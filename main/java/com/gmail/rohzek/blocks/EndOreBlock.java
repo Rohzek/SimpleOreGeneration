@@ -17,19 +17,19 @@ public class EndOreBlock extends GenericBlock
 {
 	public EndOreBlock(String unlocalizedName)
 	{
-		super(unlocalizedName, Material.rock, 3f, 15f);
+		super(unlocalizedName, Material.ROCK, 3f, 15f);
 		
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.endCoalOre ? Items.coal :
-        	   this == SGOres.endDiamondOre ? Items.diamond :
-        	   this == SGOres.endEmeraldOre ? Items.emerald :
-        	   this == SGOres.endLapisOre ? Items.dye : 
-        	   this == SGOres.endRedstoneOre ? Items.redstone :
+        return this == SGOres.endCoalOre ? Items.COAL :
+        	   this == SGOres.endDiamondOre ? Items.DIAMOND :
+        	   this == SGOres.endEmeraldOre ? Items.EMERALD :
+        	   this == SGOres.endLapisOre ? Items.DYE : 
+        	   this == SGOres.endRedstoneOre ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }
 	

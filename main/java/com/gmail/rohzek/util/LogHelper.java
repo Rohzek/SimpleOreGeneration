@@ -28,7 +28,7 @@ public class LogHelper
         FMLLog.log(Reference.LOG, Level.INFO, string);
     }
 
-    // This is a normal printout but only if my debug is true.. Saves call time later
+    // This is a normal printout but only if my debug config is true.. Allows us to check something, and forget about it for the release
     public static void debug(String string)
     {
     	if(ConfigurationManager.isDebug)
@@ -37,7 +37,7 @@ public class LogHelper
     	}
     }
     
-    // Not sure how the rest work but we don't need them I guess? Included for completeness
+    // Not sure how the rest work, but we don't need them I guess? Included for completeness. Maybe you want them?
     public static void all(String string)
     {
         log(Level.ALL, string);

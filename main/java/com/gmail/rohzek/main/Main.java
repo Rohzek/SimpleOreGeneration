@@ -48,10 +48,11 @@ public class Main
 		
 		// Ore Generation
 		LogHelper.log("Registering ore generation information");
+		SGOres.mainRegistry();
 		
 		LogHelper.log("Blocking vanilla ore spawns");
 		MinecraftForge.ORE_GEN_BUS.register(new OreSpawnBlockEvent());
-		SGOres.mainRegistry();
+		
 		LogHelper.log("Replacing vanilla ore spawns");
 		GameRegistry.registerWorldGenerator(new SGWorldGen(), 0);
 		

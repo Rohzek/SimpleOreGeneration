@@ -20,7 +20,7 @@ public class ConfigurationManager
 		
 		superEasyMode = config.get(Configuration.CATEGORY_GENERAL, "superEasyMode", false, "Allows surface ores to found easier, and at any Y value... wimp.").getBoolean(false);
 		
-		straight2Ingots = config.get(Configuration.CATEGORY_GENERAL, "smeltToIngots", true, "Makes new ores be smelted straight to their ingot form, instead of turning into vanilla ores.").getBoolean(true);
+		straight2Ingots = config.get(Configuration.CATEGORY_GENERAL, "smeltToIngots", true, "Makes new ores be smelted straight to their ingot form, instead of turning into vanilla ores first.").getBoolean(true);
 		
 		// Re-save the file
 		config.save();

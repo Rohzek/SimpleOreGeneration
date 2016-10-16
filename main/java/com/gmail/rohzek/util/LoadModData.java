@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.ModMetadata;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
- * A replacement from having a MCMOD.info file, works exactly like one would though.
+ * A replacement from having a MCMOD.info file, works exactly like one would though, just changed in code.
  * @author Rohzek
  *
  */

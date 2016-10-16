@@ -7,8 +7,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.IBlockAccess;
 
 /**
  * Allows you to change things about ALL of the Nether ores specifically
@@ -19,19 +17,19 @@ public class NetherOreBlock extends GenericBlock
 {
 	public NetherOreBlock(String unlocalizedName)
 	{
-		super(unlocalizedName, Material.rock, 3f, 15f);
+		super(unlocalizedName, Material.ROCK, 3f, 15f);
 		
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.netherCoalOre ? Items.coal :
-        	   this == SGOres.netherDiamondOre ? Items.diamond :
-        	   this == SGOres.netherEmeraldOre ? Items.emerald :
-        	   this == SGOres.netherLapisOre ? Items.dye : 
-        	   this == SGOres.netherRedstoneOre ? Items.redstone :
+        return this == SGOres.netherCoalOre ? Items.COAL :
+        	   this == SGOres.netherDiamondOre ? Items.DIAMOND :
+        	   this == SGOres.netherEmeraldOre ? Items.EMERALD :
+        	   this == SGOres.netherLapisOre ? Items.DYE : 
+        	   this == SGOres.netherRedstoneOre ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }
 	

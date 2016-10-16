@@ -17,10 +17,11 @@ public class OreSpawnBlockEvent
 	@SubscribeEvent
 	public void oreSpawnBlock(OreGenEvent.GenerateMinable event)
 	{
-		if(event.type == EventType.COAL || event.type == EventType.DIAMOND || event.type == EventType.GOLD || event.type == EventType.IRON ||
-		   event.type == EventType.LAPIS || event.type == EventType.QUARTZ || event.type == EventType.REDSTONE)
+		if(event.getType() == EventType.COAL || event.getType() == EventType.DIAMOND || event.getType() == EventType.GOLD || 
+		   event.getType() == EventType.IRON || event.getType() == EventType.LAPIS || event.getType() == EventType.QUARTZ || 
+		   event.getType() == EventType.REDSTONE)
 			{
-				LogHelper.debug("Blocked ore of type: " + event.type + " From spawning.");
+				LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
 				
 				event.setResult(Result.DENY);
 			}

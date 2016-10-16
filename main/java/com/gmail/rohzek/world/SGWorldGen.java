@@ -6,13 +6,14 @@ import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.util.ConfigurationManager;
 
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-// Modified from vanilla to make ores a little more (or less) controllable. Well generate evenly in valid Y levels
+// Modified from vanilla to make ores a little more (or less) controllable. Will generate evenly in valid Y levels
 public class SGWorldGen implements IWorldGenerator
 {	
 	// Ores - Surface
@@ -54,6 +55,7 @@ public class SGWorldGen implements IWorldGenerator
 	
 	public SGWorldGen()
 	{
+		// Creates HUGE amounts, if you want it.. Similar to Big Dig
 		if(ConfigurationManager.superEasyMode)
 		{
 			redstone = 50;
@@ -66,13 +68,13 @@ public class SGWorldGen implements IWorldGenerator
 		}
 		
 		// Surface Ores
-		this.coalOre = new SGWorldGenMineable(Blocks.coal_ore.getDefaultState(), blockSize(coal), 0);
-		this.diamondOre = new SGWorldGenMineable(Blocks.diamond_ore.getDefaultState(), blockSize(diamond), 0);
-		this.emeraldOre = new SGWorldGenMineable(Blocks.emerald_ore.getDefaultState(), blockSize(emerald), 0);
-		this.goldOre = new SGWorldGenMineable(Blocks.gold_ore.getDefaultState(), blockSize(gold), 0);
-		this.ironOre = new SGWorldGenMineable(Blocks.iron_ore.getDefaultState(), blockSize(iron), 0);
-		this.lapisOre = new SGWorldGenMineable(Blocks.lapis_ore.getDefaultState(), blockSize(lapis), 0);
-		this.redstoneOre = new SGWorldGenMineable(Blocks.redstone_ore.getDefaultState(), blockSize(redstone), 0);
+		this.coalOre = new SGWorldGenMineable(Blocks.COAL_ORE.getDefaultState(), blockSize(coal), 0);
+		this.diamondOre = new SGWorldGenMineable(Blocks.DIAMOND_ORE.getDefaultState(), blockSize(diamond), 0);
+		this.emeraldOre = new SGWorldGenMineable(Blocks.EMERALD_ORE.getDefaultState(), blockSize(emerald), 0);
+		this.goldOre = new SGWorldGenMineable(Blocks.GOLD_ORE.getDefaultState(), blockSize(gold), 0);
+		this.ironOre = new SGWorldGenMineable(Blocks.IRON_ORE.getDefaultState(), blockSize(iron), 0);
+		this.lapisOre = new SGWorldGenMineable(Blocks.LAPIS_ORE.getDefaultState(), blockSize(lapis), 0);
+		this.redstoneOre = new SGWorldGenMineable(Blocks.REDSTONE_ORE.getDefaultState(), blockSize(redstone), 0);
 		
 		// Nether Ores
 		this.netherCoalOre = new SGWorldGenMineable(SGOres.netherCoalOre.getDefaultState(), blockSize(coal), -1);
@@ -94,9 +96,9 @@ public class SGWorldGen implements IWorldGenerator
 		this.endRedstoneOre = new SGWorldGenMineable(SGOres.endRedstoneOre.getDefaultState(), blockSize(redstone), 1);
 	}
 	
-	// Taken from vanilla
+	// Taken from vanilla, modified to work with my rarity/random values
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{
 		int surfaceMinY = 0;
 		int surfaceMaxY = 256;
@@ -108,7 +110,7 @@ public class SGWorldGen implements IWorldGenerator
 		int endMaxY = 60;
 		
 		// the "rarity" number is the chance to spawn, max Y numbers taken from vanilla for the surface ores.
-		switch(world.provider.getDimensionId()) 
+		switch(world.provider.getDimension()) 
 		{
 		case 0: //Over world
 			runGenerator(this.coalOre, world, random, chunkX, chunkZ, coal, surfaceMinY, 132);

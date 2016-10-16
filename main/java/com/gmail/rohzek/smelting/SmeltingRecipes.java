@@ -25,39 +25,39 @@ public class SmeltingRecipes
 	{
 		if(ConfigurationManager.straight2Ingots)
 		{
-			GameRegistry.addSmelting(SGOres.netherCoalOre, new ItemStack(Items.coal), 0.1f);
-			GameRegistry.addSmelting(SGOres.netherDiamondOre, new ItemStack(Items.diamond), 1f);
-			GameRegistry.addSmelting(SGOres.netherEmeraldOre, new ItemStack(Items.emerald), 1f);
-			GameRegistry.addSmelting(SGOres.netherIronOre, new ItemStack(Items.iron_ingot), 0.7f);
-			GameRegistry.addSmelting(SGOres.netherGoldOre, new ItemStack(Items.gold_ingot), 1f);
-			GameRegistry.addSmelting(SGOres.netherLapisOre, new ItemStack(Items.dye), 0.2f);
-			GameRegistry.addSmelting(SGOres.netherRedstoneOre, new ItemStack(Items.redstone), 0.7f);
+			GameRegistry.addSmelting(SGOres.netherCoalOre, new ItemStack(Items.COAL), 0.1f);
+			GameRegistry.addSmelting(SGOres.netherDiamondOre, new ItemStack(Items.DIAMOND), 1f);
+			GameRegistry.addSmelting(SGOres.netherEmeraldOre, new ItemStack(Items.EMERALD), 1f);
+			GameRegistry.addSmelting(SGOres.netherIronOre, new ItemStack(Items.IRON_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.netherGoldOre, new ItemStack(Items.GOLD_INGOT), 1f);
+			GameRegistry.addSmelting(SGOres.netherLapisOre, new ItemStack(Items.DYE), 0.2f);
+			GameRegistry.addSmelting(SGOres.netherRedstoneOre, new ItemStack(Items.REDSTONE), 0.7f);
 			
-			GameRegistry.addSmelting(SGOres.endCoalOre, new ItemStack(Items.coal), 0.1f);
-			GameRegistry.addSmelting(SGOres.endDiamondOre, new ItemStack(Items.diamond), 1f);
-			GameRegistry.addSmelting(SGOres.endEmeraldOre, new ItemStack(Items.emerald), 1f);
-			GameRegistry.addSmelting(SGOres.endIronOre, new ItemStack(Items.iron_ingot), 0.7f);
-			GameRegistry.addSmelting(SGOres.endGoldOre, new ItemStack(Items.gold_ingot), 1f);
-			GameRegistry.addSmelting(SGOres.endLapisOre, new ItemStack(Items.dye), 0.2f);
-			GameRegistry.addSmelting(SGOres.endRedstoneOre, new ItemStack(Items.redstone), 0.7f);
+			GameRegistry.addSmelting(SGOres.endCoalOre, new ItemStack(Items.COAL), 0.1f);
+			GameRegistry.addSmelting(SGOres.endDiamondOre, new ItemStack(Items.DIAMOND), 1f);
+			GameRegistry.addSmelting(SGOres.endEmeraldOre, new ItemStack(Items.EMERALD), 1f);
+			GameRegistry.addSmelting(SGOres.endIronOre, new ItemStack(Items.IRON_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.endGoldOre, new ItemStack(Items.GOLD_INGOT), 1f);
+			GameRegistry.addSmelting(SGOres.endLapisOre, new ItemStack(Items.DYE), 0.2f);
+			GameRegistry.addSmelting(SGOres.endRedstoneOre, new ItemStack(Items.REDSTONE), 0.7f);
 		}
 		else
 		{
-			GameRegistry.addSmelting(SGOres.netherCoalOre, new ItemStack(Blocks.coal_ore), 0.1f);
-			GameRegistry.addSmelting(SGOres.netherDiamondOre, new ItemStack(Blocks.diamond_ore), 1f);
-			GameRegistry.addSmelting(SGOres.netherEmeraldOre, new ItemStack(Blocks.emerald_ore), 1f);
-			GameRegistry.addSmelting(SGOres.netherIronOre, new ItemStack(Blocks.iron_ore), 0.7f);
-			GameRegistry.addSmelting(SGOres.netherGoldOre, new ItemStack(Blocks.gold_ore), 1f);
-			GameRegistry.addSmelting(SGOres.netherLapisOre, new ItemStack(Blocks.lapis_ore), 0.2f);
-			GameRegistry.addSmelting(SGOres.netherRedstoneOre, new ItemStack(Blocks.redstone_ore), 0.7f);
+			GameRegistry.addSmelting(SGOres.netherCoalOre, new ItemStack(Blocks.COAL_ORE), 0.1f);
+			GameRegistry.addSmelting(SGOres.netherDiamondOre, new ItemStack(Blocks.DIAMOND_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.netherEmeraldOre, new ItemStack(Blocks.EMERALD_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.netherIronOre, new ItemStack(Blocks.IRON_ORE), 0.7f);
+			GameRegistry.addSmelting(SGOres.netherGoldOre, new ItemStack(Blocks.GOLD_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.netherLapisOre, new ItemStack(Blocks.LAPIS_ORE), 0.2f);
+			GameRegistry.addSmelting(SGOres.netherRedstoneOre, new ItemStack(Blocks.REDSTONE_ORE), 0.7f);
 			
-			GameRegistry.addSmelting(SGOres.endCoalOre, new ItemStack(Blocks.coal_ore), 0.1f);
-			GameRegistry.addSmelting(SGOres.endDiamondOre, new ItemStack(Blocks.diamond_ore), 1f);
-			GameRegistry.addSmelting(SGOres.endEmeraldOre, new ItemStack(Blocks.emerald_ore), 1f);
-			GameRegistry.addSmelting(SGOres.endIronOre, new ItemStack(Blocks.iron_ore), 0.7f);
-			GameRegistry.addSmelting(SGOres.endGoldOre, new ItemStack(Blocks.gold_ore), 1f);
-			GameRegistry.addSmelting(SGOres.endLapisOre, new ItemStack(Blocks.lapis_ore), 0.2f);
-			GameRegistry.addSmelting(SGOres.endRedstoneOre, new ItemStack(Blocks.redstone_ore), 0.7f);
+			GameRegistry.addSmelting(SGOres.endCoalOre, new ItemStack(Blocks.COAL_ORE), 0.1f);
+			GameRegistry.addSmelting(SGOres.endDiamondOre, new ItemStack(Blocks.DIAMOND_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.endEmeraldOre, new ItemStack(Blocks.EMERALD_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.endIronOre, new ItemStack(Blocks.IRON_ORE), 0.7f);
+			GameRegistry.addSmelting(SGOres.endGoldOre, new ItemStack(Blocks.GOLD_ORE), 1f);
+			GameRegistry.addSmelting(SGOres.endLapisOre, new ItemStack(Blocks.LAPIS_ORE), 0.2f);
+			GameRegistry.addSmelting(SGOres.endRedstoneOre, new ItemStack(Blocks.REDSTONE_ORE), 0.7f);
 		}
 	}
 }
