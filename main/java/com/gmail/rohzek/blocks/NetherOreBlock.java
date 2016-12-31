@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 
 /**
@@ -36,9 +37,15 @@ public class NetherOreBlock extends GenericBlock
 	@Override
 	public int quantityDropped(Random random)
     {
-		return  this == SGOres.netherCoalOre ? random.nextInt(2) :
-     	   		this == SGOres.netherLapisOre ? random.nextInt(8) : 
-     	   		this == SGOres.netherRedstoneOre ? random.nextInt(5) :
+		return  this == SGOres.netherCoalOre ? 1 + random.nextInt(2) :
+     	   		this == SGOres.netherLapisOre ? 1 + random.nextInt(8) : 
+     	   		this == SGOres.netherRedstoneOre ? 1 + random.nextInt(5) :
      	   		1;
+    }
+	
+	@Override
+	public int damageDropped(IBlockState state)
+    {
+        return this == SGOres.netherLapisOre ? EnumDyeColor.BLUE.getDyeDamage() : 0;
     }
 }

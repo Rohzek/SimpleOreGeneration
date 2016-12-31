@@ -20,7 +20,7 @@ public class Reference
 	public static final String NAME = "Simple Ore Generation";
 	
 	// We only have to change it here... MCMOD.info is gone and the ModData is hardcoded to check here
-	public static final String VERSION = "2.0";
+	public static final String VERSION = "2.1";
 	
 	public static final String CLIENTSIDEPROXY = "com.gmail.rohzek.proxys.ClientProxy";
 	
