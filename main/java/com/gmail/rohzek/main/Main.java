@@ -1,11 +1,15 @@
 package com.gmail.rohzek.main;
 
+import java.io.File;
+
 import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
 import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.proxys.CommonProxy;
 import com.gmail.rohzek.smelting.SmeltingRecipes;
 import com.gmail.rohzek.util.ConfigurationManager;
+import com.gmail.rohzek.util.JsonLoader;
+import com.gmail.rohzek.util.JsonParser;
 import com.gmail.rohzek.util.LoadModData;
 import com.gmail.rohzek.util.LogHelper;
 import com.gmail.rohzek.world.SGWorldGen;
@@ -38,6 +42,9 @@ public class Main
 	public static void PreLoad(FMLPreInitializationEvent PreEvent)
 	{
 		LogHelper.log("Beginning Pre-Initialization");
+		
+		Reference.LOCATION = new File(PreEvent.getModConfigurationDirectory().getAbsolutePath() + "/" + Reference.MODID);
+		JsonLoader.loadData();
 		
 		LogHelper.log("Loading MCMOD replacement info");
 		// This has to load first! This is a replacement for our MCMOD.Info

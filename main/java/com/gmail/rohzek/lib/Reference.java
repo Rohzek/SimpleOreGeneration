@@ -1,5 +1,7 @@
 package com.gmail.rohzek.lib;
 
+import java.io.File;
+
 /**
  * Holds global variables to be called elsewhere
  * @author Rohzek
@@ -19,8 +21,10 @@ public class Reference
 	// Human readable title
 	public static final String NAME = "Simple Ore Generation";
 	
+	// Folder holding config data
+	public static File LOCATION; 
 	// We only have to change it here... MCMOD.info is gone and the ModData is hardcoded to check here
-	public static final String VERSION = "2.1";
+	public static final String VERSION = "4.0.0";
 	
 	public static final String CLIENTSIDEPROXY = "com.gmail.rohzek.proxys.ClientProxy";
 	

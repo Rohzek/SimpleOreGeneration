@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -15,7 +16,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class SGOres 
 {
-	// Nether Ores
+	// Nether Ore Blocks
 	public static Block netherCoalOre; 
 	public static Block netherDiamondOre;  
 	public static Block netherEmeraldOre; 
@@ -24,7 +25,16 @@ public class SGOres
 	public static Block netherLapisOre;
 	public static Block netherRedstoneOre;
 	
-	// End Ores
+	// Nether Ores Item Blocks
+	public static ItemBlock netherCoalOreItem; 
+	public static ItemBlock netherDiamondOreItem;  
+	public static ItemBlock netherEmeraldOreItem;
+	public static ItemBlock netherIronOreItem;
+	public static ItemBlock netherGoldOreItem;
+	public static ItemBlock netherLapisOreItem;
+	public static ItemBlock netherRedstoneOreItem;
+	
+	// End Ore Blocks
 	public static Block endCoalOre; 
 	public static Block endDiamondOre;  
 	public static Block endEmeraldOre; 
@@ -33,10 +43,21 @@ public class SGOres
 	public static Block endLapisOre;
 	public static Block endRedstoneOre;
 	
+	// End Ores Item Blocks
+	public static ItemBlock endCoalOreItem;
+	public static ItemBlock endDiamondOreItem;
+	public static ItemBlock endEmeraldOreItem;
+	public static ItemBlock endIronOreItem;
+	public static ItemBlock endGoldOreItem;
+	public static ItemBlock endLapisOreItem;
+	public static ItemBlock endRedstoneOreItem;
+	
 	public static void mainRegistry()
 	{
 		initializeBlock();
 		registerBlock();
+		initalizeItemBlock();
+		registerItemBlock();
 	}
 	
 	public static void initializeBlock()
@@ -58,27 +79,107 @@ public class SGOres
 		endGoldOre = new EndOreBlock("endGoldOre");
 		endLapisOre = new EndOreBlock("endLapisOre");
 		endRedstoneOre = new EndOreBlock("endRedstoneOre");
+		
+		// Registry Names
+		
+		// Nether Ores
+		netherCoalOre.setRegistryName("netherCoalOre");
+		netherDiamondOre.setRegistryName("netherDiamondOre");
+		netherEmeraldOre.setRegistryName("netherEmeraldOre");
+		netherIronOre.setRegistryName("netherIronOre");
+		netherGoldOre.setRegistryName("netherGoldOre");
+		netherLapisOre.setRegistryName("netherLapisOre");
+		netherRedstoneOre.setRegistryName("netherRedstoneOre");
+		
+		// End Ores
+		endCoalOre.setRegistryName("endCoalOre");
+		endDiamondOre.setRegistryName("endDiamondOre"); 
+		endEmeraldOre.setRegistryName("endEmeraldOre");
+		endIronOre.setRegistryName("endIronOre");
+		endGoldOre.setRegistryName("endGoldOre");
+		endLapisOre.setRegistryName("endLapisOre");
+		endRedstoneOre.setRegistryName("endRedstoneOre");
+	}
+	
+	public static void initalizeItemBlock()
+	{
+		// Initialize Nether Ores
+		netherCoalOreItem = new ItemBlock(netherCoalOre);
+		netherDiamondOreItem = new ItemBlock(netherDiamondOre);
+		netherEmeraldOreItem = new ItemBlock(netherEmeraldOre);
+		netherIronOreItem = new ItemBlock(netherIronOre);
+		netherGoldOreItem = new ItemBlock(netherGoldOre);
+		netherLapisOreItem = new ItemBlock(netherLapisOre);
+		netherRedstoneOreItem = new ItemBlock(netherRedstoneOre);
+		
+		// Initialize End Ores
+		endCoalOreItem = new ItemBlock(endCoalOre);
+		endDiamondOreItem = new ItemBlock(endDiamondOre);
+		endEmeraldOreItem = new ItemBlock(endEmeraldOre);
+		endIronOreItem = new ItemBlock(endIronOre);
+		endGoldOreItem = new ItemBlock(endGoldOre);
+		endLapisOreItem = new ItemBlock(endLapisOre);
+		endRedstoneOreItem = new ItemBlock(endRedstoneOre);
+		
+		// Register Nether Ores
+		netherCoalOreItem.setRegistryName("netherCoalOre");
+		netherDiamondOreItem.setRegistryName("netherDiamondOre");
+		netherEmeraldOreItem.setRegistryName("netherEmeraldOre");
+		netherIronOreItem.setRegistryName("netherIronOre");
+		netherGoldOreItem.setRegistryName("netherGoldOre");
+		netherLapisOreItem.setRegistryName("netherLapisOre");
+		netherRedstoneOreItem.setRegistryName("netherRedstoneOre");
+		
+		// Register End Ores
+		endCoalOreItem.setRegistryName("endCoalOre");
+		endDiamondOreItem.setRegistryName("endDiamondOre");
+		endEmeraldOreItem.setRegistryName("endEmeraldOre");
+		endIronOreItem.setRegistryName("endIronOre");
+		endGoldOreItem.setRegistryName("endGoldOre");
+		endLapisOreItem.setRegistryName("endLapisOre");
+		endRedstoneOreItem.setRegistryName("endRedstoneOre");
 	}
 	
 	public static void registerBlock()
 	{
 		// Nether Ores
-		GameRegistry.registerBlock(netherCoalOre, netherCoalOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherDiamondOre, netherDiamondOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherEmeraldOre, netherEmeraldOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherIronOre, netherIronOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherGoldOre, netherGoldOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherLapisOre, netherLapisOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(netherRedstoneOre, netherRedstoneOre.getUnlocalizedName().substring(5));
+		GameRegistry.register(netherCoalOre);
+		GameRegistry.register(netherDiamondOre);
+		GameRegistry.register(netherEmeraldOre);
+		GameRegistry.register(netherIronOre);
+		GameRegistry.register(netherGoldOre);
+		GameRegistry.register(netherLapisOre);
+		GameRegistry.register(netherRedstoneOre);
 		
 		// End Ores
-		GameRegistry.registerBlock(endCoalOre, endCoalOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endDiamondOre, endDiamondOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endEmeraldOre, endEmeraldOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endIronOre, endIronOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endGoldOre, endGoldOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endLapisOre, endLapisOre.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(endRedstoneOre, endRedstoneOre.getUnlocalizedName().substring(5));
+		GameRegistry.register(endCoalOre);
+		GameRegistry.register(endDiamondOre);
+		GameRegistry.register(endEmeraldOre);
+		GameRegistry.register(endIronOre);
+		GameRegistry.register(endGoldOre);
+		GameRegistry.register(endLapisOre);
+		GameRegistry.register(endRedstoneOre);
+	}
+	
+	public static void registerItemBlock()
+	{
+		// Nether Ores
+		GameRegistry.register(netherCoalOreItem);
+		GameRegistry.register(netherDiamondOreItem);
+		GameRegistry.register(netherEmeraldOreItem);
+		GameRegistry.register(netherIronOreItem);
+		GameRegistry.register(netherGoldOreItem);
+		GameRegistry.register(netherLapisOreItem);
+		GameRegistry.register(netherRedstoneOreItem);
+		
+		// End Ores
+		GameRegistry.register(endCoalOreItem);
+		GameRegistry.register(endDiamondOreItem);
+		GameRegistry.register(endEmeraldOreItem);
+		GameRegistry.register(endIronOreItem);
+		GameRegistry.register(endGoldOreItem);
+		GameRegistry.register(endLapisOreItem);
+		GameRegistry.register(endRedstoneOreItem);
 	}
 	
 	public static void registerRenders()

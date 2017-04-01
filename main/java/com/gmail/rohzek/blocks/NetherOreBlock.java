@@ -1,13 +1,23 @@
 package com.gmail.rohzek.blocks;
 
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.scoreboard.Team;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 /**
  * Allows you to change things about ALL of the Nether ores specifically
@@ -16,6 +26,8 @@ import net.minecraft.item.Item;
  */
 public class NetherOreBlock extends GenericBlock
 {
+	private static int aggroRange = 32;
+	
 	public NetherOreBlock(String unlocalizedName)
 	{
 		super(unlocalizedName, Material.ROCK, 3f, 15f);
