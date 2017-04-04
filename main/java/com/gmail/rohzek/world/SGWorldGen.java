@@ -64,7 +64,7 @@ public class SGWorldGen implements IWorldGenerator
 		this.netherGoldOre = new SGWorldGenMineable(SGOres.netherGoldOre.getDefaultState(), blockSize(JsonParser.loadNetherGoldOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherGoldOre().get("veinMultiplier").getAsInt()), -1);
 		this.netherIronOre = new SGWorldGenMineable(SGOres.netherIronOre.getDefaultState(), blockSize(JsonParser.loadNetherIronOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherIronOre().get("veinMultiplier").getAsInt()), -1);
 		this.netherLapisOre = new SGWorldGenMineable(SGOres.netherLapisOre.getDefaultState(), blockSize(JsonParser.loadNetherLapisOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherLapisOre().get("veinMultiplier").getAsInt()), -1);
-		this.netherQuartz = new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(JsonParser.loadNetherQuartzOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherQuartzOre().get("veinMultiplier").getAsInt()), -1);
+		this.netherQuartz = new SGWorldGenMineable(SGOres.netherQuartzOre.getDefaultState(), blockSize(JsonParser.loadNetherQuartzOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherQuartzOre().get("veinMultiplier").getAsInt()), -1);
 		this.netherRedstoneOre = new SGWorldGenMineable(SGOres.netherRedstoneOre.getDefaultState(), blockSize(JsonParser.loadNetherRedstoneOre().get("veinMinimum").getAsInt(), JsonParser.loadNetherRedstoneOre().get("veinMultiplier").getAsInt()), -1);
 		
 		// End Ores
@@ -80,41 +80,24 @@ public class SGWorldGen implements IWorldGenerator
 	// Taken from vanilla, modified to work with my rarity/random values
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
-	{	
-		// the "rarity" number is the chance to spawn, max Y numbers taken from vanilla for the surface ores.
-		switch(world.provider.getDimension()) 
+	{
+		switch(world.provider.getDimension())
 		{
-		case 0: //Over world
-			runGenerator(this.coalOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceCoalOre().get("rarity").getAsInt(), JsonParser.loadSurfaceCoalOre().get("minY").getAsInt(), JsonParser.loadSurfaceCoalOre().get("maxY").getAsInt());
-			runGenerator(this.diamondOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceDiamondOre().get("rarity").getAsInt(), JsonParser.loadSurfaceDiamondOre().get("minY").getAsInt(), JsonParser.loadSurfaceDiamondOre().get("maxY").getAsInt());
-			runGenerator(this.emeraldOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceEmeraldOre().get("rarity").getAsInt(), JsonParser.loadSurfaceEmeraldOre().get("minY").getAsInt(), JsonParser.loadSurfaceEmeraldOre().get("maxY").getAsInt());
-			runGenerator(this.goldOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceGoldOre().get("rarity").getAsInt(), JsonParser.loadSurfaceGoldOre().get("minY").getAsInt(), JsonParser.loadSurfaceGoldOre().get("maxY").getAsInt());
-			runGenerator(this.ironOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceIronOre().get("rarity").getAsInt(), JsonParser.loadSurfaceIronOre().get("minY").getAsInt(), JsonParser.loadSurfaceIronOre().get("maxY").getAsInt());
-			runGenerator(this.lapisOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceLapisOre().get("rarity").getAsInt(), JsonParser.loadSurfaceLapisOre().get("minY").getAsInt(), JsonParser.loadSurfaceLapisOre().get("maxY").getAsInt());
-			runGenerator(this.redstoneOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceRedstoneOre().get("rarity").getAsInt(), JsonParser.loadSurfaceRedstoneOre().get("minY").getAsInt(), JsonParser.loadSurfaceRedstoneOre().get("maxY").getAsInt());
-			
-			break;
-		case -1: //Nether
-			runGenerator(this.netherCoalOre, world, random, chunkX, chunkZ, JsonParser.loadNetherCoalOre().get("rarity").getAsInt(), JsonParser.loadNetherCoalOre().get("minY").getAsInt(), JsonParser.loadNetherCoalOre().get("maxY").getAsInt());
-			runGenerator(this.netherDiamondOre, world, random, chunkX, chunkZ, JsonParser.loadNetherDiamondOre().get("rarity").getAsInt(), JsonParser.loadNetherDiamondOre().get("minY").getAsInt(), JsonParser.loadNetherDiamondOre().get("maxY").getAsInt());
-			runGenerator(this.netherEmeraldOre, world, random, chunkX, chunkZ, JsonParser.loadNetherEmeraldOre().get("rarity").getAsInt(), JsonParser.loadNetherEmeraldOre().get("minY").getAsInt(), JsonParser.loadNetherEmeraldOre().get("maxY").getAsInt());
-			runGenerator(this.netherGoldOre, world, random, chunkX, chunkZ, JsonParser.loadNetherGoldOre().get("rarity").getAsInt(), JsonParser.loadNetherGoldOre().get("minY").getAsInt(), JsonParser.loadNetherGoldOre().get("maxY").getAsInt());
-			runGenerator(this.netherIronOre, world, random, chunkX, chunkZ, JsonParser.loadNetherIronOre().get("rarity").getAsInt(), JsonParser.loadNetherIronOre().get("minY").getAsInt(), JsonParser.loadNetherIronOre().get("maxY").getAsInt());
-			runGenerator(this.netherLapisOre, world, random, chunkX, chunkZ, JsonParser.loadNetherLapisOre().get("rarity").getAsInt(), JsonParser.loadNetherLapisOre().get("minY").getAsInt(), JsonParser.loadNetherLapisOre().get("maxY").getAsInt());
-			runGenerator(this.netherQuartz, world, random, chunkX, chunkZ, JsonParser.loadNetherQuartzOre().get("rarity").getAsInt(), JsonParser.loadNetherQuartzOre().get("minY").getAsInt(), JsonParser.loadNetherQuartzOre().get("maxY").getAsInt());
-			runGenerator(this.netherRedstoneOre, world, random, chunkX, chunkZ, JsonParser.loadNetherRedstoneOre().get("rarity").getAsInt(), JsonParser.loadNetherRedstoneOre().get("minY").getAsInt(), JsonParser.loadNetherRedstoneOre().get("maxY").getAsInt());
-			
-			break;
-		case 1: //The End	
-			runGenerator(this.endCoalOre, world, random, chunkX, chunkZ, JsonParser.loadEndCoalOre().get("rarity").getAsInt(), JsonParser.loadEndCoalOre().get("minY").getAsInt(), JsonParser.loadEndCoalOre().get("maxY").getAsInt());
-			runGenerator(this.endDiamondOre, world, random, chunkX, chunkZ, JsonParser.loadEndDiamondOre().get("rarity").getAsInt(), JsonParser.loadEndDiamondOre().get("minY").getAsInt(), JsonParser.loadEndDiamondOre().get("maxY").getAsInt());
-			runGenerator(this.endEmeraldOre, world, random, chunkX, chunkZ, JsonParser.loadEndEmeraldOre().get("rarity").getAsInt(), JsonParser.loadEndEmeraldOre().get("minY").getAsInt(), JsonParser.loadEndEmeraldOre().get("maxY").getAsInt());
-			runGenerator(this.endGoldOre, world, random, chunkX, chunkZ, JsonParser.loadEndGoldOre().get("rarity").getAsInt(), JsonParser.loadEndGoldOre().get("minY").getAsInt(), JsonParser.loadEndGoldOre().get("maxY").getAsInt());
-			runGenerator(this.endIronOre, world, random, chunkX, chunkZ, JsonParser.loadEndIronOre().get("rarity").getAsInt(), JsonParser.loadEndIronOre().get("minY").getAsInt(), JsonParser.loadEndIronOre().get("maxY").getAsInt());
-			runGenerator(this.endLapisOre, world, random, chunkX, chunkZ, JsonParser.loadEndLapisOre().get("rarity").getAsInt(), JsonParser.loadEndLapisOre().get("minY").getAsInt(), JsonParser.loadEndLapisOre().get("maxY").getAsInt());
-			runGenerator(this.endRedstoneOre, world, random, chunkX, chunkZ, JsonParser.loadEndRedstoneOre().get("rarity").getAsInt(), JsonParser.loadEndRedstoneOre().get("minY").getAsInt(), JsonParser.loadEndRedstoneOre().get("maxY").getAsInt());
-			
-			break;
+			case 0:
+				generateOverworldOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				break;
+			case -1:
+				generateNetherOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				break;
+			case 1:
+				generateEnderOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				break;
+			default:
+				if(ConfigurationManager.supportNewDims)
+				{
+					generateOverworldOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				}
+				break;	
 		}
 	}
 	
@@ -122,6 +105,125 @@ public class SGWorldGen implements IWorldGenerator
 	private int blockSize(int min, int max)
 	{
 		return min + (int) (Math.random() * max);
+	}
+	
+	private void generateOverworldOres(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+	{
+		if(!JsonParser.loadSurfaceCoalOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.coalOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceCoalOre().get("rarity").getAsInt(), JsonParser.loadSurfaceCoalOre().get("minY").getAsInt(), JsonParser.loadSurfaceCoalOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceDiamondOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.diamondOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceDiamondOre().get("rarity").getAsInt(), JsonParser.loadSurfaceDiamondOre().get("minY").getAsInt(), JsonParser.loadSurfaceDiamondOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceEmeraldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.emeraldOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceEmeraldOre().get("rarity").getAsInt(), JsonParser.loadSurfaceEmeraldOre().get("minY").getAsInt(), JsonParser.loadSurfaceEmeraldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceGoldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.goldOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceGoldOre().get("rarity").getAsInt(), JsonParser.loadSurfaceGoldOre().get("minY").getAsInt(), JsonParser.loadSurfaceGoldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceIronOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.ironOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceIronOre().get("rarity").getAsInt(), JsonParser.loadSurfaceIronOre().get("minY").getAsInt(), JsonParser.loadSurfaceIronOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceLapisOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.lapisOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceLapisOre().get("rarity").getAsInt(), JsonParser.loadSurfaceLapisOre().get("minY").getAsInt(), JsonParser.loadSurfaceLapisOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceRedstoneOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.redstoneOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceRedstoneOre().get("rarity").getAsInt(), JsonParser.loadSurfaceRedstoneOre().get("minY").getAsInt(), JsonParser.loadSurfaceRedstoneOre().get("maxY").getAsInt());
+		}
+	}
+	
+	private void generateNetherOres(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+	{
+		if(!JsonParser.loadNetherCoalOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherCoalOre, world, random, chunkX, chunkZ, JsonParser.loadNetherCoalOre().get("rarity").getAsInt(), JsonParser.loadNetherCoalOre().get("minY").getAsInt(), JsonParser.loadNetherCoalOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherDiamondOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherDiamondOre, world, random, chunkX, chunkZ, JsonParser.loadNetherDiamondOre().get("rarity").getAsInt(), JsonParser.loadNetherDiamondOre().get("minY").getAsInt(), JsonParser.loadNetherDiamondOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherEmeraldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherEmeraldOre, world, random, chunkX, chunkZ, JsonParser.loadNetherEmeraldOre().get("rarity").getAsInt(), JsonParser.loadNetherEmeraldOre().get("minY").getAsInt(), JsonParser.loadNetherEmeraldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherGoldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherGoldOre, world, random, chunkX, chunkZ, JsonParser.loadNetherGoldOre().get("rarity").getAsInt(), JsonParser.loadNetherGoldOre().get("minY").getAsInt(), JsonParser.loadNetherGoldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherIronOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherIronOre, world, random, chunkX, chunkZ, JsonParser.loadNetherIronOre().get("rarity").getAsInt(), JsonParser.loadNetherIronOre().get("minY").getAsInt(), JsonParser.loadNetherIronOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherLapisOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherLapisOre, world, random, chunkX, chunkZ, JsonParser.loadNetherLapisOre().get("rarity").getAsInt(), JsonParser.loadNetherLapisOre().get("minY").getAsInt(), JsonParser.loadNetherLapisOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherQuartzOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherQuartz, world, random, chunkX, chunkZ, JsonParser.loadNetherQuartzOre().get("rarity").getAsInt(), JsonParser.loadNetherQuartzOre().get("minY").getAsInt(), JsonParser.loadNetherQuartzOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadNetherRedstoneOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.netherRedstoneOre, world, random, chunkX, chunkZ, JsonParser.loadNetherRedstoneOre().get("rarity").getAsInt(), JsonParser.loadNetherRedstoneOre().get("minY").getAsInt(), JsonParser.loadNetherRedstoneOre().get("maxY").getAsInt());
+		}
+	}
+	
+	private void generateEnderOres(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
+	{
+		if(!JsonParser.loadEndCoalOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endCoalOre, world, random, chunkX, chunkZ, JsonParser.loadEndCoalOre().get("rarity").getAsInt(), JsonParser.loadEndCoalOre().get("minY").getAsInt(), JsonParser.loadEndCoalOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndDiamondOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endDiamondOre, world, random, chunkX, chunkZ, JsonParser.loadEndDiamondOre().get("rarity").getAsInt(), JsonParser.loadEndDiamondOre().get("minY").getAsInt(), JsonParser.loadEndDiamondOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndEmeraldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endEmeraldOre, world, random, chunkX, chunkZ, JsonParser.loadEndEmeraldOre().get("rarity").getAsInt(), JsonParser.loadEndEmeraldOre().get("minY").getAsInt(), JsonParser.loadEndEmeraldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndGoldOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endGoldOre, world, random, chunkX, chunkZ, JsonParser.loadEndGoldOre().get("rarity").getAsInt(), JsonParser.loadEndGoldOre().get("minY").getAsInt(), JsonParser.loadEndGoldOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndIronOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endIronOre, world, random, chunkX, chunkZ, JsonParser.loadEndIronOre().get("rarity").getAsInt(), JsonParser.loadEndIronOre().get("minY").getAsInt(), JsonParser.loadEndIronOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndLapisOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endLapisOre, world, random, chunkX, chunkZ, JsonParser.loadEndLapisOre().get("rarity").getAsInt(), JsonParser.loadEndLapisOre().get("minY").getAsInt(), JsonParser.loadEndLapisOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndRedstoneOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endRedstoneOre, world, random, chunkX, chunkZ, JsonParser.loadEndRedstoneOre().get("rarity").getAsInt(), JsonParser.loadEndRedstoneOre().get("minY").getAsInt(), JsonParser.loadEndRedstoneOre().get("maxY").getAsInt());
+		}
 	}
 	
 	// Taken from vanilla

@@ -39,19 +39,19 @@ public class Main
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void PreLoad(FMLPreInitializationEvent PreEvent)
+	public static void PreLoad(FMLPreInitializationEvent preEvent)
 	{
 		LogHelper.log("Beginning Pre-Initialization");
 		
-		Reference.LOCATION = new File(PreEvent.getModConfigurationDirectory().getAbsolutePath() + "/" + Reference.MODID);
+		Reference.LOCATION = new File(preEvent.getModConfigurationDirectory().getAbsolutePath() + "/" + Reference.MODID);
 		JsonLoader.loadData();
 		
 		LogHelper.log("Loading MCMOD replacement info");
 		// This has to load first! This is a replacement for our MCMOD.Info
-		LoadModData.load(PreEvent);
+		LoadModData.load(preEvent);
 		
 		// Configuration file loader
-		ConfigurationManager manager = new ConfigurationManager(PreEvent);
+		ConfigurationManager manager = new ConfigurationManager(preEvent);
 		
 		// Ore Generation
 		LogHelper.log("Registering ore generation information");
@@ -84,5 +84,5 @@ public class Main
 	
 	// What is this even used for?
 	@EventHandler
-	public static void PostLoad(FMLPostInitializationEvent PostEvent){}
+	public static void PostLoad(FMLPostInitializationEvent postEvent){}
 }

@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 /**
  * New custom ores for generation in the Nether and End
@@ -23,6 +24,7 @@ public class SGOres
 	public static Block netherIronOre;
 	public static Block netherGoldOre;
 	public static Block netherLapisOre;
+	public static Block netherQuartzOre;
 	public static Block netherRedstoneOre;
 	
 	// Nether Ores Item Blocks
@@ -32,6 +34,7 @@ public class SGOres
 	public static ItemBlock netherIronOreItem;
 	public static ItemBlock netherGoldOreItem;
 	public static ItemBlock netherLapisOreItem;
+	public static ItemBlock netherQuartzOreItem;
 	public static ItemBlock netherRedstoneOreItem;
 	
 	// End Ore Blocks
@@ -58,6 +61,8 @@ public class SGOres
 		registerBlock();
 		initalizeItemBlock();
 		registerItemBlock();
+		
+		registerOreDict();
 	}
 	
 	public static void initializeBlock()
@@ -69,6 +74,7 @@ public class SGOres
 		netherIronOre = new NetherOreBlock("netherIronOre");
 		netherGoldOre = new NetherOreBlock("netherGoldOre");
 		netherLapisOre = new NetherOreBlock("netherLapisOre");
+		netherQuartzOre = new NetherOreBlock("netherQuartzOre");
 		netherRedstoneOre = new NetherOreBlock("netherRedstoneOre");
 		
 		// End Ores
@@ -89,6 +95,7 @@ public class SGOres
 		netherIronOre.setRegistryName("netherIronOre");
 		netherGoldOre.setRegistryName("netherGoldOre");
 		netherLapisOre.setRegistryName("netherLapisOre");
+		netherQuartzOre.setRegistryName("netherQuartzOre");
 		netherRedstoneOre.setRegistryName("netherRedstoneOre");
 		
 		// End Ores
@@ -110,6 +117,7 @@ public class SGOres
 		netherIronOreItem = new ItemBlock(netherIronOre);
 		netherGoldOreItem = new ItemBlock(netherGoldOre);
 		netherLapisOreItem = new ItemBlock(netherLapisOre);
+		netherQuartzOreItem = new ItemBlock(netherQuartzOre);
 		netherRedstoneOreItem = new ItemBlock(netherRedstoneOre);
 		
 		// Initialize End Ores
@@ -128,6 +136,7 @@ public class SGOres
 		netherIronOreItem.setRegistryName("netherIronOre");
 		netherGoldOreItem.setRegistryName("netherGoldOre");
 		netherLapisOreItem.setRegistryName("netherLapisOre");
+		netherQuartzOreItem.setRegistryName("netherQuartzOre");
 		netherRedstoneOreItem.setRegistryName("netherRedstoneOre");
 		
 		// Register End Ores
@@ -149,6 +158,7 @@ public class SGOres
 		GameRegistry.register(netherIronOre);
 		GameRegistry.register(netherGoldOre);
 		GameRegistry.register(netherLapisOre);
+		GameRegistry.register(netherQuartzOre);
 		GameRegistry.register(netherRedstoneOre);
 		
 		// End Ores
@@ -170,6 +180,7 @@ public class SGOres
 		GameRegistry.register(netherIronOreItem);
 		GameRegistry.register(netherGoldOreItem);
 		GameRegistry.register(netherLapisOreItem);
+		GameRegistry.register(netherQuartzOreItem);
 		GameRegistry.register(netherRedstoneOreItem);
 		
 		// End Ores
@@ -182,6 +193,26 @@ public class SGOres
 		GameRegistry.register(endRedstoneOreItem);
 	}
 	
+	public static void registerOreDict()
+	{
+		OreDictionary.registerOre("oreCoal", netherCoalOre);
+		OreDictionary.registerOre("oreDiamond", netherDiamondOre);
+		OreDictionary.registerOre("oreEmerald", netherEmeraldOre);
+		OreDictionary.registerOre("oreIron", netherIronOre);
+		OreDictionary.registerOre("oreGold", netherGoldOre);
+		OreDictionary.registerOre("oreLapis", netherLapisOre);
+		OreDictionary.registerOre("oreQuartz", netherQuartzOre);
+		OreDictionary.registerOre("oreRedstone", netherRedstoneOre);
+		
+		OreDictionary.registerOre("oreCoal", endCoalOre);
+		OreDictionary.registerOre("oreDiamond", endDiamondOre);
+		OreDictionary.registerOre("oreEmerald", endEmeraldOre);
+		OreDictionary.registerOre("oreIron", endIronOre);
+		OreDictionary.registerOre("oreGold", endGoldOre);
+		OreDictionary.registerOre("oreLapis", endLapisOre);
+		OreDictionary.registerOre("oreRedstone", endRedstoneOre);
+	}
+	
 	public static void registerRenders()
 	{
 		// Nether Ores
@@ -191,6 +222,7 @@ public class SGOres
 		registerRender(netherIronOre);
 		registerRender(netherGoldOre);
 		registerRender(netherLapisOre);
+		registerRender(netherQuartzOre);
 		registerRender(netherRedstoneOre);
 		
 		// End Ores

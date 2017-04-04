@@ -42,6 +42,7 @@ public class JsonCreator
 		vCoalOre.addProperty("rarity", 12 * 2);
 		vCoalOre.addProperty("veinMinimum", 2);
 		vCoalOre.addProperty("veinMultiplier", 17);
+		vCoalOre.addProperty("disableOre", false);
 		
 		vanilla.add(vCoalOre);
 		
@@ -54,6 +55,7 @@ public class JsonCreator
 		vDiamondOre.addProperty("rarity", 2 * 2);
 		vDiamondOre.addProperty("veinMinimum", 3);
 		vDiamondOre.addProperty("veinMultiplier", 6);
+		vDiamondOre.addProperty("disableOre", false);
 		
 		vanilla.add(vDiamondOre);
 		
@@ -66,6 +68,7 @@ public class JsonCreator
 		vEmeraldOre.addProperty("rarity", 4 * 2);
 		vEmeraldOre.addProperty("veinMinimum", 6);
 		vEmeraldOre.addProperty("veinMultiplier", 6);
+		vEmeraldOre.addProperty("disableOre", false);
 		
 		vanilla.add(vEmeraldOre);
 		
@@ -78,6 +81,7 @@ public class JsonCreator
 		vGoldOre.addProperty("rarity", 6 * 2);
 		vGoldOre.addProperty("veinMinimum", 9);
 		vGoldOre.addProperty("veinMultiplier", 9);
+		vGoldOre.addProperty("disableOre", false);
 		
 		vanilla.add(vGoldOre);
 		
@@ -90,6 +94,7 @@ public class JsonCreator
 		vIronOre.addProperty("rarity", 10 * 2);
 		vIronOre.addProperty("veinMinimum", 5);
 		vIronOre.addProperty("veinMultiplier", 19);
+		vIronOre.addProperty("disableOre", false);
 		
 		vanilla.add(vIronOre);
 		
@@ -102,6 +107,7 @@ public class JsonCreator
 		vLapisOre.addProperty("rarity", 8 * 2);
 		vLapisOre.addProperty("veinMinimum", 7);
 		vLapisOre.addProperty("veinMultiplier", 7);
+		vLapisOre.addProperty("disableOre", false);
 		
 		vanilla.add(vLapisOre);
 		
@@ -114,6 +120,7 @@ public class JsonCreator
 		vRedstoneOre.addProperty("rarity", 24);
 		vRedstoneOre.addProperty("veinMinimum", 3);
 		vRedstoneOre.addProperty("veinMultiplier", 7);
+		vRedstoneOre.addProperty("disableOre", false);
 		
 		vanilla.add(vRedstoneOre);
 		
@@ -131,6 +138,7 @@ public class JsonCreator
 		nCoalOre.addProperty("rarity", 12 * 3);
 		nCoalOre.addProperty("veinMinimum", 2);
 		nCoalOre.addProperty("veinMultiplier", 17);
+		nCoalOre.addProperty("disableOre", false);
 		
 		nether.add(nCoalOre);
 		
@@ -143,6 +151,7 @@ public class JsonCreator
 		nDiamondOre.addProperty("rarity", 2 * 3);
 		nDiamondOre.addProperty("veinMinimum", 3);
 		nDiamondOre.addProperty("veinMultiplier", 6);
+		nDiamondOre.addProperty("disableOre", false);
 		
 		nether.add(nDiamondOre);
 		
@@ -155,6 +164,7 @@ public class JsonCreator
 		nEmeraldOre.addProperty("rarity", 4 * 3);
 		nEmeraldOre.addProperty("veinMinimum", 6);
 		nEmeraldOre.addProperty("veinMultiplier", 6);
+		nEmeraldOre.addProperty("disableOre", false);
 		
 		nether.add(nEmeraldOre);
 		
@@ -167,6 +177,7 @@ public class JsonCreator
 		nGoldOre.addProperty("rarity", 6 * 3);
 		nGoldOre.addProperty("veinMinimum", 9);
 		nGoldOre.addProperty("veinMultiplier", 9);
+		nGoldOre.addProperty("disableOre", false);
 		
 		nether.add(nGoldOre);
 		
@@ -179,6 +190,7 @@ public class JsonCreator
 		nIronOre.addProperty("rarity", 10 * 3);
 		nIronOre.addProperty("veinMinimum", 5);
 		nIronOre.addProperty("veinMultiplier", 19);
+		nIronOre.addProperty("disableOre", false);
 		
 		nether.add(nIronOre);
 		
@@ -191,6 +203,7 @@ public class JsonCreator
 		nLapisOre.addProperty("rarity", 8 * 3);
 		nLapisOre.addProperty("veinMinimum", 7);
 		nLapisOre.addProperty("veinMultiplier", 7);
+		nLapisOre.addProperty("disableOre", false);
 		
 		nether.add(nLapisOre);
 		
@@ -203,6 +216,7 @@ public class JsonCreator
 		nQuartz.addProperty("rarity", 12 * 3);
 		nQuartz.addProperty("veinMinimum", 5);
 		nQuartz.addProperty("veinMultiplier", 9);
+		nQuartz.addProperty("disableOre", false);
 		
 		nether.add(nQuartz);
 		
@@ -215,6 +229,7 @@ public class JsonCreator
 		nRedstoneOre.addProperty("rarity", 24 * 3);
 		nRedstoneOre.addProperty("veinMinimum", 3);
 		nRedstoneOre.addProperty("veinMultiplier", 7);
+		nRedstoneOre.addProperty("disableOre", false);
 		
 		nether.add(nRedstoneOre);
 		
@@ -232,6 +247,7 @@ public class JsonCreator
 		eCoalOre.addProperty("rarity", 12);
 		eCoalOre.addProperty("veinMinimum", 2);
 		eCoalOre.addProperty("veinMultiplier", 17);
+		eCoalOre.addProperty("disableOre", false);
 		
 		end.add(eCoalOre);
 		
@@ -244,6 +260,7 @@ public class JsonCreator
 		eDiamondOre.addProperty("rarity", 2);
 		eDiamondOre.addProperty("veinMinimum", 3);
 		eDiamondOre.addProperty("veinMultiplier", 6);
+		eDiamondOre.addProperty("disableOre", false);
 		
 		end.add(eDiamondOre);
 		
@@ -256,6 +273,7 @@ public class JsonCreator
 		eEmeraldOre.addProperty("rarity", 4);
 		eEmeraldOre.addProperty("veinMinimum", 6);
 		eEmeraldOre.addProperty("veinMultiplier", 6);
+		eEmeraldOre.addProperty("disableOre", false);
 		
 		end.add(eEmeraldOre);
 		
@@ -268,6 +286,7 @@ public class JsonCreator
 		eGoldOre.addProperty("rarity", 6);
 		eGoldOre.addProperty("veinMinimum", 9);
 		eGoldOre.addProperty("veinMultiplier", 9);
+		eGoldOre.addProperty("disableOre", false);
 		
 		end.add(eGoldOre);
 		
@@ -280,6 +299,7 @@ public class JsonCreator
 		eIronOre.addProperty("rarity", 10);
 		eIronOre.addProperty("veinMinimum", 5);
 		eIronOre.addProperty("veinMultiplier", 19);
+		eIronOre.addProperty("disableOre", false);
 		
 		end.add(eIronOre);
 		
@@ -292,6 +312,7 @@ public class JsonCreator
 		eLapisOre.addProperty("rarity", 8);
 		eLapisOre.addProperty("veinMinimum", 7);
 		eLapisOre.addProperty("veinMultiplier", 7);
+		eLapisOre.addProperty("disableOre", false);
 		
 		end.add(eLapisOre);
 		
@@ -304,6 +325,7 @@ public class JsonCreator
 		eRedstoneOre.addProperty("rarity", 24);
 		eRedstoneOre.addProperty("veinMinimum", 3);
 		eRedstoneOre.addProperty("veinMultiplier", 7);
+		eRedstoneOre.addProperty("disableOre", false);
 		
 		end.add(eRedstoneOre);
 		

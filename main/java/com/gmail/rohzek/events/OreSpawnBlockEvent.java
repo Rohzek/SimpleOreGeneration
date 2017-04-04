@@ -1,5 +1,6 @@
 package com.gmail.rohzek.events;
 
+import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import net.minecraftforge.event.terraingen.OreGenEvent;
@@ -17,13 +18,51 @@ public class OreSpawnBlockEvent
 	@SubscribeEvent
 	public void oreSpawnBlock(OreGenEvent.GenerateMinable event)
 	{
-		if(event.getType() == EventType.COAL || event.getType() == EventType.DIAMOND || event.getType() == EventType.GOLD || 
-		   event.getType() == EventType.IRON || event.getType() == EventType.LAPIS || event.getType() == EventType.QUARTZ || 
-		   event.getType() == EventType.REDSTONE)
+		int dimID = event.getWorld().provider.getDimension();
+		
+		if(ConfigurationManager.supportNewDims)
+		{
+			blockOres(event);
+		}
+		else // If support for custom ores is turned off
+		{
+			if(dimID == -1 || dimID == 0) // Only block ore spawns in the nether and overworld
+			{
+				blockOres(event);
+			}
+		}
+	}
+	
+	private void blockOres(OreGenEvent.GenerateMinable event)
+	{
+		EventType[] ores = EventType.values();
+		
+		// We want to skip Silverfish and Custom blocks when searching, so remove the last 2
+		for(int i = 0; i < (ores.length - 2); i++)
+		{
+			if(event.getType() == ores[i])
 			{
 				LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
 				
 				event.setResult(Result.DENY);
 			}
+			else
+			{
+				blockCustomOres(event);
+			}
+		}
+	}
+	
+	private void blockCustomOres(OreGenEvent.GenerateMinable event)
+	{
+		if(ConfigurationManager.supportNewOres)
+		{
+			if(event.getType() == EventType.CUSTOM)
+			{
+				LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
+				
+				event.setResult(Result.DENY);
+			}
+		}
 	}
 }
