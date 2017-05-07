@@ -1,10 +1,14 @@
-package com.gmail.rohzek.util;
+package com.gmail.rohzek.util.json;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import com.gmail.rohzek.lib.Reference;
+import com.gmail.rohzek.util.LogHelper;
+import com.google.common.io.Files;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -13,6 +17,8 @@ import com.google.gson.JsonObject;
 public class JsonCreator 
 {
 	static File jsonFile = new File(Reference.LOCATION + "/OreGen.json");
+	static File updateFile = new File(Reference.LOCATION + "/OreGen.json.bak");
+	static boolean runOnce = true;
 	
 	public static String createJson()
 	{
@@ -33,15 +39,24 @@ public class JsonCreator
 		// Vanilla Array
 		JsonArray vanilla = new JsonArray();
 		
+		// Neutral Array
+		JsonArray neutral = new JsonArray();
+		
+		// Forestry Array
+		JsonArray forestry = new JsonArray();
+		
+		// IC2 Array
+		JsonArray ic = new JsonArray();
+		
 		// vanillaCoalOre
 		JsonObject vCoalOre = new JsonObject();
 		
 		vCoalOre.addProperty("ore", "SurfaceCoalOre");
 		vCoalOre.addProperty("minY", surfaceMinY);
-		vCoalOre.addProperty("maxY", 132);
+		vCoalOre.addProperty("maxY", 213);
 		vCoalOre.addProperty("rarity", 12 * 2);
-		vCoalOre.addProperty("veinMinimum", 2);
-		vCoalOre.addProperty("veinMultiplier", 17);
+		vCoalOre.addProperty("veinMinimum", 6);
+		vCoalOre.addProperty("veinMultiplier", 31);
 		vCoalOre.addProperty("disableOre", false);
 		
 		vanilla.add(vCoalOre);
@@ -337,8 +352,195 @@ public class JsonCreator
 		
 		root.add("basic", basic);
 		
-		createFile(root);
+		// --------------------------------------- Neutral Ores --------------------------------------------------- \\
 		
+		// surfaceCopperOre
+		JsonObject oCopper = new JsonObject();
+		
+		oCopper.addProperty("ore", "SurfaceCopperOre");
+		oCopper.addProperty("minY", 10);
+		oCopper.addProperty("maxY", 256);
+		oCopper.addProperty("rarity", 10 * 3);
+		oCopper.addProperty("veinMinimum", 5);
+		oCopper.addProperty("veinMultiplier", 19);
+		oCopper.addProperty("disableOre", false);
+		
+		neutral.add(oCopper);
+		
+		// surfaceTinOre
+		JsonObject oTin = new JsonObject();
+		
+		oTin.addProperty("ore", "SurfaceTinOre");
+		oTin.addProperty("minY", 20);
+		oTin.addProperty("maxY", 256);
+		oTin.addProperty("rarity", 24 * 3);
+		oTin.addProperty("veinMinimum", 3);
+		oTin.addProperty("veinMultiplier", 19);
+		oTin.addProperty("disableOre", false);
+		
+		neutral.add(oTin);
+		
+		// surfaceLeadOre
+		JsonObject oLead = new JsonObject();
+		
+		oLead.addProperty("ore", "SurfaceLeadOre");
+		oLead.addProperty("minY", 16);
+		oLead.addProperty("maxY", 60);
+		oLead.addProperty("rarity", 10 * 2);
+		oLead.addProperty("veinMinimum", 5);
+		oLead.addProperty("veinMultiplier", 19);
+		oLead.addProperty("disableOre", false);
+		
+		neutral.add(oLead);
+		
+		// netherCopperOre
+		JsonObject nCopper = new JsonObject();
+		
+		nCopper.addProperty("ore", "NetherCopperOre");
+		nCopper.addProperty("minY", netherMinY);
+		nCopper.addProperty("maxY", netherMaxY);
+		nCopper.addProperty("rarity", 10 * 3);
+		nCopper.addProperty("veinMinimum", 5);
+		nCopper.addProperty("veinMultiplier", 19);
+		nCopper.addProperty("disableOre", false);
+				
+		neutral.add(nCopper);
+		
+		// netherCopperOre
+		JsonObject nTin = new JsonObject();
+		
+		nTin.addProperty("ore", "NetherTinOre");
+		nTin.addProperty("minY", netherMinY);
+		nTin.addProperty("maxY", netherMaxY);
+		nTin.addProperty("rarity", 24 * 3);
+		nTin.addProperty("veinMinimum", 5);
+		nTin.addProperty("veinMultiplier", 19);
+		nTin.addProperty("disableOre", false);
+				
+		neutral.add(nTin);
+		
+		// netherLeadOre
+		JsonObject nLead = new JsonObject();
+		
+		nLead.addProperty("ore", "NetherLeadOre");
+		nLead.addProperty("minY", netherMinY);
+		nLead.addProperty("maxY", netherMaxY);
+		nLead.addProperty("rarity", 10 * 3);
+		nLead.addProperty("veinMinimum", 5);
+		nLead.addProperty("veinMultiplier", 19);
+		nLead.addProperty("disableOre", false);
+		
+		neutral.add(nLead);
+		
+		// endCopperOre
+		JsonObject eCopper = new JsonObject();
+		
+		eCopper.addProperty("ore", "EndCopperOre");
+		eCopper.addProperty("minY", endMinY);
+		eCopper.addProperty("maxY", endMaxY);
+		eCopper.addProperty("rarity", 10 * 3);
+		eCopper.addProperty("veinMinimum", 5);
+		eCopper.addProperty("veinMultiplier", 17);
+		eCopper.addProperty("disableOre", false);
+				
+		neutral.add(eCopper);
+		
+		// endTinOre
+		JsonObject eTin = new JsonObject();
+		
+		eTin.addProperty("ore", "EndTinOre");
+		eTin.addProperty("minY", endMinY);
+		eTin.addProperty("maxY", endMaxY);
+		eTin.addProperty("rarity", 24 * 2);
+		eTin.addProperty("veinMinimum", 7);
+		eTin.addProperty("veinMultiplier", 10);
+		eTin.addProperty("disableOre", false);
+				
+		neutral.add(eTin);
+		
+		// endLeadOre
+		JsonObject eLead = new JsonObject();
+		
+		eLead.addProperty("ore", "EndLeadOre");
+		eLead.addProperty("minY", endMinY);
+		eLead.addProperty("maxY", endMaxY);
+		eLead.addProperty("rarity", 10 * 3);
+		eLead.addProperty("veinMinimum", 4);
+		eLead.addProperty("veinMultiplier", 9);
+		eLead.addProperty("disableOre", false);
+		
+		neutral.add(eLead);
+		
+		// --------------------------------------- End Neutral Ores ------------------------------------------------ \\
+		
+		root.add("neutral", neutral);
+		
+		
+		// --------------------------------------- Forestry Ores --------------------------------------------------- \\
+		
+		// surfaceApatiteOre
+		JsonObject oApatite = new JsonObject();
+		
+		oApatite.addProperty("ore", "ApatiteOre");
+		oApatite.addProperty("minY", 64);
+		oApatite.addProperty("maxY", 256);
+		oApatite.addProperty("rarity", 24);
+		oApatite.addProperty("veinMinimum", 7);
+		oApatite.addProperty("veinMultiplier", 11);
+		oApatite.addProperty("disableOre", false);
+		
+		forestry.add(oApatite);
+		
+		// --------------------------------------- End Forestry Ores ------------------------------------------------ \\
+		
+		root.add("forestry", forestry);
+		
+		
+		// --------------------------------------- IC2 Ores --------------------------------------------------- \\
+		// surfaceUraniumOre
+		JsonObject oUranium = new JsonObject();
+		
+		oUranium.addProperty("ore", "SurfaceUraniumOre");
+		oUranium.addProperty("minY", surfaceMinY);
+		oUranium.addProperty("maxY", 60);
+		oUranium.addProperty("rarity", 2 * 2);
+		oUranium.addProperty("veinMinimum", 4);
+		oUranium.addProperty("veinMultiplier", 8);
+		oUranium.addProperty("disableOre", false);
+		
+		ic.add(oUranium);
+		
+		// netherUraniumOre
+		JsonObject nUranium = new JsonObject();
+		
+		nUranium.addProperty("ore", "NetherUraniumOre");
+		nUranium.addProperty("minY", netherMinY);
+		nUranium.addProperty("maxY", netherMaxY);
+		nUranium.addProperty("rarity", 2 * 3);
+		nUranium.addProperty("veinMinimum", 4);
+		nUranium.addProperty("veinMultiplier", 8);
+		nUranium.addProperty("disableOre", false);
+			
+		ic.add(nUranium);
+				
+		// endUraniumOre
+		JsonObject eUranium = new JsonObject();
+		
+		eUranium.addProperty("ore", "EndUraniumOre");
+		eUranium.addProperty("minY", endMinY);
+		eUranium.addProperty("maxY", endMaxY);
+		eUranium.addProperty("rarity", 2 * 3);
+		eUranium.addProperty("veinMinimum", 4);
+		eUranium.addProperty("veinMultiplier", 8);
+		eUranium.addProperty("disableOre", false);
+		
+		ic.add(eUranium);
+		
+		// --------------------------------------- End IC2 Ores ------------------------------------------------ \\
+		
+		root.add("IC2", ic);
+		
+		createFile(root);
 		return JsonFormatting(root);
 	}
 	
@@ -349,6 +551,25 @@ public class JsonCreator
 			writer.print(JsonFormatting(obj));
 		}
 		catch(FileNotFoundException fnf){}
+	}
+	
+	public static void updateFile()
+	{
+		if(runOnce)
+		{
+			LogHelper.log("Mod has been updated from previous version");
+			LogHelper.log("OreGen.json has been renamed to OreGen.json.bak, and re-generated");
+			LogHelper.log("If you used custom values for old ores, please go re-add them.");
+			
+			runOnce = false;
+		}
+		
+		if(updateFile.exists() && !updateFile.isDirectory())
+		{
+			updateFile.delete();
+		}
+		jsonFile.renameTo(updateFile);
+		createJson();
 	}
 	
 	public static String JsonFormatting(JsonObject obj)

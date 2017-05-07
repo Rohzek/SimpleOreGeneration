@@ -55,6 +55,7 @@ public class OreSpawnBlockEvent
 	
 	private void blockCustomOres(OreGenEvent.GenerateMinable event)
 	{
+		/*
 		if(ConfigurationManager.supportNewOres)
 		{
 			if(event.getType() == EventType.CUSTOM)
@@ -64,5 +65,6 @@ public class OreSpawnBlockEvent
 				event.setResult(Result.DENY);
 			}
 		}
+		*/
 	}
 }

@@ -1,10 +1,10 @@
-package com.gmail.rohzek.util;
+package com.gmail.rohzek.util.json;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-public class JsonParser 
+public class JsonParser
 {
 	static JsonObject obj = JsonLoader.getJsonObject();
 	

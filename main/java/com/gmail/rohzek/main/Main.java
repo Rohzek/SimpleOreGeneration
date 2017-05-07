@@ -2,17 +2,17 @@ package com.gmail.rohzek.main;
 
 import java.io.File;
 
-import com.gmail.rohzek.blocks.SGOres;
+import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
 import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.proxys.CommonProxy;
 import com.gmail.rohzek.smelting.SmeltingRecipes;
 import com.gmail.rohzek.util.ConfigurationManager;
-import com.gmail.rohzek.util.JsonLoader;
-import com.gmail.rohzek.util.JsonParser;
 import com.gmail.rohzek.util.LoadModData;
 import com.gmail.rohzek.util.LogHelper;
+import com.gmail.rohzek.util.json.JsonLoader;
 import com.gmail.rohzek.world.SGWorldGen;
+import com.gmail.rohzek.world.SGWorldGenSurface;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -29,7 +29,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Rohzek
  *
  */
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies="after:forestry,ic2;")
 public class Main 
 {
 	@Instance(Reference.MODID)
@@ -41,48 +41,59 @@ public class Main
 	@EventHandler
 	public static void PreLoad(FMLPreInitializationEvent preEvent)
 	{
-		LogHelper.log("Beginning Pre-Initialization");
+		LogHelper.log("Hello Minecraft, how are you?");
+		
+		LogHelper.debug("Beginning Pre-Initialization");
 		
 		Reference.LOCATION = new File(preEvent.getModConfigurationDirectory().getAbsolutePath() + "/" + Reference.MODID);
+		
 		JsonLoader.loadData();
 		
-		LogHelper.log("Loading MCMOD replacement info");
-		// This has to load first! This is a replacement for our MCMOD.Info
+		LogHelper.debug("Loading MCMOD replacement info");
+		
 		LoadModData.load(preEvent);
 		
 		// Configuration file loader
 		ConfigurationManager manager = new ConfigurationManager(preEvent);
 		
 		// Ore Generation
-		LogHelper.log("Registering ore generation information");
-		SGOres.mainRegistry();
-		
-		LogHelper.log("Blocking vanilla ore spawns");
+		LogHelper.debug("Registering ore generation information");
+		LogHelper.debug("Blocking vanilla ore spawns");
 		MinecraftForge.ORE_GEN_BUS.register(new OreSpawnBlockEvent());
 		
-		LogHelper.log("Replacing vanilla ore spawns");
+		LogHelper.debug("Replacing vanilla ore spawns");
 		GameRegistry.registerWorldGenerator(new SGWorldGen(), 0);
+		GameRegistry.registerWorldGenerator(new SGWorldGenSurface(), 0);
+		LogHelper.debug("Finished ore generation information");
 		
-		LogHelper.log("Finished ore generation information");
-		
-		LogHelper.log("Adding smelting recipes");
+		LogHelper.debug("Adding smelting recipes");
 		SmeltingRecipes.mainRegistry();
 		
-		LogHelper.log("Pre-Initialization Complete");
+		LogHelper.debug("Pre-Initialization Complete");
 	}
 	
 	@EventHandler
 	public static void load(FMLInitializationEvent event)
 	{
-		LogHelper.log("Beginning Initialization");
+		LogHelper.debug("Beginning Initialization");
 		
-		LogHelper.log("Registering Proxy Renders");
+		LogHelper.debug("Registering Proxy Renders");
 		proxy.registerRenders();
 		
-		LogHelper.log("Initialization Complete");
+		LogHelper.debug("Initialization Complete");
 	}
 	
-	// What is this even used for?
 	@EventHandler
-	public static void PostLoad(FMLPostInitializationEvent postEvent){}
+	public static void PostLoad(FMLPostInitializationEvent postEvent)
+	{
+		LogHelper.log("Checking for compatibility modules");
+		if(CheckForMods.check("forestry"))
+		{
+			CheckForMods.checkForForestry();
+		}
+		if(CheckForMods.check("ic2"))
+		{
+			CheckForMods.checkForIC();
+		}
+	}
 }

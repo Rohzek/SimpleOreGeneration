@@ -23,8 +23,9 @@ public class Reference
 	
 	// Folder holding config data
 	public static File LOCATION; 
+	
 	// We only have to change it here... MCMOD.info is gone and the ModData is hardcoded to check here
-	public static final String VERSION = "3.2.0";
+	public static final String VERSION = "3.4.0";
 	
 	public static final String CLIENTSIDEPROXY = "com.gmail.rohzek.proxys.ClientProxy";
 	

@@ -1,4 +1,4 @@
-package com.gmail.rohzek.util;
+package com.gmail.rohzek.util.json;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

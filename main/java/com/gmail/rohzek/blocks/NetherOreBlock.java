@@ -21,6 +21,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
 /**
@@ -35,6 +36,7 @@ public class NetherOreBlock extends GenericBlock
 	public NetherOreBlock(String unlocalizedName)
 	{
 		super(unlocalizedName, Material.ROCK, 3f, 15f);
+		this.setRegistryName(unlocalizedName);
 		
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
@@ -42,30 +44,45 @@ public class NetherOreBlock extends GenericBlock
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.netherCoalOre ? Items.COAL :
-        	   this == SGOres.netherDiamondOre ? Items.DIAMOND :
-        	   this == SGOres.netherEmeraldOre ? Items.EMERALD :
-        	   this == SGOres.netherLapisOre ? Items.DYE : 
-        	   this == SGOres.netherQuartzOre ? Items.QUARTZ :
-        	   this == SGOres.netherRedstoneOre ? Items.REDSTONE :
+        return this == SGOres.NETHER_COAL_ORE ? Items.COAL :
+        	   this == SGOres.NETHER_DIAMOND_ORE ? Items.DIAMOND :
+        	   this == SGOres.NETHER_EMERALD_ORE ? Items.EMERALD :
+        	   this == SGOres.NETHER_LAPIS_ORE ? Items.DYE : 
+        	   this == SGOres.NETHER_QUARTZ_ORE ? Items.QUARTZ :
+        	   this == SGOres.NETHER_REDSTONE_ORE ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }
 	
 	@Override
 	public int quantityDropped(Random random)
     {
-		return  this == SGOres.netherCoalOre ? 1 + random.nextInt(2) :
-     	   		this == SGOres.netherLapisOre ? 1 + random.nextInt(8) : 
-     	   		this == SGOres.netherQuartzOre ? 1 + random.nextInt(3) :
-     	   		this == SGOres.netherRedstoneOre ? 1 + random.nextInt(5) :
+		return  this == SGOres.NETHER_COAL_ORE     ? 1 + random.nextInt(2) :
+     	   		this == SGOres.NETHER_DIAMOND_ORE  ? 1 + random.nextInt(8) : 
+     	   		this == SGOres.NETHER_EMERALD_ORE  ? 1 + random.nextInt(3) :
+     	   		this == SGOres.NETHER_LAPIS_ORE    ? 1 + random.nextInt(5) :
+     	   		this == SGOres.NETHER_QUARTZ_ORE   ? 1 + random.nextInt(2) :
+     	   		this == SGOres.NETHER_REDSTONE_ORE ? 1 + random.nextInt(5) :
      	   		1;
     }
 	
 	@Override
 	public int damageDropped(IBlockState state)
     {
-        return this == SGOres.netherLapisOre ? EnumDyeColor.BLUE.getDyeDamage() : 0;
+        return this == SGOres.NETHER_LAPIS_ORE ? EnumDyeColor.BLUE.getDyeDamage() : 0;
     }
+	
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) 
+	{
+		if(this == SGOres.NETHER_LAPIS_ORE)
+		{
+			return new ItemStack(Item.getItemFromBlock(SGOres.NETHER_LAPIS_ORE));
+		}
+		else
+		{
+			return super.getPickBlock(state, target, world, pos, player);
+		}
+	}
 	
 	@Override
     public boolean isFireSource(World world, BlockPos blockPos, EnumFacing facing) {

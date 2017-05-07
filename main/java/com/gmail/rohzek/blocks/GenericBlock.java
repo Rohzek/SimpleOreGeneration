@@ -21,6 +21,7 @@ public class GenericBlock extends Block
 		this.setUnlocalizedName(unlocalizedName);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
+		this.setHarvestLevel("pickaxe", 2);
 	}
 	
 	@Override
@@ -32,6 +33,6 @@ public class GenericBlock extends Block
 	@Override
 	public int quantityDropped(Random random)
     {
-		return 0;
+		return 1;
     }
 }

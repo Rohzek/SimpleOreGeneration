@@ -1,11 +1,24 @@
+item.copperIngot.name=Copper Ingot
+item.leadIngot.name=Lead Ingot
+item.tinIngot.name=Tin Ingot
+
+tile.surfaceCopperOre.name=Copper Ore
+tile.surfaceLeadOre.name=Lead Ore
+tile.surfaceTinOre.name=Tin Ore
+tile.surfaceUraniumOre.name=Uranium Ore
+
 tile.netherCoalOre.name=Nether Coal Ore
 tile.netherDiamondOre.name=Nether Diamond Ore
 tile.netherEmeraldOre.name=Nether Emerald Ore
 tile.netherGoldOre.name=Nether Gold Ore
 tile.netherIronOre.name=Nether Iron Ore
 tile.netherLapisOre.name=Nether Lapis Lazuli Ore
+tile.netherLeadOre.name=Nether Lead Ore
 tile.netherQuartzOre.name=Nether Quartz Ore
 tile.netherRedstoneOre.name=Nether Redstone Ore
+tile.netherCopperOre.name=Nether Copper Ore
+tile.netherTinOre.name=Nether Tin Ore
+tile.netherUraniumOre.name=Nether Uranium Ore
 
 tile.endCoalOre.name=End Coal Ore
 tile.endDiamondOre.name=End Diamond Ore
@@ -13,4 +26,10 @@ tile.endEmeraldOre.name=End Emerald Ore
 tile.endGoldOre.name=End Gold Ore
 tile.endIronOre.name=End Iron Ore
 tile.endLapisOre.name=End Lapis Lazuli Ore
+tile.endLeadOre.name=End Lead Ore
 tile.endRedstoneOre.name=End Redstone Ore
+tile.endCopperOre.name=End Lapis Copper Ore
+tile.endTinOre.name=End Tin Ore
+tile.endUraniumOre.name=End Uranium Ore
+
+tile.cheshireRose.name=Cheshire Rose
