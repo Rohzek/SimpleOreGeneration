@@ -21,12 +21,14 @@ public class SGItems
 	public static final Item COPPER_INGOT = new ItemIngot("copperIngot");
 	public static final Item LEAD_INGOT = new ItemIngot("leadIngot");
 	public static final Item TIN_INGOT = new ItemIngot("tinIngot");
+	public static final Item HEART_DIAMOND = new HeartDiamondItem("heartDiamond");
 	
 	public static void registerRenders() 
 	{
 		registerRender(COPPER_INGOT);
 		registerRender(LEAD_INGOT);
 		registerRender(TIN_INGOT);
+		registerRender(HEART_DIAMOND);
 		
 		registerOreDict();
 	}
@@ -36,6 +38,7 @@ public class SGItems
 		OreDictionary.registerOre("ingotCopper", COPPER_INGOT);
 		OreDictionary.registerOre("ingotLead", LEAD_INGOT);
 		OreDictionary.registerOre("ingotTin", TIN_INGOT);
+		OreDictionary.registerOre("gemDiamond", HEART_DIAMOND);
 	}
 	
 	public static void registerRender(Item item)
@@ -61,6 +64,7 @@ public class SGItems
 					COPPER_INGOT,
 					LEAD_INGOT,
 					TIN_INGOT,
+					HEART_DIAMOND,
 			};
 			
 			final IForgeRegistry<Item> registry = event.getRegistry();

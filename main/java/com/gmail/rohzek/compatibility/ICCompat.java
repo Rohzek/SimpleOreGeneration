@@ -1,13 +1,11 @@
 package com.gmail.rohzek.compatibility;
 
-import com.gmail.rohzek.lib.Reference;
+import com.gmail.rohzek.smelting.SmeltingRecipes;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import ic2.core.init.MainConfig;
-import ic2.core.ref.BlockName;
 import ic2.core.util.Config;
-import ic2.core.util.ConfigUtil;
 
 public class ICCompat 
 {
@@ -15,6 +13,7 @@ public class ICCompat
 	{
 		fixConfig();
 		loadOre();
+		addRecipes();
 		LogHelper.log("IC2 Compatibility loaded");
 	}
 	
@@ -40,5 +39,10 @@ public class ICCompat
 			ModdedConstants.leadOre = true;
 			ModdedConstants.uraniumOre = true;
 		}
+	}
+	
+	public static void addRecipes()
+	{
+		SmeltingRecipes.addMaceratorRecipes();
 	}
 }

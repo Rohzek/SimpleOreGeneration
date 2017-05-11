@@ -1,6 +1,7 @@
 item.copperIngot.name=Copper Ingot
 item.leadIngot.name=Lead Ingot
 item.tinIngot.name=Tin Ingot
+item.heartDiamond.name=Heart Diamond
 
 tile.surfaceCopperOre.name=Copper Ore
 tile.surfaceLeadOre.name=Lead Ore
@@ -28,7 +29,7 @@ tile.endIronOre.name=End Iron Ore
 tile.endLapisOre.name=End Lapis Lazuli Ore
 tile.endLeadOre.name=End Lead Ore
 tile.endRedstoneOre.name=End Redstone Ore
-tile.endCopperOre.name=End Lapis Copper Ore
+tile.endCopperOre.name=End Copper Ore
 tile.endTinOre.name=End Tin Ore
 tile.endUraniumOre.name=End Uranium Ore
 
