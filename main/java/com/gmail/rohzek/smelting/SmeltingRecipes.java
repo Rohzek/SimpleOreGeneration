@@ -83,21 +83,27 @@ public class SmeltingRecipes
 		
 		if(ConfigurationManager.straight2Ingots)
 		{
-			GameRegistry.addSmelting(SGOres.NETHER_COPPER_ORE, new ItemStack(SGItems.COPPER_INGOT), 0.7f);
+			// End
 			GameRegistry.addSmelting(SGOres.END_COPPER_ORE, new ItemStack(SGItems.COPPER_INGOT), 0.7f);
-			GameRegistry.addSmelting(SGOres.SURFACE_LEAD_ORE, new ItemStack(SGItems.LEAD_INGOT), 0.7f);
-			GameRegistry.addSmelting(SGOres.SURFACE_LEAD_ORE, new ItemStack(SGItems.LEAD_INGOT), 0.7f);
-			GameRegistry.addSmelting(SGOres.NETHER_TIN_ORE, new ItemStack(SGItems.TIN_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.END_LEAD_ORE, new ItemStack(SGItems.LEAD_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.END_TIN_ORE, new ItemStack(SGItems.TIN_INGOT), 0.7f);
+			
+			// Nether
+			GameRegistry.addSmelting(SGOres.NETHER_COPPER_ORE, new ItemStack(SGItems.COPPER_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.NETHER_LEAD_ORE, new ItemStack(SGItems.LEAD_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.NETHER_TIN_ORE, new ItemStack(SGItems.TIN_INGOT), 0.7f);
 		}
 		else
 		{
-			GameRegistry.addSmelting(SGOres.NETHER_COPPER_ORE, new ItemStack(SGOres.SURFACE_COPPER_ORE), 0.7f);
+			// End
 			GameRegistry.addSmelting(SGOres.END_COPPER_ORE, new ItemStack(SGOres.SURFACE_COPPER_ORE), 0.7f);
-			GameRegistry.addSmelting(SGOres.SURFACE_LEAD_ORE, new ItemStack(SGOres.SURFACE_LEAD_ORE), 0.7f);
-			GameRegistry.addSmelting(SGOres.SURFACE_LEAD_ORE, new ItemStack(SGOres.SURFACE_LEAD_ORE), 0.7f);
-			GameRegistry.addSmelting(SGOres.NETHER_TIN_ORE, new ItemStack(SGOres.SURFACE_TIN_ORE), 0.7f);
+			GameRegistry.addSmelting(SGOres.END_LEAD_ORE, new ItemStack(SGOres.SURFACE_LEAD_ORE), 0.7f);
 			GameRegistry.addSmelting(SGOres.END_TIN_ORE, new ItemStack(SGOres.SURFACE_TIN_ORE), 0.7f);
+			
+			// Nether
+			GameRegistry.addSmelting(SGOres.NETHER_COPPER_ORE, new ItemStack(SGOres.SURFACE_COPPER_ORE), 0.7f);
+			GameRegistry.addSmelting(SGOres.NETHER_LEAD_ORE, new ItemStack(SGOres.SURFACE_LEAD_ORE), 0.7f);
+			GameRegistry.addSmelting(SGOres.NETHER_TIN_ORE, new ItemStack(SGOres.SURFACE_TIN_ORE), 0.7f);
 		}
 	}
 }
