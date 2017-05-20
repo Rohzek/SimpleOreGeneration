@@ -15,6 +15,7 @@ import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -27,7 +28,11 @@ public class SmeltingRecipes
 	public static void mainRegistry()
 	{
 		addSmeltingRecipes();
-		moddedRecipes();
+		
+		if(CheckForMods.check("ic2"))
+		{
+			moddedRecipes();
+		}
 	}
 	
 	private static void addSmeltingRecipes()
@@ -112,6 +117,7 @@ public class SmeltingRecipes
 		}
 	}
 	
+	@Optional.Method(modid = "ic2")
 	public static void addMaceratorRecipes()
 	{
 		NBTTagCompound compound = new NBTTagCompound();
@@ -119,34 +125,29 @@ public class SmeltingRecipes
 		output.addEnchantment(Enchantments.FIRE_ASPECT, 4);
 		output.addEnchantment(Enchantments.UNBREAKING, 4);
 		
-		if(CheckForMods.check("ic2"))
-		{
-			
-			// Amy's flower special recipe
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGBlocks.CHESHIREROSE)), compound, false, output);
-			
-			// Surface Ores
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
-			
-			// Nether Ores
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_GOLD_ORE)), compound, false, IC2Items.getItem("crushed", "gold"), IC2Items.getItem("crushed", "gold"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_IRON_ORE)), compound, false, IC2Items.getItem("crushed", "iron"), IC2Items.getItem("crushed", "iron"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
-			
-			// End Ores
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_GOLD_ORE)), compound, false, IC2Items.getItem("crushed", "gold"), IC2Items.getItem("crushed", "gold"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_IRON_ORE)), compound, false, IC2Items.getItem("crushed", "iron"), IC2Items.getItem("crushed", "iron"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
-			Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
-			
-		}
+		// Amy's flower special recipe
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGBlocks.CHESHIREROSE)), compound, false, output);
+		
+		// Surface Ores
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.SURFACE_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
+		
+		// Nether Ores
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_GOLD_ORE)), compound, false, IC2Items.getItem("crushed", "gold"), IC2Items.getItem("crushed", "gold"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_IRON_ORE)), compound, false, IC2Items.getItem("crushed", "iron"), IC2Items.getItem("crushed", "iron"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.NETHER_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
+		
+		// End Ores
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_COPPER_ORE)), compound, false, IC2Items.getItem("crushed", "copper"), IC2Items.getItem("crushed", "copper"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_GOLD_ORE)), compound, false, IC2Items.getItem("crushed", "gold"), IC2Items.getItem("crushed", "gold"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_IRON_ORE)), compound, false, IC2Items.getItem("crushed", "iron"), IC2Items.getItem("crushed", "iron"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_LEAD_ORE)), compound, false, IC2Items.getItem("crushed", "lead"), IC2Items.getItem("crushed", "lead"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_TIN_ORE)), compound, false, IC2Items.getItem("crushed", "tin"), IC2Items.getItem("crushed", "tin"));
+		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGOres.END_URANIUM_ORE)), compound, false, IC2Items.getItem("crushed", "uranium"), IC2Items.getItem("crushed", "uranium"));
 	}
 }
