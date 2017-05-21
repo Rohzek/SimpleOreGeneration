@@ -57,14 +57,17 @@ public class CheshireRose extends BlockBush
 	@Override
 	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) 
 	{
-		spawnHearts(world, pos, state, entity);
-		
 		EntityPlayer player;
 		
 		if(entity instanceof EntityPlayer)
 		{
 			player = (EntityPlayer)entity;
 			player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 50, 0, true, false));
+			
+			if(world.isRemote)
+			{
+				spawnHearts(world, pos, state, entity);
+			}
 		}
 	}
 	
@@ -75,22 +78,19 @@ public class CheshireRose extends BlockBush
 	@SideOnly(Side.CLIENT)
 	private void spawnHearts(World world, BlockPos pos, IBlockState state, Entity entity)
 	{
-		if(entity instanceof EntityPlayer)
+		Random rand = new Random();
+		int posX = pos.getX(), posY = pos.getY(), posZ = pos.getZ();
+		float width = 1f, height = 1f;
+		
+		for (int i = 0; i < 2; ++i)
 		{
-			Random rand = new Random();
-			int posX = pos.getX(), posY = pos.getY(), posZ = pos.getZ();
-			float width = 1f, height = 1f;
-			
-			for (int i = 0; i < 2; ++i)
-			{
-				double d0 = rand.nextGaussian() * 0.02D;
-				double d1 = rand.nextGaussian() * 0.02D;
-				double d2 = rand.nextGaussian() * 0.02D;
-				world.spawnParticle(EnumParticleTypes.HEART, 
-						posX + (double)(rand.nextFloat() * width * 2.0F) - (double)width, 
-						posY + 0.5D + (double)(rand.nextFloat() * height), 
-						posZ + (double)(rand.nextFloat() * width * 2.0F) - (double)width, d0, d1, d2, new int[0]);
-			}
+			double d0 = rand.nextGaussian() * 0.02D;
+			double d1 = rand.nextGaussian() * 0.02D;
+			double d2 = rand.nextGaussian() * 0.02D;
+			world.spawnParticle(EnumParticleTypes.HEART, 
+					posX + (double)(rand.nextFloat() * width * 2.0F) - (double)width, 
+					posY + 0.5D + (double)(rand.nextFloat() * height), 
+					posZ + (double)(rand.nextFloat() * width * 2.0F) - (double)width, d0, d1, d2, new int[0]);
 		}
 	}
 }
