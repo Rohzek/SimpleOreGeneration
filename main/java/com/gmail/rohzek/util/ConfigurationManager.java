@@ -24,6 +24,7 @@ public class ConfigurationManager
 	public static boolean supportNewDims;
 	//private HashSet<String> testingArrayIn;
 	
+	public static boolean changeVanilla;
 	public static boolean supportForestry;
 	public static boolean supportIC;
 	
@@ -48,7 +49,8 @@ public class ConfigurationManager
 		this.zombiePigsAttack = config.get(genCategory, "zombiePigmenAggro", true, "Zombie Pigmen will attack players who mine nether ores. Set to false to disable").getBoolean(true);
 		this.gfFlowerDisable = config.get(genCategory, "gfFlowerDisable", false, "True will disable spawn of the CheshireRose flower.").getBoolean(false);
 		
-		this.supportNewDims = config.get(modCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions Stone with Stone as main block (like overworld)").getBoolean(true);
+		this.supportNewDims = config.get(modCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions with Stone as the main block (like the overworld)").getBoolean(true);
+		this.changeVanilla = config.get(modCategory, "changeVanillaOreSpawn", true, "Should this mod change the vanilla ore gen?").getBoolean(true);
 		this.supportForestry = config.get(modCategory, "supportForestry", true, "Support for Forestry ores").getBoolean(true);
 		this.supportIC = config.get(modCategory, "supportIndustrialCraft", true, "Support for IC2 ores").getBoolean(true);
 		

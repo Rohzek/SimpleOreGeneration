@@ -20,15 +20,18 @@ public class OreSpawnBlockEvent
 	{
 		int dimID = event.getWorld().provider.getDimension();
 		
-		if(ConfigurationManager.supportNewDims)
+		if(ConfigurationManager.changeVanilla)
 		{
-			blockOres(event);
-		}
-		else // If support for custom ores is turned off
-		{
-			if(dimID == -1 || dimID == 0) // Only block ore spawns in the nether and overworld
+			if(ConfigurationManager.supportNewDims)
 			{
 				blockOres(event);
+			}
+			else // If support for custom ores is turned off
+			{
+				if(dimID == -1 || dimID == 0) // Only block ore spawns in the nether and overworld
+				{
+					blockOres(event);
+				}
 			}
 		}
 	}

@@ -130,7 +130,10 @@ public class SGWorldGen implements IWorldGenerator
 		switch(world.provider.getDimension())
 		{
 			case 0:
-				generateVanillaSurfaceOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				if(ConfigurationManager.changeVanilla)
+				{
+					generateVanillaSurfaceOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+				}
 				generateModdedSurfaceOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
 				break;
 			case -1:
@@ -280,9 +283,12 @@ public class SGWorldGen implements IWorldGenerator
 			runGenerator(this.netherLapisOre, world, random, chunkX, chunkZ, JsonParser.loadNetherLapisOre().get("rarity").getAsInt(), JsonParser.loadNetherLapisOre().get("minY").getAsInt(), JsonParser.loadNetherLapisOre().get("maxY").getAsInt());
 		}
 		
-		if(!JsonParser.loadNetherQuartzOre().get("disableOre").getAsBoolean())
+		if(ConfigurationManager.changeVanilla)
 		{
-			runGenerator(this.netherQuartz, world, random, chunkX, chunkZ, JsonParser.loadNetherQuartzOre().get("rarity").getAsInt(), JsonParser.loadNetherQuartzOre().get("minY").getAsInt(), JsonParser.loadNetherQuartzOre().get("maxY").getAsInt());
+			if(!JsonParser.loadNetherQuartzOre().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.netherQuartz, world, random, chunkX, chunkZ, JsonParser.loadNetherQuartzOre().get("rarity").getAsInt(), JsonParser.loadNetherQuartzOre().get("minY").getAsInt(), JsonParser.loadNetherQuartzOre().get("maxY").getAsInt());
+			}
 		}
 		
 		if(!JsonParser.loadNetherRedstoneOre().get("disableOre").getAsBoolean())
