@@ -60,6 +60,7 @@ public class Main
 		LogHelper.debug("Registering ore generation information");
 		LogHelper.debug("Blocking vanilla ore spawns");
 		MinecraftForge.ORE_GEN_BUS.register(new OreSpawnBlockEvent());
+		OreSpawnBlockEvent.populateOreType();
 		
 		LogHelper.debug("Replacing vanilla ore spawns");
 		GameRegistry.registerWorldGenerator(new SGWorldGen(), 0);
