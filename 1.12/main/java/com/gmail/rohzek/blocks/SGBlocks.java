@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.fml.common.registry.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
 
 @ObjectHolder(Reference.MODID)
 public class SGBlocks 
@@ -81,10 +81,5 @@ public class SGBlocks
 	private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String name) 
 	{
 		GameRegistry.registerTileEntity(tileEntityClass, Reference.RESOURCEID + name);
-	}
-
-	private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String name, String legacyName) 
-	{
-		GameRegistry.registerTileEntityWithAlternatives(tileEntityClass, Reference.RESOURCEID + name, Reference.RESOURCEID + legacyName);
 	}
 }

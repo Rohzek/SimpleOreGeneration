@@ -29,7 +29,7 @@ public class SGWorldGenCheshireRose extends WorldGenerator
         {
             BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 
-            if (worldIn.isAirBlock(blockpos) && (!worldIn.provider.hasNoSky() || blockpos.getY() < worldIn.getHeight() - 1) && this.block.canBlockStay(worldIn, blockpos, this.block.getDefaultState()))
+            if (worldIn.isAirBlock(blockpos) && (!worldIn.provider.hasSkyLight() || blockpos.getY() < worldIn.getHeight() - 1) && this.block.canBlockStay(worldIn, blockpos, this.block.getDefaultState()))
             {
                 worldIn.setBlockState(blockpos, this.block.getDefaultState(), 2);
                 LogHelper.debug("Generating a flower at: " + blockpos);

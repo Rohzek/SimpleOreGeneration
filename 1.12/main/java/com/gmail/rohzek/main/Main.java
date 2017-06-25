@@ -10,6 +10,7 @@ import com.gmail.rohzek.smelting.SmeltingRecipes;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LoadModData;
 import com.gmail.rohzek.util.LogHelper;
+import com.gmail.rohzek.util.TimeOutput;
 import com.gmail.rohzek.util.json.JsonLoader;
 import com.gmail.rohzek.world.SGWorldGen;
 import com.gmail.rohzek.world.SGWorldGenSurface;
@@ -42,6 +43,8 @@ public class Main
 	public static void PreLoad(FMLPreInitializationEvent preEvent)
 	{
 		LogHelper.log("Hello Minecraft, how are you?");
+		LogHelper.log("Did you know that Tony loves Amy?");
+		LogHelper.log("" + TimeOutput.getTimeTogether());
 		
 		LogHelper.debug("Beginning Pre-Initialization");
 		
