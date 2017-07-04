@@ -2,7 +2,9 @@ package com.gmail.rohzek.main;
 
 import java.io.File;
 
+import com.gmail.rohzek.blocks.SetMiningLevels;
 import com.gmail.rohzek.compatibility.CheckForMods;
+import com.gmail.rohzek.compatibility.waila.Waila;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
 import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.proxys.CommonProxy;
@@ -10,6 +12,7 @@ import com.gmail.rohzek.smelting.SmeltingRecipes;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LoadModData;
 import com.gmail.rohzek.util.LogHelper;
+import com.gmail.rohzek.util.TimeOutput;
 import com.gmail.rohzek.util.json.JsonLoader;
 import com.gmail.rohzek.world.SGWorldGen;
 import com.gmail.rohzek.world.SGWorldGenSurface;
@@ -20,6 +23,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -29,7 +33,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  * @author Rohzek
  *
  */
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies="after:forestry,ic2;")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = Reference.DEPENDENCIES)
 public class Main 
 {
 	@Instance(Reference.MODID)
@@ -42,6 +46,8 @@ public class Main
 	public static void PreLoad(FMLPreInitializationEvent preEvent)
 	{
 		LogHelper.log("Hello Minecraft, how are you?");
+		LogHelper.log("Did you know that Tony loves Amy?");
+		LogHelper.log("" + TimeOutput.getTimeTogether());
 		
 		LogHelper.debug("Beginning Pre-Initialization");
 		
@@ -67,9 +73,6 @@ public class Main
 		GameRegistry.registerWorldGenerator(new SGWorldGenSurface(), 0);
 		LogHelper.debug("Finished ore generation information");
 		
-		LogHelper.debug("Adding smelting recipes");
-		SmeltingRecipes.mainRegistry();
-		
 		LogHelper.debug("Pre-Initialization Complete");
 	}
 	
@@ -78,8 +81,14 @@ public class Main
 	{
 		LogHelper.debug("Beginning Initialization");
 		
+		LogHelper.debug("Setting mining levels");
+		SetMiningLevels.set();
+		
 		LogHelper.debug("Registering Proxy Renders");
 		proxy.registerRenders();
+		
+		LogHelper.debug("Registering Waila module");
+		FMLInterModComms.sendMessage("waila", "register", "com.gmail.rohzek.compatibility.waila.Waila.callbackRegister");
 		
 		LogHelper.debug("Initialization Complete");
 	}
@@ -92,9 +101,33 @@ public class Main
 		{
 			CheckForMods.checkForForestry();
 		}
+		
+		else
+		{
+			LogHelper.log("Forestry not installed; Compatibility not loaded");
+		}
+		
 		if(CheckForMods.check("ic2"))
 		{
 			CheckForMods.checkForIC();
 		}
+		
+		else
+		{
+			LogHelper.log("IC2 not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("immersiveengineering"))
+		{
+			CheckForMods.checkForIE();
+		}
+		
+		else
+		{
+			LogHelper.log("Immersive Engineering not installed; Compatibility not loaded");
+		}
+		
+		LogHelper.debug("Adding smelting recipes");
+		SmeltingRecipes.mainRegistry();
 	}
 }

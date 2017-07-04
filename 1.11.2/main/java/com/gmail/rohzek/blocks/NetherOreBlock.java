@@ -31,7 +31,7 @@ import net.minecraft.world.World;
  */
 public class NetherOreBlock extends GenericBlock
 {
-	private static int aggroRange = 32;
+	private static int aggroRange;
 	
 	public NetherOreBlock(String unlocalizedName)
 	{
@@ -39,6 +39,8 @@ public class NetherOreBlock extends GenericBlock
 		this.setRegistryName(unlocalizedName);
 		
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		
+		this.aggroRange = ConfigurationManager.aggroRange;
 	}
 	
 	@Override
@@ -98,6 +100,11 @@ public class NetherOreBlock extends GenericBlock
 		{
 			angerPigmen(player, world, pos);
 		}
+	}
+	
+	public int getAggroRange()
+	{
+		return aggroRange;
 	}
 	
 	private void angerPigmen(EntityPlayer player, World world, BlockPos pos)

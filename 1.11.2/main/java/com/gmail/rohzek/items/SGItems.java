@@ -18,16 +18,24 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class SGItems 
 {
+	public static final Item ALUMINUM_INGOT = new ItemIngot("aluminumIngot");
 	public static final Item COPPER_INGOT = new ItemIngot("copperIngot");
 	public static final Item LEAD_INGOT = new ItemIngot("leadIngot");
+	public static final Item NICKEL_INGOT = new ItemIngot("nickelIngot");
+	public static final Item SILVER_INGOT = new ItemIngot("silverIngot");
 	public static final Item TIN_INGOT = new ItemIngot("tinIngot");
+	public static final Item URANIUM_INGOT = new ItemIngot("uraniumIngot");
 	public static final Item HEART_DIAMOND = new HeartDiamondItem("heartDiamond");
 	
 	public static void registerRenders() 
 	{
+		registerRender(ALUMINUM_INGOT);
 		registerRender(COPPER_INGOT);
 		registerRender(LEAD_INGOT);
+		registerRender(NICKEL_INGOT);
+		registerRender(SILVER_INGOT);
 		registerRender(TIN_INGOT);
+		registerRender(URANIUM_INGOT);
 		registerRender(HEART_DIAMOND);
 		
 		registerOreDict();
@@ -35,9 +43,13 @@ public class SGItems
 	
 	public static void registerOreDict()
 	{
+		OreDictionary.registerOre("ingotAluminum", ALUMINUM_INGOT);
 		OreDictionary.registerOre("ingotCopper", COPPER_INGOT);
 		OreDictionary.registerOre("ingotLead", LEAD_INGOT);
+		OreDictionary.registerOre("ingotNickel", NICKEL_INGOT);
+		OreDictionary.registerOre("ingotSilver", SILVER_INGOT);
 		OreDictionary.registerOre("ingotTin", TIN_INGOT);
+		OreDictionary.registerOre("ingotUranium", URANIUM_INGOT);
 		OreDictionary.registerOre("gemDiamond", HEART_DIAMOND);
 	}
 	
@@ -61,9 +73,13 @@ public class SGItems
 		{
 			final Item[] items =
 			{
+					ALUMINUM_INGOT,
 					COPPER_INGOT,
 					LEAD_INGOT,
+					NICKEL_INGOT,
+					SILVER_INGOT,
 					TIN_INGOT,
+					URANIUM_INGOT,
 					HEART_DIAMOND,
 			};
 			

@@ -7,6 +7,7 @@ import com.gmail.rohzek.compatibility.ModdedConstants;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.json.JsonLoadICBlocks;
 import com.gmail.rohzek.util.json.JsonLoaderForestryBlocks;
+import com.gmail.rohzek.util.json.JsonLoaderIEBlocks;
 import com.gmail.rohzek.util.json.JsonNeutralModBlocks;
 import com.gmail.rohzek.util.json.JsonParser;
 
@@ -56,20 +57,29 @@ public class SGWorldGen implements IWorldGenerator
 	
 	// Modded Surface Ores
 	private WorldGenerator surfaceApatiteOre;
+	private WorldGenerator surfaceBauxiteOre;
 	private WorldGenerator surfaceCopperOre;
 	private WorldGenerator surfaceLeadOre;
+	private WorldGenerator surfaceNickelOre;
+	private WorldGenerator surfaceSilverOre;
 	private WorldGenerator surfaceTinOre;
 	private WorldGenerator surfaceUraniumOre;
 	
 	// Modded Nether Ores
+	private WorldGenerator netherBauxiteOre;
 	private WorldGenerator netherCopperOre;
 	private WorldGenerator netherLeadOre;
+	private WorldGenerator netherNickelOre;
+	private WorldGenerator netherSilverOre;
 	private WorldGenerator netherTinOre;
 	private WorldGenerator netherUraniumOre;
 	
 	// Modded End Ores
+	private WorldGenerator endBauxiteOre;
 	private WorldGenerator endCopperOre;
 	private WorldGenerator endLeadOre;
+	private WorldGenerator endNickelOre;
+	private WorldGenerator endSilverOre;
 	private WorldGenerator endTinOre;
 	private WorldGenerator endUraniumOre;
 	
@@ -104,20 +114,29 @@ public class SGWorldGen implements IWorldGenerator
 		this.endRedstoneOre = new SGWorldGenMineable(SGOres.END_REDSTONE_ORE.getDefaultState(), blockSize(JsonParser.loadEndRedstoneOre().get("veinMinimum").getAsInt(), JsonParser.loadEndRedstoneOre().get("veinMultiplier").getAsInt()), 1);
 	
 		// Modded Surface Ores
+		this.surfaceBauxiteOre = new SGWorldGenMineable(SGOres.SURFACE_BAUXITE_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadSurfaceBauxite().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadSurfaceBauxite().get("veinMultiplier").getAsInt()), 0);
 		this.surfaceCopperOre = new SGWorldGenMineable(SGOres.SURFACE_COPPER_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadSurfaceCopper().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadSurfaceCopper().get("veinMultiplier").getAsInt()), 0);
 		this.surfaceLeadOre = new SGWorldGenMineable(SGOres.SURFACE_LEAD_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadSurfaceLead().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadSurfaceLead().get("veinMultiplier").getAsInt()), 0);
+		this.surfaceNickelOre = new SGWorldGenMineable(SGOres.SURFACE_NICKEL_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadSurfaceNickel().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadSurfaceNickel().get("veinMultiplier").getAsInt()), 0);
+		this.surfaceSilverOre = new SGWorldGenMineable(SGOres.SURFACE_SILVER_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadSurfaceSilver().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadSurfaceSilver().get("veinMultiplier").getAsInt()), 0);
 		this.surfaceTinOre = new SGWorldGenMineable(SGOres.SURFACE_TIN_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadSurfaceLead().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadSurfaceLead().get("veinMultiplier").getAsInt()), 0);
 		this.surfaceUraniumOre = new SGWorldGenMineable(SGOres.SURFACE_URANIUM_ORE.getDefaultState(), blockSize(JsonLoadICBlocks.loadSurfaceUranium().get("veinMinimum").getAsInt(), JsonLoadICBlocks.loadSurfaceUranium().get("veinMultiplier").getAsInt()), 0);
 		
 		// Modded Nether Ores
+		this.netherBauxiteOre = new SGWorldGenMineable(SGOres.NETHER_BAUXITE_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadNetherBauxite().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadNetherBauxite().get("veinMultiplier").getAsInt()), -1);
 		this.netherCopperOre = new SGWorldGenMineable(SGOres.NETHER_COPPER_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadNetherCopper().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadNetherCopper().get("veinMultiplier").getAsInt()), -1);
 		this.netherLeadOre = new SGWorldGenMineable(SGOres.NETHER_LEAD_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadNetherLead().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadNetherLead().get("veinMultiplier").getAsInt()), -1);
+		this.netherNickelOre = new SGWorldGenMineable(SGOres.NETHER_NICKEL_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadNetherNickel().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadNetherNickel().get("veinMultiplier").getAsInt()), -1);
+		this.netherSilverOre = new SGWorldGenMineable(SGOres.NETHER_SILVER_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadNetherSilver().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadNetherSilver().get("veinMultiplier").getAsInt()), -1);
 		this.netherTinOre = new SGWorldGenMineable(SGOres.NETHER_TIN_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadNetherTin().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadNetherTin().get("veinMultiplier").getAsInt()), -1);
 		this.netherUraniumOre = new SGWorldGenMineable(SGOres.NETHER_URANIUM_ORE.getDefaultState(), blockSize(JsonLoadICBlocks.loadNetherUranium().get("veinMinimum").getAsInt(), JsonLoadICBlocks.loadNetherUranium().get("veinMultiplier").getAsInt()), -1);
 		
 		// Modded End Ores
+		this.endBauxiteOre = new SGWorldGenMineable(SGOres.END_BAUXITE_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadEndBauxite().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadEndBauxite().get("veinMultiplier").getAsInt()), 1);
 		this.endCopperOre = new SGWorldGenMineable(SGOres.END_COPPER_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadEndCopper().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadEndCopper().get("veinMultiplier").getAsInt()), 1);
 		this.endLeadOre = new SGWorldGenMineable(SGOres.END_LEAD_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadEndLead().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadEndLead().get("veinMultiplier").getAsInt()), 1);
+		this.endNickelOre = new SGWorldGenMineable(SGOres.END_NICKEL_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadEndNickel().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadEndNickel().get("veinMultiplier").getAsInt()), 1);
+		this.endSilverOre = new SGWorldGenMineable(SGOres.END_SILVER_ORE.getDefaultState(), blockSize(JsonLoaderIEBlocks.loadEndSilver().get("veinMinimum").getAsInt(), JsonLoaderIEBlocks.loadEndSilver().get("veinMultiplier").getAsInt()), 1);
 		this.endTinOre = new SGWorldGenMineable(SGOres.END_TIN_ORE.getDefaultState(), blockSize(JsonNeutralModBlocks.loadEndTin().get("veinMinimum").getAsInt(), JsonNeutralModBlocks.loadEndTin().get("veinMultiplier").getAsInt()), 1);
 		this.endUraniumOre = new SGWorldGenMineable(SGOres.END_URANIUM_ORE.getDefaultState(), blockSize(JsonLoadICBlocks.loadEndUranium().get("veinMinimum").getAsInt(), JsonLoadICBlocks.loadEndUranium().get("veinMultiplier").getAsInt()), 1);
 		
@@ -236,6 +255,30 @@ public class SGWorldGen implements IWorldGenerator
 		{
 			generateForestrySurfaceOres(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
 		}
+		
+		if(ModdedConstants.bauxiteOre)
+		{
+			if(!JsonLoaderIEBlocks.loadSurfaceBauxite().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.surfaceBauxiteOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadSurfaceBauxite().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadSurfaceBauxite().get("minY").getAsInt(), JsonLoaderIEBlocks.loadSurfaceBauxite().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.nickelOre)
+		{
+			if(!JsonLoaderIEBlocks.loadSurfaceNickel().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.surfaceNickelOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadSurfaceNickel().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadSurfaceNickel().get("minY").getAsInt(), JsonLoaderIEBlocks.loadSurfaceNickel().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.silverOre)
+		{
+			if(!JsonLoaderIEBlocks.loadSurfaceSilver().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.surfaceSilverOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadSurfaceSilver().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadSurfaceSilver().get("minY").getAsInt(), JsonLoaderIEBlocks.loadSurfaceSilver().get("maxY").getAsInt());
+			}
+		}
 	}
 	
 	@Optional.Method(modid = "forestry")
@@ -330,6 +373,30 @@ public class SGWorldGen implements IWorldGenerator
 				runGenerator(this.netherUraniumOre, world, random, chunkX, chunkZ, JsonLoadICBlocks.loadNetherUranium().get("rarity").getAsInt(), JsonLoadICBlocks.loadNetherUranium().get("minY").getAsInt(), JsonLoadICBlocks.loadNetherUranium().get("maxY").getAsInt());
 			}
 		}
+		
+		if(ModdedConstants.bauxiteOre)
+		{
+			if(!JsonLoaderIEBlocks.loadNetherBauxite().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.netherBauxiteOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadNetherBauxite().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadNetherBauxite().get("minY").getAsInt(), JsonLoaderIEBlocks.loadNetherBauxite().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.nickelOre)
+		{
+			if(!JsonLoaderIEBlocks.loadNetherNickel().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.netherNickelOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadNetherNickel().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadNetherNickel().get("minY").getAsInt(), JsonLoaderIEBlocks.loadNetherNickel().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.silverOre)
+		{
+			if(!JsonLoaderIEBlocks.loadNetherSilver().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.netherSilverOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadNetherSilver().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadNetherSilver().get("minY").getAsInt(), JsonLoaderIEBlocks.loadNetherSilver().get("maxY").getAsInt());
+			}
+		}
 	}
 	
 	private void generateVanillaEnderOres(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
@@ -401,6 +468,30 @@ public class SGWorldGen implements IWorldGenerator
 			if(!JsonLoadICBlocks.loadEndUranium().get("disableOre").getAsBoolean())
 			{
 				runGenerator(this.endUraniumOre, world, random, chunkX, chunkZ, JsonLoadICBlocks.loadEndUranium().get("rarity").getAsInt(), JsonLoadICBlocks.loadEndUranium().get("minY").getAsInt(), JsonLoadICBlocks.loadEndUranium().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.bauxiteOre)
+		{
+			if(!JsonLoaderIEBlocks.loadEndBauxite().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.endBauxiteOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadEndBauxite().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadEndBauxite().get("minY").getAsInt(), JsonLoaderIEBlocks.loadEndBauxite().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.nickelOre)
+		{
+			if(!JsonLoaderIEBlocks.loadEndNickel().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.endNickelOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadEndNickel().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadEndNickel().get("minY").getAsInt(), JsonLoaderIEBlocks.loadEndNickel().get("maxY").getAsInt());
+			}
+		}
+		
+		if(ModdedConstants.silverOre)
+		{
+			if(!JsonLoaderIEBlocks.loadEndSilver().get("disableOre").getAsBoolean())
+			{
+				runGenerator(this.endSilverOre, world, random, chunkX, chunkZ, JsonLoaderIEBlocks.loadEndSilver().get("rarity").getAsInt(), JsonLoaderIEBlocks.loadEndSilver().get("minY").getAsInt(), JsonLoaderIEBlocks.loadEndSilver().get("maxY").getAsInt());
 			}
 		}
 	}

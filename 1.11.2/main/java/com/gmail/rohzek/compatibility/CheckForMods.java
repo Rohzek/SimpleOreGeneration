@@ -29,4 +29,13 @@ public class CheckForMods
 			ICCompat.load();
 		}
 	}
+	
+	@Optional.Method(modid = "immersiveengineering")
+	public static void checkForIE()
+	{
+		if(ConfigurationManager.supportIE)
+		{
+			IECompat.load();
+		}
+	}
 }
