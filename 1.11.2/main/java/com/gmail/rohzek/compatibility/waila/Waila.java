@@ -41,6 +41,7 @@ public class Waila implements IWailaDataProvider
 	@Override
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
 	{
+		if(ConfigurationManager.supportWaila && ConfigurationManager.zombiePigsAttack)
 		{
 			addTipToNetherBlock(currenttip, accessor);
 		}
