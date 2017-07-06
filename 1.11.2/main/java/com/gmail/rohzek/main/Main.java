@@ -2,10 +2,14 @@ package com.gmail.rohzek.main;
 
 import java.io.File;
 
+import com.gmail.rohzek.blocks.SGBlocks;
+import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.blocks.SetMiningLevels;
 import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.compatibility.waila.Waila;
+import com.gmail.rohzek.crafting.CraftingManager;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
+import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.proxys.CommonProxy;
 import com.gmail.rohzek.smelting.SmeltingRecipes;
@@ -127,7 +131,13 @@ public class Main
 			LogHelper.log("Immersive Engineering not installed; Compatibility not loaded");
 		}
 		
-		LogHelper.debug("Adding smelting recipes");
+		LogHelper.debug("Adding smelting and crafting recipes");
 		SmeltingRecipes.mainRegistry();
+		CraftingManager.mainRegistry();
+		
+		LogHelper.debug("Adding Ore Dict entries");
+		SGItems.registerOreDict();
+		SGOres.registerOreDict();
+		SGBlocks.registerOreDict();
 	}
 }

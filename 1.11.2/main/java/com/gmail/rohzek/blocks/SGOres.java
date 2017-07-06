@@ -31,6 +31,7 @@ public class SGOres
 	public static Block SURFACE_COPPER_ORE = new SurfaceOreBlock("surfaceCopperOre");
 	public static Block SURFACE_LEAD_ORE = new SurfaceOreBlock("surfaceLeadOre");
 	public static Block SURFACE_NICKEL_ORE = new SurfaceOreBlock("surfaceNickelOre");
+	public static Block SURFACE_QUARTZ_ORE = new SurfaceOreBlock("surfaceQuartzOre");
 	public static Block SURFACE_SILVER_ORE = new SurfaceOreBlock("surfaceSilverOre");
 	public static Block SURFACE_TIN_ORE = new SurfaceOreBlock("surfaceTinOre");
 	public static Block SURFACE_URANIUM_ORE = new SurfaceOreBlock("surfaceUraniumOre");
@@ -63,6 +64,7 @@ public class SGOres
 	public static Block END_LAPIS_ORE = new EndOreBlock("endLapisOre");
 	public static Block END_LEAD_ORE = new EndOreBlock("endLeadOre");
 	public static Block END_NICKEL_ORE = new EndOreBlock("endNickelOre");
+	public static Block END_QUARTZ_ORE = new EndOreBlock("endQuartzOre");
 	public static Block END_REDSTONE_ORE = new EndOreBlock("endRedstoneOre");
 	public static Block END_SILVER_ORE = new EndOreBlock("endSilverOre");
 	public static Block END_TIN_ORE = new EndOreBlock("endTinOre");
@@ -73,6 +75,7 @@ public class SGOres
 	public static ItemBlock SURFACE_COPPER_ORE_ITEM = new ItemBlock(SURFACE_COPPER_ORE);
 	public static ItemBlock SURFACE_LEAD_ORE_ITEM = new ItemBlock(SURFACE_LEAD_ORE);
 	public static ItemBlock SURFACE_NICKEL_ORE_ITEM = new ItemBlock(SURFACE_NICKEL_ORE);
+	public static ItemBlock SURFACE_QUARTZ_ORE_ITEM = new ItemBlock(SURFACE_QUARTZ_ORE);
 	public static ItemBlock SURFACE_SILVER_ORE_ITEM = new ItemBlock(SURFACE_SILVER_ORE);
 	public static ItemBlock SURFACE_TIN_ORE_ITEM = new ItemBlock(SURFACE_TIN_ORE);
 	public static ItemBlock SURFACE_URANIUM_ORE_ITEM = new ItemBlock(SURFACE_URANIUM_ORE);
@@ -105,6 +108,7 @@ public class SGOres
 	public static ItemBlock END_LAPIS_ORE_ITEM = new ItemBlock(END_LAPIS_ORE);
 	public static ItemBlock END_LEAD_ORE_ITEM = new ItemBlock(END_LEAD_ORE);
 	public static ItemBlock END_NICKEL_ORE_ITEM = new ItemBlock(END_NICKEL_ORE);
+	public static ItemBlock END_QUARTZ_ORE_ITEM = new ItemBlock(END_QUARTZ_ORE);
 	public static ItemBlock END_REDSTONE_ORE_ITEM = new ItemBlock(END_REDSTONE_ORE);
 	public static ItemBlock END_SILVER_ORE_ITEM = new ItemBlock(END_SILVER_ORE);
 	public static ItemBlock END_TIN_ORE_ITEM = new ItemBlock(END_TIN_ORE);
@@ -116,6 +120,7 @@ public class SGOres
 		registerRender(SURFACE_COPPER_ORE);
 		registerRender(SURFACE_LEAD_ORE);
 		registerRender(SURFACE_NICKEL_ORE);
+		registerRender(SURFACE_QUARTZ_ORE);
 		registerRender(SURFACE_SILVER_ORE);
 		registerRender(SURFACE_TIN_ORE);
 		registerRender(SURFACE_URANIUM_ORE);
@@ -144,12 +149,11 @@ public class SGOres
 		registerRender(END_LAPIS_ORE);
 		registerRender(END_LEAD_ORE);
 		registerRender(END_NICKEL_ORE);
+		registerRender(END_QUARTZ_ORE);
 		registerRender(END_REDSTONE_ORE);
 		registerRender(END_SILVER_ORE);
 		registerRender(END_TIN_ORE);
 		registerRender(END_URANIUM_ORE);
-		
-		registerOreDict();
 	}
 	
 	public static void registerOreDict()
@@ -158,6 +162,7 @@ public class SGOres
 		OreDictionary.registerOre("oreCopper", SURFACE_COPPER_ORE);
 		OreDictionary.registerOre("oreLead", SURFACE_LEAD_ORE);
 		OreDictionary.registerOre("oreNickel", SURFACE_NICKEL_ORE);
+		OreDictionary.registerOre("oreQuartz", SURFACE_QUARTZ_ORE);
 		OreDictionary.registerOre("oreSilver", SURFACE_SILVER_ORE);
 		OreDictionary.registerOre("oreTin", SURFACE_TIN_ORE);
 		OreDictionary.registerOre("oreUranium", SURFACE_URANIUM_ORE);
@@ -186,6 +191,7 @@ public class SGOres
 		OreDictionary.registerOre("oreLapis", END_LAPIS_ORE);
 		OreDictionary.registerOre("oreLead", END_LEAD_ORE);
 		OreDictionary.registerOre("oreNickel", END_NICKEL_ORE);
+		OreDictionary.registerOre("oreQuartz", END_QUARTZ_ORE);
 		OreDictionary.registerOre("oreRedstone", END_REDSTONE_ORE);
 		OreDictionary.registerOre("oreSilver", END_SILVER_ORE);
 		OreDictionary.registerOre("oreTin", END_TIN_ORE);
@@ -213,6 +219,7 @@ public class SGOres
 					SURFACE_COPPER_ORE,
 					SURFACE_LEAD_ORE,
 					SURFACE_NICKEL_ORE,
+					SURFACE_QUARTZ_ORE,
 					SURFACE_SILVER_ORE,
 					SURFACE_TIN_ORE,
 					SURFACE_URANIUM_ORE,
@@ -241,6 +248,7 @@ public class SGOres
 					END_LAPIS_ORE,
 					END_LEAD_ORE,
 					END_NICKEL_ORE,
+					END_QUARTZ_ORE,
 					END_REDSTONE_ORE,
 					END_SILVER_ORE,
 					END_TIN_ORE,
@@ -259,6 +267,7 @@ public class SGOres
 					SURFACE_COPPER_ORE_ITEM,
 					SURFACE_LEAD_ORE_ITEM,
 					SURFACE_NICKEL_ORE_ITEM,
+					SURFACE_QUARTZ_ORE_ITEM,
 					SURFACE_SILVER_ORE_ITEM,
 					SURFACE_TIN_ORE_ITEM,
 					SURFACE_URANIUM_ORE_ITEM,
@@ -287,6 +296,7 @@ public class SGOres
 					END_LAPIS_ORE_ITEM,
 					END_LEAD_ORE_ITEM,
 					END_NICKEL_ORE_ITEM,
+					END_QUARTZ_ORE_ITEM,
 					END_REDSTONE_ORE_ITEM,
 					END_SILVER_ORE_ITEM,
 					END_TIN_ORE_ITEM,

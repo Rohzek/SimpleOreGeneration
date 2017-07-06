@@ -26,8 +26,6 @@ public class SGBlocks
 	public static void registerRenders()
 	{
 		registerRender(CHESHIREROSE);
-		
-		registerOreDict();
 	}
 	
 	public static void registerOreDict()

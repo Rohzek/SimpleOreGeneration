@@ -7,6 +7,8 @@ import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.util.LogHelper;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -22,6 +24,7 @@ public class SGItems
 	public static final Item COPPER_INGOT = new ItemIngot("copperIngot");
 	public static final Item LEAD_INGOT = new ItemIngot("leadIngot");
 	public static final Item NICKEL_INGOT = new ItemIngot("nickelIngot");
+	public static final Item QUARTZ = new Item().setRegistryName("quartz").setUnlocalizedName("quartz").setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_INGOT = new ItemIngot("silverIngot");
 	public static final Item TIN_INGOT = new ItemIngot("tinIngot");
 	public static final Item URANIUM_INGOT = new ItemIngot("uraniumIngot");
@@ -33,12 +36,11 @@ public class SGItems
 		registerRender(COPPER_INGOT);
 		registerRender(LEAD_INGOT);
 		registerRender(NICKEL_INGOT);
+		registerRender(QUARTZ);
 		registerRender(SILVER_INGOT);
 		registerRender(TIN_INGOT);
 		registerRender(URANIUM_INGOT);
 		registerRender(HEART_DIAMOND);
-		
-		registerOreDict();
 	}
 	
 	public static void registerOreDict()
@@ -47,6 +49,7 @@ public class SGItems
 		OreDictionary.registerOre("ingotCopper", COPPER_INGOT);
 		OreDictionary.registerOre("ingotLead", LEAD_INGOT);
 		OreDictionary.registerOre("ingotNickel", NICKEL_INGOT);
+		OreDictionary.registerOre("gemQuartz", QUARTZ);
 		OreDictionary.registerOre("ingotSilver", SILVER_INGOT);
 		OreDictionary.registerOre("ingotTin", TIN_INGOT);
 		OreDictionary.registerOre("ingotUranium", URANIUM_INGOT);
@@ -77,6 +80,7 @@ public class SGItems
 					COPPER_INGOT,
 					LEAD_INGOT,
 					NICKEL_INGOT,
+					QUARTZ,
 					SILVER_INGOT,
 					TIN_INGOT,
 					URANIUM_INGOT,

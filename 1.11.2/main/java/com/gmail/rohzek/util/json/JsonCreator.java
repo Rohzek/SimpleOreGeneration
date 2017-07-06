@@ -129,6 +129,19 @@ public class JsonCreator
 		
 		vanilla.add(vLapisOre);
 		
+		// surfaceQuartzOre
+		JsonObject sQuartz = new JsonObject();
+		
+		sQuartz.addProperty("ore", "SurfaceQuartzOre");
+		sQuartz.addProperty("minY", surfaceMinY);
+		sQuartz.addProperty("maxY", 21);
+		sQuartz.addProperty("rarity", 2 * 4);
+		sQuartz.addProperty("veinMinimum", 4);
+		sQuartz.addProperty("veinMultiplier", 7);
+		sQuartz.addProperty("disableOre", false);
+		
+		vanilla.add(sQuartz);
+				
 		 // vanillaRedstoneOre
 		JsonObject vRedstoneOre = new JsonObject();
 		
@@ -334,6 +347,19 @@ public class JsonCreator
 		
 		end.add(eLapisOre);
 		
+		// netherDiamondOre
+		JsonObject eQuartzOre = new JsonObject();
+		
+		eQuartzOre.addProperty("ore", "EndQuartzOre");
+		eQuartzOre.addProperty("minY", endMinY);
+		eQuartzOre.addProperty("maxY", endMaxY);
+		eQuartzOre.addProperty("rarity", 2 * 4);
+		eQuartzOre.addProperty("veinMinimum", 4);
+		eQuartzOre.addProperty("veinMultiplier", 7);
+		eQuartzOre.addProperty("disableOre", false);
+		
+		end.add(eQuartzOre);
+				
 		// netherRedstoneOre
 		JsonObject eRedstoneOre = new JsonObject();
 		

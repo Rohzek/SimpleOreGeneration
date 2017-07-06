@@ -4,7 +4,7 @@ import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
-//import forestry.core.config.Config;
+import forestry.core.config.Config;
 import net.minecraft.block.Block;
 
 public class ForestryCompat 
@@ -20,11 +20,9 @@ public class ForestryCompat
 	{
 		if(ConfigurationManager.supportForestry)
 		{
-			/*
 			Config.generateApatiteOre = false;
 			Config.generateCopperOre = false;
 			Config.generateTinOre = false;
-			*/
 		}
 	}
 	

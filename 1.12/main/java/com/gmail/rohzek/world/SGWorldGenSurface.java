@@ -1,11 +1,9 @@
 package com.gmail.rohzek.world;
 
 import java.util.Random;
-
 import com.gmail.rohzek.blocks.CheshireRose;
 import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.util.ConfigurationManager;
-
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -16,7 +14,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 public class SGWorldGenSurface implements IWorldGenerator
 {
 	WorldGenerator cheshireRose = new SGWorldGenCheshireRose((CheshireRose)SGBlocks.CHESHIREROSE);
-
+	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{

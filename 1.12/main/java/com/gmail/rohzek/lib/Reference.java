@@ -21,11 +21,14 @@ public class Reference
 	// Human readable title
 	public static final String NAME = "Simple Ore Generation";
 	
+	// Mods to load after
+	public static final String DEPENDENCIES = "after:forestry,ic2,immersiveengineering;";
+	
 	// Folder holding config data
 	public static File LOCATION; 
 	
 	// We only have to change it here... MCMOD.info is gone and the ModData is hardcoded to check here
-	public static final String VERSION = "3.4.7";
+	public static final String VERSION = "4.0.6";
 	
 	public static final String CLIENTSIDEPROXY = "com.gmail.rohzek.proxys.ClientProxy";
 	

@@ -2,6 +2,8 @@ package com.gmail.rohzek.blocks;
 
 import java.util.Random;
 
+import com.gmail.rohzek.items.SGItems;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -37,7 +39,8 @@ public class EndOreBlock extends GenericBlock
         return this == SGOres.END_COAL_ORE     ? Items.COAL :
         	   this == SGOres.END_DIAMOND_ORE  ? Items.DIAMOND :
         	   this == SGOres.END_EMERALD_ORE  ? Items.EMERALD :
-        	   this == SGOres.END_LAPIS_ORE    ?  Items.DYE :
+        	   this == SGOres.END_LAPIS_ORE    ? Items.DYE :
+        	   this == SGOres.END_QUARTZ_ORE   ? SGItems.QUARTZ :
         	   this == SGOres.END_REDSTONE_ORE ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }
@@ -45,9 +48,10 @@ public class EndOreBlock extends GenericBlock
 	@Override
 	public int quantityDropped(Random random)
     {
-		return  this == SGOres.END_COAL_ORE     ? 1 + random.nextInt(2) :
-     	   		this == SGOres.END_LAPIS_ORE    ? 1 + random.nextInt(8) : 
-     	   		this == SGOres.END_REDSTONE_ORE ? 1 + random.nextInt(5) :
+		return  this == SGOres.END_COAL_ORE      ? 1 + random.nextInt(2) :
+     	   		this == SGOres.END_LAPIS_ORE     ? 1 + random.nextInt(8) : 
+     	   		this == SGOres.END_QUARTZ_ORE    ? 1 + random.nextInt(3) :
+     	   		this == SGOres.END_REDSTONE_ORE  ? 1 + random.nextInt(5) :
      	   		1;
     }
 	

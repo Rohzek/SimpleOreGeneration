@@ -27,6 +27,7 @@ public class LoadModData
 		m.logoFile = Reference.RESOURCEID + "logo.png";
 		LogHelper.debug("Our logo should be loaded from: " + Reference.RESOURCEID + "logo.png");
 		m.authorList.add("Rohzek");
+		m.authorList.add("CheshireRose");
 		
 	}
 }

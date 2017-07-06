@@ -26,24 +26,28 @@ public class OreSpawnBlockEvent
 		
 		if(ConfigurationManager.changeVanilla)
 		{
-			if(ConfigurationManager.supportNewDims)
+			if(dimID == -1) // Nether
+			{
+				blockNetherOres(event);
+			}
+			
+			else if(dimID == 0) // Overworld
 			{
 				blockOres(event);
 			}
-			else // If support for custom ores is turned off
+			
+			else if(dimID == 1) // End
+			{}
+			
+			else if(ConfigurationManager.supportNewDims)
 			{
-				if(dimID == -1 || dimID == 0) // Only block ore spawns in the nether and overworld
-				{
-					blockOres(event);
-				}
+				blockOres(event);
 			}
 		}
 	}
 	
 	private void blockOres(OreGenEvent.GenerateMinable event)
 	{
-		
-		
 		// We want to skip Silverfish and Custom blocks when searching, so remove the last 2
 		for(int i = 0; i < (ores.size() - 2); i++)
 		{
@@ -52,10 +56,6 @@ public class OreSpawnBlockEvent
 				LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
 				
 				event.setResult(Result.DENY);
-			}
-			else
-			{
-				blockCustomOres(event);
 			}
 		}
 	}
@@ -95,18 +95,13 @@ public class OreSpawnBlockEvent
 		}
 	}
 	
-	private void blockCustomOres(OreGenEvent.GenerateMinable event)
+	private void blockNetherOres(OreGenEvent.GenerateMinable event)
 	{
-		/*
-		if(ConfigurationManager.supportNewOres)
+		if(event.getType() == EventType.QUARTZ)
 		{
-			if(event.getType() == EventType.CUSTOM)
-			{
-				LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
-				
-				event.setResult(Result.DENY);
-			}
+			LogHelper.debug("Blocked ore of type: " + event.getType() + " From spawning.");
+			
+			event.setResult(Result.DENY);
 		}
-		*/
 	}
 }

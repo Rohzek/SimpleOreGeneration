@@ -48,6 +48,9 @@ public class JsonCreator
 		// IC2 Array
 		JsonArray ic = new JsonArray();
 		
+		// IE Array
+		JsonArray ie = new JsonArray();
+		
 		// vanillaCoalOre
 		JsonObject vCoalOre = new JsonObject();
 		
@@ -126,6 +129,19 @@ public class JsonCreator
 		
 		vanilla.add(vLapisOre);
 		
+		// surfaceQuartzOre
+		JsonObject sQuartz = new JsonObject();
+		
+		sQuartz.addProperty("ore", "SurfaceQuartzOre");
+		sQuartz.addProperty("minY", surfaceMinY);
+		sQuartz.addProperty("maxY", 21);
+		sQuartz.addProperty("rarity", 2 * 4);
+		sQuartz.addProperty("veinMinimum", 4);
+		sQuartz.addProperty("veinMultiplier", 7);
+		sQuartz.addProperty("disableOre", false);
+		
+		vanilla.add(sQuartz);
+				
 		 // vanillaRedstoneOre
 		JsonObject vRedstoneOre = new JsonObject();
 		
@@ -331,6 +347,19 @@ public class JsonCreator
 		
 		end.add(eLapisOre);
 		
+		// netherDiamondOre
+		JsonObject eQuartzOre = new JsonObject();
+		
+		eQuartzOre.addProperty("ore", "EndQuartzOre");
+		eQuartzOre.addProperty("minY", endMinY);
+		eQuartzOre.addProperty("maxY", endMaxY);
+		eQuartzOre.addProperty("rarity", 2 * 4);
+		eQuartzOre.addProperty("veinMinimum", 4);
+		eQuartzOre.addProperty("veinMultiplier", 7);
+		eQuartzOre.addProperty("disableOre", false);
+		
+		end.add(eQuartzOre);
+				
 		// netherRedstoneOre
 		JsonObject eRedstoneOre = new JsonObject();
 		
@@ -363,6 +392,7 @@ public class JsonCreator
 		oCopper.addProperty("rarity", 10 * 3);
 		oCopper.addProperty("veinMinimum", 5);
 		oCopper.addProperty("veinMultiplier", 19);
+		oCopper.addProperty("miningLevel", "STONE");
 		oCopper.addProperty("disableOre", false);
 		
 		neutral.add(oCopper);
@@ -376,6 +406,7 @@ public class JsonCreator
 		oTin.addProperty("rarity", 24 * 3);
 		oTin.addProperty("veinMinimum", 3);
 		oTin.addProperty("veinMultiplier", 19);
+		oTin.addProperty("miningLevel", "STONE");
 		oTin.addProperty("disableOre", false);
 		
 		neutral.add(oTin);
@@ -389,6 +420,7 @@ public class JsonCreator
 		oLead.addProperty("rarity", 10 * 2);
 		oLead.addProperty("veinMinimum", 5);
 		oLead.addProperty("veinMultiplier", 19);
+		oLead.addProperty("miningLevel", "IRON");
 		oLead.addProperty("disableOre", false);
 		
 		neutral.add(oLead);
@@ -402,6 +434,7 @@ public class JsonCreator
 		nCopper.addProperty("rarity", 10 * 3);
 		nCopper.addProperty("veinMinimum", 5);
 		nCopper.addProperty("veinMultiplier", 19);
+		nCopper.addProperty("miningLevel", "STONE");
 		nCopper.addProperty("disableOre", false);
 				
 		neutral.add(nCopper);
@@ -415,6 +448,7 @@ public class JsonCreator
 		nTin.addProperty("rarity", 24 * 3);
 		nTin.addProperty("veinMinimum", 5);
 		nTin.addProperty("veinMultiplier", 19);
+		nTin.addProperty("miningLevel", "STONE");
 		nTin.addProperty("disableOre", false);
 				
 		neutral.add(nTin);
@@ -428,6 +462,7 @@ public class JsonCreator
 		nLead.addProperty("rarity", 10 * 3);
 		nLead.addProperty("veinMinimum", 5);
 		nLead.addProperty("veinMultiplier", 19);
+		nLead.addProperty("miningLevel", "IRON");
 		nLead.addProperty("disableOre", false);
 		
 		neutral.add(nLead);
@@ -441,6 +476,7 @@ public class JsonCreator
 		eCopper.addProperty("rarity", 10 * 3);
 		eCopper.addProperty("veinMinimum", 5);
 		eCopper.addProperty("veinMultiplier", 17);
+		eCopper.addProperty("miningLevel", "STONE");
 		eCopper.addProperty("disableOre", false);
 				
 		neutral.add(eCopper);
@@ -454,6 +490,7 @@ public class JsonCreator
 		eTin.addProperty("rarity", 24 * 2);
 		eTin.addProperty("veinMinimum", 7);
 		eTin.addProperty("veinMultiplier", 10);
+		eTin.addProperty("miningLevel", "STONE");
 		eTin.addProperty("disableOre", false);
 				
 		neutral.add(eTin);
@@ -467,6 +504,7 @@ public class JsonCreator
 		eLead.addProperty("rarity", 10 * 3);
 		eLead.addProperty("veinMinimum", 4);
 		eLead.addProperty("veinMultiplier", 9);
+		eLead.addProperty("miningLevel", "IRON");
 		eLead.addProperty("disableOre", false);
 		
 		neutral.add(eLead);
@@ -506,6 +544,7 @@ public class JsonCreator
 		oUranium.addProperty("rarity", 2 * 2);
 		oUranium.addProperty("veinMinimum", 4);
 		oUranium.addProperty("veinMultiplier", 8);
+		oUranium.addProperty("miningLevel", "IRON");
 		oUranium.addProperty("disableOre", false);
 		
 		ic.add(oUranium);
@@ -519,6 +558,7 @@ public class JsonCreator
 		nUranium.addProperty("rarity", 2 * 3);
 		nUranium.addProperty("veinMinimum", 4);
 		nUranium.addProperty("veinMultiplier", 8);
+		nUranium.addProperty("miningLevel", "IRON");
 		nUranium.addProperty("disableOre", false);
 			
 		ic.add(nUranium);
@@ -532,6 +572,7 @@ public class JsonCreator
 		eUranium.addProperty("rarity", 2 * 3);
 		eUranium.addProperty("veinMinimum", 4);
 		eUranium.addProperty("veinMultiplier", 8);
+		eUranium.addProperty("miningLevel", "IRON");
 		eUranium.addProperty("disableOre", false);
 		
 		ic.add(eUranium);
@@ -539,6 +580,138 @@ public class JsonCreator
 		// --------------------------------------- End IC2 Ores ------------------------------------------------ \\
 		
 		root.add("IC2", ic);
+		
+		
+		// --------------------------------------- IE Ores ------------------------------------------------ \\
+		// Surface Aluminum Ore
+		JsonObject oBauxite = new JsonObject();
+		
+		oBauxite.addProperty("ore", "SurfaceBauxiteOre");
+		oBauxite.addProperty("minY", 40);
+		oBauxite.addProperty("maxY", 85);
+		oBauxite.addProperty("rarity", 12 * 4);
+		oBauxite.addProperty("veinMinimum", 6);
+		oBauxite.addProperty("veinMultiplier", 20);
+		oBauxite.addProperty("miningLevel", "STONE");
+		oBauxite.addProperty("disableOre", false);
+		
+		ie.add(oBauxite);
+		
+		// Surface Nickel Ore
+		JsonObject oNickel = new JsonObject();
+		
+		oNickel.addProperty("ore", "SurfaceNickelOre");
+		oNickel.addProperty("minY", 8);
+		oNickel.addProperty("maxY", 24);
+		oNickel.addProperty("rarity", 6);
+		oNickel.addProperty("veinMinimum", 9);
+		oNickel.addProperty("veinMultiplier", 9);
+		oNickel.addProperty("miningLevel", "STONE");
+		oNickel.addProperty("disableOre", false);
+		
+		ie.add(oNickel);
+		
+		// Surface Silver Ore
+		JsonObject oSilver = new JsonObject();
+		
+		oSilver.addProperty("ore", "SurfaceSilverOre");
+		oSilver.addProperty("minY", 8);
+		oSilver.addProperty("maxY", 40);
+		oSilver.addProperty("rarity", 2 * 2);
+		oSilver.addProperty("veinMinimum", 3);
+		oSilver.addProperty("veinMultiplier", 6);
+		oSilver.addProperty("miningLevel", "IRON");
+		oSilver.addProperty("disableOre", false);
+		
+		ie.add(oSilver);
+		
+		// Nether Aluminum Ore
+		JsonObject nBauxite = new JsonObject();
+		
+		nBauxite.addProperty("ore", "NetherBauxiteOre");
+		nBauxite.addProperty("minY", netherMinY);
+		nBauxite.addProperty("maxY", netherMaxY);
+		nBauxite.addProperty("rarity", 12 * 4);
+		nBauxite.addProperty("veinMinimum", 6);
+		nBauxite.addProperty("veinMultiplier", 20);
+		nBauxite.addProperty("miningLevel", "STONE");
+		nBauxite.addProperty("disableOre", false);
+		
+		ie.add(nBauxite);
+		
+		// Nether Nickel Ore
+		JsonObject nNickel = new JsonObject();
+		
+		nNickel.addProperty("ore", "NetherNickelOre");
+		nNickel.addProperty("minY", netherMinY);
+		nNickel.addProperty("maxY", netherMaxY);
+		nNickel.addProperty("rarity", 6);
+		nNickel.addProperty("veinMinimum", 9);
+		nNickel.addProperty("veinMultiplier", 9);
+		nNickel.addProperty("miningLevel", "STONE");
+		nNickel.addProperty("disableOre", false);
+		
+		ie.add(nNickel);
+		
+		// Nether Silver Ore
+		JsonObject nSilver = new JsonObject();
+		
+		nSilver.addProperty("ore", "NetherSilverOre");
+		nSilver.addProperty("minY", netherMinY);
+		nSilver.addProperty("maxY", netherMaxY);
+		nSilver.addProperty("rarity", 2 * 2);
+		nSilver.addProperty("veinMinimum", 3);
+		nSilver.addProperty("veinMultiplier", 6);
+		nSilver.addProperty("miningLevel", "IRON");
+		nSilver.addProperty("disableOre", false);
+		
+		ie.add(nSilver);
+		
+		// End Aluminum Ore
+		JsonObject eBauxite = new JsonObject();
+		
+		eBauxite.addProperty("ore", "EndBauxiteOre");
+		eBauxite.addProperty("minY", endMinY);
+		eBauxite.addProperty("maxY", endMaxY);
+		eBauxite.addProperty("rarity", 12 * 4);
+		eBauxite.addProperty("veinMinimum", 6);
+		eBauxite.addProperty("veinMultiplier", 20);
+		eBauxite.addProperty("miningLevel", "STONE");
+		eBauxite.addProperty("disableOre", false);
+		
+		ie.add(eBauxite);
+		
+		// End Nickel Ore
+		JsonObject eNickel = new JsonObject();
+		
+		eNickel.addProperty("ore", "EndNickelOre");
+		eNickel.addProperty("minY", endMinY);
+		eNickel.addProperty("maxY", endMaxY);
+		eNickel.addProperty("rarity", 6);
+		eNickel.addProperty("veinMinimum", 9);
+		eNickel.addProperty("veinMultiplier", 9);
+		eNickel.addProperty("miningLevel", "STONE");
+		eNickel.addProperty("disableOre", false);
+		
+		ie.add(eNickel);
+		
+		// End Silver Ore
+		JsonObject eSilver = new JsonObject();
+		
+		eSilver.addProperty("ore", "EndSilverOre");
+		eSilver.addProperty("minY", endMinY);
+		eSilver.addProperty("maxY", endMaxY);
+		eSilver.addProperty("rarity", 2 * 2);
+		eSilver.addProperty("veinMinimum", 3);
+		eSilver.addProperty("veinMultiplier", 6);
+		eSilver.addProperty("miningLevel", "IRON");
+		eSilver.addProperty("disableOre", false);
+		
+		ie.add(eSilver);
+		
+		// --------------------------------------- End IE Ores ------------------------------------------------ \\
+		
+		root.add("IE", ie);
 		
 		createFile(root);
 		return JsonFormatting(root);

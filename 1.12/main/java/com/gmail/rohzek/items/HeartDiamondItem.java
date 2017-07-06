@@ -22,7 +22,7 @@ public class HeartDiamondItem extends Item
 	public HeartDiamondItem(String name)
 	{
 		setNames(name);
-		this.setCreativeTab(CreativeTabs.MISC);
+		this.setCreativeTab(CreativeTabs.MATERIALS);
 	}
 	
 	private void setNames(String name)
@@ -31,11 +31,8 @@ public class HeartDiamondItem extends Item
 		this.setUnlocalizedName(name);
 	}
 	
-	/**
-	 * Calculates the time since October 24, 2016, in years, days, and months.
-	 */
 	@Override
-	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) 
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
 		{

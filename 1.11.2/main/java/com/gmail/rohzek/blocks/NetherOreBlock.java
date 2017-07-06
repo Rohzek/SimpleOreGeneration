@@ -3,6 +3,7 @@ package com.gmail.rohzek.blocks;
 import java.util.List;
 import java.util.Random;
 
+import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
@@ -50,7 +51,7 @@ public class NetherOreBlock extends GenericBlock
         	   this == SGOres.NETHER_DIAMOND_ORE ? Items.DIAMOND :
         	   this == SGOres.NETHER_EMERALD_ORE ? Items.EMERALD :
         	   this == SGOres.NETHER_LAPIS_ORE ? Items.DYE : 
-        	   this == SGOres.NETHER_QUARTZ_ORE ? Items.QUARTZ :
+        	   this == SGOres.NETHER_QUARTZ_ORE ? SGItems.QUARTZ :
         	   this == SGOres.NETHER_REDSTONE_ORE ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }

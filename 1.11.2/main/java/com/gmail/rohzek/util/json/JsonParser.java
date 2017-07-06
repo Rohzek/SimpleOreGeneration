@@ -56,10 +56,16 @@ public class JsonParser
 		return (JsonObject) array.get(5);
 	}
 	
-	public static JsonObject loadSurfaceRedstoneOre()
+	public static JsonObject loadSurfaceQuartzOre()
 	{
 		JsonArray array = loadSurfaceOres();
 		return (JsonObject) array.get(6);
+	}
+	
+	public static JsonObject loadSurfaceRedstoneOre()
+	{
+		JsonArray array = loadSurfaceOres();
+		return (JsonObject) array.get(7);
 	}
 	
 	// --------------------------------------- End Surface Ores -------------------------------------------------- \\
@@ -161,10 +167,16 @@ public class JsonParser
 		return (JsonObject) array.get(5);
 	}
 	
-	public static JsonObject loadEndRedstoneOre()
+	public static JsonObject loadEndQuartzOre()
 	{
 		JsonArray array = loadEndOres();
 		return (JsonObject) array.get(6);
+	}
+	
+	public static JsonObject loadEndRedstoneOre()
+	{
+		JsonArray array = loadEndOres();
+		return (JsonObject) array.get(7);
 	}
 	
 	// --------------------------------------- End Ender Ores -------------------------------------------------- \\

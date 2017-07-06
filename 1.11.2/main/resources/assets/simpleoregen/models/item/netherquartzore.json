@@ -1,5 +1,5 @@
 {
-    "parent": "block/quartz_ore",
+    "parent": "simpleoregen:block/netherQuartzOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

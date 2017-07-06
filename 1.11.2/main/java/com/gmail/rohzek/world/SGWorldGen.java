@@ -34,6 +34,7 @@ public class SGWorldGen implements IWorldGenerator
 	private WorldGenerator goldOre;
 	private WorldGenerator ironOre;
 	private WorldGenerator lapisOre;
+	private WorldGenerator quartzOre;
 	private WorldGenerator redstoneOre;
 	
 	// Vanilla Nether Ores
@@ -53,6 +54,7 @@ public class SGWorldGen implements IWorldGenerator
 	private WorldGenerator endGoldOre;
 	private WorldGenerator endIronOre;
 	private WorldGenerator endLapisOre;
+	private WorldGenerator endQuartzOre;
 	private WorldGenerator endRedstoneOre;
 	
 	// Modded Surface Ores
@@ -92,6 +94,7 @@ public class SGWorldGen implements IWorldGenerator
 		this.goldOre = new SGWorldGenMineable(Blocks.GOLD_ORE.getDefaultState(), blockSize(JsonParser.loadSurfaceGoldOre().get("veinMinimum").getAsInt(), JsonParser.loadSurfaceGoldOre().get("veinMultiplier").getAsInt()), 0);
 		this.ironOre = new SGWorldGenMineable(Blocks.IRON_ORE.getDefaultState(), blockSize(JsonParser.loadSurfaceIronOre().get("veinMinimum").getAsInt(), JsonParser.loadSurfaceIronOre().get("veinMultiplier").getAsInt()), 0);
 		this.lapisOre = new SGWorldGenMineable(Blocks.LAPIS_ORE.getDefaultState(), blockSize(JsonParser.loadSurfaceLapisOre().get("veinMinimum").getAsInt(), JsonParser.loadSurfaceLapisOre().get("veinMultiplier").getAsInt()), 0);
+		this.quartzOre = new SGWorldGenMineable(SGOres.SURFACE_QUARTZ_ORE.getDefaultState(), blockSize(JsonParser.loadSurfaceQuartzOre().get("veinMinimum").getAsInt(), JsonParser.loadSurfaceQuartzOre().get("veinMultiplier").getAsInt()), 0);
 		this.redstoneOre = new SGWorldGenMineable(Blocks.REDSTONE_ORE.getDefaultState(), blockSize(JsonParser.loadSurfaceRedstoneOre().get("veinMinimum").getAsInt(),JsonParser.loadSurfaceRedstoneOre().get("veinMultiplier").getAsInt()), 0);
 		
 		// Vanilla Nether Ores
@@ -111,6 +114,7 @@ public class SGWorldGen implements IWorldGenerator
 		this.endGoldOre = new SGWorldGenMineable(SGOres.END_GOLD_ORE.getDefaultState(), blockSize(JsonParser.loadEndGoldOre().get("veinMinimum").getAsInt(), JsonParser.loadEndGoldOre().get("veinMultiplier").getAsInt()), 1);
 		this.endIronOre = new SGWorldGenMineable(SGOres.END_IRON_ORE.getDefaultState(), blockSize(JsonParser.loadEndIronOre().get("veinMinimum").getAsInt(), JsonParser.loadEndIronOre().get("veinMultiplier").getAsInt()), 1);
 		this.endLapisOre = new SGWorldGenMineable(SGOres.END_LAPIS_ORE.getDefaultState(), blockSize(JsonParser.loadEndLapisOre().get("veinMinimum").getAsInt(), JsonParser.loadEndLapisOre().get("veinMultiplier").getAsInt()), 1);
+		this.endQuartzOre = new SGWorldGenMineable(SGOres.END_QUARTZ_ORE.getDefaultState(), blockSize(JsonParser.loadEndQuartzOre().get("veinMinimum").getAsInt(), JsonParser.loadEndQuartzOre().get("veinMultiplier").getAsInt()), 0);
 		this.endRedstoneOre = new SGWorldGenMineable(SGOres.END_REDSTONE_ORE.getDefaultState(), blockSize(JsonParser.loadEndRedstoneOre().get("veinMinimum").getAsInt(), JsonParser.loadEndRedstoneOre().get("veinMultiplier").getAsInt()), 1);
 	
 		// Modded Surface Ores
@@ -209,6 +213,11 @@ public class SGWorldGen implements IWorldGenerator
 		if(!JsonParser.loadSurfaceLapisOre().get("disableOre").getAsBoolean())
 		{
 			runGenerator(this.lapisOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceLapisOre().get("rarity").getAsInt(), JsonParser.loadSurfaceLapisOre().get("minY").getAsInt(), JsonParser.loadSurfaceLapisOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadSurfaceQuartzOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.quartzOre, world, random, chunkX, chunkZ, JsonParser.loadSurfaceQuartzOre().get("rarity").getAsInt(), JsonParser.loadSurfaceQuartzOre().get("minY").getAsInt(), JsonParser.loadSurfaceQuartzOre().get("maxY").getAsInt());
 		}
 		
 		if(!JsonParser.loadSurfaceRedstoneOre().get("disableOre").getAsBoolean())
@@ -429,6 +438,11 @@ public class SGWorldGen implements IWorldGenerator
 		if(!JsonParser.loadEndLapisOre().get("disableOre").getAsBoolean())
 		{
 			runGenerator(this.endLapisOre, world, random, chunkX, chunkZ, JsonParser.loadEndLapisOre().get("rarity").getAsInt(), JsonParser.loadEndLapisOre().get("minY").getAsInt(), JsonParser.loadEndLapisOre().get("maxY").getAsInt());
+		}
+		
+		if(!JsonParser.loadEndQuartzOre().get("disableOre").getAsBoolean())
+		{
+			runGenerator(this.endQuartzOre, world, random, chunkX, chunkZ, JsonParser.loadEndQuartzOre().get("rarity").getAsInt(), JsonParser.loadEndQuartzOre().get("minY").getAsInt(), JsonParser.loadEndQuartzOre().get("maxY").getAsInt());
 		}
 		
 		if(!JsonParser.loadEndRedstoneOre().get("disableOre").getAsBoolean())

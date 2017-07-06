@@ -3,7 +3,7 @@ package com.gmail.rohzek.smelting;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-/*
+
 import ic2.api.recipe.IRecipeInput;
 import ic2.core.util.StackUtil;
 import net.minecraft.item.ItemStack;
@@ -51,4 +51,3 @@ public class MaceratorRecipeInput implements IRecipeInput
 		return "RInputItemStack<" + StackUtil.setImmutableSize(this.input, this.amount) + ">";
 	}
 }
-*/
