@@ -1,5 +1,6 @@
 package com.gmail.rohzek.crafting;
 
+import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.items.SGItems;
 
 import net.minecraft.init.Blocks;
@@ -33,5 +34,16 @@ public class CraftingManager
 		
 		// Granite
 		GameRegistry.addRecipe(new ItemStack(Blocks.STONE,  1, 1), new Object[]{"SQ", 'S', new ItemStack(Blocks.STONE, 1, 3), 'Q', SGItems.QUARTZ});
+		
+		// Block of Bronze
+		GameRegistry.addRecipe(new ItemStack(SGBlocks.BRONZE_BLOCK), new Object[]{"BBB", "BBB", "BBB", 'B', SGItems.BRONZE_INGOT});
+		
+		// Bronze Ingot
+		GameRegistry.addRecipe(new ItemStack(SGItems.BRONZE_INGOT), new Object[]{"CC", "CT", 'C', SGItems.BRONZE_INGOT, 'T', SGItems.TIN_INGOT});
+		GameRegistry.addRecipe(new ItemStack(SGItems.BRONZE_INGOT), new Object[]{"BBB", "BBB", "BBB", 'B', SGItems.BRONZE_NUGGET});
+		GameRegistry.addShapelessRecipe(new ItemStack(SGItems.BRONZE_INGOT, 9, 0), SGBlocks.BRONZE_BLOCK);
+		
+		// Bronze Nugget
+		GameRegistry.addShapelessRecipe(new ItemStack(SGItems.BRONZE_NUGGET, 9, 0), SGItems.BRONZE_INGOT);
 	}
 }

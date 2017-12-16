@@ -41,7 +41,7 @@ public class CheshireRose extends BlockBush
 	
 	/**
 	 * Calculates the time since October 24, 2016, in years, days, and months.
-	 */	
+	 */
 	@Override
 	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) 
 	{

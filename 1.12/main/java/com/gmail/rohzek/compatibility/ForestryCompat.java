@@ -1,11 +1,9 @@
 package com.gmail.rohzek.compatibility;
 
-import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import forestry.core.config.Config;
-import net.minecraft.block.Block;
 
 public class ForestryCompat 
 {	
@@ -30,9 +28,9 @@ public class ForestryCompat
 	{
 		if(ConfigurationManager.supportForestry)
 		{
-			ModdedConstants.apatiteOre = true;
-			ModdedConstants.copperOre = true;
-			ModdedConstants.tinOre = true;
+			ModdedConstants.enabledOres.add(new ModOre("apatiteOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
 		}
 	}
 }

@@ -38,4 +38,40 @@ public class CheckForMods
 			IECompat.load();
 		}
 	}
+	
+	@Optional.Method(modid = "mekanism")
+	public static void checkForMK()
+	{
+		if(ConfigurationManager.supportMK)
+		{
+			MKCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "techreborn")
+	public static void checkForTR()
+	{
+		if(ConfigurationManager.supportTR)
+		{
+			TRCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "thermalfoundation")
+	public static void checkForTF()
+	{
+		if(ConfigurationManager.supportTF)
+		{
+			TFCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "tconstruct")
+	public static void checkForTC()
+	{
+		if(ConfigurationManager.supportTC)
+		{
+			TCCompat.load();
+		}
+	}
 }

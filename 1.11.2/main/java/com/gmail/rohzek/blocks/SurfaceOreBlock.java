@@ -13,8 +13,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class SurfaceOreBlock extends GenericBlock
-{
-
+{	
 	public SurfaceOreBlock(String unlocalizedName) 
 	{
 		super(unlocalizedName, Material.ROCK, 3f, 15f);
@@ -27,14 +26,14 @@ public class SurfaceOreBlock extends GenericBlock
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.SURFACE_QUARTZ_ORE ? SGItems.QUARTZ :
+        return this == SGOres.getBlockSurface("quartz") ? SGItems.QUARTZ :
         	   Item.getItemFromBlock(this);
     }
 	
 	@Override
 	public int quantityDropped(Random random)
     {
-		return this == SGOres.SURFACE_QUARTZ_ORE  ? 1 + random.nextInt(3) : 1;
+		return this == SGOres.getBlockSurface("quartz")  ? 1 + random.nextInt(3) : 1;
     }
 	
 	@Override
@@ -65,7 +64,7 @@ public class SurfaceOreBlock extends GenericBlock
         {
             int i = 0;
 
-            if (this == SGOres.SURFACE_QUARTZ_ORE)
+            if (this == SGOres.getBlockSurface("quartz"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }

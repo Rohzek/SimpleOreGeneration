@@ -2,13 +2,13 @@ package com.gmail.rohzek.world;
 
 import java.util.Random;
 
+import com.gmail.rohzek.json.OreData;
 import com.gmail.rohzek.util.LogHelper;
 import com.google.common.base.Predicate;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
@@ -17,32 +17,27 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 // Taken straight from Vanilla code, and tweaked just a tiny bit, to work in Nether and End.
 public class SGWorldGenMineable extends WorldGenerator
 {
-    private final IBlockState oreBlock;
-    /** The number of blocks to generate. */
+    public final IBlockState oreBlock;
+    public OreData data;
+    //The number of blocks to generate.
     private final int numberOfBlocks;
     private final Predicate<IBlockState> predicate;
 
-    // Instead of having 3 of these for each dimension, I'm just using one and changing blocks based on dimension ID
-    public SGWorldGenMineable(IBlockState state, int blockCount, int dimension)
-    {
-    	this(state, blockCount, BlockMatcher.forBlock(determineDimension(dimension)));
+    public SGWorldGenMineable(IBlockState state, int blockCount, OreData data)
+    {    	
+    	this(state, blockCount, BlockMatcher.forBlock(Block.getBlockFromName(data.spawnBlock)), data);
     }
     
-    // Dimension ID determines block to replace
-    private static Block determineDimension(int dimension)
-    {
-    	       // Nether                             // End                             // Over World
-    	return dimension == -1 ? Blocks.NETHERRACK : dimension == 1 ? Blocks.END_STONE : Blocks.STONE;
-    }
-
-    public SGWorldGenMineable(IBlockState state, int blockCount, Predicate<IBlockState> predicate)
+    public SGWorldGenMineable(IBlockState state, int blockCount, Predicate<IBlockState> predicate, OreData data)
     {
         this.oreBlock = state;
         this.numberOfBlocks = blockCount;
         this.predicate = predicate;
+        this.data = data;
     }
 
     // Lots of math. Just taken from WorldGenMineable source, Not sure what it does, honestly.
+    @Override
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
         float f = rand.nextFloat() * (float)Math.PI;
@@ -89,13 +84,12 @@ public class SGWorldGenMineable extends WorldGenerator
                                 {
                                     BlockPos blockpos = new BlockPos(l1, i2, j2);
                                     
-                                    // This is new to 1.10 in the vanilla class. Sets current block state, to block pos? Wasn't in 1.8
-                                    // Not sure why, but this is required for the condition to become true.
                                     IBlockState state = worldIn.getBlockState(blockpos);
                                     
                                     if (worldIn.getBlockState(blockpos).getBlock().isReplaceableOreGen(state, worldIn, blockpos, predicate))
                                     {
                                         worldIn.setBlockState(blockpos, oreBlock, 2);
+                                        LogHelper.debug(data.name + " spawning at " + blockpos);
                                     }
                                 }
                             }

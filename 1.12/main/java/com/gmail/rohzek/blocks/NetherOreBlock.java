@@ -2,9 +2,11 @@ package com.gmail.rohzek.blocks;
 
 import java.util.List;
 import java.util.Random;
+
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,7 +32,7 @@ import net.minecraft.world.World;
  */
 public class NetherOreBlock extends GenericBlock
 {
-	private static int aggroRange;
+	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop;
 	
 	public NetherOreBlock(String unlocalizedName)
 	{
@@ -39,45 +41,67 @@ public class NetherOreBlock extends GenericBlock
 		
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		
-		this.aggroRange = ConfigurationManager.aggroRange;
+		this.aggroRange = ConfigurationManager.aggroRangePigmen;
+	}
+	
+	void setDropRates()
+	{
+		if(ConfigurationManager.zombiePigsAttack)
+		{
+			coalDrop = 3;
+			diamondDrop = 3;
+			emeraldDrop = 3;
+			lapisDrop = 6;
+			quartzDrop = 3;
+			redstoneDrop = 4;
+		}
+		else
+		{
+			coalDrop = 1;
+			diamondDrop = 1;
+			emeraldDrop = 1;
+			lapisDrop = 4;
+			quartzDrop = 1;
+			redstoneDrop = 1;
+		}
 	}
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.NETHER_COAL_ORE ? Items.COAL :
-        	   this == SGOres.NETHER_DIAMOND_ORE ? Items.DIAMOND :
-        	   this == SGOres.NETHER_EMERALD_ORE ? Items.EMERALD :
-        	   this == SGOres.NETHER_LAPIS_ORE ? Items.DYE : 
-        	   this == SGOres.NETHER_QUARTZ_ORE ? SGItems.QUARTZ :
-        	   this == SGOres.NETHER_REDSTONE_ORE ? Items.REDSTONE :
+        return this == SGOres.getBlockNether("coal") ? Items.COAL :
+        	   this == SGOres.getBlockNether("diamond") ? Items.DIAMOND :
+        	   this == SGOres.getBlockNether("emerald") ? Items.EMERALD :
+        	   this == SGOres.getBlockNether("lapis") ? Items.DYE : 
+        	   this == SGOres.getBlockNether("quartz") ? SGItems.QUARTZ :
+        	   this == SGOres.getBlockNether("redstone") ? Items.REDSTONE :
         	   Item.getItemFromBlock(this);
     }
 	
 	@Override
 	public int quantityDropped(Random random)
     {
-		return  this == SGOres.NETHER_COAL_ORE     ? 1 + random.nextInt(2) :
-     	   		this == SGOres.NETHER_DIAMOND_ORE  ? 1 + random.nextInt(8) : 
-     	   		this == SGOres.NETHER_EMERALD_ORE  ? 1 + random.nextInt(3) :
-     	   		this == SGOres.NETHER_LAPIS_ORE    ? 1 + random.nextInt(5) :
-     	   		this == SGOres.NETHER_QUARTZ_ORE   ? 1 + random.nextInt(2) :
-     	   		this == SGOres.NETHER_REDSTONE_ORE ? 1 + random.nextInt(5) :
+		return  this == SGOres.getBlockNether("coal")     ? 1 + random.nextInt(coalDrop) :
+     	   		this == SGOres.getBlockNether("diamond")  ? 1 + random.nextInt(diamondDrop) : 
+     	   		this == SGOres.getBlockNether("emerald")  ? 1 + random.nextInt(emeraldDrop) :
+     	   		this == SGOres.getBlockNether("lapis")    ? 4 + random.nextInt(lapisDrop) :
+     	   		this == SGOres.getBlockNether("quartz")   ? 1 + random.nextInt(quartzDrop) :
+     	   		this == SGOres.getBlockNether("redstone") ? 4 + random.nextInt(redstoneDrop) :
      	   		1;
     }
 	
 	@Override
 	public int damageDropped(IBlockState state)
     {
-        return this == SGOres.NETHER_LAPIS_ORE ? EnumDyeColor.BLUE.getDyeDamage() : 0;
+        return this == SGOres.getBlockNether("lapis") ? EnumDyeColor.BLUE.getDyeDamage() : 0;
     }
 	
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) 
 	{
-		if(this == SGOres.NETHER_LAPIS_ORE)
+		if(this == SGOres.getBlockNether("lapis"))
 		{
-			return new ItemStack(Item.getItemFromBlock(SGOres.NETHER_LAPIS_ORE));
+			return new ItemStack(Item.getItemFromBlock(SGOres.getBlockNether("lapis")));
 		}
 		else
 		{
@@ -129,23 +153,23 @@ public class NetherOreBlock extends GenericBlock
         {
             int i = 0;
 
-            if (this == SGOres.NETHER_COAL_ORE)
+            if (this == SGOres.getBlockNether("coal"))
             {
                 i = MathHelper.getInt(rand, 0, 2);
             }
-            else if (this == SGOres.NETHER_DIAMOND_ORE)
+            else if (this == SGOres.getBlockNether("diamond"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
-            else if (this == SGOres.NETHER_EMERALD_ORE)
+            else if (this == SGOres.getBlockNether("emerald"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
-            else if (this == SGOres.NETHER_LAPIS_ORE)
+            else if (this == SGOres.getBlockNether("lapis"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
-            else if (this == SGOres.NETHER_QUARTZ_ORE)
+            else if (this == SGOres.getBlockNether("quartz"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
@@ -173,7 +197,7 @@ public class NetherOreBlock extends GenericBlock
 			{
 				EntityPigZombie zombiePig = (EntityPigZombie)entity;
 				zombiePig.setRevengeTarget(player);
-				LogHelper.log("Zombie pigs aggro applied to: " + player.getDisplayNameString());
+				LogHelper.debug("Zombie pigs aggro applied to: " + player.getDisplayNameString());
 			}
 		}
 	}

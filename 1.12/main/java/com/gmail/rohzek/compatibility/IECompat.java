@@ -1,28 +1,24 @@
 package com.gmail.rohzek.compatibility;
 
 import java.util.ArrayList;
-import com.gmail.rohzek.lib.Reference;
+
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
-//import blusunrize.immersiveengineering.ImmersiveEngineering;
-//import blusunrize.immersiveengineering.common.Config;
-//import blusunrize.immersiveengineering.common.world.IEWorldGen;
-import net.minecraft.client.Minecraft;
+
+import blusunrize.immersiveengineering.common.world.IEWorldGen;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.config.Configuration;
 
 public class IECompat 
 {
 	
 	public static void load()
 	{
-		//fixConfigs();
-		//loadOre();
-		//LogHelper.log("IE Compatibility loaded");
+		fixConfigs();
+		loadOre();
+		LogHelper.log("Immersive Engineering Compatibility loaded");
 	}
 	
-	/*
 	public static void fixConfigs()
 	{
 		if(ConfigurationManager.supportIE)
@@ -50,14 +46,13 @@ public class IECompat
 	public static void loadOre()
 	{
 		if(ConfigurationManager.supportIE)
-		{
-			ModdedConstants.bauxiteOre = true;
-			ModdedConstants.copperOre = true;
-			ModdedConstants.leadOre = true;
-			ModdedConstants.nickelOre = true;
-			ModdedConstants.silverOre = true;
-			ModdedConstants.uraniumOre = true;
+		{			
+			ModdedConstants.enabledOres.add(new ModOre("aluminumOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("nickelOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("uraniumOre", true));
 		}
 	}
-	*/
 }

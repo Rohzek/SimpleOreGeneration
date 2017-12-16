@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CCC",
+	"CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "simpleoregen:copperIngot"
+    }
+  },
+  "result": {
+    "item": "simpleoregen:bronzeBlock",
+    "data": 0,
+    "count": 1
+  }
+}

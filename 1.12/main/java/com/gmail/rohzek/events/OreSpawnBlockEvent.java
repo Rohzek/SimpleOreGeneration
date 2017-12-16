@@ -19,6 +19,11 @@ public class OreSpawnBlockEvent
 {
 	public static ArrayList<EventType> ores = new ArrayList<EventType>();
 	
+	public OreSpawnBlockEvent() 
+	{
+		populateOreType();
+	}
+	
 	@SubscribeEvent
 	public void oreSpawnBlock(OreGenEvent.GenerateMinable event)
 	{
@@ -26,23 +31,11 @@ public class OreSpawnBlockEvent
 		
 		if(ConfigurationManager.changeVanilla)
 		{
-			if(dimID == -1) // Nether
-			{
-				blockNetherOres(event);
-			}
-			
-			else if(dimID == 0) // Overworld
-			{
-				blockOres(event);
-			}
-			
-			else if(dimID == 1) // End
-			{}
-			
-			else if(ConfigurationManager.supportNewDims)
-			{
-				blockOres(event);
-			}
+			blockOres(event);
+		}
+		if(!ConfigurationManager.useVanillaNetherQuartz)
+		{
+			blockNetherOres(event);
 		}
 	}
 	
@@ -62,17 +55,20 @@ public class OreSpawnBlockEvent
 	
 	/**
 	 * Allows us to remove any ore types added into the "remove" array.
-	 * We call this from the main, so we don't have to call it every
+	 * We call this in the constructor so we don't have to call it every
 	 * time an ore gets generated (as it would be in this class)
 	 */
 	public static void populateOreType()
 	{
+		LogHelper.debug("We're populating our blocked ore list now");
+		
 		EventType[] types = EventType.values(); // A list of all the types
 		// The types to remove from the above list
 		EventType[] remove = 
 			{
 				EventType.ANDESITE, 
 				EventType.DIORITE, 
+				EventType.DIRT,
 				EventType.GRANITE,
 				EventType.GRAVEL,
 				EventType.SILVERFISH, 

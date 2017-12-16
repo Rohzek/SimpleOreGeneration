@@ -30,9 +30,9 @@ public class ForestryCompat
 	{
 		if(ConfigurationManager.supportForestry)
 		{
-			ModdedConstants.apatiteOre = true;
-			ModdedConstants.copperOre = true;
-			ModdedConstants.tinOre = true;
+			ModdedConstants.enabledOres.add(new ModOre("apatiteOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
 		}
 	}
 }

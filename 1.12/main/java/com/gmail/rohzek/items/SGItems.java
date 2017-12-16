@@ -2,8 +2,7 @@ package com.gmail.rohzek.items;
 
 import java.util.HashSet;
 import java.util.Set;
-import com.gmail.rohzek.lib.Reference;
-import com.gmail.rohzek.util.LogHelper;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -11,7 +10,6 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -27,6 +25,9 @@ public class SGItems
 	public static final Item URANIUM_INGOT = new ItemIngot("uraniumIngot");
 	public static final Item HEART_DIAMOND = new HeartDiamondItem("heartDiamond");
 	
+	public static final Item BRONZE_INGOT = new ItemIngot("bronzeIngot");
+	public static final Item BRONZE_NUGGET = new ItemIngot("bronzeNugget");
+	
 	public static void registerRenders() 
 	{
 		registerRender(ALUMINUM_INGOT);
@@ -38,6 +39,9 @@ public class SGItems
 		registerRender(TIN_INGOT);
 		registerRender(URANIUM_INGOT);
 		registerRender(HEART_DIAMOND);
+		
+		registerRender(BRONZE_INGOT);
+		registerRender(BRONZE_NUGGET);
 	}
 	
 	public static void registerOreDict()
@@ -51,6 +55,9 @@ public class SGItems
 		OreDictionary.registerOre("ingotTin", TIN_INGOT);
 		OreDictionary.registerOre("ingotUranium", URANIUM_INGOT);
 		OreDictionary.registerOre("gemDiamond", HEART_DIAMOND);
+		
+		OreDictionary.registerOre("ingotBronze", BRONZE_INGOT);
+		OreDictionary.registerOre("nuggetBronze", BRONZE_NUGGET);
 	}
 	
 	public static void registerRender(Item item)
@@ -82,6 +89,8 @@ public class SGItems
 					TIN_INGOT,
 					URANIUM_INGOT,
 					HEART_DIAMOND,
+					BRONZE_INGOT,
+					BRONZE_NUGGET,
 			};
 			
 			final IForgeRegistry<Item> registry = event.getRegistry();

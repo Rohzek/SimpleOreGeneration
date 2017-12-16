@@ -33,11 +33,11 @@ public class ICCompat
 	public static void loadOre()
 	{
 		if(ConfigurationManager.supportIC)
-		{
-			ModdedConstants.copperOre = true;
-			ModdedConstants.tinOre = true;
-			ModdedConstants.leadOre = true;
-			ModdedConstants.uraniumOre = true;
+		{	
+			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("uraniumOre", true));
 		}
 	}
 	

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+	"BBB",
+	"BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "simpleoregen:bronzeNugget"
+    }
+  },
+  "result": {
+    "item": "simpleoregen:bronzeIngot",
+    "data": 0,
+    "count": 1
+  }
+}

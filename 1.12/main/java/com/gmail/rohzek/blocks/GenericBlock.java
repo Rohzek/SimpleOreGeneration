@@ -1,6 +1,7 @@
 package com.gmail.rohzek.blocks;
 
 import java.util.Random;
+
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,8 +14,12 @@ import net.minecraft.item.Item;
  */
 public class GenericBlock extends BlockOre
 {
+	String name;
+	
 	public GenericBlock(String unlocalizedName, Material mat, float hardness, float resistance)
-	{
+	{	
+		this.name = unlocalizedName;
+		
 		this.setUnlocalizedName(unlocalizedName);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
@@ -32,4 +37,9 @@ public class GenericBlock extends BlockOre
     {
 		return 1;
     }
+	
+	public String getName()
+	{
+		return name;
+	}
 }

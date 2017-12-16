@@ -1,9 +1,11 @@
 package com.gmail.rohzek.world;
 
 import java.util.Random;
+
 import com.gmail.rohzek.blocks.CheshireRose;
 import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.util.ConfigurationManager;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

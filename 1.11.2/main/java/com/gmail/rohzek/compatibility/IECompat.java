@@ -19,7 +19,7 @@ public class IECompat
 	{
 		fixConfigs();
 		loadOre();
-		LogHelper.log("IE Compatibility loaded");
+		LogHelper.log("Immersive Engineering Compatibility loaded");
 	}
 	
 	public static void fixConfigs()
@@ -49,13 +49,13 @@ public class IECompat
 	public static void loadOre()
 	{
 		if(ConfigurationManager.supportIE)
-		{
-			ModdedConstants.bauxiteOre = true;
-			ModdedConstants.copperOre = true;
-			ModdedConstants.leadOre = true;
-			ModdedConstants.nickelOre = true;
-			ModdedConstants.silverOre = true;
-			ModdedConstants.uraniumOre = true;
+		{			
+			ModdedConstants.enabledOres.add(new ModOre("aluminumOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("nickelOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("uraniumOre", true));
 		}
 	}
 }
