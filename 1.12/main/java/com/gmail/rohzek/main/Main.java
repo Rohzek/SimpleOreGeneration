@@ -2,6 +2,8 @@ package com.gmail.rohzek.main;
 
 import java.io.File;
 
+import com.gmail.rohzek.blocks.EndOreBlock;
+import com.gmail.rohzek.blocks.NetherOreBlock;
 import com.gmail.rohzek.blocks.OtherBlocks;
 import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.blocks.SGOres;
@@ -177,6 +179,9 @@ public class Main
 		SGItems.registerOreDict();
 		SGOres.registerOreDict();
 		SGBlocks.registerOreDict();
+		
+		EndOreBlock.setDropRates();
+		NetherOreBlock.setDropRates();
 		
 		OtherBlocks.init();
 		WorldGenerators.init();

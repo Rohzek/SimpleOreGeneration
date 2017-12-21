@@ -45,7 +45,7 @@ public class NetherOreBlock extends GenericBlock
 		this.aggroRange = ConfigurationManager.aggroRangePigmen;
 	}
 	
-	void setDropRates()
+	public static void setDropRates()
 	{
 		if(ConfigurationManager.zombiePigsAttack)
 		{

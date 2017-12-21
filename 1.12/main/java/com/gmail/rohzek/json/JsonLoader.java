@@ -3,6 +3,7 @@ package com.gmail.rohzek.json;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
@@ -22,15 +23,28 @@ public class JsonLoader
 	
 	public static void loadData(File file)
 	{
+		FileReader reader = null;
 		if(file.exists() && !file.isDirectory())
 		{
 			try 
 			{
-				obj = parser.parse(new FileReader(file)).getAsJsonObject();
+				reader = new FileReader(file);
+				obj = parser.parse(reader).getAsJsonObject();
 			} 
 			catch (JsonIOException e){} 
 			catch (JsonSyntaxException e){} 
-			catch (FileNotFoundException e){}
+			catch (FileNotFoundException e){} 
+			finally
+			{
+				if(reader != null)
+				{
+					try 
+					{
+						reader.close();
+					} 
+					catch (IOException e) {}
+				}
+			}
 		}
 		else
 		{

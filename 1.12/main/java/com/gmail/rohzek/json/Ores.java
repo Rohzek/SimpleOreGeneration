@@ -58,61 +58,61 @@ public class Ores
 	
 	static void generateFile()
 	{
+		// Checks for an old backup, and removes it
+		if(rename.exists() && !rename.isDirectory())
+		{
+			rename.delete();
+		}
+		
 		// Renames the old file
 		if(file.exists() && !file.isDirectory())
 		{
-			if(rename.exists() && !rename.isDirectory())
-			{
-				rename.delete();
-			}
-			
+			LogHelper.debug("I should be renaming " + file.getName() + " to " + rename.getName() + " but due to an error, I don't.");
 			file.renameTo(rename);
 		}
-		else
+		
+		if(!file.getParentFile().exists())
 		{
-			if(!file.getParentFile().exists())
+			file.getParentFile().mkdirs();
+		}
+		
+		populateArrays();
+		
+		// Generates new file
+		JsonObject root = new JsonObject(), versionNumber = new JsonObject();
+		JsonParser parser = new JsonParser();
+		
+		versionNumber.addProperty("Version", Reference.VERSION);
+		root.add("VersionNumber", versionNumber);
+		
+		JsonArray vanilla = parser.parse(new Gson().toJson(vanillaOres)).getAsJsonArray();
+		root.add("VanillaOres", vanilla);
+		
+		JsonArray surface = parser.parse(new Gson().toJson(surfaceOres)).getAsJsonArray();
+		root.add("SurfaceOres", surface);
+		
+		JsonArray nether = parser.parse(new Gson().toJson(netherOres)).getAsJsonArray();
+		root.add("NetherOres", nether);
+		
+		JsonArray end = parser.parse(new Gson().toJson(endOres)).getAsJsonArray();
+		root.add("EndOres", end);
+		
+		LogHelper.debug("I should be creating: " + file.getAbsolutePath());
+		LogHelper.debug("It should be: " + JsonFormatting(root));
+		
+		PrintWriter writer = null;
+		try
+		{
+			writer = new PrintWriter(file);
+			writer.print(JsonFormatting(root));
+		} 
+		catch (FileNotFoundException e) {}
+		finally
+		{
+			if(writer != null)
 			{
-				file.getParentFile().mkdirs();
-			}
-			
-			populateArrays();
-			
-			// Generates new file
-			JsonObject root = new JsonObject(), versionNumber = new JsonObject();
-			JsonParser parser = new JsonParser();
-			
-			versionNumber.addProperty("Version", Reference.VERSION);
-			root.add("VersionNumber", versionNumber);
-			
-			JsonArray vanilla = parser.parse(new Gson().toJson(vanillaOres)).getAsJsonArray();
-			root.add("VanillaOres", vanilla);
-			
-			JsonArray surface = parser.parse(new Gson().toJson(surfaceOres)).getAsJsonArray();
-			root.add("SurfaceOres", surface);
-			
-			JsonArray nether = parser.parse(new Gson().toJson(netherOres)).getAsJsonArray();
-			root.add("NetherOres", nether);
-			
-			JsonArray end = parser.parse(new Gson().toJson(endOres)).getAsJsonArray();
-			root.add("EndOres", end);
-			
-			LogHelper.debug("I should be creating: " + file.getAbsolutePath());
-			LogHelper.debug("It should be: " + JsonFormatting(root));
-			
-			PrintWriter writer = null;
-			try
-			{
-				writer = new PrintWriter(file);
-				writer.print(JsonFormatting(root));
-			} 
-			catch (FileNotFoundException e) {}
-			finally
-			{
-				if(writer != null)
-				{
-					LogHelper.debug("Closing print writer");
-					writer.close();
-				}
+				LogHelper.debug("Closing print writer");
+				writer.close();
 			}
 		}
 	}
@@ -122,6 +122,7 @@ public class Ores
 	{
 		LogHelper.debug("Loading OreGen.json arrays into memory.");
 		vanillaOres = JsonLoader.getList("VanillaOres");
+		
 		surfaceOres = JsonLoader.getList("SurfaceOres");
 		netherOres = JsonLoader.getList("NetherOres");
 		endOres = JsonLoader.getList("EndOres");

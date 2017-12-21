@@ -46,7 +46,7 @@ public class EndOreBlock extends GenericBlock
 		this.aggroRange = ConfigurationManager.aggroRangeEndermen;
 	}
 	
-	void setDropRates()
+	public static void setDropRates()
 	{
 		if(ConfigurationManager.zombiePigsAttack)
 		{
