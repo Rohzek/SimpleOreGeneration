@@ -45,5 +45,8 @@ public class CraftingManager
 		
 		// Bronze Nugget
 		GameRegistry.addShapelessRecipe(new ItemStack(SGItems.BRONZE_NUGGET, 9, 0), SGItems.BRONZE_INGOT);
+		
+		// Nether Quartz
+		GameRegistry.addRecipe(new ItemStack(Items.QUARTZ, 8), new Object[]{"QQQ", "QRQ", "QQQ", 'Q', SGItems.QUARTZ, 'R', Items.BLAZE_POWDER});
 	}
 }

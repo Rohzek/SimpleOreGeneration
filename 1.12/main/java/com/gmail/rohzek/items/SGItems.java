@@ -17,6 +17,7 @@ public class SGItems
 {
 	public static final Item ALUMINUM_INGOT = new ItemIngot("aluminumIngot");
 	public static final Item COPPER_INGOT = new ItemIngot("copperIngot");
+	public static final Item IRIDIUM_INGOT = new ItemIngot("iridiumIngot");
 	public static final Item LEAD_INGOT = new ItemIngot("leadIngot");
 	public static final Item NICKEL_INGOT = new ItemIngot("nickelIngot");
 	public static final Item QUARTZ = new Item().setRegistryName("quartz").setUnlocalizedName("quartz").setCreativeTab(CreativeTabs.MATERIALS);
@@ -32,6 +33,7 @@ public class SGItems
 	{
 		registerRender(ALUMINUM_INGOT);
 		registerRender(COPPER_INGOT);
+		registerRender(IRIDIUM_INGOT);
 		registerRender(LEAD_INGOT);
 		registerRender(NICKEL_INGOT);
 		registerRender(QUARTZ);
@@ -48,6 +50,7 @@ public class SGItems
 	{
 		OreDictionary.registerOre("ingotAluminum", ALUMINUM_INGOT);
 		OreDictionary.registerOre("ingotCopper", COPPER_INGOT);
+		OreDictionary.registerOre("ingotIridium", IRIDIUM_INGOT);
 		OreDictionary.registerOre("ingotLead", LEAD_INGOT);
 		OreDictionary.registerOre("ingotNickel", NICKEL_INGOT);
 		OreDictionary.registerOre("gemQuartz", QUARTZ);
@@ -82,6 +85,7 @@ public class SGItems
 			{
 					ALUMINUM_INGOT,
 					COPPER_INGOT,
+					IRIDIUM_INGOT,
 					LEAD_INGOT,
 					NICKEL_INGOT,
 					QUARTZ,

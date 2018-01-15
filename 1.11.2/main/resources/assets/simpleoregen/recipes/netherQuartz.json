@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "QQQ",
+    "QRQ",
+	"QQQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "simpleoregen:quartz"
+    },
+	"R": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "minecraft:quartz",
+	"count": 8
+  }
+}
