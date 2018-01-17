@@ -3,9 +3,9 @@ package com.gmail.rohzek.blocks;
 import com.gmail.rohzek.json.OreData;
 import com.gmail.rohzek.json.Ores;
 
-public class SetMiningLevels 
+public class MiningLevels 
 {
-	public static void set()
+	public static void Set()
 	{
 		setMiningLevels();
 	}
@@ -82,6 +82,6 @@ public class SetMiningLevels
 			return 4;
 		}
 		
-		return 0;
+		return 2;
 	}
 }

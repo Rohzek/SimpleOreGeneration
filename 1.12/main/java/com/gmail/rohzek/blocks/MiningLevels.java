@@ -3,14 +3,14 @@ package com.gmail.rohzek.blocks;
 import com.gmail.rohzek.json.OreData;
 import com.gmail.rohzek.json.Ores;
 
-public class SetMiningLevels 
+public class MiningLevels 
 {
-	public static void set()
+	public static void Set()
 	{
 		setMiningLevels();
 	}
 	
-	public static void setMiningLevels()
+	private static void setMiningLevels()
 	{
 		for(SurfaceOreBlock block : SGOres.surfaceOres)
 		{
@@ -55,7 +55,7 @@ public class SetMiningLevels
 		}
 	}
 	
-	public static int getMiningLevel(String level)
+	private static int getMiningLevel(String level)
 	{
 		if(level.equalsIgnoreCase("wooden") || level.equalsIgnoreCase("wood") || level.equalsIgnoreCase("gold"))
 		{
@@ -82,6 +82,6 @@ public class SetMiningLevels
 			return 4;
 		}
 		
-		return 0;
+		return 2;
 	}
 }

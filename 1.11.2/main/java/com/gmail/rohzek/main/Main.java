@@ -3,6 +3,7 @@ package com.gmail.rohzek.main;
 import java.io.File;
 
 import com.gmail.rohzek.blocks.EndOreBlock;
+import com.gmail.rohzek.blocks.MiningLevels;
 import com.gmail.rohzek.blocks.NetherOreBlock;
 import com.gmail.rohzek.blocks.OtherBlocks;
 import com.gmail.rohzek.blocks.SGBlocks;
@@ -184,6 +185,8 @@ public class Main
 		
 		EndOreBlock.setDropRates();
 		NetherOreBlock.setDropRates();
+		
+		MiningLevels.Set();
 		
 		OtherBlocks.init();
 		WorldGenerators.init();
