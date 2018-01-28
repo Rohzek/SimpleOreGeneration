@@ -1,9 +1,11 @@
 package com.gmail.rohzek.compatibility;
 
+import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import forestry.core.config.Config;
+import net.minecraft.block.Block;
 
 public class ForestryCompat 
 {	

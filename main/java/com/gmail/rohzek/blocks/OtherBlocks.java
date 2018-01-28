@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.gmail.rohzek.compatibility.CheckForMods;
+import com.gmail.rohzek.util.LogHelper;
 
-import forestry.core.ModuleCore;
+import forestry.core.PluginCore;
 import forestry.core.blocks.BlockResourceOre;
 import forestry.core.blocks.EnumResourceType;
 import mekanism.common.MekanismBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Optional;
@@ -54,7 +56,7 @@ public class OtherBlocks
 	@Optional.Method(modid = "forestry")
 	static void forestry()
 	{
-		BlockResourceOre resourcesBlock = ModuleCore.getBlocks().resources;
+		BlockResourceOre resourcesBlock = PluginCore.getBlocks().resources;
 		IBlockState apatiteBlockState = resourcesBlock.getStateFromMeta(EnumResourceType.APATITE.getMeta());
 		moddedSurfaceOres.add(new ModOrePack("surfaceApatiteOre", apatiteBlockState));
 	}
@@ -63,11 +65,7 @@ public class OtherBlocks
 	static void techReborn()
 	{
 		IBlockState galena = ModBlocks.ORE.getBlockStateFromName("galena");
-		IBlockState ruby =  ModBlocks.ORE.getBlockStateFromName("ruby");
-		IBlockState sapphire =  ModBlocks.ORE.getBlockStateFromName("sapphire");
 		moddedSurfaceOres.add(new ModOrePack("surfaceGalenaOre", galena));
-		moddedSurfaceOres.add(new ModOrePack("surfaceRubyOre", ruby));
-		moddedSurfaceOres.add(new ModOrePack("surfaceSapphireOre", sapphire));
 	}
 	
 	@Optional.Method(modid = "mekanism")

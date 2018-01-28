@@ -2,6 +2,7 @@ package com.gmail.rohzek.compatibility.waila;
 
 import java.util.List;
 
+import com.gmail.rohzek.blocks.EndOreBlock;
 import com.gmail.rohzek.blocks.NetherOreBlock;
 import com.gmail.rohzek.util.ConfigurationManager;
 
@@ -11,6 +12,8 @@ import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

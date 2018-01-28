@@ -12,12 +12,39 @@ public class CheckForMods
 		return Loader.isModLoaded(modid);
 	}
 	
+	@Optional.Method(modid = "embers")
+	public static void checkForEmbers()
+	{
+		if(ConfigurationManager.supportEmbers)
+		{
+			EmbersCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "iceandfire")
+	public static void checkForIAF()
+	{
+		if(ConfigurationManager.supportIceAndFire)
+		{
+			IAFCompat.load();
+		}
+	}
+	
 	@Optional.Method(modid = "forestry")
 	public static void checkForForestry()
 	{
 		if(ConfigurationManager.supportForestry)
 		{
 			ForestryCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "fp")
+	public static void checkForFuturepack()
+	{
+		if(ConfigurationManager.supportFuturepack)
+		{
+			FuturepackCompat.load();
 		}
 	}
 	
@@ -36,6 +63,15 @@ public class CheckForMods
 		if(ConfigurationManager.supportIE)
 		{
 			IECompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "advancedrocketry")
+	public static void checkForAR()
+	{
+		if(ConfigurationManager.supportAdvRok)
+		{
+			AdvRokCompat.load();
 		}
 	}
 	

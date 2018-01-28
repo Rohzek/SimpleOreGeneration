@@ -10,7 +10,6 @@ import com.gmail.rohzek.util.TimeOutput;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -43,8 +42,8 @@ public class CheshireRose extends BlockBush
 	 * Calculates the time since October 24, 2016, in years, days, and months.
 	 */
 	@Override
-	public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) 
-	{
+	public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced)
+	{	
 		if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
 		{
 			tooltip.add(TextFormatting.RED + "Rohzek loves CheshireRose");

@@ -10,7 +10,7 @@ public class MiningLevels
 		setMiningLevels();
 	}
 	
-	private static void setMiningLevels()
+	public static void setMiningLevels()
 	{
 		for(SurfaceOreBlock block : SGOres.surfaceOres)
 		{
@@ -55,7 +55,7 @@ public class MiningLevels
 		}
 	}
 	
-	private static int getMiningLevel(String level)
+	public static int getMiningLevel(String level)
 	{
 		if(level.equalsIgnoreCase("wooden") || level.equalsIgnoreCase("wood") || level.equalsIgnoreCase("gold"))
 		{

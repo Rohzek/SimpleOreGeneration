@@ -27,6 +27,8 @@ public class SurfaceOreBlock extends GenericBlock
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
         return this == SGOres.getBlockSurface("quartz") ? SGItems.QUARTZ :
+        	   this == SGOres.getBlockSurface("ruby") ? SGItems.RUBY :
+        	   this == SGOres.getBlockSurface("sapphire") ? SGItems.SAPPHIRE :
         	   Item.getItemFromBlock(this);
     }
 	
@@ -65,6 +67,16 @@ public class SurfaceOreBlock extends GenericBlock
             int i = 0;
 
             if (this == SGOres.getBlockSurface("quartz"))
+            {
+                i = MathHelper.getInt(rand, 2, 5);
+            }
+            
+            else if (this == SGOres.getBlockSurface("ruby"))
+            {
+                i = MathHelper.getInt(rand, 2, 5);
+            }
+            
+            else if (this == SGOres.getBlockSurface("sapphire"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }

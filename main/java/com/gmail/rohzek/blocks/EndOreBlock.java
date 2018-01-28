@@ -12,7 +12,9 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -31,7 +33,7 @@ import net.minecraft.world.World;
  */
 public class EndOreBlock extends GenericBlock
 {
-	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop;
+	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
 	
 	public EndOreBlock(String unlocalizedName)
 	{
@@ -54,6 +56,9 @@ public class EndOreBlock extends GenericBlock
 			lapisDrop = 6;
 			quartzDrop = 3;
 			redstoneDrop = 4;
+			
+			rubyDrop = 3;
+			sapphireDrop = 3;
 		}
 		else
 		{
@@ -63,6 +68,9 @@ public class EndOreBlock extends GenericBlock
 			lapisDrop = 4;
 			quartzDrop = 1;
 			redstoneDrop = 1;
+			
+			rubyDrop = 1;
+			sapphireDrop = 1;
 		}
 	}
 	
@@ -75,6 +83,8 @@ public class EndOreBlock extends GenericBlock
         	   this == SGOres.getBlockEnd("lapis")    ? Items.DYE :
         	   this == SGOres.getBlockEnd("quartz")   ? SGItems.QUARTZ :
         	   this == SGOres.getBlockEnd("redstone") ? Items.REDSTONE :
+        	   this == SGOres.getBlockEnd("ruby") ? SGItems.RUBY :
+        	   this == SGOres.getBlockEnd("sapphire") ? SGItems.SAPPHIRE :
         	   Item.getItemFromBlock(this);
     }
 	
@@ -87,6 +97,8 @@ public class EndOreBlock extends GenericBlock
      	   		this == SGOres.getBlockEnd("lapis")    ? 4 + random.nextInt(lapisDrop) :
      	   		this == SGOres.getBlockEnd("quartz")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockEnd("redstone") ? 4 + random.nextInt(redstoneDrop) :
+     	   		this == SGOres.getBlockEnd("ruby")  ? 1 + random.nextInt(rubyDrop) :
+     	   		this == SGOres.getBlockEnd("sapphire")  ? 1 + random.nextInt(sapphireDrop) :
      	   		1;
     }
 	
@@ -141,21 +153,35 @@ public class EndOreBlock extends GenericBlock
             {
                 i = MathHelper.getInt(rand, 0, 2);
             }
+            
             else if (this == SGOres.getBlockEnd("diamond"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockEnd("emerald"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockEnd("lapis"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
+            
             else if (this == SGOres.getBlockEnd("quartz"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
+            }
+            
+            else if (this == SGOres.getBlockEnd("ruby"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
+            }
+            
+            else if (this == SGOres.getBlockEnd("sapphire"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
             }
 
             return i;

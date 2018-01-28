@@ -22,13 +22,13 @@ public class Reference
 	public static final String NAME = "Simple Ore Generation";
 	
 	// Mods to load after
-	public static final String DEPENDENCIES = "after:forestry,ic2,immersiveengineering,techreborn,thermalfoundation,tconstruct,mekanism;";
+	public static final String DEPENDENCIES = "after:advancedrocketry,embers,forestry,fp,ic2,iceandfire,immersiveengineering,mekanism,techreborn,thermalfoundation,tconstruct;";
 	
 	// Folder holding config data
 	public static File LOCATION; 
 	
 	// We only have to change it here... MCMOD.info is gone and the ModData is hardcoded to check here
-	public static final String VERSION = "4.1.3";
+	public static final String VERSION = "3.7.0";
 	
 	static String address = "com.gmail.rohzek.proxy";
 	

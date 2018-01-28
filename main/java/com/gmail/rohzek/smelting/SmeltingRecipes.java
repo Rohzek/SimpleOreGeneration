@@ -1,7 +1,5 @@
 package com.gmail.rohzek.smelting;
 
-import java.util.List;
-
 import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.compatibility.CheckForMods;
@@ -9,7 +7,6 @@ import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 
 import ic2.api.recipe.Recipes;
-import mekanism.common.Mekanism;
 import mekanism.common.MekanismBlocks;
 import mekanism.common.MekanismItems;
 import net.minecraft.block.Block;
@@ -21,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import zmaster587.libVulpes.api.material.AllowedProducts;
 
 /**
  * Recipes to get the ingots and stuff out of the ore, if they didn't drop normally, or if silk touch was used.
@@ -111,11 +109,18 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockNether("aluminum"), new ItemStack(SGItems.ALUMINUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("aluminum"), new ItemStack(SGItems.ALUMINUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);
-			GameRegistry.addSmelting(SGOres.getBlockEnd("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);;
+			GameRegistry.addSmelting(SGOres.getBlockNether("rutile"), new ItemStack(SGItems.TITANIUM_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("rutile"), new ItemStack(SGItems.TITANIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("iridium"), new ItemStack(SGItems.IRIDIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("iridium"), new ItemStack(SGItems.IRIDIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("lead"), new ItemStack(SGItems.LEAD_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lead"), new ItemStack(SGItems.LEAD_INGOT), 0.7f);
+			
+			GameRegistry.addSmelting(SGOres.getBlockNether("magnetite"), new ItemStack(Items.IRON_INGOT, 4), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("magnetite"), new ItemStack(Items.IRON_INGOT, 4), 0.7f);
+			
+			
 			GameRegistry.addSmelting(SGOres.getBlockNether("nickel"), new ItemStack(SGItems.NICKEL_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("nickel"), new ItemStack(SGItems.NICKEL_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("silver"), new ItemStack(SGItems.SILVER_INGOT), 0.7f);
@@ -124,6 +129,8 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("tin"), new ItemStack(SGItems.TIN_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("uranium"), new ItemStack(SGItems.URANIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("uranium"), new ItemStack(SGItems.URANIUM_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("zinc"), new ItemStack(SGItems.ZINC_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("zinc"), new ItemStack(SGItems.ZINC_INGOT), 0.7f);
 		}
 		else
 		{
@@ -131,10 +138,14 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("aluminum"), new ItemStack(SGOres.getBlockSurface("aluminum")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("copper"), new ItemStack(SGOres.getBlockSurface("copper")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("copper"), new ItemStack(SGOres.getBlockSurface("copper")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("rutile"), new ItemStack(SGOres.getBlockSurface("rutile")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("rutile"), new ItemStack(SGOres.getBlockSurface("rutile")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("iridium"), new ItemStack(SGOres.getBlockSurface("iridium")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("iridium"), new ItemStack(SGOres.getBlockSurface("iridium")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("lead"), new ItemStack(SGOres.getBlockSurface("lead")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lead"), new ItemStack(SGOres.getBlockSurface("lead")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("magnetite"), new ItemStack(SGOres.getBlockSurface("magnetite")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("magnetite"), new ItemStack(SGOres.getBlockSurface("magnetite")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("nickel"), new ItemStack(SGOres.getBlockSurface("nickel")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("nickel"), new ItemStack(SGOres.getBlockSurface("nickel")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("silver"), new ItemStack(SGOres.getBlockSurface("silver")), 0.7f);
@@ -143,6 +154,8 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("tin"), new ItemStack(SGOres.getBlockSurface("tin")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("uranium"), new ItemStack(SGOres.getBlockSurface("uranium")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("uranium"), new ItemStack(SGOres.getBlockSurface("uranium")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("zinc"), new ItemStack(SGOres.getBlockSurface("zinc")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("zinc"), new ItemStack(SGOres.getBlockSurface("zinc")), 0.7f);
 		}
 	}
 	
@@ -176,6 +189,5 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockNether("osmium"), new ItemStack(osmium), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("osmium"), new ItemStack(osmium), 0.7f);
 		}
-		
 	}
 }

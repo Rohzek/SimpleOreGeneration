@@ -2,6 +2,8 @@ package com.gmail.rohzek.compatibility;
 
 import java.util.Objects;
 
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class ModOre 
 {
 	String name;

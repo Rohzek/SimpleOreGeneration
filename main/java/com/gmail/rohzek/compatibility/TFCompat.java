@@ -1,5 +1,7 @@
 package com.gmail.rohzek.compatibility;
 
+import cofh.thermalfoundation.ThermalFoundation;
+
 import java.io.File;
 
 import com.gmail.rohzek.util.ConfigurationManager;
@@ -7,7 +9,6 @@ import com.gmail.rohzek.util.LogHelper;
 
 import cofh.core.init.CoreProps;
 import cofh.core.util.ConfigHandler;
-import cofh.thermalfoundation.ThermalFoundation;
 
 public class TFCompat 
 {
@@ -21,11 +22,11 @@ public class TFCompat
 	public static void fixConfig()
 	{
 		String path = CoreProps.configDir + "/cofh/world/";
-		String worldGenOre = "01_thermalfoundation_ores.json";
+		String worldGenOre = "thermalfoundation_ores.json";
 		
 		File worldGenFile = new File(path + worldGenOre);
 		File worldGenFileReplace = new File(path + worldGenOre + ".bak");
-		File worldVanilla = new File(path + "00_minecraft.json");
+		File worldVanilla = new File(path + "vanilla.json");
 		
 		if(ConfigurationManager.supportTF)
 		{

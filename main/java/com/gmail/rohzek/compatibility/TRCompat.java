@@ -1,9 +1,13 @@
 package com.gmail.rohzek.compatibility;
 
+import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import techreborn.Core;
+import techreborn.init.ModBlocks;
 
 public class TRCompat
 {
@@ -31,6 +35,7 @@ public class TRCompat
 			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("iridiumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("rutileOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
 			

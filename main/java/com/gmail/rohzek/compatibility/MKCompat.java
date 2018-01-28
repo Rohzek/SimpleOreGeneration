@@ -3,6 +3,7 @@ package com.gmail.rohzek.compatibility;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
+import mekanism.common.Mekanism;
 import mekanism.common.config.MekanismConfig;
 
 public class MKCompat 

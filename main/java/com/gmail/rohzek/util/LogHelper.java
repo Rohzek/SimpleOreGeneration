@@ -1,11 +1,8 @@
 package com.gmail.rohzek.util;
 
 import java.util.logging.Logger;
-
 import org.apache.logging.log4j.Level;
-
 import com.gmail.rohzek.lib.Reference;
-
 import net.minecraftforge.fml.common.FMLLog;
 
 /**

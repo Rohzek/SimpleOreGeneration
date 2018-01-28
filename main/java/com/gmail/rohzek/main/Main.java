@@ -10,6 +10,7 @@ import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.compatibility.ModdedConstants;
+import com.gmail.rohzek.crafting.CraftingManager;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.json.Ores;
@@ -103,6 +104,26 @@ public class Main
 	{
 		LogHelper.log("Checking for compatibility modules");
 		
+		if(CheckForMods.check("advancedrocketry"))
+		{
+			CheckForMods.checkForAR();
+		}
+		
+		else
+		{
+			LogHelper.log("Advanced Rocketry not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("embers"))
+		{
+			CheckForMods.checkForEmbers();
+		}
+		
+		else
+		{
+			LogHelper.log("Embers not installed; Compatibility not loaded");
+		}
+		
 		if(CheckForMods.check("forestry"))
 		{
 			CheckForMods.checkForForestry();
@@ -111,6 +132,26 @@ public class Main
 		else
 		{
 			LogHelper.log("Forestry not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("fp"))
+		{
+			CheckForMods.checkForFuturepack();
+		}
+		
+		else
+		{
+			LogHelper.log("Futurepack not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("iceandfire"))
+		{
+			CheckForMods.checkForIAF();
+		}
+		
+		else
+		{
+			LogHelper.log("Ice and Fire not installed; Compatibility not loaded");
 		}
 		
 		if(CheckForMods.check("ic2"))
@@ -175,6 +216,7 @@ public class Main
 		
 		LogHelper.debug("Adding smelting and crafting recipes");
 		SmeltingRecipes.mainRegistry();
+		CraftingManager.mainRegistry();
 		
 		LogHelper.debug("Adding Ore Dict entries");
 		SGItems.registerOreDict();
