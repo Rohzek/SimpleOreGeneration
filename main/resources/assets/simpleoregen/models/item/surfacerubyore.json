@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/surfacerubyore",
+    "parent": "simpleoregen:block/surfaceRubyOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

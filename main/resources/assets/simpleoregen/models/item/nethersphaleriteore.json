@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/nethersphaleriteore",
+    "parent": "simpleoregen:block/netherSphaleriteOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

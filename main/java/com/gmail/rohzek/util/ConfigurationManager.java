@@ -77,7 +77,7 @@ public class ConfigurationManager
 		this.supportIE = config.get(modCategory, "supportImmersiveEngineering", true, "Support for Immersive Engineering ores").getBoolean(true);
 		this.supportAdvRok = config.get(modCategory, "supportAdvancedRocketry", true, "Support for Advanced Rocketry/Lib Vulpes ores").getBoolean(true);
 		this.supportMK = config.get(modCategory, "supportMekanism", true, "Support for Mekanism ores").getBoolean(true);
-		this.supportTF = config.get(modCategory, "supportThermalFoundation", true, "Support for Thermal Foundation ores").getBoolean(true);
+		this.supportTF = config.get(modCategory, "supportThermalFoundation", true, "Enables my ores spawning, when Thermal Foudnation is active. To remove the original ores, you must go to config/cofh/thermalfoundation and edit common.cfg, and change GenerateDefaultFiles on line 541 to false and go to config/cofh/world and rename or delete '00_minecraft.json', and '01_thermalfoundation_ores.json' This was previously done for you, but that feature has been removed at the request of the author. It may be coming back in the future, if the author adds the option.").getBoolean(true);
 		this.supportTR = config.get(modCategory, "supportTechReborn", true, "Support for Tech Reborn ores").getBoolean(true);
 		this.supportTC = config.get(modCategory, "supportTinkersConstruct", true, "Support for Tinker's Construct ores").getBoolean(true);
 		this.supportWaila = config.get(modCategory, "supportWaila", true, "Support for Waila overlay on End and Nether blocks").getBoolean(true);

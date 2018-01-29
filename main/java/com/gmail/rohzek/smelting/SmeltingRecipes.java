@@ -159,18 +159,6 @@ public class SmeltingRecipes
 		}
 	}
 	
-	@Optional.Method(modid = "ic2")
-	public static void addMaceratorRecipes()
-	{
-		NBTTagCompound compound = new NBTTagCompound();
-		ItemStack output = new ItemStack(SGItems.HEART_DIAMOND);
-		output.addEnchantment(Enchantments.FIRE_ASPECT, 4);
-		output.addEnchantment(Enchantments.UNBREAKING, 4);
-		
-		// Amy's flower special recipe
-		Recipes.macerator.addRecipe(new MaceratorRecipeInput(new ItemStack(SGBlocks.CHESHIREROSE)), compound, false, output);
-	}
-	
 	@Optional.Method(modid = "mekanism")
 	public static void mekanismOre()
 	{

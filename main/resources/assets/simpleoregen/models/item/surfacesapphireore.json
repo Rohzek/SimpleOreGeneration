@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/surfacesapphireore",
+    "parent": "simpleoregen:block/surfaceSapphireOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

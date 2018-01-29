@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/surfacenickelore",
+    "parent": "simpleoregen:block/surfaceNickelOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

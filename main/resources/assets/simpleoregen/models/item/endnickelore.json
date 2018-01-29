@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/endnickelore",
+    "parent": "simpleoregen:block/endNickelOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
