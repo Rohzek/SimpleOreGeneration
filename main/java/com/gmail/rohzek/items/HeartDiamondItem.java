@@ -8,6 +8,7 @@ import com.gmail.rohzek.util.TimeOutput;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.Item;
@@ -32,9 +33,9 @@ public class HeartDiamondItem extends Item
 	
 	/**
 	 * Calculates the time since October 24, 2016, in years, days, and months.
-	 */
+	 */	
 	@Override
-	public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag) 
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
 		{
@@ -43,7 +44,6 @@ public class HeartDiamondItem extends Item
 		}
 	}
 	
-	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) 
 	{
 		if(tab == CreativeTabs.MISC)

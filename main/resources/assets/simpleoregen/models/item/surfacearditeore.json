@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/surfacearditeore",
+    "parent": "simpleoregen:block/surfaceArditeOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

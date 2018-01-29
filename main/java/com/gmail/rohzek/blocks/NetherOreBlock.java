@@ -7,8 +7,12 @@ import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
+import appeng.client.render.effects.ChargedOreFX;
+import appeng.core.AEConfig;
+import appeng.core.AppEng;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityPigZombie;
@@ -24,6 +28,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Optional;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Allows you to change things about ALL of the Nether ores specifically
@@ -32,7 +39,8 @@ import net.minecraft.world.World;
  */
 public class NetherOreBlock extends GenericBlock
 {
-	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop;
+	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
+	private static Item drop;
 	
 	public NetherOreBlock(String unlocalizedName)
 	{
@@ -42,6 +50,15 @@ public class NetherOreBlock extends GenericBlock
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		
 		this.aggroRange = ConfigurationManager.aggroRangePigmen;
+		
+		if(ConfigurationManager.dropVanillaQuartz)
+		{
+			drop = Items.QUARTZ;
+		}
+		else
+		{
+			drop = SGItems.QUARTZ;
+		}
 	}
 	
 	public static void setDropRates()
@@ -54,6 +71,9 @@ public class NetherOreBlock extends GenericBlock
 			lapisDrop = 6;
 			quartzDrop = 3;
 			redstoneDrop = 4;
+			
+			rubyDrop = 2;
+			sapphireDrop = 2;
 		}
 		else
 		{
@@ -63,6 +83,9 @@ public class NetherOreBlock extends GenericBlock
 			lapisDrop = 4;
 			quartzDrop = 1;
 			redstoneDrop = 1;
+			
+			rubyDrop = 1;
+			sapphireDrop = 1;
 		}
 	}
 	
@@ -73,8 +96,10 @@ public class NetherOreBlock extends GenericBlock
         	   this == SGOres.getBlockNether("diamond") ? Items.DIAMOND :
         	   this == SGOres.getBlockNether("emerald") ? Items.EMERALD :
         	   this == SGOres.getBlockNether("lapis") ? Items.DYE : 
-        	   this == SGOres.getBlockNether("quartz") ? SGItems.QUARTZ :
+        	   this == SGOres.getBlockNether("quartz") ? drop :
         	   this == SGOres.getBlockNether("redstone") ? Items.REDSTONE :
+        	   this == SGOres.getBlockNether("ruby") ? SGItems.RUBY :
+        	   this == SGOres.getBlockNether("sapphire") ? SGItems.SAPPHIRE :
         	   Item.getItemFromBlock(this);
     }
 	
@@ -87,6 +112,8 @@ public class NetherOreBlock extends GenericBlock
      	   		this == SGOres.getBlockNether("lapis")    ? 4 + random.nextInt(lapisDrop) :
      	   		this == SGOres.getBlockNether("quartz")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockNether("redstone") ? 4 + random.nextInt(redstoneDrop) :
+     	   		this == SGOres.getBlockNether("ruby") ? 1 + random.nextInt(rubyDrop) :
+     	   		this == SGOres.getBlockNether("sapphire") ? 1 + random.nextInt(rubyDrop) :
      	   		1;
     }
 	
@@ -157,21 +184,35 @@ public class NetherOreBlock extends GenericBlock
             {
                 i = MathHelper.getInt(rand, 0, 2);
             }
+            
             else if (this == SGOres.getBlockNether("diamond"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockNether("emerald"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockNether("lapis"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
+            
             else if (this == SGOres.getBlockNether("quartz"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
+            }
+            
+            else if (this == SGOres.getBlockNether("ruby"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
+            }
+            
+            else if (this == SGOres.getBlockNether("sapphire"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
             }
 
             return i;
@@ -199,6 +240,52 @@ public class NetherOreBlock extends GenericBlock
 				zombiePig.setRevengeTarget(player);
 				LogHelper.debug("Zombie pigs aggro applied to: " + player.getDisplayNameString());
 			}
+		}
+	}
+	
+	@Optional.Method(modid = "appliedenergistics2")
+	@Override
+	@SideOnly( Side.CLIENT )
+	public void randomDisplayTick( final IBlockState state, final World w, final BlockPos pos, final Random r )
+	{
+		if(!AEConfig.instance().isEnableEffects())
+		{
+			return;
+		}
+
+		double xOff = (r.nextFloat());
+		double yOff = (r.nextFloat());
+		double zOff = (r.nextFloat());
+
+		switch(r.nextInt(6))
+		{
+			case 0:
+				xOff = -0.01;
+				break;
+			case 1:
+				yOff = -0.01;
+				break;
+			case 2:
+				xOff = -0.01;
+				break;
+			case 3:
+				zOff = -0.01;
+				break;
+			case 4:
+				xOff = 1.01;
+				break;
+			case 5:
+				yOff = 1.01;
+				break;
+			case 6:
+				zOff = 1.01;
+				break;
+		}
+
+		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockNether("chargedcertusquartz"))
+		{
+			final ChargedOreFX fx = new ChargedOreFX(w, pos.getX() + xOff, pos.getY() + yOff, pos.getZ() + zOff, 0.0f, 0.0f, 0.0f);
+			Minecraft.getMinecraft().effectRenderer.addEffect(fx);
 		}
 	}
 }

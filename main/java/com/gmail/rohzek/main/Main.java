@@ -103,6 +103,36 @@ public class Main
 	{
 		LogHelper.log("Checking for compatibility modules");
 		
+		if(CheckForMods.check("advancedrocketry"))
+		{
+			CheckForMods.checkForAR();
+		}
+		
+		else
+		{
+			LogHelper.log("Advanced Rocketry not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("appliedenergistics2"))
+		{
+			CheckForMods.checkForAE();
+		}
+		
+		else
+		{
+			LogHelper.log("Applied Energestics not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("embers"))
+		{
+			CheckForMods.checkForEmbers();
+		}
+		
+		else
+		{
+			LogHelper.log("Embers not installed; Compatibility not loaded");
+		}
+		
 		if(CheckForMods.check("forestry"))
 		{
 			CheckForMods.checkForForestry();
@@ -111,6 +141,26 @@ public class Main
 		else
 		{
 			LogHelper.log("Forestry not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("fp"))
+		{
+			CheckForMods.checkForFuturepack();
+		}
+		
+		else
+		{
+			LogHelper.log("Futurepack not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("iceandfire"))
+		{
+			CheckForMods.checkForIAF();
+		}
+		
+		else
+		{
+			LogHelper.log("Ice and Fire not installed; Compatibility not loaded");
 		}
 		
 		if(CheckForMods.check("ic2"))

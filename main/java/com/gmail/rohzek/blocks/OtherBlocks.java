@@ -63,11 +63,7 @@ public class OtherBlocks
 	static void techReborn()
 	{
 		IBlockState galena = ModBlocks.ORE.getBlockStateFromName("galena");
-		IBlockState ruby =  ModBlocks.ORE.getBlockStateFromName("ruby");
-		IBlockState sapphire =  ModBlocks.ORE.getBlockStateFromName("sapphire");
 		moddedSurfaceOres.add(new ModOrePack("surfaceGalenaOre", galena));
-		moddedSurfaceOres.add(new ModOrePack("surfaceRubyOre", ruby));
-		moddedSurfaceOres.add(new ModOrePack("surfaceSapphireOre", sapphire));
 	}
 	
 	@Optional.Method(modid = "mekanism")

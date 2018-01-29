@@ -25,7 +25,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -37,7 +36,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -49,7 +47,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -77,7 +74,7 @@ public class ModdedConstants
 		allOres.add(new ModOre("cobaltOre", false));
 		allOres.add(new ModOre("arditeOre", false));
 		allOres.add(new ModOre("copperOre", false));
-		allOres.add(new ModOre("iridiumOre", false)); // Iridium ore needs smelting recipe
+		allOres.add(new ModOre("iridiumOre", false));
 		allOres.add(new ModOre("leadOre", false));
 		allOres.add(new ModOre("nickelOre", false));
 		allOres.add(new ModOre("tinOre", false));
@@ -95,8 +92,15 @@ public class ModdedConstants
 		allOres.add(new ModOre("sphaleriteOre", false));
 		allOres.add(new ModOre("tungstenOre", false));
 		
-		allOres.add(new ModOre("osmiumOre", false)); // Osmium needs a smelting recipe
+		allOres.add(new ModOre("osmiumOre", false));
+
+		allOres.add(new ModOre("rutileOre", false));
+		allOres.add(new ModOre("dilithiumOre", false));
 		
+		allOres.add(new ModOre("magnetiteOre", false));
+		allOres.add(new ModOre("zincOre", false));
 		
+		allOres.add(new ModOre("certusQuartzOre", false));
+		allOres.add(new ModOre("chargedCertusQuartzOre", false));
 	}
 }

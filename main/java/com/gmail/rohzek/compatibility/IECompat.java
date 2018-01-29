@@ -1,13 +1,16 @@
 package com.gmail.rohzek.compatibility;
 
 import java.util.ArrayList;
-
+import com.gmail.rohzek.lib.Reference;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
-
+import blusunrize.immersiveengineering.ImmersiveEngineering;
+import blusunrize.immersiveengineering.common.Config;
 import blusunrize.immersiveengineering.common.world.IEWorldGen;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.config.Configuration;
 
 public class IECompat 
 {

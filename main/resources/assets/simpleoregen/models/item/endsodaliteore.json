@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/endsodaliteore",
+    "parent": "simpleoregen:block/endSodaliteOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

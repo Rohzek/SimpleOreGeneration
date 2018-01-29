@@ -23,11 +23,17 @@ public class ConfigurationManager
 	public static boolean supportNewDims;
 	public static boolean changeVanilla;
 	public static boolean useVanillaNetherQuartz;
+	public static boolean dropVanillaQuartz;
 	public static boolean emeraldSpawnAnywhere;
 	
+	public static boolean supportAE;
+	public static boolean supportEmbers;
 	public static boolean supportForestry;
+	public static boolean supportFuturepack;
 	public static boolean supportIC;
+	public static boolean supportIceAndFire;
 	public static boolean supportIE;
+	public static boolean supportAdvRok;
 	public static boolean supportMK;
 	public static boolean supportTF;
 	public static boolean supportTR;
@@ -61,16 +67,22 @@ public class ConfigurationManager
 		this.supportNewDims = config.get(modCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions with Stone as the main block (like the overworld)").getBoolean(true);
 		this.changeVanilla = config.get(modCategory, "changeVanillaOreSpawn", true, "Should this mod change the vanilla ore gen?").getBoolean(true);
 		this.useVanillaNetherQuartz = config.get(modCategory, "useVanillaNetherQuartz", false, "Should the mod not override Nether Quartz?").getBoolean(false);
+		this.dropVanillaQuartz = config.get(modCategory, "dropVanillaQuartz", false, "Should the modded Nether Quartz drop vanilla Nether Quartz (item)?").getBoolean(false);
 		this.emeraldSpawnAnywhere = config.get(modCategory, "easyEmeralds", true, "Should emeralds spawn anywhere? Set false to make emeralds only spawn in Extreme Hills biomes").getBoolean(true);
 		
+		this.supportAE = config.get(modCategory, "supportAppliedEnergestics2", true, "Support for Applied Energestics 2 quartz").getBoolean(true);
+		this.supportEmbers = config.get(modCategory, "supportEmbers", true, "Support for Embers ores").getBoolean(true);
 		this.supportForestry = config.get(modCategory, "supportForestry", true, "Support for Forestry ores").getBoolean(true);
+		this.supportFuturepack = config.get(modCategory, "supportFuturepack", true, "Support for Futurepack ores").getBoolean(true);
 		this.supportIC = config.get(modCategory, "supportIndustrialCraft", true, "Support for IC2 ores").getBoolean(true);
-		this.supportIE = config.get(modCategory, "supportImmersiveEngineering", true, "Support for Immersive Engineering").getBoolean(true);
-		this.supportMK = config.get(modCategory, "supportMekanism", true, "Support for Mekanism").getBoolean(true);
-		this.supportTF = config.get(modCategory, "supportThermalFoundation", true, "Support for Thermal Foundation").getBoolean(true);
-		this.supportTR = config.get(modCategory, "supportTechReborn", true, "Support for Tech Reborn").getBoolean(true);
-		this.supportTC = config.get(modCategory, "supportTinkersConstruct", true, "Support for Tinker's Construct").getBoolean(true);
-		this.supportWaila = config.get(modCategory, "supportWaila", true, "Support for Waila").getBoolean(true);
+		this.supportIceAndFire = config.get(modCategory, "supportIceAndFire", true, "Support for Ice and Fire ores").getBoolean(true);
+		this.supportIE = config.get(modCategory, "supportImmersiveEngineering", true, "Support for Immersive Engineering ores").getBoolean(true);
+		this.supportAdvRok = config.get(modCategory, "supportAdvancedRocketry", true, "Support for Advanced Rocketry/Lib Vulpes ores").getBoolean(true);
+		this.supportMK = config.get(modCategory, "supportMekanism", true, "Support for Mekanism ores").getBoolean(true);
+		this.supportTF = config.get(modCategory, "supportThermalFoundation", true, "Enables my ores spawning, when Thermal Foudnation is active. To remove the original ores, you must go to config/cofh/thermalfoundation and edit common.cfg, and change GenerateDefaultFiles on line 541 to false and go to config/cofh/world and rename or delete '00_minecraft.json', and '01_thermalfoundation_ores.json' This was previously done for you, but that feature has been removed at the request of the author. It may be coming back in the future, if the author adds the option.").getBoolean(true);
+		this.supportTR = config.get(modCategory, "supportTechReborn", true, "Support for Tech Reborn ores").getBoolean(true);
+		this.supportTC = config.get(modCategory, "supportTinkersConstruct", true, "Support for Tinker's Construct ores").getBoolean(true);
+		this.supportWaila = config.get(modCategory, "supportWaila", true, "Support for Waila overlay on End and Nether blocks").getBoolean(true);
 		
 		config.save();
 	}

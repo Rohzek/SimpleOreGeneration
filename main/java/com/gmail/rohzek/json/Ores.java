@@ -147,6 +147,8 @@ public class Ores
 			{
 				new OreData("surfaceApatiteOre", 64, 256, 24, 7, 11, "MODDED", "minecraft:stone", false),
 				new OreData("surfaceArditeOre", 64, 256, 24, 7, 11, "IRON", "minecraft:stone", true),
+				new OreData("surfaceCertusQuartzOre", surfaceMin, 250, 13, 3, 6, "STONE", "minecraft:stone", false),
+				new OreData("surfaceChargedCertusQuartzOre", surfaceMin, 250, 9, 3, 6, "STONE", "minecraft:stone", false),
 				new OreData("surfaceCobaltOre", 64, 256, 24, 7, 11, "IRON", "minecraft:stone", true),
 				new OreData("surfaceCopperOre", 10, 256, 30, 5, 19, "STONE", "minecraft:stone", false),
 				new OreData("surfaceTinOre", 20, 256, 72, 3, 19, "STONE", "minecraft:stone", false),
@@ -166,29 +168,36 @@ public class Ores
 				new OreData("surfaceSheldoniteOre", 10, 60, 12, 4, 9, "IRON", "minecraft:stone", true),
 				new OreData("surfacePeridotOre", 10, 60, 12, 4, 9, "IRON", "minecraft:stone", true),
 				new OreData("surfaceSodaliteOre", 10, 60, 12, 4, 9, "IRON", "minecraft:stone", true),
-				new OreData("surfaceOsmiumOre", surfaceMin, 256, 12, 4, 9, "MODDED", "minecraft:stone", false)
+				new OreData("surfaceOsmiumOre", surfaceMin, 256, 12, 4, 9, "MODDED", "minecraft:stone", false),
+				new OreData("surfaceQuartzOre", surfaceMin, 21, 4, 3, 6, "WOODEN", "minecraft:stone", false),
+				new OreData("surfaceDilithiumOre", surfaceMin, 21, 4, 3, 6, "STONE", "minecraft:stone", false),
+				new OreData("surfaceRutileOre", 5, 60, 3, 5, 8, "IRON", "minecraft:stone", false),
+				new OreData("surfaceZincOre", surfaceMin, 69, 6, 5, 19, "IRON", "minecraft:stone", false),
+				new OreData("surfaceMagnetiteOre", surfaceMin, 69, 20, 5, 19, "IRON", "minecraft:stone", false)
 			};
 		surfaceOres = new ArrayList<OreData>(Arrays.asList(sOres));
 		
 		OreData[] nOres = 
 			{
+				new OreData("netherCertusQuartzOre", netherMin, netherMax, 36, 5, 9, "STONE", "minecraft:netherrack", false),
+				new OreData("netherChargedCertusQuartzOre", netherMin, netherMax, 36, 5, 9, "STONE", "minecraft:netherrack", false),
 				new OreData("netherCoalOre", netherMin, netherMax, 36, 2, 17, "WOODEN", "minecraft:netherrack",  false),
 				new OreData("netherDiamondOre", netherMin, netherMax, 6, 3, 6, "IRON", "minecraft:netherrack", false),
 				new OreData("netherEmeraldOre", netherMin, netherMax, 12, 6, 6, "IRON", "minecraft:netherrack", false),
 				new OreData("netherGoldOre", netherMin, netherMax, 18, 9, 9, "IRON", "minecraft:netherrack", false),
-				new OreData("netherIronOre", netherMin, netherMax, 30, 5, 19, "STONE", "minecraft:netherrack", false),
+				new OreData("netherIronOre", netherMin, netherMax, 30, 5, 19, "IRON", "minecraft:netherrack", false),
 				new OreData("netherLapisOre", netherMin, netherMax, 24, 7, 7, "STONE", "minecraft:netherrack", false),
 				new OreData("netherQuartzOre", netherMin, netherMax, 36, 5, 9, "WOODEN", "minecraft:netherrack", false),
 				new OreData("netherRedstoneOre", netherMin, netherMax, 72, 3, 7, "IRON", "minecraft:netherrack", false),
-				new OreData("netherCopperOre", netherMin, netherMax, 30, 5, 19, "STONE", "minecraft:netherrack", false),
-				new OreData("netherTinOre", netherMin, netherMax, 72, 5, 19, "STONE", "minecraft:netherrack", false),
+				new OreData("netherCopperOre", netherMin, netherMax, 30, 5, 19, "IRON", "minecraft:netherrack", false),
+				new OreData("netherTinOre", netherMin, netherMax, 72, 5, 19, "IRON", "minecraft:netherrack", false),
 				new OreData("netherLeadOre", netherMin, netherMax, 30, 5, 19, "IRON", "minecraft:netherrack", false),
 				new OreData("netherIridiumOre", 10, 80, 9, 5, 8, "IRON", "minecraft:netherrack", false),
 				new OreData("netherUraniumOre", netherMin, netherMax, 6, 4, 8, "IRON", "minecraft:netherrack", false),
-				new OreData("netherAluminumOre", netherMin, netherMax, 48, 6, 20, "STONE", "minecraft:netherrack", false),
-				new OreData("netherArditeOre", netherMin, netherMax, 7, 7, 19, "STONE", "minecraft:netherrack", false),
-				new OreData("netherCobaltOre", netherMin, netherMax, 7, 5, 18, "STONE", "minecraft:netherrack", false),
-				new OreData("netherNickelOre", netherMin, netherMax, 6, 9, 9, "STONE", "minecraft:netherrack", false),
+				new OreData("netherAluminumOre", netherMin, netherMax, 48, 6, 20, "IRON", "minecraft:netherrack", false),
+				new OreData("netherArditeOre", netherMin, netherMax, 7, 7, 19, "IRON", "minecraft:netherrack", false),
+				new OreData("netherCobaltOre", netherMin, netherMax, 7, 5, 18, "IRON", "minecraft:netherrack", false),
+				new OreData("netherNickelOre", netherMin, netherMax, 6, 9, 9, "IRON", "minecraft:netherrack", false),
 				new OreData("netherSilverOre", netherMin, netherMax, 4, 3, 6, "IRON", "minecraft:netherrack", false),
 				new OreData("netherGalenaOre", 10, netherMax, 24, 4, 9, "IRON", "minecraft:netherrack", true),
 				new OreData("netherRubyOre", 10, netherMax, 12, 4, 9, "IRON", "minecraft:netherrack", true),
@@ -200,12 +209,18 @@ public class Ores
 				new OreData("netherSheldoniteOre", 10, netherMax, 12, 4, 9, "IRON", "minecraft:netherrack", true),
 				new OreData("netherPeridotOre", 10, netherMax, 12, 4, 9, "IRON", "minecraft:netherrack", true),
 				new OreData("netherSodaliteOre", 10, netherMax, 12, 4, 9, "IRON", "minecraft:netherrack", true),
-				new OreData("netherSodaliteOre", netherMin, netherMax, 12, 3, 10, "IRON", "minecraft:netherrack", true)
+				new OreData("netherSodaliteOre", netherMin, netherMax, 12, 3, 10, "IRON", "minecraft:netherrack", true),
+				new OreData("netherRutileOre", 10, 80, 9, 5, 8, "IRON", "minecraft:netherrack", false),
+				new OreData("netherDilithiumOre", netherMin, netherMax, 6, 3, 6, "WOODEN", "minecraft:netherrack", false),
+				new OreData("netherMagnetiteOre", netherMin, netherMax, 30, 5, 19, "IRON", "minecraft:netherrack", false),
+				new OreData("netherZincOre", netherMin, netherMax, 30, 5, 19, "IRON", "minecraft:netherrack", false)
 			};
 		netherOres = new ArrayList<OreData>(Arrays.asList(nOres));
 		
 		OreData[] eOres = 
 			{
+				new OreData("endCertusQuartzOre", endMin, endMax, 36, 5, 9, "STONE", "minecraft:end_stone", false),
+				new OreData("endChargedCertusQuartzOre", endMin, endMax, 36, 5, 9, "STONE", "minecraft:end_stone", false),
 				new OreData("endCoalOre", endMin, endMax, 36, 2, 17, "WOODEN", "minecraft:end_stone",  false),
 				new OreData("endDiamondOre", endMin, endMax, 6, 3, 6, "IRON", "minecraft:end_stone", false),
 				new OreData("endEmeraldOre", endMin, endMax, 12, 6, 6, "IRON", "minecraft:end_stone", false),
@@ -216,13 +231,13 @@ public class Ores
 				new OreData("endRedstoneOre", endMin, endMax, 72, 3, 7, "IRON", "minecraft:end_stone", false),
 				new OreData("endArditeOre", endMin, endMax, 7, 7, 19, "IRON", "minecraft:end_stone", true),
 				new OreData("endCobaltOre", endMin, endMax, 7, 7, 20, "IRON", "minecraft:end_stone", true),
-				new OreData("endCopperOre", endMin, endMax, 30, 5, 19, "STONE", "minecraft:end_stone", false),
-				new OreData("endTinOre", endMin, endMax, 72, 5, 19, "STONE", "minecraft:end_stone", false),
+				new OreData("endCopperOre", endMin, endMax, 30, 5, 19, "IRON", "minecraft:end_stone", false),
+				new OreData("endTinOre", endMin, endMax, 72, 5, 19, "IRON", "minecraft:end_stone", false),
 				new OreData("endLeadOre", endMin, endMax, 30, 5, 19, "IRON", "minecraft:end_stone", false),
 				new OreData("endIridiumOre", 10, endMax, 9, 5, 8, "IRON", "minecraft:end_stone", false),
 				new OreData("endUraniumOre", endMin, endMax, 6, 4, 8, "IRON", "minecraft:end_stone", false),
-				new OreData("endAluminumOre", endMin, endMax, 48, 6, 20, "STONE", "minecraft:end_stone", false),
-				new OreData("endNickelOre", endMin, endMax, 6, 9, 9, "STONE", "minecraft:end_stone", false),
+				new OreData("endAluminumOre", endMin, endMax, 48, 6, 20, "IRON", "minecraft:end_stone", false),
+				new OreData("endNickelOre", endMin, endMax, 6, 9, 9, "IRON", "minecraft:end_stone", false),
 				new OreData("endSilverOre", endMin, endMax, 4, 3, 6, "IRON", "minecraft:end_stone", false),
 				new OreData("endGalenaOre", 10, endMax, 24, 4, 9, "IRON", "minecraft:end_stone", true),
 				new OreData("endRubyOre", 10, endMax, 12, 4, 9, "IRON", "minecraft:end_stone", true),
@@ -234,7 +249,11 @@ public class Ores
 				new OreData("endSheldoniteOre", 10, endMax, 12, 4, 9, "MODDED", "minecraft:end_stone", false),
 				new OreData("endPeridotOre", 10, endMax, 12, 4, 9, "MODDED", "minecraft:end_stone", false),
 				new OreData("endSodaliteOre", 10, endMax, 12, 4, 9, "MODDED", "minecraft:end_stone", false),
-				new OreData("endSodaliteOre", endMin, endMax, 12, 3, 10, "IRON", "minecraft:end_stone", true)
+				new OreData("endSodaliteOre", endMin, endMax, 12, 3, 10, "IRON", "minecraft:end_stone", true),
+				new OreData("endDilithiumOre", endMin, endMax, 6, 3, 6, "IRON", "minecraft:end_stone", false),
+				new OreData("endRutileOre", 10, endMax, 9, 5, 8, "IRON", "minecraft:end_stone", false),
+				new OreData("endMagnetiteOre", endMin, endMax, 30, 5, 19, "STONE", "minecraft:end_stone", false),
+				new OreData("endZincOre", endMin, endMax, 30, 5, 19, "STONE", "minecraft:end_stone", false)
 			};
 		endOres = new ArrayList<OreData>(Arrays.asList(eOres));
 		

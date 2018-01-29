@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simpleoregen:blocks/cheshirerose"
+        "layer0": "simpleoregen:blocks/cheshireRose"
     }
 }

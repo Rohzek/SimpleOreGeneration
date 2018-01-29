@@ -28,10 +28,14 @@ public class SGOres
 	{
 		new SurfaceOreBlock("surfaceAluminumOre"),
 		new SurfaceOreBlock("surfaceArditeOre"),
+		new SurfaceOreBlock("surfaceCertusQuartzOre"),
+		new SurfaceOreBlock("surfaceChargedCertusQuartzOre"),
 		new SurfaceOreBlock("surfaceCobaltOre"),
 		new SurfaceOreBlock("surfaceCopperOre"),
+		new SurfaceOreBlock("surfaceDilithiumOre"),
 		new SurfaceOreBlock("surfaceIridiumOre"),
 		new SurfaceOreBlock("surfaceLeadOre"),
+		new SurfaceOreBlock("surfaceMagnetiteOre"),
 		new SurfaceOreBlock("surfaceNickelOre"),
 		new SurfaceOreBlock("surfaceQuartzOre"),
 		new SurfaceOreBlock("surfaceSilverOre"),
@@ -39,28 +43,36 @@ public class SGOres
 		new SurfaceOreBlock("surfaceUraniumOre"),
 		new SurfaceOreBlock("surfacePyriteOre"),
 		new SurfaceOreBlock("surfaceCinnabarOre"),
+		new SurfaceOreBlock("surfaceRubyOre"),
+		new SurfaceOreBlock("surfaceRutileOre"),
+		new SurfaceOreBlock("surfaceSapphireOre"),
 		new SurfaceOreBlock("surfaceSphaleriteOre"),
 		new SurfaceOreBlock("surfaceTungstenOre"),
 		new SurfaceOreBlock("surfaceSheldoniteOre"),
 		new SurfaceOreBlock("surfacePeridotOre"),
 		new SurfaceOreBlock("surfaceSodaliteOre"),
+		new SurfaceOreBlock("surfaceZincOre")
 	};
 	
 	public static NetherOreBlock[] netherOres = 
 	{
 		new NetherOreBlock("netherAluminumOre"),
 		new NetherOreBlock("netherArditeOre"),
+		new NetherOreBlock("netherCertusQuartzOre"),
+		new NetherOreBlock("netherChargedCertusQuartzOre"),
 		new NetherOreBlock("netherCoalOre"),
 		new NetherOreBlock("netherCobaltOre"),
 		new NetherOreBlock("netherCopperOre"),
 		new NetherOreBlock("netherCinnabarOre"),
 		new NetherOreBlock("netherDiamondOre"),
+		new NetherOreBlock("netherDilithiumOre"),
 		new NetherOreBlock("netherEmeraldOre"),
 		new NetherOreBlock("netherIridiumOre"),
 		new NetherOreBlock("netherIronOre"),
 		new NetherOreBlock("netherGoldOre"),
 		new NetherOreBlock("netherLapisOre"),
 		new NetherOreBlock("netherLeadOre"),
+		new NetherOreBlock("netherMagnetiteOre"),
 		new NetherOreBlock("netherNickelOre"),
 		new NetherOreBlock("netherOsmiumOre"),
 		new NetherOreBlock("netherPyriteOre"),
@@ -72,27 +84,33 @@ public class SGOres
 		new NetherOreBlock("netherUraniumOre"),
 		new NetherOreBlock("netherGalenaOre"),
 		new NetherOreBlock("netherRubyOre"),
+		new NetherOreBlock("netherRutileOre"),
 		new NetherOreBlock("netherSapphireOre"),
 		new NetherOreBlock("netherTungstenOre"),
 		new NetherOreBlock("netherSheldoniteOre"),
 		new NetherOreBlock("netherPeridotOre"),
-		new NetherOreBlock("netherSodaliteOre")
+		new NetherOreBlock("netherSodaliteOre"),
+		new NetherOreBlock("netherZincOre")
 	};
 	
 	public static EndOreBlock[] endOres = 
 	{
 		new EndOreBlock("endAluminumOre"),
 		new EndOreBlock("endArditeOre"),
+		new EndOreBlock("endCertusQuartzOre"),
+		new EndOreBlock("endChargedCertusQuartzOre"),
 		new EndOreBlock("endCoalOre"),
 		new EndOreBlock("endCobaltOre"),
 		new EndOreBlock("endCopperOre"),
 		new EndOreBlock("endDiamondOre"),
+		new EndOreBlock("endDilithiumOre"),
 		new EndOreBlock("endEmeraldOre"),
 		new EndOreBlock("endIridiumOre"),
 		new EndOreBlock("endIronOre"),
 		new EndOreBlock("endGoldOre"),
 		new EndOreBlock("endLapisOre"),
 		new EndOreBlock("endLeadOre"),
+		new EndOreBlock("endMagnetiteOre"),
 		new EndOreBlock("endNickelOre"),
 		new EndOreBlock("endOsmiumOre"),
 		new EndOreBlock("endQuartzOre"),
@@ -102,6 +120,7 @@ public class SGOres
 		new EndOreBlock("endUraniumOre"),
 		new EndOreBlock("endGalenaOre"),
 		new EndOreBlock("endRubyOre"),
+		new EndOreBlock("endRutileOre"),
 		new EndOreBlock("endSapphireOre"),
 		new EndOreBlock("endPyriteOre"),
 		new EndOreBlock("endCinnabarOre"),
@@ -109,7 +128,8 @@ public class SGOres
 		new EndOreBlock("endTungstenOre"),
 		new EndOreBlock("endSheldoniteOre"),
 		new EndOreBlock("endPeridotOre"),
-		new EndOreBlock("endSodaliteOre")
+		new EndOreBlock("endSodaliteOre"),
+		new EndOreBlock("endZincOre")
 	};
 	
 	static int size = surfaceOres.length + netherOres.length + endOres.length;
@@ -188,6 +208,14 @@ public class SGOres
 		{
 			OreDictionary.registerOre("ore" + block.getName().substring(3, block.getName().length() - 3), block);
 		}
+		
+		OreDictionary.registerOre("oreCertusQuartz", getBlockSurface("chargedcertusquartz"));
+		OreDictionary.registerOre("oreCertusQuartz", getBlockNether("chargedcertusquartz"));
+		OreDictionary.registerOre("oreCertusQuartz", getBlockEnd("chargedcertusquartz"));
+		
+		OreDictionary.registerOre("oreTitanium", getBlockSurface("rutile"));
+		OreDictionary.registerOre("oreTitanium", getBlockNether("rutile"));
+		OreDictionary.registerOre("oreTitanium", getBlockEnd("rutile"));
 	}
 	
 	public static void registerRender(Block block)

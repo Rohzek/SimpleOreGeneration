@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/endtungstenore",
+    "parent": "simpleoregen:block/endTungstenOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

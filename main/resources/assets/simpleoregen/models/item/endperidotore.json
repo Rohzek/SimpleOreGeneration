@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/endperidotore",
+    "parent": "simpleoregen:block/endPeridotOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

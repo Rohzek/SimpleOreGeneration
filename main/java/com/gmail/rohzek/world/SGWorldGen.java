@@ -3,6 +3,7 @@ package com.gmail.rohzek.world;
 import java.util.Random;
 
 import com.gmail.rohzek.util.ConfigurationManager;
+import com.gmail.rohzek.util.LogHelper;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -13,22 +14,36 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class SGWorldGen implements IWorldGenerator
 {
+	boolean test = false;
+	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{	
 		switch(world.provider.getDimension())
 		{
 			case 0:
-				overworld(random, chunkX, chunkZ, world);
+				if(!test)
+				{
+					overworld(random, chunkX, chunkZ, world);
+				}
 				break;
 			case -1:
-				nether(random, chunkX, chunkZ, world);
+				if(!test)
+				{
+					nether(random, chunkX, chunkZ, world);
+				}
 				break;
 			case 1:
-				end(random, chunkX, chunkZ, world);
+				if(!test)
+				{
+					end(random, chunkX, chunkZ, world);
+				}
 				break;
 			default:
-				overworld(random, chunkX, chunkZ, world);
+				if(!test)
+				{
+					overworld(random, chunkX, chunkZ, world);
+				}
 				break;	
 		}
 	}

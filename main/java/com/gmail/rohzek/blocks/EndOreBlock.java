@@ -7,12 +7,18 @@ import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
+import appeng.client.render.effects.ChargedOreFX;
+import appeng.core.AEConfig;
+import appeng.core.AppEng;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -23,6 +29,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Optional;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Lets you change things about ALL of the End blocks specifically.
@@ -31,7 +40,7 @@ import net.minecraft.world.World;
  */
 public class EndOreBlock extends GenericBlock
 {
-	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop;
+	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
 	
 	public EndOreBlock(String unlocalizedName)
 	{
@@ -54,6 +63,9 @@ public class EndOreBlock extends GenericBlock
 			lapisDrop = 6;
 			quartzDrop = 3;
 			redstoneDrop = 4;
+			
+			rubyDrop = 3;
+			sapphireDrop = 3;
 		}
 		else
 		{
@@ -63,6 +75,9 @@ public class EndOreBlock extends GenericBlock
 			lapisDrop = 4;
 			quartzDrop = 1;
 			redstoneDrop = 1;
+			
+			rubyDrop = 1;
+			sapphireDrop = 1;
 		}
 	}
 	
@@ -75,6 +90,8 @@ public class EndOreBlock extends GenericBlock
         	   this == SGOres.getBlockEnd("lapis")    ? Items.DYE :
         	   this == SGOres.getBlockEnd("quartz")   ? SGItems.QUARTZ :
         	   this == SGOres.getBlockEnd("redstone") ? Items.REDSTONE :
+        	   this == SGOres.getBlockEnd("ruby") ? SGItems.RUBY :
+        	   this == SGOres.getBlockEnd("sapphire") ? SGItems.SAPPHIRE :
         	   Item.getItemFromBlock(this);
     }
 	
@@ -87,6 +104,8 @@ public class EndOreBlock extends GenericBlock
      	   		this == SGOres.getBlockEnd("lapis")    ? 4 + random.nextInt(lapisDrop) :
      	   		this == SGOres.getBlockEnd("quartz")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockEnd("redstone") ? 4 + random.nextInt(redstoneDrop) :
+     	   		this == SGOres.getBlockEnd("ruby")  ? 1 + random.nextInt(rubyDrop) :
+     	   		this == SGOres.getBlockEnd("sapphire")  ? 1 + random.nextInt(sapphireDrop) :
      	   		1;
     }
 	
@@ -141,21 +160,35 @@ public class EndOreBlock extends GenericBlock
             {
                 i = MathHelper.getInt(rand, 0, 2);
             }
+            
             else if (this == SGOres.getBlockEnd("diamond"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockEnd("emerald"))
             {
                 i = MathHelper.getInt(rand, 3, 7);
             }
+            
             else if (this == SGOres.getBlockEnd("lapis"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
+            
             else if (this == SGOres.getBlockEnd("quartz"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
+            }
+            
+            else if (this == SGOres.getBlockEnd("ruby"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
+            }
+            
+            else if (this == SGOres.getBlockEnd("sapphire"))
+            {
+                i = MathHelper.getInt(rand, 3, 7);
             }
 
             return i;
@@ -194,6 +227,52 @@ public class EndOreBlock extends GenericBlock
 				enderman.setRevengeTarget(player);
 				LogHelper.debug("Endermen aggro applied to: " + player.getDisplayNameString());
 			}
+		}
+	}
+	
+	@Optional.Method(modid = "appliedenergistics2")
+	@Override
+	@SideOnly( Side.CLIENT )
+	public void randomDisplayTick( final IBlockState state, final World w, final BlockPos pos, final Random r )
+	{
+		if(!AEConfig.instance().isEnableEffects())
+		{
+			return;
+		}
+
+		double xOff = (r.nextFloat());
+		double yOff = (r.nextFloat());
+		double zOff = (r.nextFloat());
+
+		switch(r.nextInt(6))
+		{
+			case 0:
+				xOff = -0.01;
+				break;
+			case 1:
+				yOff = -0.01;
+				break;
+			case 2:
+				xOff = -0.01;
+				break;
+			case 3:
+				zOff = -0.01;
+				break;
+			case 4:
+				xOff = 1.01;
+				break;
+			case 5:
+				yOff = 1.01;
+				break;
+			case 6:
+				zOff = 1.01;
+				break;
+		}
+
+		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockEnd("chargedcertusquartz"))
+		{
+			final ChargedOreFX fx = new ChargedOreFX(w, pos.getX() + xOff, pos.getY() + yOff, pos.getZ() + zOff, 0.0f, 0.0f, 0.0f);
+			Minecraft.getMinecraft().effectRenderer.addEffect(fx);
 		}
 	}
 }

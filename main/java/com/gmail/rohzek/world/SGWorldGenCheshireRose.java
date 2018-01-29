@@ -21,7 +21,7 @@ public class SGWorldGenCheshireRose extends WorldGenerator
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-        for (int i = 0; i < 21; ++i)
+        for (int i = 0; i < 13; ++i)
         {
             BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 

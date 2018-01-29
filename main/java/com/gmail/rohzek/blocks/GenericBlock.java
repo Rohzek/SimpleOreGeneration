@@ -2,6 +2,8 @@ package com.gmail.rohzek.blocks;
 
 import java.util.Random;
 
+import com.gmail.rohzek.json.OreData;
+
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
