@@ -3,7 +3,6 @@ package com.gmail.rohzek.world;
 import java.util.Random;
 
 import com.gmail.rohzek.util.ConfigurationManager;
-import com.gmail.rohzek.util.LogHelper;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

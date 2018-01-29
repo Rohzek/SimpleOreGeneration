@@ -25,7 +25,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -37,7 +36,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -49,7 +47,6 @@ public class ModdedConstants
 				if(mineable.data.name.toLowerCase().contains(ore.name.toLowerCase()))
 				{
 					mineable.data.disableOre = true;
-					LogHelper.debug("A mod that supports " + mineable.data.name + " isn't installed. Removing from spawn list.");
 				}
 			}
 		}
@@ -102,5 +99,8 @@ public class ModdedConstants
 		
 		allOres.add(new ModOre("magnetiteOre", false));
 		allOres.add(new ModOre("zincOre", false));
+		
+		allOres.add(new ModOre("certusQuartzOre", false));
+		allOres.add(new ModOre("chargedCertusQuartzOre", false));
 	}
 }

@@ -147,6 +147,8 @@ public class Ores
 			{
 				new OreData("surfaceApatiteOre", 64, 256, 24, 7, 11, "MODDED", "minecraft:stone", false),
 				new OreData("surfaceArditeOre", 64, 256, 24, 7, 11, "IRON", "minecraft:stone", true),
+				new OreData("surfaceCertusQuartzOre", surfaceMin, 250, 13, 3, 6, "STONE", "minecraft:stone", false),
+				new OreData("surfaceChargedCertusQuartzOre", surfaceMin, 250, 9, 3, 6, "STONE", "minecraft:stone", false),
 				new OreData("surfaceCobaltOre", 64, 256, 24, 7, 11, "IRON", "minecraft:stone", true),
 				new OreData("surfaceCopperOre", 10, 256, 30, 5, 19, "STONE", "minecraft:stone", false),
 				new OreData("surfaceTinOre", 20, 256, 72, 3, 19, "STONE", "minecraft:stone", false),
@@ -177,6 +179,8 @@ public class Ores
 		
 		OreData[] nOres = 
 			{
+				new OreData("netherCertusQuartzOre", netherMin, netherMax, 36, 5, 9, "STONE", "minecraft:netherrack", false),
+				new OreData("netherChargedCertusQuartzOre", netherMin, netherMax, 36, 5, 9, "STONE", "minecraft:netherrack", false),
 				new OreData("netherCoalOre", netherMin, netherMax, 36, 2, 17, "WOODEN", "minecraft:netherrack",  false),
 				new OreData("netherDiamondOre", netherMin, netherMax, 6, 3, 6, "IRON", "minecraft:netherrack", false),
 				new OreData("netherEmeraldOre", netherMin, netherMax, 12, 6, 6, "IRON", "minecraft:netherrack", false),
@@ -215,6 +219,8 @@ public class Ores
 		
 		OreData[] eOres = 
 			{
+				new OreData("endCertusQuartzOre", endMin, endMax, 36, 5, 9, "STONE", "minecraft:end_stone", false),
+				new OreData("endChargedCertusQuartzOre", endMin, endMax, 36, 5, 9, "STONE", "minecraft:end_stone", false),
 				new OreData("endCoalOre", endMin, endMax, 36, 2, 17, "WOODEN", "minecraft:end_stone",  false),
 				new OreData("endDiamondOre", endMin, endMax, 6, 3, 6, "IRON", "minecraft:end_stone", false),
 				new OreData("endEmeraldOre", endMin, endMax, 12, 6, 6, "IRON", "minecraft:end_stone", false),

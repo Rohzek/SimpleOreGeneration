@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/netheraluminumore",
+    "parent": "simpleoregen:block/netherAluminumOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

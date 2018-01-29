@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/endsilverore",
+    "parent": "simpleoregen:block/endSilverOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

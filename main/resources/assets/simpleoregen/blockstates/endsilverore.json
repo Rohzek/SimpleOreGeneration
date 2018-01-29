@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "simpleoregen:endsilverore" }
+        "normal": { "model": "simpleoregen:endSilverOre" }
     }
 }

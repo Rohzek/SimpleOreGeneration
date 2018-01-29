@@ -18,6 +18,8 @@ item.bronzeNugget.name=Bronze Nugget
 
 tile.surfaceAluminumOre.name=Bauxite Ore
 tile.surfaceArditeOre.name=Ardite Ore
+tile.surfaceCertusQuartzOre.name=Certus Quartz Ore
+tile.surfaceChargedCertusQuartzOre.name=Charged Certus Quartz Ore
 tile.surfaceCobaltOre.name=Cobalt Ore
 tile.surfaceCopperOre.name=Copper Ore
 tile.surfaceDilithiumOre.name=Dilithium Ore
@@ -43,6 +45,8 @@ tile.surfaceZincOre.name=Zinc Ore
 
 tile.netherAluminumOre.name=Nether Bauxite Ore
 tile.netherArditeOre.name=Nether Ardite Ore
+tile.netherCertusQuartzOre.name=Nether Certus Quartz Ore
+tile.netherChargedCertusQuartzOre.name=Nether Charged Certus Quartz Ore
 tile.netherCoalOre.name=Nether Coal Ore
 tile.netherCobaltOre.name=Nether Cobalt Ore
 tile.netherCopperOre.name=Nether Copper Ore
@@ -77,6 +81,8 @@ tile.netherZincOre.name=Nether Zinc Ore
 
 tile.endAluminumOre.name=End Bauxite Ore
 tile.endArditeOre.name=End Ardite Ore
+tile.endCertusQuartzOre.name=End Certus Quartz Ore
+tile.endChargedCertusQuartzOre.name=End Charged Certus Quartz Ore
 tile.endCobaltOre.name=End Cobalt Ore
 tile.endCopperOre.name=End Copper Ore
 tile.endCoalOre.name=End Coal Ore

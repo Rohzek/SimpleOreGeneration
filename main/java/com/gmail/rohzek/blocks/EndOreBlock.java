@@ -12,9 +12,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -151,37 +149,37 @@ public class EndOreBlock extends GenericBlock
 
             if (this == SGOres.getBlockEnd("coal"))
             {
-                i = MathHelper.getInt(rand, 0, 2);
+                i = MathHelper.getRandomIntegerInRange(rand, 0, 2);
             }
             
             else if (this == SGOres.getBlockEnd("diamond"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockEnd("emerald"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockEnd("lapis"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockEnd("quartz"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockEnd("ruby"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockEnd("sapphire"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
 
             return i;

@@ -12,6 +12,17 @@ public class CheckForMods
 		return Loader.isModLoaded(modid);
 	}
 	
+	
+	
+	@Optional.Method(modid = "advancedrocketry")
+	public static void checkForAR()
+	{
+		if(ConfigurationManager.supportAdvRok)
+		{
+			AdvRokCompat.load();
+		}
+	}
+	
 	@Optional.Method(modid = "embers")
 	public static void checkForEmbers()
 	{
@@ -63,15 +74,6 @@ public class CheckForMods
 		if(ConfigurationManager.supportIE)
 		{
 			IECompat.load();
-		}
-	}
-	
-	@Optional.Method(modid = "advancedrocketry")
-	public static void checkForAR()
-	{
-		if(ConfigurationManager.supportAdvRok)
-		{
-			AdvRokCompat.load();
 		}
 	}
 	

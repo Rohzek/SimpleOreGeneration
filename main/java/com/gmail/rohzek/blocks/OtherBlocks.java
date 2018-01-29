@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.gmail.rohzek.compatibility.CheckForMods;
-import com.gmail.rohzek.util.LogHelper;
 
 import forestry.core.PluginCore;
 import forestry.core.blocks.BlockResourceOre;
 import forestry.core.blocks.EnumResourceType;
 import mekanism.common.MekanismBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Optional;
 import techreborn.init.ModBlocks;
 
@@ -56,7 +55,7 @@ public class OtherBlocks
 	@Optional.Method(modid = "forestry")
 	static void forestry()
 	{
-		BlockResourceOre resourcesBlock = PluginCore.getBlocks().resources;
+		BlockResourceOre resourcesBlock = PluginCore.blocks.resources;
 		IBlockState apatiteBlockState = resourcesBlock.getStateFromMeta(EnumResourceType.APATITE.getMeta());
 		moddedSurfaceOres.add(new ModOrePack("surfaceApatiteOre", apatiteBlockState));
 	}

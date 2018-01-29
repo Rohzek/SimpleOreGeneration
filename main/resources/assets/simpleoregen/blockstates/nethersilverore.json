@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "simpleoregen:nethersilverore" }
+        "normal": { "model": "simpleoregen:netherSilverOre" }
     }
 }

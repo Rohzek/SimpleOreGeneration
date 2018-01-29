@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "simpleoregen:surfacealuminumore" }
+        "normal": { "model": "simpleoregen:surfaceAluminumOre" }
     }
 }

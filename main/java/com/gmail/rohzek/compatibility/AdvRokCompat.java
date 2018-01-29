@@ -21,7 +21,6 @@ public class AdvRokCompat
 			Configuration.generateAluminum = false;
 			Configuration.generateCopper = false;
 			Configuration.generateDilithium = false;
-			Configuration.generateIridium = false;
 			Configuration.generateRutile = false;
 			Configuration.generateTin = false;
 		}
@@ -34,7 +33,6 @@ public class AdvRokCompat
 			ModdedConstants.enabledOres.add(new ModOre("aluminumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("dilithiumOre", true));
-			ModdedConstants.enabledOres.add(new ModOre("iridiumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("rutileOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
 		}

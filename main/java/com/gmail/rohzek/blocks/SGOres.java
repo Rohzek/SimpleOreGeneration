@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 import com.gmail.rohzek.lib.Reference;
-import com.gmail.rohzek.util.LogHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -276,10 +275,5 @@ public class SGOres
 	private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String name) 
 	{
 		GameRegistry.registerTileEntity(tileEntityClass, Reference.RESOURCEID + name);
-	}
-
-	private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String name, String legacyName) 
-	{
-		GameRegistry.registerTileEntityWithAlternatives(tileEntityClass, Reference.RESOURCEID + name, Reference.RESOURCEID + legacyName);
 	}
 }

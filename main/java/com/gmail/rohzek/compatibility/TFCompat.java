@@ -1,14 +1,7 @@
 package com.gmail.rohzek.compatibility;
 
-import cofh.thermalfoundation.ThermalFoundation;
-
-import java.io.File;
-
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
-
-import cofh.core.init.CoreProps;
-import cofh.core.util.ConfigHandler;
 
 public class TFCompat 
 {
@@ -16,42 +9,14 @@ public class TFCompat
 	{
 		fixConfig();
 		loadOre();
-		LogHelper.log("Thermal Foundation Compatibility loaded");
+		LogHelper.log("Thermal Foundation Compatibility loaded, however, please note that additional steps are required to remove Thermal Foundation ores from spawning.");
+		LogHelper.log("First, you must go to config/cofh/thermalfoundation and edit common.cfg, and change 'GenerateDefaultFiles' on line 541 to false");
+		LogHelper.log("Then, go to config/cofh/world and rename or delete '00_minecraft.json' and '01_thermalfoundation_ores.json'");
+		LogHelper.log("This was previously done for you, but that feature has been removed at the request of one of the authors. A simpler version may be coming again in the future, but that is per the author's discretion");
 	}
 	
-	public static void fixConfig()
-	{
-		String path = CoreProps.configDir + "/cofh/world/";
-		String worldGenOre = "thermalfoundation_ores.json";
-		
-		File worldGenFile = new File(path + worldGenOre);
-		File worldGenFileReplace = new File(path + worldGenOre + ".bak");
-		File worldVanilla = new File(path + "vanilla.json");
-		
-		if(ConfigurationManager.supportTF)
-		{
-			ConfigHandler config = ThermalFoundation.CONFIG;
-			config.set("World", "GenerateDefaultFiles", false);
-			config.save();
-			
-			if(worldGenFile.exists() && !worldGenFile.isDirectory())
-			{
-				worldGenFile.renameTo(worldGenFileReplace);
-			}
-		}
-		else
-		{	
-			if(worldGenFileReplace.exists() && !worldGenFileReplace.isDirectory())
-			{
-				worldGenFileReplace.renameTo(worldGenFile);
-			}
-		}
-		
-		if(worldVanilla.exists())
-		{
-			worldVanilla.delete();
-		}
-	}
+	// An IMC may be coming in the future, to automate the feature once more.
+	public static void fixConfig(){}
 	
 	public static void loadOre()
 	{
@@ -64,8 +29,6 @@ public class TFCompat
 			ModdedConstants.enabledOres.add(new ModOre("nickelOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
-			// Platinum - Doesn't spawn by default
-			// Mana Infused Ore - Doesn't spawn by default
 		}
 	}
 }

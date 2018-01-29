@@ -13,7 +13,6 @@ public class ICCompat
 	{
 		fixConfig();
 		loadOre();
-		addRecipes();
 		LogHelper.log("IC2 Compatibility loaded");
 	}
 	
@@ -39,10 +38,5 @@ public class ICCompat
 			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("uraniumOre", true));
 		}
-	}
-	
-	public static void addRecipes()
-	{
-		SmeltingRecipes.addMaceratorRecipes();
 	}
 }

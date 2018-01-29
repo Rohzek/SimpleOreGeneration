@@ -20,7 +20,9 @@ public class EmbersCompat
 	{	
 		if(ConfigurationManager.supportEmbers)
 		{
-			ConfigManager.orespawnBlacklist.add(0);
+			ConfigManager.copperVeinSize = 0;
+			ConfigManager.leadVeinSize = 0;
+			ConfigManager.silverVeinSize = 0;
 		}
 	}
 	
@@ -28,12 +30,9 @@ public class EmbersCompat
 	{
 		if(ConfigurationManager.supportEmbers)
 		{
-			ModdedConstants.enabledOres.add(new ModOre("aluminumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
-			ModdedConstants.enabledOres.add(new ModOre("nickelOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
-			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
 		}
 	}
 }

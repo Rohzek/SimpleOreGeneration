@@ -68,17 +68,17 @@ public class SurfaceOreBlock extends GenericBlock
 
             if (this == SGOres.getBlockSurface("quartz"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockSurface("ruby"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockSurface("sapphire"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
 
             return i;

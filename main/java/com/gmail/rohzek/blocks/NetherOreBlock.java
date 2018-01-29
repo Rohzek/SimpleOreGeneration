@@ -175,37 +175,37 @@ public class NetherOreBlock extends GenericBlock
 
             if (this == SGOres.getBlockNether("coal"))
             {
-                i = MathHelper.getInt(rand, 0, 2);
+                i = MathHelper.getRandomIntegerInRange(rand, 0, 2);
             }
             
             else if (this == SGOres.getBlockNether("diamond"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockNether("emerald"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockNether("lapis"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockNether("quartz"))
             {
-                i = MathHelper.getInt(rand, 2, 5);
+                i = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }
             
             else if (this == SGOres.getBlockNether("ruby"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
             
             else if (this == SGOres.getBlockNether("sapphire"))
             {
-                i = MathHelper.getInt(rand, 3, 7);
+                i = MathHelper.getRandomIntegerInRange(rand, 3, 7);
             }
 
             return i;

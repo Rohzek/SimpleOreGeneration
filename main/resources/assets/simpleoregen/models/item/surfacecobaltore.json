@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/surfacecobaltore",
+    "parent": "simpleoregen:block/surfaceCobaltOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

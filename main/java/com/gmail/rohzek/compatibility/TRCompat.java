@@ -38,7 +38,6 @@ public class TRCompat
 			ModdedConstants.enabledOres.add(new ModOre("rutileOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
-			
 			ModdedConstants.enabledOres.add(new ModOre("cinnabarOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("galenaOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("peridotOre", true));

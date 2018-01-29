@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/nethersilverore",
+    "parent": "simpleoregen:block/netherSilverOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
