@@ -25,6 +25,8 @@ public class ConfigurationManager
 	public static boolean useVanillaNetherQuartz;
 	public static boolean dropVanillaQuartz;
 	public static boolean emeraldSpawnAnywhere;
+	public static boolean netherOres;
+	public static boolean endOres;
 	
 	public static boolean supportAE;
 	public static boolean supportEmbers;
@@ -43,6 +45,7 @@ public class ConfigurationManager
 	public static String genCategory = "general";
 	public static String debugCategory = "debug";
 	public static String modCategory = "compatibility";
+	public static String ovrCategory = "overrides";
 	
 	public ConfigurationManager(FMLPreInitializationEvent event)
 	{
@@ -57,6 +60,7 @@ public class ConfigurationManager
 		config.load();
 		
 		this.isDebug = config.get(debugCategory, "debugMode", false, "Enables more printouts to the chat. WARNING: Will spam the log file. Good for bug reports. Not recommended for regular play.").getBoolean(false);
+		
 		this.straight2Ingots = config.get(genCategory, "smeltToIngots", true, "Makes new ores be smelted straight to their ingot form, instead of turning into vanilla ores first.").getBoolean(true);
 		this.zombiePigsAttack = config.get(genCategory, "zombiePigmenAggro", true, "Zombie Pigmen will attack players who mine nether ores. Set to false to disable").getBoolean(true);
 		this.aggroRangePigmen = config.get(genCategory, "aggroRangePigmen", 16, "Range at which Zombie Pigmen will aggro, in blocks.", 8, Integer.MAX_VALUE).getInt();
@@ -64,11 +68,14 @@ public class ConfigurationManager
 		this.aggroRangeEndermen = config.get(genCategory, "aggroRangeEndermen", 16, "Range at which Endermen will aggro, in blocks.", 8, Integer.MAX_VALUE).getInt();
 		this.gfFlowerDisable = config.get(genCategory, "gfFlowerDisable", false, "True will disable spawn of the CheshireRose flower.").getBoolean(false);
 		
-		this.supportNewDims = config.get(modCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions with Stone as the main block (like the overworld)").getBoolean(true);
-		this.changeVanilla = config.get(modCategory, "changeVanillaOreSpawn", true, "Should this mod change the vanilla ore gen?").getBoolean(true);
-		this.useVanillaNetherQuartz = config.get(modCategory, "useVanillaNetherQuartz", false, "Should the mod not override Nether Quartz?").getBoolean(false);
-		this.dropVanillaQuartz = config.get(modCategory, "dropVanillaQuartz", false, "Should the modded Nether Quartz drop vanilla Nether Quartz (item)?").getBoolean(false);
-		this.emeraldSpawnAnywhere = config.get(modCategory, "easyEmeralds", true, "Should emeralds spawn anywhere? Set false to make emeralds only spawn in Extreme Hills biomes").getBoolean(true);
+		this.supportNewDims = config.get(ovrCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions with Stone as the main block (like the overworld)").getBoolean(true);
+		this.changeVanilla = config.get(ovrCategory, "changeVanillaOreSpawn", true, "Should this mod change the vanilla ore gen?").getBoolean(true);
+		this.useVanillaNetherQuartz = config.get(ovrCategory, "useVanillaNetherQuartz", false, "Should the mod not override Nether Quartz?").getBoolean(false);
+		this.dropVanillaQuartz = config.get(modCategory, "dropVanillaQuartz", false, "Should the Quartz Blocks drop vanilla Nether Quartz (item) instead?").getBoolean(false);
+		this.emeraldSpawnAnywhere = config.get(ovrCategory, "easyEmeralds", true, "Should emeralds spawn like vanilla? Set false to make emeralds only spawn in Extreme Hills biomes").getBoolean(true);
+		this.netherOres = config.get(ovrCategory, "netherOreSpawn", true, "Should nether ores be spawned?").getBoolean(true);
+		this.endOres = config.get(ovrCategory, "endOreSpawn", true, "Should end ores be spawned?").getBoolean(true);
+		
 		
 		this.supportAE = config.get(modCategory, "supportAppliedEnergestics2", true, "Support for Applied Energestics 2 quartz").getBoolean(true);
 		this.supportEmbers = config.get(modCategory, "supportEmbers", true, "Support for Embers ores").getBoolean(true);

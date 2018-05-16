@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.gmail.rohzek.compatibility.CheckForMods;
 
+import appeng.core.Api;
 import forestry.core.ModuleCore;
 import forestry.core.blocks.BlockResourceOre;
 import forestry.core.blocks.EnumResourceType;
@@ -49,6 +50,11 @@ public class OtherBlocks
 		{
 			mekanism();
 		}
+		
+		if(CheckForMods.check("appliedenergistics2"))
+		{
+			appliedenegestics();
+		}
 	}
 	
 	@Optional.Method(modid = "forestry")
@@ -71,5 +77,15 @@ public class OtherBlocks
 	{
 		IBlockState osmium = MekanismBlocks.OreBlock.getDefaultState();
 		moddedSurfaceOres.add(new ModOrePack("surfaceOsmiumOre", osmium));
+	}
+	
+	@Optional.Method(modid = "appliedenergistics2")
+	static void appliedenegestics()
+	{
+		IBlockState quartz = Api.INSTANCE.definitions().blocks().quartzOre().maybeBlock().get().getDefaultState();
+		IBlockState quartzCharged = Api.INSTANCE.definitions().blocks().quartzOreCharged().maybeBlock().get().getDefaultState();
+		
+		moddedSurfaceOres.add(new ModOrePack("surfaceCertusQuartzOre", quartz));
+		moddedSurfaceOres.add(new ModOrePack("surfaceChargedCertusQuartzOre", quartzCharged));
 	}
 }

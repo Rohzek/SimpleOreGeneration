@@ -3,12 +3,14 @@ package com.gmail.rohzek.blocks;
 import java.util.List;
 import java.util.Random;
 
+import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import appeng.client.render.effects.ChargedOreFX;
 import appeng.core.AEConfig;
+import appeng.core.Api;
 import appeng.core.AppEng;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -39,8 +41,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class NetherOreBlock extends GenericBlock
 {
-	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
-	private static Item drop;
+	private static int aggroRange, certusDrop, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
+	private static Item drop, certus, chargedCertus;
 	
 	public NetherOreBlock(String unlocalizedName)
 	{
@@ -50,21 +52,13 @@ public class NetherOreBlock extends GenericBlock
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		
 		this.aggroRange = ConfigurationManager.aggroRangePigmen;
-		
-		if(ConfigurationManager.dropVanillaQuartz)
-		{
-			drop = Items.QUARTZ;
-		}
-		else
-		{
-			drop = SGItems.QUARTZ;
-		}
 	}
 	
 	public static void setDropRates()
 	{
 		if(ConfigurationManager.zombiePigsAttack)
 		{
+			certusDrop = 2;
 			coalDrop = 3;
 			diamondDrop = 3;
 			emeraldDrop = 3;
@@ -77,6 +71,7 @@ public class NetherOreBlock extends GenericBlock
 		}
 		else
 		{
+			certusDrop = 1;
 			coalDrop = 1;
 			diamondDrop = 1;
 			emeraldDrop = 1;
@@ -87,6 +82,21 @@ public class NetherOreBlock extends GenericBlock
 			rubyDrop = 1;
 			sapphireDrop = 1;
 		}
+		
+		if(ConfigurationManager.dropVanillaQuartz)
+		{
+			drop = Items.QUARTZ;
+		}
+		else
+		{
+			drop = SGItems.QUARTZ;
+		}
+		
+		if(CheckForMods.check("appliedenergistics2"))
+		{
+			certus = Api.INSTANCE.definitions().materials().certusQuartzCrystal().maybeItem().get();
+			chargedCertus = Api.INSTANCE.definitions().materials().certusQuartzCrystalCharged().maybeItem().get();;
+		}
 	}
 	
 	@Override
@@ -96,7 +106,9 @@ public class NetherOreBlock extends GenericBlock
         	   this == SGOres.getBlockNether("diamond") ? Items.DIAMOND :
         	   this == SGOres.getBlockNether("emerald") ? Items.EMERALD :
         	   this == SGOres.getBlockNether("lapis") ? Items.DYE : 
-        	   this == SGOres.getBlockNether("quartz") ? drop :
+        	   this == SGOres.getBlockNether("certusquartzore") ? certus :
+        	   this == SGOres.getBlockNether("chargedcertusquartz") ? chargedCertus :
+        	   this == SGOres.getBlockNether("netherquartzore") ? drop :
         	   this == SGOres.getBlockNether("redstone") ? Items.REDSTONE :
         	   this == SGOres.getBlockNether("ruby") ? SGItems.RUBY :
         	   this == SGOres.getBlockNether("sapphire") ? SGItems.SAPPHIRE :
@@ -110,7 +122,9 @@ public class NetherOreBlock extends GenericBlock
      	   		this == SGOres.getBlockNether("diamond")  ? 1 + random.nextInt(diamondDrop) : 
      	   		this == SGOres.getBlockNether("emerald")  ? 1 + random.nextInt(emeraldDrop) :
      	   		this == SGOres.getBlockNether("lapis")    ? 4 + random.nextInt(lapisDrop) :
-     	   		this == SGOres.getBlockNether("quartz")   ? 1 + random.nextInt(quartzDrop) :
+     	   		this == SGOres.getBlockNether("certusquartzore") ? 1 + random.nextInt(certusDrop) :
+             	this == SGOres.getBlockNether("chargedcertusquartz") ? 1 + random.nextInt(certusDrop) :
+     	   		this == SGOres.getBlockNether("netherquartzore")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockNether("redstone") ? 4 + random.nextInt(redstoneDrop) :
      	   		this == SGOres.getBlockNether("ruby") ? 1 + random.nextInt(rubyDrop) :
      	   		this == SGOres.getBlockNether("sapphire") ? 1 + random.nextInt(rubyDrop) :
@@ -200,7 +214,7 @@ public class NetherOreBlock extends GenericBlock
                 i = MathHelper.getInt(rand, 2, 5);
             }
             
-            else if (this == SGOres.getBlockNether("quartz"))
+            else if (this == SGOres.getBlockNether("netherQuartzOre"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }

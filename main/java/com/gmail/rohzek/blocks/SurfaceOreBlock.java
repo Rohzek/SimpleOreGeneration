@@ -3,6 +3,7 @@ package com.gmail.rohzek.blocks;
 import java.util.Random;
 
 import com.gmail.rohzek.items.SGItems;
+import com.gmail.rohzek.util.ConfigurationManager;
 
 import appeng.client.render.effects.ChargedOreFX;
 import appeng.core.AEConfig;
@@ -11,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -21,6 +23,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class SurfaceOreBlock extends GenericBlock
 {	
+	private static Item drop;
+	
 	public SurfaceOreBlock(String unlocalizedName) 
 	{
 		super(unlocalizedName, Material.ROCK, 3f, 15f);
@@ -30,10 +34,22 @@ public class SurfaceOreBlock extends GenericBlock
 		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 	}
 	
+	public static void setDropRates()
+	{
+		if(ConfigurationManager.dropVanillaQuartz)
+		{
+			drop = Items.QUARTZ;
+		}
+		else
+		{
+			drop = SGItems.QUARTZ;
+		}
+	}
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == SGOres.getBlockSurface("quartz") ? SGItems.QUARTZ :
+        return this == SGOres.getBlockSurface("surfaceQuartzOre") ? drop :
         	   this == SGOres.getBlockSurface("ruby") ? SGItems.RUBY :
         	   this == SGOres.getBlockSurface("sapphire") ? SGItems.SAPPHIRE :
         	   Item.getItemFromBlock(this);
@@ -42,7 +58,7 @@ public class SurfaceOreBlock extends GenericBlock
 	@Override
 	public int quantityDropped(Random random)
     {
-		return this == SGOres.getBlockSurface("quartz")  ? 1 + random.nextInt(3) : 1;
+		return this == SGOres.getBlockSurface("surfaceQuartzOre")  ? 1 + random.nextInt(3) : 1;
     }
 	
 	@Override

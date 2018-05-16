@@ -28,8 +28,6 @@ public class SGOres
 	{
 		new SurfaceOreBlock("surfaceAluminumOre"),
 		new SurfaceOreBlock("surfaceArditeOre"),
-		new SurfaceOreBlock("surfaceCertusQuartzOre"),
-		new SurfaceOreBlock("surfaceChargedCertusQuartzOre"),
 		new SurfaceOreBlock("surfaceCobaltOre"),
 		new SurfaceOreBlock("surfaceCopperOre"),
 		new SurfaceOreBlock("surfaceDilithiumOre"),
@@ -209,9 +207,14 @@ public class SGOres
 			OreDictionary.registerOre("ore" + block.getName().substring(3, block.getName().length() - 3), block);
 		}
 		
-		OreDictionary.registerOre("oreCertusQuartz", getBlockSurface("chargedcertusquartz"));
+		OreDictionary.registerOre("oreChargedCertusQuartz", getBlockNether("chargedcertusquartz"));
+		OreDictionary.registerOre("oreChargedCertusQuartz", getBlockEnd("chargedcertusquartz"));
+		
 		OreDictionary.registerOre("oreCertusQuartz", getBlockNether("chargedcertusquartz"));
 		OreDictionary.registerOre("oreCertusQuartz", getBlockEnd("chargedcertusquartz"));
+		
+		OreDictionary.registerOre("oreCertusQuartz", getBlockNether("certusquartz"));
+		OreDictionary.registerOre("oreCertusQuartz", getBlockEnd("certusquartz"));
 		
 		OreDictionary.registerOre("oreTitanium", getBlockSurface("rutile"));
 		OreDictionary.registerOre("oreTitanium", getBlockNether("rutile"));

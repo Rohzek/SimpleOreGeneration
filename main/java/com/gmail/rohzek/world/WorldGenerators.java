@@ -49,7 +49,7 @@ public class WorldGenerators
 					
 					if(dataName.contains(blockName) && !data.disableOre && ConfigurationManager.changeVanilla)
 					{
-						worldGeneratorsSurface.add(new SGWorldGenMineable(block, blockSize(data.veinMinimum, data.veinMultiplier), data));
+						worldGeneratorsSurface.add(new SGWorldGenMineable(block, blockSize(data.veinMinimum, data.veinMaximum), data));
 					}
 				}
 			}
@@ -63,7 +63,7 @@ public class WorldGenerators
 				
 				if(name.equals(data.name) && !data.disableOre)
 				{
-					worldGeneratorsSurface.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMultiplier), data));
+					worldGeneratorsSurface.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
 				}
 			}
 		}
@@ -76,7 +76,7 @@ public class WorldGenerators
 				
 				if(data.name.equals(name) && !data.disableOre)
 				{
-					worldGeneratorsSurface.add(new SGWorldGenMineable(pack.block, blockSize(data.veinMinimum, data.veinMultiplier), data));
+					worldGeneratorsSurface.add(new SGWorldGenMineable(pack.block, blockSize(data.veinMinimum, data.veinMaximum), data));
 				}
 			}
 		}
@@ -86,21 +86,40 @@ public class WorldGenerators
 	{
 		worldGeneratorsNether = new ArrayList<SGWorldGenMineable>();
 		
-		for(NetherOreBlock block : SGOres.netherOres)
+		if(ConfigurationManager.netherOres)
 		{
-			for(OreData data : Ores.netherOres)
+			for(NetherOreBlock block : SGOres.netherOres)
 			{
-				String name = block.getUnlocalizedName().substring(5);
-				
-				if(name.equals(data.name) && !data.disableOre)
+				for(OreData data : Ores.netherOres)
 				{
-					if(data.name.equals("netherQuartzOre") && ConfigurationManager.useVanillaNetherQuartz)
+					String name = block.getUnlocalizedName().substring(5);
+					
+					if(name.equals(data.name) && !data.disableOre)
 					{
-						worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(data.veinMinimum, data.veinMultiplier), data));
+						if(data.name.equals("netherQuartzOre") && ConfigurationManager.useVanillaNetherQuartz)
+						{
+							worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+						}
+						else
+						{
+							worldGeneratorsNether.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+						}
 					}
-					else
+				}
+			}
+		}
+		else if(!ConfigurationManager.netherOres)
+		{
+			for(NetherOreBlock block : SGOres.netherOres)
+			{
+				for(OreData data : Ores.netherOres)
+				{
+					String name = block.getUnlocalizedName().substring(5);
+					String quartz = "netherQuartzOre";
+					
+					if(name.equals(quartz) && data.name.equals(quartz) && !data.disableOre)
 					{
-						worldGeneratorsNether.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMultiplier), data));
+						worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
 					}
 				}
 			}
@@ -111,15 +130,18 @@ public class WorldGenerators
 	{
 		worldGeneratorsEnd = new ArrayList<SGWorldGenMineable>();
 		
-		for(EndOreBlock block : SGOres.endOres)
+		if(ConfigurationManager.endOres)
 		{
-			for(OreData data : Ores.endOres)
+			for(EndOreBlock block : SGOres.endOres)
 			{
-				String name = block.getUnlocalizedName().substring(5);
-				
-				if(name.equals(data.name) && !data.disableOre)
+				for(OreData data : Ores.endOres)
 				{
-					worldGeneratorsEnd.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMultiplier), data));
+					String name = block.getUnlocalizedName().substring(5);
+					
+					if(name.equals(data.name) && !data.disableOre)
+					{
+						worldGeneratorsEnd.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+					}
 				}
 			}
 		}
@@ -128,6 +150,8 @@ public class WorldGenerators
 	// Randomly choose how many blocks can be in a vein
 	private static int blockSize(int min, int max)
 	{
+		// Since min is added at the end,
+		max = max - min; // Subtract it from max here, so we can never have more than the max
 		return min + (int) (Math.random() * max);
 	}
 }

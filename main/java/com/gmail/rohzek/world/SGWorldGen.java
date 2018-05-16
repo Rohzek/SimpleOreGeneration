@@ -96,16 +96,25 @@ public class SGWorldGen implements IWorldGenerator
 			int y = minHeight + rand.nextInt(heightDiff);
 			int z = chunkZ * 16 + rand.nextInt(16);
 			
+			BlockPos pos = new BlockPos(x, y, z);
+			String biomeName = world.getBiome(pos).getRegistryName().getResourcePath().toString();
+			
 			if(generator.data.name.equals("surfaceEmeraldOre") && !ConfigurationManager.emeraldSpawnAnywhere)
 			{
-				if(world.getBiome(new BlockPos(x, y, z)) instanceof BiomeHills)
+				if(world.getBiome(pos) instanceof BiomeHills)
 				{
-					generator.generate(world, rand, new BlockPos(x, y, z));
+					generator.generate(world, rand, pos);
 				}
 			}
 			else
 			{
-				generator.generate(world, rand, new BlockPos(x, y, z));
+				for(String biom : generator.data.biomeList)
+				{
+					if(biomeName.equals(biom))
+					{
+						generator.generate(world, rand, pos);
+					}
+				}
 			}
 		}
 	}

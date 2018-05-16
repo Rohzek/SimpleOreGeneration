@@ -8,6 +8,7 @@ import com.gmail.rohzek.blocks.NetherOreBlock;
 import com.gmail.rohzek.blocks.OtherBlocks;
 import com.gmail.rohzek.blocks.SGBlocks;
 import com.gmail.rohzek.blocks.SGOres;
+import com.gmail.rohzek.blocks.SurfaceOreBlock;
 import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.compatibility.ModdedConstants;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
@@ -233,6 +234,7 @@ public class Main
 		
 		EndOreBlock.setDropRates();
 		NetherOreBlock.setDropRates();
+		SurfaceOreBlock.setDropRates();
 		
 		MiningLevels.Set();
 		

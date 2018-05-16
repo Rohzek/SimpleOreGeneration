@@ -3,12 +3,14 @@ package com.gmail.rohzek.blocks;
 import java.util.List;
 import java.util.Random;
 
+import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
 import appeng.client.render.effects.ChargedOreFX;
 import appeng.core.AEConfig;
+import appeng.core.Api;
 import appeng.core.AppEng;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -40,7 +42,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class EndOreBlock extends GenericBlock
 {
-	private static int aggroRange, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
+	private static int aggroRange, certusDrop, coalDrop, diamondDrop, emeraldDrop, lapisDrop, quartzDrop, redstoneDrop, rubyDrop, sapphireDrop;
+	private static Item drop, certus, chargedCertus;
 	
 	public EndOreBlock(String unlocalizedName)
 	{
@@ -57,6 +60,7 @@ public class EndOreBlock extends GenericBlock
 	{
 		if(ConfigurationManager.zombiePigsAttack)
 		{
+			certusDrop = 2;
 			coalDrop = 3;
 			diamondDrop = 3;
 			emeraldDrop = 3;
@@ -69,6 +73,7 @@ public class EndOreBlock extends GenericBlock
 		}
 		else
 		{
+			certusDrop = 1;
 			coalDrop = 1;
 			diamondDrop = 1;
 			emeraldDrop = 1;
@@ -79,6 +84,21 @@ public class EndOreBlock extends GenericBlock
 			rubyDrop = 1;
 			sapphireDrop = 1;
 		}
+		
+		if(ConfigurationManager.dropVanillaQuartz)
+		{
+			drop = Items.QUARTZ;
+		}
+		else
+		{
+			drop = SGItems.QUARTZ;
+		}
+		
+		if(CheckForMods.check("appliedenergistics2"))
+		{
+			certus = Api.INSTANCE.definitions().materials().certusQuartzCrystal().maybeItem().get();
+			chargedCertus = Api.INSTANCE.definitions().materials().certusQuartzCrystalCharged().maybeItem().get();
+		}
 	}
 	
 	@Override
@@ -88,7 +108,9 @@ public class EndOreBlock extends GenericBlock
         	   this == SGOres.getBlockEnd("diamond")   ? Items.DIAMOND :
         	   this == SGOres.getBlockEnd("emerald")   ? Items.EMERALD :
         	   this == SGOres.getBlockEnd("lapis")    ? Items.DYE :
-        	   this == SGOres.getBlockEnd("quartz")   ? SGItems.QUARTZ :
+        	   this == SGOres.getBlockEnd("endCertusQuartzOre") ? certus :
+               this == SGOres.getBlockEnd("endChargedCertusQuartzOre") ? chargedCertus :
+        	   this == SGOres.getBlockEnd("endQuartzOre")   ? drop :
         	   this == SGOres.getBlockEnd("redstone") ? Items.REDSTONE :
         	   this == SGOres.getBlockEnd("ruby") ? SGItems.RUBY :
         	   this == SGOres.getBlockEnd("sapphire") ? SGItems.SAPPHIRE :
@@ -102,7 +124,9 @@ public class EndOreBlock extends GenericBlock
      	   		this == SGOres.getBlockEnd("diamond")  ? 1 + random.nextInt(diamondDrop) : 
      	   		this == SGOres.getBlockEnd("emerald")  ? 1 + random.nextInt(emeraldDrop) :
      	   		this == SGOres.getBlockEnd("lapis")    ? 4 + random.nextInt(lapisDrop) :
-     	   		this == SGOres.getBlockEnd("quartz")   ? 1 + random.nextInt(quartzDrop) :
+     	   		this == SGOres.getBlockEnd("endCertusQuartzOre") ? 1 + random.nextInt(certusDrop) :
+                this == SGOres.getBlockEnd("endChargedCertusQuartzOre") ? 1 + random.nextInt(certusDrop) :
+     	   		this == SGOres.getBlockEnd("endQuartzOre")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockEnd("redstone") ? 4 + random.nextInt(redstoneDrop) :
      	   		this == SGOres.getBlockEnd("ruby")  ? 1 + random.nextInt(rubyDrop) :
      	   		this == SGOres.getBlockEnd("sapphire")  ? 1 + random.nextInt(sapphireDrop) :
