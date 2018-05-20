@@ -11,6 +11,8 @@ import com.gmail.rohzek.blocks.SGOres;
 import com.gmail.rohzek.blocks.SurfaceOreBlock;
 import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.compatibility.ModdedConstants;
+import com.gmail.rohzek.compatibility.SelfCompat;
+import com.gmail.rohzek.compatibility.ThaumcraftCompat;
 import com.gmail.rohzek.events.OreSpawnBlockEvent;
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.json.Ores;
@@ -47,12 +49,6 @@ public class Main
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public static void PreloadServer(FMLServerStartingEvent event)
-	{
-		//event.registerServerCommand(new ClearCommand());
-	}
-	
-	@EventHandler
 	public static void PreLoad(FMLPreInitializationEvent preEvent)
 	{
 		LogHelper.log("Hello Minecraft, how are you? Did you know that Tony loves Amy? " + TimeOutput.getTimeTogether());
@@ -78,6 +74,7 @@ public class Main
 		GameRegistry.registerWorldGenerator(new SGWorldGenSurface(), 0);
 		
 		LogHelper.debug("Finished ore generation information");
+		
 		LogHelper.debug("Pre-Initialization Complete");
 	}
 	
@@ -103,6 +100,8 @@ public class Main
 	public static void PostLoad(FMLPostInitializationEvent postEvent)
 	{
 		LogHelper.log("Checking for compatibility modules");
+		
+		SelfCompat.load();
 		
 		if(CheckForMods.check("advancedrocketry"))
 		{
@@ -194,6 +193,16 @@ public class Main
 			LogHelper.log("Mekanism not installed; Compatibility not loaded");
 		}
 		
+		if(CheckForMods.check("projecte"))
+		{
+			CheckForMods.checkForPE();
+		}
+		
+		else
+		{
+			LogHelper.log("Project E not installed; Compatibility not loaded");
+		}
+		
 		if(CheckForMods.check("tconstruct"))
 		{
 			CheckForMods.checkForTC();
@@ -202,6 +211,16 @@ public class Main
 		else
 		{
 			LogHelper.log("Tinker's Construct not installed; Compatibility not loaded");
+		}
+		
+		if(CheckForMods.check("thaumcraft"))
+		{
+			CheckForMods.checkForThaumcraft();
+		}
+		
+		else
+		{
+			LogHelper.log("Thaumcraft not installed; Compatibility not loaded");
 		}
 		
 		if(CheckForMods.check("thermalfoundation"))

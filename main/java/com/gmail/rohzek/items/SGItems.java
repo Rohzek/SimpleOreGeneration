@@ -21,6 +21,7 @@ public class SGItems
 	public static final Item IRIDIUM_INGOT = new ItemIngot("iridiumIngot");
 	public static final Item LEAD_INGOT = new ItemIngot("leadIngot");
 	public static final Item NICKEL_INGOT = new ItemIngot("nickelIngot");
+	public static final Item PLATINUM_INGOT = new ItemIngot("platinumIngot");
 	public static final Item QUARTZ = new Item().setRegistryName("quartz").setUnlocalizedName("quartz").setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY = new ItemIngot("ruby");
 	public static final Item SAPPHIRE = new ItemIngot("sapphire");
@@ -30,9 +31,6 @@ public class SGItems
 	public static final Item HEART_DIAMOND = new HeartDiamondItem("heartDiamond");
 	public static final Item ZINC_INGOT = new ItemIngot("zincIngot");
 	
-	public static final Item BRONZE_INGOT = new ItemIngot("bronzeIngot");
-	public static final Item BRONZE_NUGGET = new ItemIngot("bronzeNugget");
-	
 	public static void registerRenders() 
 	{
 		registerRender(ALUMINUM_INGOT);
@@ -40,6 +38,7 @@ public class SGItems
 		registerRender(IRIDIUM_INGOT);
 		registerRender(LEAD_INGOT);
 		registerRender(NICKEL_INGOT);
+		registerRender(PLATINUM_INGOT);
 		registerRender(QUARTZ);
 		registerRender(RUBY);
 		registerRender(SAPPHIRE);
@@ -49,9 +48,6 @@ public class SGItems
 		registerRender(URANIUM_INGOT);
 		registerRender(HEART_DIAMOND);
 		registerRender(ZINC_INGOT);
-		
-		registerRender(BRONZE_INGOT);
-		registerRender(BRONZE_NUGGET);
 	}
 	
 	public static void registerOreDict()
@@ -61,6 +57,7 @@ public class SGItems
 		OreDictionary.registerOre("ingotIridium", IRIDIUM_INGOT);
 		OreDictionary.registerOre("ingotLead", LEAD_INGOT);
 		OreDictionary.registerOre("ingotNickel", NICKEL_INGOT);
+		OreDictionary.registerOre("ingotPlatinum", PLATINUM_INGOT);
 		OreDictionary.registerOre("gemQuartz", QUARTZ);
 		OreDictionary.registerOre("gemRuby", RUBY);
 		OreDictionary.registerOre("gemSapphire", SAPPHIRE);
@@ -70,9 +67,6 @@ public class SGItems
 		OreDictionary.registerOre("ingotUranium", URANIUM_INGOT);
 		OreDictionary.registerOre("gemDiamond", HEART_DIAMOND);
 		OreDictionary.registerOre("ingotZinc", ZINC_INGOT);
-		
-		OreDictionary.registerOre("ingotBronze", BRONZE_INGOT);
-		OreDictionary.registerOre("nuggetBronze", BRONZE_NUGGET);
 	}
 	
 	public static void registerRender(Item item)
@@ -100,6 +94,7 @@ public class SGItems
 					IRIDIUM_INGOT,
 					LEAD_INGOT,
 					NICKEL_INGOT,
+					PLATINUM_INGOT,
 					QUARTZ,
 					RUBY,
 					SAPPHIRE,
@@ -109,8 +104,6 @@ public class SGItems
 					URANIUM_INGOT,
 					HEART_DIAMOND,
 					ZINC_INGOT,
-					BRONZE_INGOT,
-					BRONZE_NUGGET,
 			};
 			
 			final IForgeRegistry<Item> registry = event.getRegistry();

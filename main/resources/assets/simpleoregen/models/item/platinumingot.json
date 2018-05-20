@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "simpleoregen:items/bronzeNugget"
+        "layer0": "simpleoregen:items/platinumIngot"
     }
 }

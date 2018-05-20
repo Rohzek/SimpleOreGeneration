@@ -26,6 +26,7 @@ public class TFCompat
 			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("iridiumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("leadOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("platinumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("nickelOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("silverOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));

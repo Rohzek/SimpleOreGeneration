@@ -18,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import thaumcraft.api.items.ItemsTC;
 import zmaster587.libVulpes.api.material.AllowedProducts;
 
 /**
@@ -39,8 +40,12 @@ public class SmeltingRecipes
 		output.addEnchantment(Enchantments.FIRE_ASPECT, 4);
 		output.addEnchantment(Enchantments.UNBREAKING, 4);
 		
-		GameRegistry.addSmelting(SGBlocks.CHESHIREROSE, output, 1.0f);
-		GameRegistry.addSmelting(SGOres.getBlockSurface("quartz"), new ItemStack(SGItems.QUARTZ), 0.7f);
+		if(!ConfigurationManager.gfFlowerSmeltingDisable) 
+		{
+			GameRegistry.addSmelting(SGBlocks.CHESHIREROSE, output, 1.0f);
+		}
+		
+		GameRegistry.addSmelting(SGOres.getBlockSurface("surfacequartzore"), new ItemStack(SGItems.QUARTZ), 0.7f);
 		
 		if(ConfigurationManager.straight2Ingots)
 		{
@@ -50,7 +55,7 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockNether("iron"), new ItemStack(Items.IRON_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("gold"), new ItemStack(Items.GOLD_INGOT), 1f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("lapis"), new ItemStack(Items.DYE, 1, 4), 0.2f);
-			GameRegistry.addSmelting(SGOres.getBlockNether("quartz"), new ItemStack(SGItems.QUARTZ), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("netherquartzore"), new ItemStack(SGItems.QUARTZ), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("redstone"), new ItemStack(Items.REDSTONE), 0.7f);
 			
 			GameRegistry.addSmelting(SGOres.getBlockEnd("coal"), new ItemStack(Items.COAL), 0.1f);
@@ -59,7 +64,7 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("iron"), new ItemStack(Items.IRON_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("gold"), new ItemStack(Items.GOLD_INGOT), 1f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lapis"), new ItemStack(Items.DYE, 1, 4), 0.2f);
-			GameRegistry.addSmelting(SGOres.getBlockEnd("quartz"), new ItemStack(SGItems.QUARTZ), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("endquartzore"), new ItemStack(SGItems.QUARTZ), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("redstone"), new ItemStack(Items.REDSTONE), 0.7f);
 		}
 		else
@@ -70,7 +75,7 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockNether("iron"), new ItemStack(Blocks.IRON_ORE), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("gold"), new ItemStack(Blocks.GOLD_ORE), 1f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("lapis"), new ItemStack(Blocks.LAPIS_ORE), 0.2f);
-			GameRegistry.addSmelting(SGOres.getBlockNether("quartz"), new ItemStack(SGOres.getBlockSurface("quartz")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("netherquartzore"), new ItemStack(SGOres.getBlockSurface("surfacequartzore")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("redstone"), new ItemStack(Blocks.REDSTONE_ORE), 0.7f);
 			
 			
@@ -80,14 +85,11 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("iron"), new ItemStack(Blocks.IRON_ORE), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("gold"), new ItemStack(Blocks.GOLD_ORE), 1f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lapis"), new ItemStack(Blocks.LAPIS_ORE), 0.2f);
-			GameRegistry.addSmelting(SGOres.getBlockEnd("quartz"), new ItemStack(SGOres.getBlockSurface("quartz")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("endquartzore"), new ItemStack(SGOres.getBlockSurface("surfacequartzore")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("redstone"), new ItemStack(Blocks.REDSTONE_ORE), 0.7f);
 		}
 	}
-	
-	/**
-	 * Removing the conditional. We can *always* smelt into the correct ingot regardless of if the blocks spawn
-	 */
+
 	public static void moddedRecipes()
 	{	
 		GameRegistry.addSmelting(SGOres.getBlockSurface("aluminum"), new ItemStack(SGItems.ALUMINUM_INGOT), 0.7f);
@@ -95,6 +97,7 @@ public class SmeltingRecipes
 		GameRegistry.addSmelting(SGOres.getBlockSurface("iridium"), new ItemStack(SGItems.IRIDIUM_INGOT), 0.7f);
 		GameRegistry.addSmelting(SGOres.getBlockSurface("lead"), new ItemStack(SGItems.LEAD_INGOT), 0.7f);
 		GameRegistry.addSmelting(SGOres.getBlockSurface("nickel"), new ItemStack(SGItems.NICKEL_INGOT), 0.7f);
+		GameRegistry.addSmelting(SGOres.getBlockSurface("platinum"), new ItemStack(SGItems.PLATINUM_INGOT), 0.7f);
 		GameRegistry.addSmelting(SGOres.getBlockSurface("silver"), new ItemStack(SGItems.SILVER_INGOT), 0.7f);
 		GameRegistry.addSmelting(SGOres.getBlockSurface("tin"), new ItemStack(SGItems.TIN_INGOT), 0.7f);
 		GameRegistry.addSmelting(SGOres.getBlockSurface("uranium"), new ItemStack(SGItems.URANIUM_INGOT), 0.7f);
@@ -104,23 +107,27 @@ public class SmeltingRecipes
 			mekanismOre();
 		}
 		
+		if(CheckForMods.check("thaumcraft"))
+		{
+			thaumcraftOre();
+		}
+		
 		if(ConfigurationManager.straight2Ingots)
 		{
 			GameRegistry.addSmelting(SGOres.getBlockNether("aluminum"), new ItemStack(SGItems.ALUMINUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("aluminum"), new ItemStack(SGItems.ALUMINUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);
-			GameRegistry.addSmelting(SGOres.getBlockEnd("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);;
+			GameRegistry.addSmelting(SGOres.getBlockEnd("copper"), new ItemStack(SGItems.COPPER_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("rutile"), new ItemStack(SGItems.TITANIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("rutile"), new ItemStack(SGItems.TITANIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("iridium"), new ItemStack(SGItems.IRIDIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("iridium"), new ItemStack(SGItems.IRIDIUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("lead"), new ItemStack(SGItems.LEAD_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lead"), new ItemStack(SGItems.LEAD_INGOT), 0.7f);
-			
 			GameRegistry.addSmelting(SGOres.getBlockNether("magnetite"), new ItemStack(Items.IRON_INGOT, 4), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("magnetite"), new ItemStack(Items.IRON_INGOT, 4), 0.7f);
-			
-			
+			GameRegistry.addSmelting(SGOres.getBlockNether("platinum"), new ItemStack(SGItems.PLATINUM_INGOT), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("platinum"), new ItemStack(SGItems.PLATINUM_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("nickel"), new ItemStack(SGItems.NICKEL_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("nickel"), new ItemStack(SGItems.NICKEL_INGOT), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("silver"), new ItemStack(SGItems.SILVER_INGOT), 0.7f);
@@ -146,6 +153,8 @@ public class SmeltingRecipes
 			GameRegistry.addSmelting(SGOres.getBlockEnd("lead"), new ItemStack(SGOres.getBlockSurface("lead")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("magnetite"), new ItemStack(SGOres.getBlockSurface("magnetite")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("magnetite"), new ItemStack(SGOres.getBlockSurface("magnetite")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockNether("platinum"), new ItemStack(SGOres.getBlockSurface("platinum")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("platinum"), new ItemStack(SGOres.getBlockSurface("platinum")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("nickel"), new ItemStack(SGOres.getBlockSurface("nickel")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("nickel"), new ItemStack(SGOres.getBlockSurface("nickel")), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockNether("silver"), new ItemStack(SGOres.getBlockSurface("silver")), 0.7f);
@@ -176,6 +185,23 @@ public class SmeltingRecipes
 		{
 			GameRegistry.addSmelting(SGOres.getBlockNether("osmium"), new ItemStack(osmium), 0.7f);
 			GameRegistry.addSmelting(SGOres.getBlockEnd("osmium"), new ItemStack(osmium), 0.7f);
+		}
+	}
+	
+	@Optional.Method(modid = "thaumcraft")
+	public static void thaumcraftOre() 
+	{
+		GameRegistry.addSmelting(SGOres.getBlockSurface("cinnabar"), new ItemStack(ItemsTC.quicksilver), 0.7f);
+		
+		if(ConfigurationManager.straight2Ingots)
+		{
+			GameRegistry.addSmelting(SGOres.getBlockNether("cinnabar"), new ItemStack(ItemsTC.quicksilver), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("cinnabar"), new ItemStack(ItemsTC.quicksilver), 0.7f);
+		}
+		else
+		{
+			GameRegistry.addSmelting(SGOres.getBlockNether("cinnabar"), new ItemStack(SGOres.getBlockSurface("cinnabar")), 0.7f);
+			GameRegistry.addSmelting(SGOres.getBlockEnd("cinnabar"), new ItemStack(SGOres.getBlockSurface("cinnabar")), 0.7f);
 		}
 	}
 }

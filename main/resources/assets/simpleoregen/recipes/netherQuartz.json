@@ -2,15 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "QQQ",
-    "QCQ",
-	"QQQ"
+    "QXQ",
+    "QQQ"
   ],
   "key": {
     "Q": {
       "item": "simpleoregen:quartz"
     },
-	"C": {
-      "item": "minecraft:coal"
+    "X": {
+      "item": "minecraft:coal",
+	  "data": 0
     }
   },
   "result": {

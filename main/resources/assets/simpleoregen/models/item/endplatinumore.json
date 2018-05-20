@@ -1,5 +1,5 @@
 {
-    "parent": "simpleoregen:block/bronzeBlock",
+    "parent": "simpleoregen:block/endPlatinumOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

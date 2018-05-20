@@ -31,7 +31,7 @@ public class FuturepackCompat
 	{
 		if(ConfigurationManager.supportFuturepack)
 		{
-			ModdedConstants.enabledOres.add(new ModOre("bauxiteOre", true));
+			ModdedConstants.enabledOres.add(new ModOre("aluminumOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("copperOre", true));
 			ModdedConstants.enabledOres.add(new ModOre("tinOre", true));
 			

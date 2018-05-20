@@ -77,6 +77,7 @@ public class ModdedConstants
 		allOres.add(new ModOre("iridiumOre", false));
 		allOres.add(new ModOre("leadOre", false));
 		allOres.add(new ModOre("nickelOre", false));
+		allOres.add(new ModOre("platinumOre", false));
 		allOres.add(new ModOre("tinOre", false));
 		allOres.add(new ModOre("silverOre", false));
 		allOres.add(new ModOre("uraniumOre", false));

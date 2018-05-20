@@ -95,12 +95,30 @@ public class CheckForMods
 		}
 	}
 	
+	@Optional.Method(modid = "projecte")
+	public static void checkForPE()
+	{
+		if(ConfigurationManager.supportProjE)
+		{
+			PECompat.load();
+		}
+	}
+	
 	@Optional.Method(modid = "techreborn")
 	public static void checkForTR()
 	{
 		if(ConfigurationManager.supportTR)
 		{
 			TRCompat.load();
+		}
+	}
+	
+	@Optional.Method(modid = "thaumcraft")
+	public static void checkForThaumcraft()
+	{
+		if(ConfigurationManager.supportThaumcraft)
+		{
+			ThaumcraftCompat.load();
 		}
 	}
 	

@@ -19,9 +19,11 @@ public class ConfigurationManager
 	public static boolean endermenAttack;
 	public static int aggroRangeEndermen = 16;
 	public static boolean gfFlowerDisable;
+	public static boolean gfFlowerSmeltingDisable;
 	
 	public static boolean supportNewDims;
 	public static boolean changeVanilla;
+	public static boolean forceSpawnModdedOres;
 	public static boolean useVanillaNetherQuartz;
 	public static boolean dropVanillaQuartz;
 	public static boolean emeraldSpawnAnywhere;
@@ -36,10 +38,12 @@ public class ConfigurationManager
 	public static boolean supportIceAndFire;
 	public static boolean supportIE;
 	public static boolean supportAdvRok;
+	public static boolean supportProjE;
 	public static boolean supportMK;
 	public static boolean supportTF;
 	public static boolean supportTR;
 	public static boolean supportTC;
+	public static boolean supportThaumcraft;
 	public static boolean supportWaila;
 	
 	public static String genCategory = "general";
@@ -67,9 +71,12 @@ public class ConfigurationManager
 		this.endermenAttack = config.get(genCategory, "endermenAggro", true, "Endermen will attack players who mine end ores. Set to false to disable").getBoolean(true);
 		this.aggroRangeEndermen = config.get(genCategory, "aggroRangeEndermen", 16, "Range at which Endermen will aggro, in blocks.", 8, Integer.MAX_VALUE).getInt();
 		this.gfFlowerDisable = config.get(genCategory, "gfFlowerDisable", false, "True will disable spawn of the CheshireRose flower.").getBoolean(false);
+		this.gfFlowerSmeltingDisable = config.get(genCategory, "gfFlowerSmeltingDisable", false, "True will disable smelting CheshireRose flower into a heart diamond.").getBoolean(false);
+		
 		
 		this.supportNewDims = config.get(ovrCategory, "customDimensions", true, "Allows custom generation in modded dimensions. Only supports dimensions with Stone as the main block (like the overworld)").getBoolean(true);
 		this.changeVanilla = config.get(ovrCategory, "changeVanillaOreSpawn", true, "Should this mod change the vanilla ore gen?").getBoolean(true);
+		this.forceSpawnModdedOres = config.get(ovrCategory, "forceSpawnModdedOres", false, "Should this mod spawn modded ores, even if no supported mod is installed?").getBoolean(false);
 		this.useVanillaNetherQuartz = config.get(ovrCategory, "useVanillaNetherQuartz", false, "Should the mod not override Nether Quartz?").getBoolean(false);
 		this.dropVanillaQuartz = config.get(modCategory, "dropVanillaQuartz", false, "Should the Quartz Blocks drop vanilla Nether Quartz (item) instead?").getBoolean(false);
 		this.emeraldSpawnAnywhere = config.get(ovrCategory, "easyEmeralds", true, "Should emeralds spawn like vanilla? Set false to make emeralds only spawn in Extreme Hills biomes").getBoolean(true);
@@ -86,9 +93,11 @@ public class ConfigurationManager
 		this.supportIE = config.get(modCategory, "supportImmersiveEngineering", true, "Support for Immersive Engineering ores").getBoolean(true);
 		this.supportAdvRok = config.get(modCategory, "supportAdvancedRocketry", true, "Support for Advanced Rocketry/Lib Vulpes ores").getBoolean(true);
 		this.supportMK = config.get(modCategory, "supportMekanism", true, "Support for Mekanism ores").getBoolean(true);
+		this.supportProjE = config.get(modCategory, "supportProjectE", true, "Support for Project E's EMC values, for Simple Ore Gen blocks and items").getBoolean(true);
 		this.supportTF = config.get(modCategory, "supportThermalFoundation", true, "Enables my ores spawning, when Thermal Foudnation is active. To remove the original ores, you must go to config/cofh/thermalfoundation and edit common.cfg, and change GenerateDefaultFiles on line 541 to false and go to config/cofh/world and rename or delete '00_minecraft.json', and '01_thermalfoundation_ores.json' This was previously done for you, but that feature has been removed at the request of the author. It may be coming back in the future, if the author adds the option.").getBoolean(true);
 		this.supportTR = config.get(modCategory, "supportTechReborn", true, "Support for Tech Reborn ores").getBoolean(true);
 		this.supportTC = config.get(modCategory, "supportTinkersConstruct", true, "Support for Tinker's Construct ores").getBoolean(true);
+		this.supportThaumcraft = config.get(modCategory, "supportThaumcraft", true, "Support for Thaumcraft ores and aspects").getBoolean(true);
 		this.supportWaila = config.get(modCategory, "supportWaila", true, "Support for Waila overlay on End and Nether blocks").getBoolean(true);
 		
 		config.save();

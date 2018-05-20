@@ -25,21 +25,14 @@ public class SGBlocks
 	public static Block CHESHIREROSE = new CheshireRose("cheshireRose").setRegistryName("cheshireRose");
 	public static ItemBlock CHESHIREROSEITEM = new ItemBlock(CHESHIREROSE);
 	
-	public static Block BRONZE_BLOCK = new SolidBlock("bronzeBlock");
-	public static ItemBlock BRONZE_BLOCK_ITEM = new ItemBlock(BRONZE_BLOCK);
-	
 	public static void registerRenders()
 	{
 		registerRender(CHESHIREROSE);
-		
-		registerRender(BRONZE_BLOCK);
 	}
 	
 	public static void registerOreDict()
 	{
 		OreDictionary.registerOre("flowerCheshireRose", CHESHIREROSE);
-		
-		OreDictionary.registerOre("blockBronze", BRONZE_BLOCK);
 	}
 	
 	public static void registerRender(Block block)
@@ -60,7 +53,6 @@ public class SGBlocks
 			final Block[] blocks = 
 			{
 					CHESHIREROSE,
-					BRONZE_BLOCK,
 			};
 
 			registry.registerAll(blocks);
@@ -72,7 +64,6 @@ public class SGBlocks
 			final ItemBlock[] items = 
 			{
 				CHESHIREROSEITEM,
-				BRONZE_BLOCK_ITEM,
 			};
 
 			final IForgeRegistry<Item> registry = event.getRegistry();

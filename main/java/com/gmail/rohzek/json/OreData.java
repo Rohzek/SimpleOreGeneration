@@ -17,11 +17,7 @@ public class OreData implements Comparable<OreData>
 		this.maxY = maxY;
 		this.veinCount = rarity;
 		this.veinMinimum = veinMin;
-		/*
-		 * VeinMin is removed from the maximum here, because previously "best/worst" case scenario would generate maximum + minimum ores
-		 * Now it will only generate maximum
-		 */
-		this.veinMaximum = (veinMulti - veinMin);
+		this.veinMaximum = veinMulti;
 		this.miningLevel = mineLvel;
 		this.spawnBlock = oreConn;
 		this.disableOre = disable;

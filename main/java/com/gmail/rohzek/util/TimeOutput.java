@@ -21,7 +21,7 @@ public class TimeOutput
 		long days = tempDateTime.until( toDateTime, ChronoUnit.DAYS);
 		tempDateTime = tempDateTime.plusDays(days);
 		
-		String partOne = years > 1 ? years + " years " : years == 1 ? years + " year " : "";
+		String partOne = years > 1 ? years + " years" : years == 1 ? years + " year" : "";
 		String partTwo = years > 0 && months > 0 ? " and " : "";
 		String partThree = months > 1 ? months + " months" : months == 1 ? months + " month" : "";
 		String partFour = " together. <3";
