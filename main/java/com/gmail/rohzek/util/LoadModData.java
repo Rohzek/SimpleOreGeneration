@@ -21,7 +21,7 @@ public class LoadModData
 		m.modId = Reference.MODID;
 		m.version = Reference.VERSION;
 		m.name = Reference.NAME;
-		m.url = "www.twitter.com/Rohzek";
+		m.url = "https://discord.gg/F9v83CU";
 		m.description = "A simple mod to make the vanilla spawn rates easier,"
 				+ " as well as add ores to the Nether and the End.";
 		m.logoFile = Reference.RESOURCEID + "logo.png";
