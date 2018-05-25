@@ -8,7 +8,9 @@ import net.minecraft.item.ItemStack;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.internal.CommonInternals;
 import thaumcraft.common.config.ModConfig;
+import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 
 public class ThaumcraftCompat 
 {
@@ -153,5 +155,41 @@ public class ThaumcraftCompat
 	{
 		ModdedConstants.enabledOres.add(new ModOre("cinnabarOre", true));
 		// We already spawn surface quartz
+	}
+	
+	
+	/*
+	 * I'll leave these here for now, but they weren't working:
+	 */
+	static void removeAspects(ItemStack stack, Aspect... aspects)
+	{
+		AspectList list = ThaumcraftCraftingManager.getObjectTags(stack);
+		if(list != null)
+		{
+			for(Aspect aspect : aspects)
+			{
+				list.remove(aspect);
+			}
+				
+			CommonInternals.objectTags.put(CommonInternals.generateUniqueItemstackId(stack), list);
+		}
+	}
+	
+	static void removeAllAspects(ItemStack stack)
+	{
+		AspectList list = ThaumcraftCraftingManager.getObjectTags(stack);
+		Aspect[] aspects = list.getAspects();
+		
+		for(Aspect aspect : aspects)
+		{
+			list.remove(aspect);
+		}
+		
+		CommonInternals.objectTags.put(CommonInternals.generateUniqueItemstackId(stack), list);
+	}
+	
+	static void replaceAspects(ItemStack stack, AspectList list) 
+	{
+		CommonInternals.objectTags.put(CommonInternals.generateUniqueItemstackId(stack), list);
 	}
 }

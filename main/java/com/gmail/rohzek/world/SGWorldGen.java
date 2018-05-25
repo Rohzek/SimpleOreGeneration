@@ -54,7 +54,7 @@ public class SGWorldGen implements IWorldGenerator
 		{
 			if(!mineable.data.disableOre)
 			{
-				runGenerator(mineable, world, random, chunkX, chunkZ, mineable.data.veinCount, mineable.data.minY, mineable.data.maxY);
+				runGenerator(mineable, world, random, chunkX, chunkZ, veinCount(mineable.data.veinMinimum, mineable.data.veinMaximum), mineable.data.minY, mineable.data.maxY);
 			}
 		}
 	}
@@ -65,7 +65,7 @@ public class SGWorldGen implements IWorldGenerator
 		{
 			if(!mineable.data.disableOre)
 			{
-				runGenerator(mineable, world, random, chunkX, chunkZ, mineable.data.veinCount, mineable.data.minY, mineable.data.maxY);
+				runGenerator(mineable, world, random, chunkX, chunkZ, veinCount(mineable.data.veinMinimum, mineable.data.veinMaximum), mineable.data.minY, mineable.data.maxY);
 			}
 		}
 	}
@@ -76,12 +76,29 @@ public class SGWorldGen implements IWorldGenerator
 		{
 			if(!mineable.data.disableOre)
 			{
-				runGenerator(mineable, world, random, chunkX, chunkZ, mineable.data.veinCount, mineable.data.minY, mineable.data.maxY);
+				runGenerator(mineable, world, random, chunkX, chunkZ, veinCount(mineable.data.veinMinimum, mineable.data.veinMaximum), mineable.data.minY, mineable.data.maxY);
 			}
 		}
 	}
 	
-	private void runGenerator (SGWorldGenMineable generator, World world, Random rand, int chunkX, int chunkZ, int chanceToSpawn, int minHeight, int maxHeight)
+	// Randomly choose how many veins can be in a chunk
+	private static int veinCount(int min, int max)
+	{
+		// Since min is added at the end,
+		max = max - min; // Subtract it from max here, so we can never have more than the max
+		
+		if(max < 0)
+		{
+			max = 0;
+		}
+		
+		return min + (int) (Math.random() * max);
+	}
+	
+	/*
+	 * Chance to spawn is number of times it tries to spawn a vein per chunk
+	 */
+	private void runGenerator (SGWorldGenMineable generator, World world, Random rand, int chunkX, int chunkZ, int veinsPerChunk, int minHeight, int maxHeight)
 	{	
 		if (minHeight < 0 || maxHeight > 256 || minHeight > maxHeight)
 		{
@@ -90,7 +107,7 @@ public class SGWorldGen implements IWorldGenerator
 		
 		int heightDiff = maxHeight - minHeight + 1;
 		
-		for (int i = 0; i < chanceToSpawn; i++)
+		for (int i = 0; i < veinsPerChunk; i++)
 		{
 			int x = chunkX * 16 + rand.nextInt(16);
 			int y = minHeight + rand.nextInt(heightDiff);

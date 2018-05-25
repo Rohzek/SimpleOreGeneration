@@ -95,7 +95,7 @@ public class NetherOreBlock extends GenericBlock
 		if(CheckForMods.check("appliedenergistics2"))
 		{
 			certus = Api.INSTANCE.definitions().materials().certusQuartzCrystal().maybeItem().get();
-			chargedCertus = Api.INSTANCE.definitions().materials().certusQuartzCrystalCharged().maybeItem().get();;
+			chargedCertus = Api.INSTANCE.definitions().materials().certusQuartzCrystalCharged().maybeItem().get();
 		}
 	}
 	
@@ -106,9 +106,9 @@ public class NetherOreBlock extends GenericBlock
         	   this == SGOres.getBlockNether("diamond") ? Items.DIAMOND :
         	   this == SGOres.getBlockNether("emerald") ? Items.EMERALD :
         	   this == SGOres.getBlockNether("lapis") ? Items.DYE : 
-        	   this == SGOres.getBlockNether("certusquartzore") ? certus :
-        	   this == SGOres.getBlockNether("chargedcertusquartz") ? chargedCertus :
-        	   this == SGOres.getBlockNether("netherquartzore") ? drop :
+        	   this == SGOres.getBlockNether("netherCertusQuartzOre") ? certus :
+        	   this == SGOres.getBlockNether("netherChargedCertusQuartzOre") ? chargedCertus :
+        	   this == SGOres.getBlockNether("netherQuartzOre") ? drop :
         	   this == SGOres.getBlockNether("redstone") ? Items.REDSTONE :
         	   this == SGOres.getBlockNether("ruby") ? SGItems.RUBY :
         	   this == SGOres.getBlockNether("sapphire") ? SGItems.SAPPHIRE :
@@ -122,9 +122,9 @@ public class NetherOreBlock extends GenericBlock
      	   		this == SGOres.getBlockNether("diamond")  ? 1 + random.nextInt(diamondDrop) : 
      	   		this == SGOres.getBlockNether("emerald")  ? 1 + random.nextInt(emeraldDrop) :
      	   		this == SGOres.getBlockNether("lapis")    ? 4 + random.nextInt(lapisDrop) :
-     	   		this == SGOres.getBlockNether("certusquartzore") ? 1 + random.nextInt(certusDrop) :
-             	this == SGOres.getBlockNether("chargedcertusquartz") ? 1 + random.nextInt(certusDrop) :
-     	   		this == SGOres.getBlockNether("netherquartzore")   ? 1 + random.nextInt(quartzDrop) :
+     	   		this == SGOres.getBlockNether("netherCertusQuartzOre") ? 1 + random.nextInt(certusDrop) :
+             	this == SGOres.getBlockNether("netherChargedCertusQuartzOre") ? 1 + random.nextInt(certusDrop) :
+     	   		this == SGOres.getBlockNether("netherQuartzOre")   ? 1 + random.nextInt(quartzDrop) :
      	   		this == SGOres.getBlockNether("redstone") ? 4 + random.nextInt(redstoneDrop) :
      	   		this == SGOres.getBlockNether("ruby") ? 1 + random.nextInt(rubyDrop) :
      	   		this == SGOres.getBlockNether("sapphire") ? 1 + random.nextInt(rubyDrop) :
@@ -134,7 +134,8 @@ public class NetherOreBlock extends GenericBlock
 	@Override
 	public int damageDropped(IBlockState state)
     {
-        return this == SGOres.getBlockNether("lapis") ? EnumDyeColor.BLUE.getDyeDamage() : 0;
+        return this == SGOres.getBlockNether("lapis") ? EnumDyeColor.BLUE.getDyeDamage() :
+        	   this == SGOres.getBlockNether("netherChargedCertusQuartzOre") ? 1 : 0;
     }
 	
 	@Override
@@ -296,7 +297,7 @@ public class NetherOreBlock extends GenericBlock
 				break;
 		}
 
-		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockNether("chargedcertusquartz"))
+		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockNether("netherChargedCertusQuartzOre"))
 		{
 			final ChargedOreFX fx = new ChargedOreFX(w, pos.getX() + xOff, pos.getY() + yOff, pos.getZ() + zOff, 0.0f, 0.0f, 0.0f);
 			Minecraft.getMinecraft().effectRenderer.addEffect(fx);

@@ -57,7 +57,7 @@ public class MiningLevels
 	
 	public static int getMiningLevel(String level)
 	{
-		if(level.equalsIgnoreCase("wooden") || level.equalsIgnoreCase("wood") || level.equalsIgnoreCase("gold"))
+		if(level.equalsIgnoreCase("wooden") || level.equalsIgnoreCase("wood") || level.equalsIgnoreCase("gold") || level.equalsIgnoreCase("golden"))
 		{
 			return 0;
 		}

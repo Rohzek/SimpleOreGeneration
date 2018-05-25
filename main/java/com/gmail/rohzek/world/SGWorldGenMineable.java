@@ -19,7 +19,7 @@ public class SGWorldGenMineable extends WorldGenerator
 {
     public final IBlockState oreBlock;
     public OreData data;
-    //The number of blocks to generate.
+    //The number of blocks to generate per vein.
     private final int numberOfBlocks;
     private final Predicate<IBlockState> predicate;
 

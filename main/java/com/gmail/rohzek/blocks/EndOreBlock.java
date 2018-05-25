@@ -18,9 +18,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -136,7 +134,8 @@ public class EndOreBlock extends GenericBlock
 	@Override
 	public int damageDropped(IBlockState state)
     {
-        return this == SGOres.getBlockEnd("lapis") ? EnumDyeColor.BLUE.getDyeDamage() : 0;
+        return this == SGOres.getBlockEnd("lapis") ? EnumDyeColor.BLUE.getDyeDamage() : 
+        	   this == SGOres.getBlockEnd("endChargedCertusQuartzOre") ? 1 : 0;
     }
 	
 	@Override
@@ -200,7 +199,7 @@ public class EndOreBlock extends GenericBlock
                 i = MathHelper.getInt(rand, 2, 5);
             }
             
-            else if (this == SGOres.getBlockEnd("quartz"))
+            else if (this == SGOres.getBlockEnd("endQuartzOre"))
             {
                 i = MathHelper.getInt(rand, 2, 5);
             }
@@ -293,7 +292,7 @@ public class EndOreBlock extends GenericBlock
 				break;
 		}
 
-		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockEnd("chargedcertusquartz"))
+		if(AppEng.proxy.shouldAddParticles(r) && this == SGOres.getBlockEnd("endChargedCertusQuartzOre"))
 		{
 			final ChargedOreFX fx = new ChargedOreFX(w, pos.getX() + xOff, pos.getY() + yOff, pos.getZ() + zOff, 0.0f, 0.0f, 0.0f);
 			Minecraft.getMinecraft().effectRenderer.addEffect(fx);

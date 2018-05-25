@@ -27,6 +27,7 @@ public class ConfigurationManager
 	public static boolean useVanillaNetherQuartz;
 	public static boolean dropVanillaQuartz;
 	public static boolean emeraldSpawnAnywhere;
+	public static boolean emeraldEmulateVanilla;
 	public static boolean netherOres;
 	public static boolean endOres;
 	
@@ -80,6 +81,7 @@ public class ConfigurationManager
 		this.useVanillaNetherQuartz = config.get(ovrCategory, "useVanillaNetherQuartz", false, "Should the mod not override Nether Quartz?").getBoolean(false);
 		this.dropVanillaQuartz = config.get(modCategory, "dropVanillaQuartz", false, "Should the Quartz Blocks drop vanilla Nether Quartz (item) instead?").getBoolean(false);
 		this.emeraldSpawnAnywhere = config.get(ovrCategory, "easyEmeralds", true, "Should emeralds spawn like vanilla? Set false to make emeralds only spawn in Extreme Hills biomes").getBoolean(true);
+		this.emeraldEmulateVanilla = config.get(ovrCategory, "emeraldVanillaEmulation", false, "Should emeralds spawn like vanilla? Set true to make emeralds as single blocks instead of veins. OVERRIDES OREGEN.JSON NUMBERS **COULD BE BUGGY, NEEDS MORE TESTING").getBoolean(false);
 		this.netherOres = config.get(ovrCategory, "netherOreSpawn", true, "Should nether ores be spawned?").getBoolean(true);
 		this.endOres = config.get(ovrCategory, "endOreSpawn", true, "Should end ores be spawned?").getBoolean(true);
 		

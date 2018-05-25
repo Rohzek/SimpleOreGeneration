@@ -6,6 +6,7 @@ import com.gmail.rohzek.compatibility.CheckForMods;
 import com.gmail.rohzek.items.SGItems;
 import com.gmail.rohzek.util.ConfigurationManager;
 
+import appeng.core.Api;
 import ic2.api.recipe.Recipes;
 import mekanism.common.MekanismBlocks;
 import mekanism.common.MekanismItems;
@@ -115,6 +116,30 @@ public class SmeltingRecipes
 		if(CheckForMods.check("thaumcraft"))
 		{
 			thaumcraftOre();
+		}
+		
+		if(CheckForMods.check("appliedenergistics2")) 
+		{
+			ItemStack certus = new ItemStack( Api.INSTANCE.definitions().materials().certusQuartzCrystal().maybeItem().get()), // Item
+					  chargedCertus = new ItemStack(Api.INSTANCE.definitions().materials().certusQuartzCrystalCharged().maybeItem().get(), 1, 1), // Item
+			          quartz = new ItemStack(Api.INSTANCE.definitions().blocks().quartzOre().maybeBlock().get()), // Block
+				      chargedQuartz = new ItemStack(Api.INSTANCE.definitions().blocks().quartzOreCharged().maybeBlock().get()); // Block
+			
+			if(ConfigurationManager.straight2Ingots)
+			{
+				GameRegistry.addSmelting(SGOres.getBlockNether("netherCertusQuartzOre"), certus, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockEnd("endCertusQuartzOre"), certus, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockNether("netherChargedCertusQuartzOre"), chargedCertus, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockEnd("endChargedCertusQuartzOre"), chargedCertus, 0.7f);
+			}
+			
+			else
+			{
+				GameRegistry.addSmelting(SGOres.getBlockNether("netherCertusQuartzOre"), quartz, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockEnd("endCertusQuartzOre"), quartz, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockNether("netherChargedCertusQuartzOre"), chargedQuartz, 0.7f);
+				GameRegistry.addSmelting(SGOres.getBlockEnd("endChargedCertusQuartzOre"), chargedQuartz, 0.7f);
+			}
 		}
 		
 		if(ConfigurationManager.straight2Ingots)

@@ -47,9 +47,13 @@ public class WorldGenerators
 						blockName = block.getBlock().getUnlocalizedName().substring(5).toLowerCase();
 					}
 					
-					if(dataName.contains(blockName) && !data.disableOre && ConfigurationManager.changeVanilla)
+					if(ConfigurationManager.emeraldEmulateVanilla && ConfigurationManager.changeVanilla && dataName.contains("emerald")) 
 					{
-						worldGeneratorsSurface.add(new SGWorldGenMineable(block, blockSize(data.veinMinimum, data.veinMaximum), data));
+						worldGeneratorsSurface.add(new SGWorldGenMineableEmerald(block, oreCount(data.countMinimum, data.countMaximum), data));
+					}
+					else if(dataName.contains(blockName) && !data.disableOre && ConfigurationManager.changeVanilla)
+					{
+						worldGeneratorsSurface.add(new SGWorldGenMineable(block, oreCount(data.countMinimum, data.countMaximum), data));
 					}
 				}
 			}
@@ -63,7 +67,7 @@ public class WorldGenerators
 				
 				if(name.equals(data.name) && !data.disableOre)
 				{
-					worldGeneratorsSurface.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+					worldGeneratorsSurface.add(new SGWorldGenMineable(block.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
 				}
 			}
 		}
@@ -76,7 +80,7 @@ public class WorldGenerators
 				
 				if(data.name.equals(name) && !data.disableOre)
 				{
-					worldGeneratorsSurface.add(new SGWorldGenMineable(pack.block, blockSize(data.veinMinimum, data.veinMaximum), data));
+					worldGeneratorsSurface.add(new SGWorldGenMineable(pack.block, oreCount(data.countMinimum, data.countMaximum), data));
 				}
 			}
 		}
@@ -98,11 +102,17 @@ public class WorldGenerators
 					{
 						if(data.name.equals("netherQuartzOre") && ConfigurationManager.useVanillaNetherQuartz)
 						{
-							worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+							worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
 						}
+						
+						else if(ConfigurationManager.emeraldEmulateVanilla && name.contains("emerald")) 
+						{
+							worldGeneratorsNether.add(new SGWorldGenMineableEmerald(block.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
+						}
+						
 						else
 						{
-							worldGeneratorsNether.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+							worldGeneratorsNether.add(new SGWorldGenMineable(block.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
 						}
 					}
 				}
@@ -119,7 +129,7 @@ public class WorldGenerators
 					
 					if(name.equals(quartz) && data.name.equals(quartz) && !data.disableOre)
 					{
-						worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+						worldGeneratorsNether.add(new SGWorldGenMineable(Blocks.QUARTZ_ORE.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
 					}
 				}
 			}
@@ -138,9 +148,14 @@ public class WorldGenerators
 				{
 					String name = block.getUnlocalizedName().substring(5);
 					
-					if(name.equals(data.name) && !data.disableOre)
+					if(ConfigurationManager.emeraldEmulateVanilla && name.contains("emerald")) 
 					{
-						worldGeneratorsEnd.add(new SGWorldGenMineable(block.getDefaultState(), blockSize(data.veinMinimum, data.veinMaximum), data));
+						worldGeneratorsEnd.add(new SGWorldGenMineableEmerald(block.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
+					}
+					
+					else if(name.equals(data.name) && !data.disableOre)
+					{
+						worldGeneratorsEnd.add(new SGWorldGenMineable(block.getDefaultState(), oreCount(data.countMinimum, data.countMaximum), data));
 					}
 				}
 			}
@@ -148,10 +163,16 @@ public class WorldGenerators
 	}
 	
 	// Randomly choose how many blocks can be in a vein
-	private static int blockSize(int min, int max)
+	private static int oreCount(int min, int max)
 	{
 		// Since min is added at the end,
 		max = max - min; // Subtract it from max here, so we can never have more than the max
+		
+		if(max < 0)
+		{
+			max = 0;
+		}
+		
 		return min + (int) (Math.random() * max);
 	}
 }
