@@ -23,6 +23,7 @@ format, such as:
 for smooth stone from Minecraft. Note, this defaults to metadata 0, which is regular stone as opposed to andesite, granite etc.
 It gets consumed by the code in:
 >[com.gmail.rohzek.world.SGWorldGenMineable](https://github.com/Rohzek/SimpleOreGeneration/blob/master/main/java/com/gmail/rohzek/world/SGWorldGenMineable.java)
+
 >[com.gmail.rohzek.world.SGWorldGenMineableEmerald](https://github.com/Rohzek/SimpleOreGeneration/blob/master/main/java/com/gmail/rohzek/world/SGWorldGenMineableEmerald.java)
 
 where it's used in the constructor to set the block.
@@ -35,6 +36,7 @@ public SGWorldGenMineable(IBlockState state, int blockCount, OreData data)
 #### Mining Level
 Mining level sets the level of pickaxe that is needed to mine the block. It only effects SimpleOreGeneration blocks, as other mod's blocks, and vanilla blocks, can't be (easily) overwritten.
 Here are the valid levels, and what they do:
+
 | JSON Entry | Vanilla Blocks Mined | Level |
 | ------ | ------ | ------ | 
 | WOOD | Coal, Nether Quartz, Stone | 0 |
@@ -45,6 +47,7 @@ Here are the valid levels, and what they do:
 | IRON | Diamond, Emerald, Gold, Redstone | 2 |
 | DIAMOND | Everything | 3 |
 | CUSTOM | Not used in vanilla, only in some mods. | 4 |
+
 If a word not in the table above is used, it defaults to mining level 2 (Iron)
 
 It's set in code, in:
