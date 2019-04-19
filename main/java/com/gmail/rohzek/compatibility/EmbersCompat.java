@@ -3,6 +3,8 @@ package com.gmail.rohzek.compatibility;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
+import appeng.api.features.IWorldGen.WorldGenType;
+import appeng.core.features.registries.WorldGenRegistry;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
 import teamroots.embers.ConfigManager;
@@ -20,7 +22,16 @@ public class EmbersCompat
 	{	
 		if(ConfigurationManager.supportEmbers)
 		{
-			ConfigManager.orespawnBlacklist.add(0);
+			try 
+			{
+				Class.forName("teamroots.embers.ConfigManager");
+				
+				ConfigManager.orespawnBlacklist.add(0);
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Embers not found, but Embers compat is loaded?");
+			}
 		}
 	}
 	

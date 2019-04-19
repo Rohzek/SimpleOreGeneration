@@ -17,8 +17,17 @@ public class IAFCompat
 	{
 		if(ConfigurationManager.supportIceAndFire)
 		{
-			IceAndFire.CONFIG.generateSapphireOre = false;
-			IceAndFire.CONFIG.generateSilverOre = false;
+			try 
+			{
+				Class.forName("com.github.alexthe666.iceandfire.IceAndFire");
+				
+				IceAndFire.CONFIG.generateSapphireOre = false;
+				IceAndFire.CONFIG.generateSilverOre = false;
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Ice And Fire not found, but Ice And Fire compat is loaded?");
+			}
 		}
 	}
 	

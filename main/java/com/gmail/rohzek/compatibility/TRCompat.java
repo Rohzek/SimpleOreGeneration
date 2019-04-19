@@ -22,7 +22,16 @@ public class TRCompat
 	{
 		if(ConfigurationManager.supportTR)
 		{
-			Core.worldGen.config.generateOres = false;
+			try 
+			{
+				Class.forName("techreborn.Core");
+				
+				Core.worldGen.config.generateOres = false;
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Tech Reborn not found, but compat is loaded?");
+			}
 		}
 	}
 	

@@ -3,7 +3,6 @@ package com.gmail.rohzek.compatibility;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
-import mekanism.common.Mekanism;
 import mekanism.common.config.MekanismConfig;
 
 public class MKCompat 
@@ -19,9 +18,20 @@ public class MKCompat
 	{
 		if(ConfigurationManager.supportMK)
 		{
-			MekanismConfig.general.copperPerChunk = 0;
-			MekanismConfig.general.osmiumPerChunk = 0;
-			MekanismConfig.general.tinPerChunk = 0;
+			try 
+			{
+				Class.forName("mekanism.common.config.MekanismConfig");
+				
+				MekanismConfig config = MekanismConfig.local();
+				
+				config.general.copperPerChunk.set(0);
+				config.general.osmiumPerChunk.set(0);
+				config.general.tinPerChunk.set(0);
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Mekanism not found, but Mekanism compat is loaded?");
+			}
 		}
 	}
 	

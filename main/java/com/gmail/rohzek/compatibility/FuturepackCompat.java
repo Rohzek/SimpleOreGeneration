@@ -18,12 +18,21 @@ public class FuturepackCompat
 	{
 		if(ConfigurationManager.supportFuturepack)
 		{
-			FPConfig.bauxiteOre = 0;
-			FPConfig.copperOre = 0;
-			FPConfig.tinOre = 0;
-			
-			FPConfig.magnetiteOre = 0;
-			FPConfig.zincOre = 0;
+			try 
+			{
+				Class.forName("futurepack.common.FPConfig");
+				
+				FPConfig.bauxiteOre = 0;
+				FPConfig.copperOre = 0;
+				FPConfig.tinOre = 0;
+				
+				FPConfig.magnetiteOre = 0;
+				FPConfig.zincOre = 0;
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("FuturePack not found, but FuturePack compat is loaded?");
+			}
 		}
 	}
 	

@@ -26,23 +26,32 @@ public class IECompat
 	{
 		if(ConfigurationManager.supportIE)
 		{
-			DimensionType[] dimTypes = DimensionType.values();
-			ArrayList<Integer> dims = new ArrayList<Integer>();
-			
-			LogHelper.debug("Blocking IE ores in the following dimensions:");
-			
-			for(int i = 0; i < dimTypes.length; i++)
+			try 
 			{
-				int[] dim = DimensionManager.getDimensions(dimTypes[i]);
-				for(int j = 0; j < dim.length; j++)
+				Class.forName("blusunrize.immersiveengineering.common.Config");
+				
+				DimensionType[] dimTypes = DimensionType.values();
+				ArrayList<Integer> dims = new ArrayList<Integer>();
+				
+				LogHelper.debug("Blocking IE ores in the following dimensions:");
+				
+				for(int i = 0; i < dimTypes.length; i++)
 				{
-					dims.add(dim[j]);
-					LogHelper.debug("" + dimTypes[i]);
-					LogHelper.debug("Which is dim ID: " + dim[j]);
+					int[] dim = DimensionManager.getDimensions(dimTypes[i]);
+					for(int j = 0; j < dim.length; j++)
+					{
+						dims.add(dim[j]);
+						LogHelper.debug("" + dimTypes[i]);
+						LogHelper.debug("Which is dim ID: " + dim[j]);
+					}
 				}
+		
+				IEWorldGen.oreDimBlacklist = dims;
 			}
-	
-			IEWorldGen.oreDimBlacklist = dims;
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("IE not found, but IE compat is loaded?");
+			}	
 		}
 	}
 	

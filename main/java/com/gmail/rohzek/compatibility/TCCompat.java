@@ -18,8 +18,17 @@ public class TCCompat
 	{
 		if(ConfigurationManager.supportTC)
 		{
-			Config.genCobalt = false;
-			Config.genArdite = false;
+			try 
+			{
+				Class.forName("slimeknights.tconstruct.common.config.Config");
+				
+				Config.genCobalt = false;
+				Config.genArdite = false;
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Tinkers Construct not found, but Tinkers Construct compat is loaded?");
+			}	
 		}
 	}
 	

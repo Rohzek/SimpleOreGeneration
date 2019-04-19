@@ -21,8 +21,17 @@ public class AECompat
 	{
 		if(ConfigurationManager.supportAE)
 		{
-			WorldGenRegistry.INSTANCE.disableWorldGenForDimension(WorldGenType.CERTUS_QUARTZ, 0);
-			WorldGenRegistry.INSTANCE.disableWorldGenForDimension(WorldGenType.CHARGED_CERTUS_QUARTZ, 0);
+			try 
+			{
+				Class.forName("appeng.core.features.registries.WorldGenRegistry");
+				
+				WorldGenRegistry.INSTANCE.disableWorldGenForDimension(WorldGenType.CERTUS_QUARTZ, 0);
+				WorldGenRegistry.INSTANCE.disableWorldGenForDimension(WorldGenType.CHARGED_CERTUS_QUARTZ, 0);
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("AE2 not found, but AE2 compat is loaded?");
+			}
 		}
 	}
 	

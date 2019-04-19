@@ -6,6 +6,7 @@ import com.gmail.rohzek.util.LogHelper;
 
 import forestry.core.config.Config;
 import net.minecraft.block.Block;
+import teamroots.embers.ConfigManager;
 
 public class ForestryCompat 
 {	
@@ -20,9 +21,18 @@ public class ForestryCompat
 	{
 		if(ConfigurationManager.supportForestry)
 		{
-			Config.generateApatiteOre = false;
-			Config.generateCopperOre = false;
-			Config.generateTinOre = false;
+			try 
+			{
+				Class.forName("forestry.core.config.Config");
+				
+				Config.generateApatiteOre = false;
+				Config.generateCopperOre = false;
+				Config.generateTinOre = false;
+			}
+			catch( ClassNotFoundException e ) 
+			{
+				 LogHelper.log("Forestry not found, but Forestry compat is loaded?");
+			}
 		}
 	}
 	

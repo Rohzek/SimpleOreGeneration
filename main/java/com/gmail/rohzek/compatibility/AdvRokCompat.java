@@ -3,7 +3,7 @@ package com.gmail.rohzek.compatibility;
 import com.gmail.rohzek.util.ConfigurationManager;
 import com.gmail.rohzek.util.LogHelper;
 
-import zmaster587.advancedRocketry.api.Configuration;
+//import zmaster587.advancedRocketry.api.Configuration;
 
 public class AdvRokCompat 
 {
@@ -18,12 +18,14 @@ public class AdvRokCompat
 	{
 		if(ConfigurationManager.supportAdvRok)
 		{
+			/*
 			Configuration.generateAluminum = false;
 			Configuration.generateCopper = false;
 			Configuration.generateDilithium = false;
 			Configuration.generateIridium = false;
 			Configuration.generateRutile = false;
 			Configuration.generateTin = false;
+			*/
 		}
 	}
 	
