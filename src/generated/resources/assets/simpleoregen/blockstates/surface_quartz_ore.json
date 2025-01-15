@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/surface_quartz_ore"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "aluminium",
+  "ingredient": {
+    "item": "simpleoregen:surface_deepslate_aluminum_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:aluminum_ingot"
+  }
+}

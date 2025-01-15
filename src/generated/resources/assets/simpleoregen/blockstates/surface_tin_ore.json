@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/surface_tin_ore"
+    }
+  }
+}

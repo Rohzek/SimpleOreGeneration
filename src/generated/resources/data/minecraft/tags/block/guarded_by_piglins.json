@@ -1,0 +1,25 @@
+{
+  "values": [
+    "simpleoregen:nether_coal_ore",
+    "simpleoregen:nether_copper_ore",
+    "simpleoregen:nether_diamond_ore",
+    "simpleoregen:nether_emerald_ore",
+    "simpleoregen:nether_gold_ore",
+    "simpleoregen:nether_iron_ore",
+    "simpleoregen:nether_redstone_ore",
+    "simpleoregen:nether_lapis_ore",
+    "simpleoregen:nether_aluminum_ore",
+    "simpleoregen:nether_cobalt_ore",
+    "simpleoregen:nether_iridium_ore",
+    "simpleoregen:nether_lead_ore",
+    "simpleoregen:nether_nickel_ore",
+    "simpleoregen:nether_platinum_ore",
+    "simpleoregen:nether_ruby_ore",
+    "simpleoregen:nether_sapphire_ore",
+    "simpleoregen:nether_silver_ore",
+    "simpleoregen:nether_tin_ore",
+    "simpleoregen:nether_tungsten_ore",
+    "simpleoregen:nether_uranium_ore",
+    "simpleoregen:nether_zinc_ore"
+  ]
+}
