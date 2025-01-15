@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sand_uranium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:sand_uranium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:uranium_ingot_from_blasting_sand_uranium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sand_uranium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:uranium_ingot_from_blasting_sand_uranium_ore"
+    ]
+  }
+}

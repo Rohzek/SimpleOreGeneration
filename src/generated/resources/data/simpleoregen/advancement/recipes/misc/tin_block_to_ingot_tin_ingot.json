@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bismuth_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:tin_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:tin_block_to_ingot_tin_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:tin_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bismuth_block",
+      "has_tin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:tin_block_to_ingot_tin_ingot"
+    ]
+  }
+}

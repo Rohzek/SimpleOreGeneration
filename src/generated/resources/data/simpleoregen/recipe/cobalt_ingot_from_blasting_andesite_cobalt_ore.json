@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "cobalt",
+  "ingredient": {
+    "item": "simpleoregen:andesite_cobalt_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:cobalt_ingot"
+  }
+}

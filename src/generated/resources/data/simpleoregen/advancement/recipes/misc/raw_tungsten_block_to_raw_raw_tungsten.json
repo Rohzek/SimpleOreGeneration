@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bismuth_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:raw_tungsten"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:raw_tungsten_block_to_raw_raw_tungsten"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tungsten": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:raw_tungsten"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bismuth_block",
+      "has_tungsten"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:raw_tungsten_block_to_raw_raw_tungsten"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diorite_iridium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:diorite_iridium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:iridium_ingot_from_smelting_diorite_iridium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diorite_iridium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:iridium_ingot_from_smelting_diorite_iridium_ore"
+    ]
+  }
+}

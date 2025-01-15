@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silver": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:silver_ingots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:silver_nugget_from_nugget_silver_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silver"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:silver_nugget_from_nugget_silver_ingot"
+    ]
+  }
+}

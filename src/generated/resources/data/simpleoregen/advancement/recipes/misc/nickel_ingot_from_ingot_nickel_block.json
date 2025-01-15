@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nickel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:nickel_ingots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:nickel_ingot_from_ingot_nickel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nickel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:nickel_ingot_from_ingot_nickel_block"
+    ]
+  }
+}

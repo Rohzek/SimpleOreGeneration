@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cheshirerose": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:cheshirerose"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:heart_diamond_from_blasting_cheshirerose"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cheshirerose"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:heart_diamond_from_blasting_cheshirerose"
+    ]
+  }
+}

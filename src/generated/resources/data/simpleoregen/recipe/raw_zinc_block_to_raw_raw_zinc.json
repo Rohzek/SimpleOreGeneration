@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simpleoregen:raw_zinc_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "simpleoregen:raw_zinc"
+  }
+}

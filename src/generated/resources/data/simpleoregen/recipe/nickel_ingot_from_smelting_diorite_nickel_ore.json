@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "nickel",
+  "ingredient": {
+    "item": "simpleoregen:diorite_nickel_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:nickel_ingot"
+  }
+}

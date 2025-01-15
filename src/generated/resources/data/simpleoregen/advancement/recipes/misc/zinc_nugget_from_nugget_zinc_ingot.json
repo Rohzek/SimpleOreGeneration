@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:zinc_nugget_from_nugget_zinc_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zinc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:zinc_ingots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zinc"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:zinc_nugget_from_nugget_zinc_ingot"
+    ]
+  }
+}
