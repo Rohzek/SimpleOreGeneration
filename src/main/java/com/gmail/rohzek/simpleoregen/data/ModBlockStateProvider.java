@@ -1,7 +1,5 @@
 package com.gmail.rohzek.simpleoregen.data;
 
-import java.util.function.Function;
-
 import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
 import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
@@ -9,9 +7,7 @@ import com.gmail.rohzek.simpleoregen.lib.Reference;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -25,9 +21,14 @@ public class ModBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels() 
     {
-    	makeFlower(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get(), "cheshirerose", "cheshirerose");
-    	makeFlower(WorldGenBlocks.ROSE_FLOWER.get(), "rose", "rose");
-    	makeFlower(WorldGenBlocks.ROSE_CYAN_FLOWER.get(), "rose_cyan", "rose_cyan");
+    	makeFlower(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get(), "cheshirerose");
+    	makeFlowerPotted(WorldGenBlocks.CHESHIRE_ROSE_FLOWER_POTTED.get(),"cheshirerose");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_FLOWER.get(), "rose");
+    	makeFlowerPotted(WorldGenBlocks.ROSE_FLOWER_POTTED.get(),"rose");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_CYAN_FLOWER.get(), "rose_cyan");
+    	makeFlowerPotted(WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED.get(), "rose_cyan");
     	
     	// Stone
     	blockWithItem(OreGenBlocks.SURFACE_QUARTZ_ORE);
@@ -248,19 +249,14 @@ public class ModBlockStateProvider extends BlockStateProvider
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
     
-    private void makeFlower(Block block, String name, String texture) 
+    private void makeFlower(Block block, String name) 
     {
-    	Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, name, texture);
-
-        getVariantBuilder(block).forAllStates(function);
+    	simpleBlockWithItem(block, models().cross(name, ResourceLocation.fromNamespaceAndPath(Reference.MODID, "item/" + name)).renderType("cutout"));;
     }
     
-    private ConfiguredModel[] states(BlockState state, Block block, String modelName, String textureName) 
+    private void makeFlowerPotted(Block block, String name) 
     {
-        ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().cross(modelName,
-                ResourceLocation.fromNamespaceAndPath(Reference.MODID, "block/" + textureName)).renderType("cutout"));
-
-        return models;
+    	simpleBlockWithItem(block, models().singleTexture(name + "_potted", ResourceLocation.fromNamespaceAndPath("minecraft", "flower_pot_cross"),
+    			"plant", ResourceLocation.fromNamespaceAndPath(Reference.MODID, "item/" + name)).renderType("cutout"));;
     }
 }

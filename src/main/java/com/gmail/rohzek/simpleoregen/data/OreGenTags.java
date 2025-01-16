@@ -2,11 +2,13 @@ package com.gmail.rohzek.simpleoregen.data;
 
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class OreGenTags 
@@ -72,6 +74,18 @@ public class OreGenTags
 		private static TagKey<Item> createTag(String name)
 		{
 			return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));
+		}
+	}
+	
+	public static class Biomes
+	{
+		// Define tags for biomes
+		public static final TagKey<Biome> CHESHIREROSE_BIOMES = createTag("cheshirerose_biomes");
+		public static final TagKey<Biome> ROSE_BIOMES = createTag("rose_biomes");
+		
+		private static TagKey<Biome> createTag(String name)
+		{
+			return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));
 		}
 	}
 }

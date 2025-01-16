@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "simpleoregen:block/cheshirerose"
+    "cross": "simpleoregen:item/cheshirerose"
   }
 }

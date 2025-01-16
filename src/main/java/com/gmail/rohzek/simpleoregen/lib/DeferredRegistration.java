@@ -19,6 +19,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class DeferredRegistration 
 {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.Items.createItems(Reference.MODID);
+	public static final DeferredRegister.Items ITEMS_FLOWERS = DeferredRegister.Items.createItems(Reference.MODID);
+	public static final DeferredRegister.Items ITEMS_FLOWERS_POTTED = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Items ITEM_BLOCKS = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.Blocks.createBlocks(Reference.MODID);
 	private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, Reference.MODID);
@@ -34,13 +36,20 @@ public class DeferredRegistration
 	{
 		if(name.toLowerCase().contains("rose")) 
 		{
-			if(name.toLowerCase().equals("cheshirerose")) 
+			if(name.toLowerCase().contains("potted")) 
 			{
-				ITEMS.register(name, () -> new CheshireRoseFlowerItem(block.get()));
+				ITEMS_FLOWERS_POTTED.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
 			}
 			else
 			{
-				ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+				if(name.toLowerCase().contains("cheshire")) 
+				{
+					ITEMS_FLOWERS.register(name, () -> new CheshireRoseFlowerItem(block.get()));
+				}
+				else 
+				{
+					ITEMS_FLOWERS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+				}
 			}
 		}
 		else
@@ -53,6 +62,8 @@ public class DeferredRegistration
 	{
 		ITEMS.register(bus);
 		ITEM_BLOCKS.register(bus);
+		ITEMS_FLOWERS.register(bus);
+		ITEMS_FLOWERS_POTTED.register(bus);
 		TABS.register(bus);
 		BLOCKS.register(bus);
 	}
@@ -61,6 +72,10 @@ public class DeferredRegistration
 			.title(Component.translatable("itemGroup." + Reference.MODID))
 			.icon(() -> new ItemStack(Blocks.IRON_ORE))
 			.displayItems((params, output) -> {
+				ITEMS_FLOWERS.getEntries().forEach(entry -> {
+					output.accept(entry.get());
+				});
+				
 				ITEMS.getEntries().forEach(entry -> {
 					output.accept(entry.get());
 				});

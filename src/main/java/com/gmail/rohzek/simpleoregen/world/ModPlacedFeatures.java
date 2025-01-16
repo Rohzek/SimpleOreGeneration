@@ -7,13 +7,18 @@ import com.gmail.rohzek.simpleoregen.lib.Reference;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
+import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.RarityFilter;
 
 public class ModPlacedFeatures 
 {
@@ -95,6 +100,10 @@ public class ModPlacedFeatures
 	public static final ResourceKey<PlacedFeature> OVERWORLD_ZINC_ORE_PLACED_KEY = registerKey("zinc_ore_placed");
 	public static final ResourceKey<PlacedFeature> NETHER_ZINC_ORE_PLACED_KEY = registerKey("nether_zinc_ore_placed");
 	public static final ResourceKey<PlacedFeature> END_ZINC_ORE_PLACED_KEY = registerKey("end_zinc_ore_placed");
+	
+	public static final ResourceKey<PlacedFeature> CHESHIREROSE_PLACED_KEY = registerKey("cheshirerose_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_PLACED_KEY = registerKey("rose_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_CYAN_PLACED_KEY = registerKey("rose_cyan_placed");
 	
     public static void bootstrap(BootstrapContext<PlacedFeature> context) 
     {
@@ -234,6 +243,21 @@ public class ModPlacedFeatures
                 ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
         register(context, END_ZINC_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_ZINC_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+    
+        // Cheshire Rose should be more rare than any other flower
+        // NoiseThresholdCountPlacement.of(-0.8, 15, 4)
+        register(context, CHESHIREROSE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHESHIREROSE_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(128), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_KEY),
+        		List.of(CountPlacement.of(3),
+        				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_CYAN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_CYAN_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) 

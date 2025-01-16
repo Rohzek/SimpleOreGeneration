@@ -45,6 +45,7 @@ public class DataGenetators
 		BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
 		dataGenerator.addProvider(event.includeServer(), blockTagsProvider);
 		dataGenerator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+		dataGenerator.addProvider(event.includeServer(), new ModBiomeTagProvider(packOutput, lookupProvider, existingFileHelper));
 		
 		dataGenerator.addProvider(event.includeServer(), new ModDatapackProvider(packOutput, lookupProvider));
 	}

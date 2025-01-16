@@ -35,8 +35,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 	protected void generate() 
 	{
 		dropSelf(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get());
+		add(WorldGenBlocks.CHESHIRE_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get()));
+		
 		dropSelf(WorldGenBlocks.ROSE_FLOWER.get());
+		add(WorldGenBlocks.ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_FLOWER.get()));
+		
 		dropSelf(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
+		add(WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_CYAN_FLOWER.get()));
 		
 		dropSelf(OreGenBlocks.ALUMINIUM_BLOCK.get());
 		dropSelf(OreGenBlocks.BRONZE_BLOCK.get());

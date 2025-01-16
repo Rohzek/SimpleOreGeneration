@@ -3,10 +3,12 @@ package com.gmail.rohzek.simpleoregen.world;
 import java.util.List;
 
 import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
+import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -15,6 +17,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -100,7 +104,9 @@ public class ModConfiguredFeatures
 	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_ZINC_ORE_KEY = registerKey("nether_zinc_ore");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> END_ZINC_ORE_KEY = registerKey("end_zinc_ore");
 	
-	
+	public static final ResourceKey<ConfiguredFeature<?, ?>> CHESHIREROSE_KEY = registerKey("cheshirerose");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_KEY = registerKey("rose");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_CYAN_KEY = registerKey("rose_cyan");
 	
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) 
     {
@@ -391,6 +397,21 @@ public class ModConfiguredFeatures
         		OreGenBlocks.NETHER_ZINC_ORE.get().defaultBlockState(), veinSize));
         register(context, END_ZINC_ORE_KEY, Feature.ORE, new OreConfiguration(endReplace,
         		OreGenBlocks.END_ZINC_ORE.get().defaultBlockState(), veinSize));
+        /*
+        register(context, CHESHIREROSE_KEY, Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK)));*/
+        register(context, CHESHIREROSE_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_CYAN_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_CYAN_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) 

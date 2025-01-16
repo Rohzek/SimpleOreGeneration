@@ -1,5 +1,6 @@
 package com.gmail.rohzek.simpleoregen.world;
 
+import com.gmail.rohzek.simpleoregen.data.OreGenTags;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
 import net.minecraft.core.HolderSet;
@@ -93,6 +94,10 @@ public class ModBiomeModifiers
 	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_ZINC_ORE = registerKey("add_zinc_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_ZINC_ORE = registerKey("add_nether_zinc_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_ZINC_ORE = registerKey("add_end_zinc_ore");
+	
+	public static final ResourceKey<BiomeModifier> ADD_CHESHIREROSE = registerKey("add_cheshirerose");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE = registerKey("add_rose");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_CYAN = registerKey("add_rose_cyan");
 	
     public static void bootstrap(BootstrapContext<BiomeModifier> context) 
     {
@@ -396,6 +401,26 @@ public class ModBiomeModifiers
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_ZINC_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+     // context.register(ADD_OVERWORLD_ZINC_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        //         HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)),
+        //         HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_ZINC_ORE_PLACED_KEY)),
+        //         GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_CHESHIREROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.CHESHIREROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHESHIREROSE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_CYAN, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) 

@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-15T16:06:10.9125274	Item Models: simpleoregen
+// 1.21.1	2025-01-16T08:05:09.5347975	Item Models: simpleoregen
 142f8924dd7bb6bb679734d77734b776707ffd05 assets/simpleoregen/models/item/aluminium_block.json
 83d2c11afb1bff6665f582be4cfcd1769b1a1a94 assets/simpleoregen/models/item/aluminium_ingot.json
 a521ab591c5cef2fcc87f63ad787d8a946f3bcd2 assets/simpleoregen/models/item/aluminium_nugget.json
@@ -20,7 +20,6 @@ ceefbb2b17e29a86bcda0d2eb971a1f703e8f45a assets/simpleoregen/models/item/andesit
 a8f47d116dbdb988202f225e21f0bd7aeb28fdd7 assets/simpleoregen/models/item/bronze_block.json
 4285d84777792ff9222e6b781edd06c648d51a3e assets/simpleoregen/models/item/bronze_ingot.json
 f4331863c48953816c12001ded5355f8960c0832 assets/simpleoregen/models/item/bronze_nugget.json
-439d5eeec046b8032ca1f980d587a3646b28a306 assets/simpleoregen/models/item/cheshirerose.json
 533484bd8e44fa0ac3435ffe7fefe2766e9bb171 assets/simpleoregen/models/item/cobalt_block.json
 44f8f1855c78f7764a0428afea0b031bb33a52ff assets/simpleoregen/models/item/cobalt_ingot.json
 65c898c91f9e4ba73b6bc5186ad65f67f7ecec2b assets/simpleoregen/models/item/cobalt_nugget.json
@@ -164,8 +163,6 @@ c32aa6b68c6fb0b61eebf452b74a15996df57809 assets/simpleoregen/models/item/raw_ura
 0b46cfb47456afd3ec71be217fea1f8d1ba5ec82 assets/simpleoregen/models/item/raw_uranium_block.json
 96ee0b017b7aa1d9417f25ad3df28f8b1e83a7e5 assets/simpleoregen/models/item/raw_zinc.json
 7837075b806fdaa01d6f951d9a817def970485f0 assets/simpleoregen/models/item/raw_zinc_block.json
-74a20b2c610cd363d00c7382cb48a98bca5b1480 assets/simpleoregen/models/item/rose.json
-929c5facc85fb82539b44a5764c48520f23e0bca assets/simpleoregen/models/item/rose_cyan.json
 6d526bc44af3998e840f652d1b20925048a45777 assets/simpleoregen/models/item/ruby.json
 519f0171e29e407ae9181cea7c24919da3699bb2 assets/simpleoregen/models/item/ruby_block.json
 7262ab4fd772092a342a8aa2b5180b49efca3245 assets/simpleoregen/models/item/ruby_ore.json
