@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-15T16:06:10.9195275	Loot Tables
+// 1.21.1	2025-01-16T08:05:09.5417982	Loot Tables
 f6949257e319a72827d073bc3c62a0290d859332 data/simpleoregen/loot_table/blocks/aluminium_block.json
 cb245bdfc71c86ff6cb0ec760fe45ef87079e9af data/simpleoregen/loot_table/blocks/aluminium_ore.json
 3fb991a39e61a15cdeb44c8ae30077f666935867 data/simpleoregen/loot_table/blocks/andesite_aluminium_ore.json
@@ -17,6 +17,7 @@ caa55bea1f4f89a04589b6f4fdc0e8157520192e data/simpleoregen/loot_table/blocks/and
 0116e720566e13768641dfdcd8fca97dc757e857 data/simpleoregen/loot_table/blocks/andesite_zinc_ore.json
 207384a4d7bab9d0519775a3407e3b3138286efb data/simpleoregen/loot_table/blocks/bronze_block.json
 a8811d9559ab6f82d1983812277975fb7048556f data/simpleoregen/loot_table/blocks/cheshirerose.json
+0cf19d7f1177debd0cacc1b930dc1953c3b178b6 data/simpleoregen/loot_table/blocks/cheshirerose_potted.json
 07bdf26a59b7fc9bc8658fd196eafd40cd25d631 data/simpleoregen/loot_table/blocks/cobalt_block.json
 92efea742ab412c958d91132ccf7397e3ba4e36c data/simpleoregen/loot_table/blocks/cobalt_ore.json
 79af74c7cecc76da01aa8f078a5774b647224fe1 data/simpleoregen/loot_table/blocks/deepslate_aluminium_ore.json
@@ -140,6 +141,8 @@ b05d033acc83d5091706fd48c9aca8e08fbd1cf1 data/simpleoregen/loot_table/blocks/raw
 8bb6b65875d35e7d92e1333d1885c3eb6d4c8da9 data/simpleoregen/loot_table/blocks/raw_zinc_block.json
 3613d3bce2639570beb53470ff3c1cc8ea295cb1 data/simpleoregen/loot_table/blocks/rose.json
 fa23e148ef65773a6282ddae448ab0576b93f4d5 data/simpleoregen/loot_table/blocks/rose_cyan.json
+bb144cffad606d3600945ff4c0408cd128c964e5 data/simpleoregen/loot_table/blocks/rose_cyan_potted.json
+0ea16dd9188a584e3bc842d61a70bfe57acff95d data/simpleoregen/loot_table/blocks/rose_potted.json
 cf67d38ad4a662c827415a9de262143dd85bb3a2 data/simpleoregen/loot_table/blocks/ruby_block.json
 3a893c351d3864e50f2a177a514ea7fddaf165d8 data/simpleoregen/loot_table/blocks/ruby_ore.json
 f1025f4dec0104d3787c702b915ad821de5a6d2a data/simpleoregen/loot_table/blocks/sandstone_aluminium_ore.json

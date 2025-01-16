@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#simpleoregen:cheshirerose_biomes",
+  "features": "simpleoregen:cheshirerose_placed",
+  "step": "vegetal_decoration"
+}
