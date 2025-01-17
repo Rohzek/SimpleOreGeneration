@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/end_copper_ore"
+    }
+  }
+}

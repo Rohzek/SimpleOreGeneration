@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/zinc_ore"
+    }
+  }
+}

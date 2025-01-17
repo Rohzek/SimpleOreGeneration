@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "tungsten",
+  "ingredient": {
+    "item": "simpleoregen:sandstone_tungsten_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:tungsten_ingot"
+  }
+}

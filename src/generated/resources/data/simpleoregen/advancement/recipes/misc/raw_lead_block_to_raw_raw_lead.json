@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bismuth_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:raw_lead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lead": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:raw_lead"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:raw_lead_block_to_raw_raw_lead"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bismuth_block",
+      "has_lead"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:raw_lead_block_to_raw_raw_lead"
+    ]
+  }
+}

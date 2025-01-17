@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_tungsten_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:granite_tungsten_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:tungsten_ingot_from_blasting_granite_tungsten_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_tungsten_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:tungsten_ingot_from_blasting_granite_tungsten_ore"
+    ]
+  }
+}

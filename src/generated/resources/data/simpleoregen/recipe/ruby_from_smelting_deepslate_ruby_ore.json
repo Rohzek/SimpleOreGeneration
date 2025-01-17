@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "ruby",
+  "ingredient": {
+    "item": "simpleoregen:deepslate_ruby_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:ruby"
+  }
+}

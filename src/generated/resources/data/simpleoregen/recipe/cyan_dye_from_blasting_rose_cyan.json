@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "heart_diamond",
+  "ingredient": {
+    "item": "simpleoregen:rose_cyan"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:cyan_dye"
+  }
+}

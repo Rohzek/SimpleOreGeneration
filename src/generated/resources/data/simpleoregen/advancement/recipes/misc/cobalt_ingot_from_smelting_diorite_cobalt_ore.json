@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diorite_cobalt_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:diorite_cobalt_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:cobalt_ingot_from_smelting_diorite_cobalt_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diorite_cobalt_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:cobalt_ingot_from_smelting_diorite_cobalt_ore"
+    ]
+  }
+}

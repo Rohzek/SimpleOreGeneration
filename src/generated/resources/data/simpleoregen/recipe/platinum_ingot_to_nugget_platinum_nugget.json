@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simpleoregen:platinum_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "simpleoregen:platinum_nugget"
+  }
+}

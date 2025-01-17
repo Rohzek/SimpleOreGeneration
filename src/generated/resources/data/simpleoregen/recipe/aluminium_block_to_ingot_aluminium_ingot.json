@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "simpleoregen:aluminium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "simpleoregen:aluminium_ingot"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "values": [
+    "simpleoregen:sand_quartz_ore",
+    "simpleoregen:sand_aluminium_ore",
+    "simpleoregen:sand_cobalt_ore",
+    "simpleoregen:sand_iridium_ore",
+    "simpleoregen:sand_lead_ore",
+    "simpleoregen:sand_nickel_ore",
+    "simpleoregen:sand_platinum_ore",
+    "simpleoregen:sand_ruby_ore",
+    "simpleoregen:sand_sapphire_ore",
+    "simpleoregen:sand_silver_ore",
+    "simpleoregen:sand_tin_ore",
+    "simpleoregen:sand_tungsten_ore",
+    "simpleoregen:sand_uranium_ore",
+    "simpleoregen:sand_zinc_ore",
+    "simpleoregen:gravel_quartz_ore",
+    "simpleoregen:gravel_aluminium_ore",
+    "simpleoregen:gravel_cobalt_ore",
+    "simpleoregen:gravel_iridium_ore",
+    "simpleoregen:gravel_lead_ore",
+    "simpleoregen:gravel_nickel_ore",
+    "simpleoregen:gravel_platinum_ore",
+    "simpleoregen:gravel_ruby_ore",
+    "simpleoregen:gravel_sapphire_ore",
+    "simpleoregen:gravel_silver_ore",
+    "simpleoregen:gravel_tin_ore",
+    "simpleoregen:gravel_tungsten_ore",
+    "simpleoregen:gravel_uranium_ore",
+    "simpleoregen:gravel_zinc_ore"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gravel_sapphire_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:gravel_sapphire_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:sapphire_from_smelting_gravel_sapphire_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gravel_sapphire_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:sapphire_from_smelting_gravel_sapphire_ore"
+    ]
+  }
+}

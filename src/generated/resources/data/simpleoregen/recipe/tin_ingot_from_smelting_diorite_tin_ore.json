@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "tin",
+  "ingredient": {
+    "item": "simpleoregen:diorite_tin_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:tin_ingot"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_uranium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:granite_uranium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:uranium_ingot_from_smelting_granite_uranium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_uranium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:uranium_ingot_from_smelting_granite_uranium_ore"
+    ]
+  }
+}

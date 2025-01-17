@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nickel_raw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:raw_nickels"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:raw_nickel_from_raw_raw_nickel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nickel_raw"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:raw_nickel_from_raw_raw_nickel_block"
+    ]
+  }
+}
