@@ -88,6 +88,8 @@ public class OreGenTags
 		public static final TagKey<Biome> CHESHIREROSE_BIOMES = createTag("cheshirerose_biomes");
 		public static final TagKey<Biome> ROSE_BIOMES = createTag("rose_biomes");
 		
+		public static final TagKey<Biome> ALL_BIOMES = createTag("all_biomes");
+		
 		private static TagKey<Biome> createTag(String name)
 		{
 			return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));

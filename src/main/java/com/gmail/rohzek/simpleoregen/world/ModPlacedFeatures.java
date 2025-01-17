@@ -22,6 +22,17 @@ import net.minecraft.world.level.levelgen.placement.RarityFilter;
 
 public class ModPlacedFeatures 
 {
+	public static final ResourceKey<PlacedFeature> SURFACE_COAL_ORE_PLACED_KEY = registerKey("surface_coal_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_COPPER_ORE_PLACED_KEY = registerKey("surface_copper_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_DIAMOND_ORE_PLACED_KEY = registerKey("surface_diamond_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_EMERALD_ORE_PLACED_KEY = registerKey("surface_emerald_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_GOLD_ORE_PLACED_KEY = registerKey("surface_gold_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_IRON_ORE_PLACED_KEY = registerKey("surface_iron_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_REDSTONE_ORE_PLACED_KEY = registerKey("surface_redstone_ore_placed");
+	public static final ResourceKey<PlacedFeature> SURFACE_LAPIS_ORE_PLACED_KEY = registerKey("surface_lapis_ore_placed");
+	
+	
+	
 	public static final ResourceKey<PlacedFeature> NETHER_COAL_ORE_PLACED_KEY = registerKey("nether_coal_ore_placed");
 	public static final ResourceKey<PlacedFeature> END_COAL_ORE_PLACED_KEY = registerKey("end_coal_ore_placed");
 	
@@ -111,6 +122,33 @@ public class ModPlacedFeatures
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         int veinCount = 12, lowestYLevel = -64, highestYLevel = 80;
+        
+        
+        
+        register(context, SURFACE_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_COAL_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_COPPER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_COPPER_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_DIAMOND_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_DIAMOND_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_EMERALD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_EMERALD_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_GOLD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_GOLD_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_IRON_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_IRON_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_REDSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_REDSTONE_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        register(context, SURFACE_LAPIS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SURFACE_LAPIS_ORE_KEY),
+        		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         register(context, NETHER_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),

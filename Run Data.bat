@@ -1,2 +1,3 @@
+@echo off
 gradlew runData
-pause
+PAUSE

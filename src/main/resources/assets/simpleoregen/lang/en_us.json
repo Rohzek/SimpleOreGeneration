@@ -2,7 +2,7 @@
   "itemGroup.simpleoregen": "Simple Ore Generation",
 
   "block.simpleoregen.quartz_ore": "Quartz Ore",
-  "block.simpleoregen.bauxite_ore": "Aluminium Ore",
+  "block.simpleoregen.bauxite_ore": "Aluminum Ore",
   "block.simpleoregen.cobalt_ore": "Cobalt Ore",
   "block.simpleoregen.iridium_ore": "Iridium Ore",
   "block.simpleoregen.lead_ore": "Lead Ore",
@@ -197,7 +197,7 @@
 
   "item.simpleoregen.heart_diamond": "Heart Diamond",
 
-  "item.simpleoregen.raw_bauxite": "Raw Aluminium",
+  "item.simpleoregen.raw_bauxite": "Raw Aluminum",
   "item.simpleoregen.raw_cobalt": "Raw Cobalt",
   "item.simpleoregen.raw_iridium": "Raw Iridium",
   "item.simpleoregen.raw_lead": "Raw Lead",
@@ -211,7 +211,7 @@
   "item.simpleoregen.raw_uranium": "Raw Uranium",
   "item.simpleoregen.raw_zinc": "Raw Zinc",
 
-  "item.simpleoregen.bauxite_ingot": "Aluminium Ingot",
+  "item.simpleoregen.bauxite_ingot": "Aluminum Ingot",
   "item.simpleoregen.bronze_ingot": "Bronze Ingot",
   "item.simpleoregen.cobalt_ingot": "Cobalt Ingot",
   "item.simpleoregen.iridium_ingot": "Iridium Ingot",
@@ -226,7 +226,7 @@
   "item.simpleoregen.uranium_ingot": "Uranium Ingot",
   "item.simpleoregen.zinc_ingot": "Zinc Ingot",
 
-  "item.simpleoregen.bauxite_nugget": "Aluminium Nugget",
+  "item.simpleoregen.bauxite_nugget": "Aluminum Nugget",
   "item.simpleoregen.bronze_nugget": "Bronze Nugget",
   "item.simpleoregen.cobalt_nugget": "Cobalt Nugget",
   "item.simpleoregen.iridium_nugget": "Iridium Nugget",

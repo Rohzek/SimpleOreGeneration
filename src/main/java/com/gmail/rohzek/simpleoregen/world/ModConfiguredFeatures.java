@@ -25,6 +25,18 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 public class ModConfiguredFeatures 
 {
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_COAL_ORE_KEY = registerKey("surface_coal_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_COPPER_ORE_KEY = registerKey("surface_copper_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_DIAMOND_ORE_KEY = registerKey("surface_diamond_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_EMERALD_ORE_KEY = registerKey("surface_emerald_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_GOLD_ORE_KEY = registerKey("surface_gold_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_IRON_ORE_KEY = registerKey("surface_iron_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_REDSTONE_ORE_KEY = registerKey("surface_redstone_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> SURFACE_LAPIS_ORE_KEY = registerKey("surface_lapis_ore");
+	
+	
+	
+	
 	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COAL_ORE_KEY = registerKey("nether_coal_ore");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> END_COAL_ORE_KEY = registerKey("end_coal_ore");
 	
@@ -281,6 +293,37 @@ public class ModConfiguredFeatures
                 );
         
         int veinSize = 9;
+        
+        
+        
+        
+        
+        register(context, SURFACE_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.COAL_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_COPPER_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.COPPER_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_DIAMOND_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.DIAMOND_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_EMERALD_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.EMERALD_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.GOLD_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_IRON_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.IRON_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_REDSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.REDSTONE_ORE.defaultBlockState(), veinSize));
+        register(context, SURFACE_LAPIS_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		Blocks.LAPIS_ORE.defaultBlockState(), veinSize));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         register(context, NETHER_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
         		OreGenBlocks.NETHER_COAL_ORE.get().defaultBlockState(), veinSize));
