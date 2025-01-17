@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "simpleoregen:tool_handles"
+    },
+    "M": {
+      "tag": "simpleoregen:diamonds"
+    }
+  },
+  "pattern": [
+    "MMM",
+    " H ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_pickaxe"
+  }
+}

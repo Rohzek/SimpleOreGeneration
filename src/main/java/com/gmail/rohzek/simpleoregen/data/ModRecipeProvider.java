@@ -203,6 +203,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_magic_block", has(ModBlocks.MAGIC_BLOCK))
                 .save(recipeOutput, "tutorialmod:bismuth_from_magic_block");
          */
+        
+        shapedCraftingPickaxe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_PICKAXE);
+        
+        
         oreSmelting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 200, "bauxite");
         oreBlasting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 100, "bauxite");
         oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, OreGenItems.COBALT_INGOT.get(), 0.25f, 200, "cobalt");
@@ -239,6 +243,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, List.of(WorldGenBlocks.ROSE_CYAN_FLOWER), RecipeCategory.MISC, Items.CYAN_DYE, 0.25f, 200, "heart_diamond");
         oreBlasting(recipeOutput, List.of(WorldGenBlocks.ROSE_CYAN_FLOWER), RecipeCategory.MISC, Items.CYAN_DYE, 0.25f, 100, "heart_diamond");
     }
+	
+	protected static void shapedCraftingPickaxe(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, TagKey<Item> input_handle, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output)
+        .pattern("MMM")
+        .pattern(" H ")
+        .pattern(" H ")
+        .define('M', input_material)
+        .define('H', input_handle)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_pickaxe");
+	}
 	
 	protected static void shapedCraftingSolidBlocks(RecipeOutput recipeOutput, String unlocked, Item input, Block output, TagKey<Item> unlock, String name) 
 	{

@@ -34,6 +34,7 @@ public class OreGenTags
 		public static final TagKey<Item> DIAMONDS = createTag("diamonds");
 		public static final TagKey<Item> RUBIES = createTag("rubies");
 		public static final TagKey<Item> SAPPHIRES = createTag("sapphires");
+		
 		public static final TagKey<Item> RAW_BAUXITES = createTag("raw_bauxites");
 		public static final TagKey<Item> RAW_ALUMINUMS = createTag("raw_bauxites");
 		public static final TagKey<Item> RAW_ALUMINIUMS = createTag("raw_bauxites");
@@ -75,6 +76,8 @@ public class OreGenTags
 		public static final TagKey<Item> TUNGSTEN_NUGGETS = createTag("tungsten_nuggets");
 		public static final TagKey<Item> URANIUM_NUGGETS = createTag("uranium_nuggets");
 		public static final TagKey<Item> ZINC_NUGGETS = createTag("zinc_nuggets");
+		
+		public static final TagKey<Item> TOOL_HANDLES = createTag("tool_handles");
 					
 		private static TagKey<Item> createTag(String name)
 		{

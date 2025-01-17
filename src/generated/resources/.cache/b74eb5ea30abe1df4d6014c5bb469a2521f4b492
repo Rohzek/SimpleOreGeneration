@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-16T20:48:16.0762793	Tags for minecraft:item mod id simpleoregen
+// 1.21.1	2025-01-17T08:37:50.7087518	Tags for minecraft:item mod id simpleoregen
 4eb0ddc071675939dbca4f942fc9abda8903b71e data/simpleoregen/tags/item/bauxite_ingots.json
 cb169589d1c3bdf963e4a741d04b912ae2325eed data/simpleoregen/tags/item/bauxite_nuggets.json
 51389987a53a6fa7f0793983d150ad593fb9bc2e data/simpleoregen/tags/item/cobalt_ingots.json
@@ -29,6 +29,7 @@ c77c7a8ee31cbfb17c4f9638feea2ee664dfefbf data/simpleoregen/tags/item/raw_tungste
 067d0348005d9b6ab4eb811a026376dea7f01af9 data/simpleoregen/tags/item/silver_nuggets.json
 be85c771218ce77344df5773e438efdb9e883cf1 data/simpleoregen/tags/item/tin_ingots.json
 04ae1fce7b30f0241600491e6de2bff808e241b4 data/simpleoregen/tags/item/tin_nuggets.json
+1ad920aa65e2706dabb6265f3b12546ab33e8936 data/simpleoregen/tags/item/tool_handles.json
 cdd8c0f96dcef637e3658f4601f722e24bb68ec5 data/simpleoregen/tags/item/tungsten_ingots.json
 4c02949074f149574f31290208c54820f90dcb42 data/simpleoregen/tags/item/tungsten_nuggets.json
 021dddfff16b7e05f036a0f18dd4ae2978b31d5c data/simpleoregen/tags/item/uranium_ingots.json
