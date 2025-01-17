@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sand_bauxite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:sand_bauxite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:bauxite_ingot_from_smelting_sand_bauxite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sand_bauxite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:bauxite_ingot_from_smelting_sand_bauxite_ore"
+    ]
+  }
+}

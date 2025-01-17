@@ -46,9 +46,9 @@ public class ModPlacedFeatures
 	public static final ResourceKey<PlacedFeature> NETHER_LAPIS_ORE_PLACED_KEY = registerKey("nether_lapis_ore_placed");
 	public static final ResourceKey<PlacedFeature> END_LAPIS_ORE_PLACED_KEY = registerKey("end_lapis_ore_placed");
 	
-	public static final ResourceKey<PlacedFeature> OVERWORLD_ALUMINIUM_ORE_PLACED_KEY = registerKey("aluminium_ore_placed");
-	public static final ResourceKey<PlacedFeature> NETHER_ALUMINIUM_ORE_PLACED_KEY = registerKey("nether_aluminium_ore_placed");
-	public static final ResourceKey<PlacedFeature> END_ALUMINIUM_ORE_PLACED_KEY = registerKey("end_aluminium_ore_placed");
+	public static final ResourceKey<PlacedFeature> OVERWORLD_BAUXITE_ORE_PLACED_KEY = registerKey("bauxite_ore_placed");
+	public static final ResourceKey<PlacedFeature> NETHER_BAUXITE_ORE_PLACED_KEY = registerKey("nether_bauxite_ore_placed");
+	public static final ResourceKey<PlacedFeature> END_BAUXITE_ORE_PLACED_KEY = registerKey("end_bauxite_ore_placed");
 	
 	public static final ResourceKey<PlacedFeature> OVERWORLD_COBALT_ORE_PLACED_KEY = registerKey("cobalt_ore_placed");
 	public static final ResourceKey<PlacedFeature> NETHER_COBALT_ORE_PLACED_KEY = registerKey("nether_cobalt_ore_placed");
@@ -153,11 +153,11 @@ public class ModPlacedFeatures
         		ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
         
         
-        register(context, OVERWORLD_ALUMINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_ALUMINIUM_ORE_KEY),
+        register(context, OVERWORLD_BAUXITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BAUXITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
-        register(context, NETHER_ALUMINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_ALUMINIUM_ORE_KEY),
+        register(context, NETHER_BAUXITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_BAUXITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
-        register(context, END_ALUMINIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_ALUMINIUM_ORE_KEY),
+        register(context, END_BAUXITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_BAUXITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(veinCount, HeightRangePlacement.uniform(VerticalAnchor.absolute(lowestYLevel), VerticalAnchor.absolute(highestYLevel))));
         
         register(context, OVERWORLD_COBALT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_COBALT_ORE_KEY),

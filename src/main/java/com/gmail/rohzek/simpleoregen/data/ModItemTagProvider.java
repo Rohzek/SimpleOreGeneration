@@ -31,10 +31,10 @@ public class ModItemTagProvider extends ItemTagsProvider
         	.add(OreGenItems.RUBY.get());
         tag(OreGenTags.Items.SAPPHIRES)
     		.add(OreGenItems.SAPPHIRE.get());
-        tag(OreGenTags.Items.RAW_ALUMINIUMS)
-			.add(OreGenItems.RAW_ALUMINIUM.get());
+        tag(OreGenTags.Items.RAW_BAUXITES)
+			.add(OreGenItems.RAW_BAUXITE.get());
         tag(OreGenTags.Items.RAW_ALUMINUMS)
-			.add(OreGenItems.RAW_ALUMINIUM.get());
+			.add(OreGenItems.RAW_BAUXITE.get());
         tag(OreGenTags.Items.RAW_COBALTS)
     		.add(OreGenItems.RAW_COBALT.get());
         tag(OreGenTags.Items.RAW_IRIDIUMS)
@@ -55,10 +55,10 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenItems.RAW_URANIUM.get());
         tag(OreGenTags.Items.RAW_ZINCS)
 			.add(OreGenItems.RAW_ZINC.get());
-        tag(OreGenTags.Items.ALUMINIUM_INGOTS)
-			.add(OreGenItems.ALUMINIUM_INGOT.get());
+        tag(OreGenTags.Items.BAUXITE_INGOTS)
+			.add(OreGenItems.BAUXITE_INGOT.get());
         tag(OreGenTags.Items.ALUMINUM_INGOTS)
-			.add(OreGenItems.ALUMINIUM_INGOT.get());
+			.add(OreGenItems.BAUXITE_INGOT.get());
         tag(OreGenTags.Items.COBALT_INGOTS)
 			.add(OreGenItems.COBALT_INGOT.get());
         tag(OreGenTags.Items.IRIDIUM_INGOTS)
@@ -79,10 +79,10 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenItems.URANIUM_INGOT.get());
         tag(OreGenTags.Items.ZINC_INGOTS)
 			.add(OreGenItems.ZINC_INGOT.get());
-        tag(OreGenTags.Items.ALUMINIUM_NUGGETS)
-			.add(OreGenItems.ALUMINIUM_NUGGET.get());
+        tag(OreGenTags.Items.BAUXITE_NUGGETS)
+			.add(OreGenItems.BAUXITE_NUGGET.get());
         tag(OreGenTags.Items.ALUMINUM_NUGGETS)
-			.add(OreGenItems.ALUMINIUM_NUGGET.get());
+			.add(OreGenItems.BAUXITE_NUGGET.get());
         tag(OreGenTags.Items.COBALT_NUGGETS)
 			.add(OreGenItems.COBALT_NUGGET.get());
         tag(OreGenTags.Items.IRIDIUM_NUGGETS)

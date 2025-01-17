@@ -26,7 +26,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
         // Surface
                 .add(OreGenBlocks.SURFACE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.SURFACE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.SURFACE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.SURFACE_COBALT_ORE.get())
                 .add(OreGenBlocks.SURFACE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.SURFACE_LEAD_ORE.get())
@@ -41,7 +41,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.SURFACE_ZINC_ORE.get())
         // Deepslate
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_COBALT_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_LEAD_ORE.get())
@@ -56,7 +56,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_ZINC_ORE.get())
         // Andesite        
                 .add(OreGenBlocks.ANDESITE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.ANDESITE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.ANDESITE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.ANDESITE_COBALT_ORE.get())
                 .add(OreGenBlocks.ANDESITE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.ANDESITE_LEAD_ORE.get())
@@ -71,7 +71,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.ANDESITE_ZINC_ORE.get())
       // Diorite          
                 .add(OreGenBlocks.DIORITE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.DIORITE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.DIORITE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.DIORITE_COBALT_ORE.get())
                 .add(OreGenBlocks.DIORITE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.DIORITE_LEAD_ORE.get())
@@ -86,7 +86,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.DIORITE_ZINC_ORE.get())
       // Granite          
                 .add(OreGenBlocks.GRANITE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.GRANITE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.GRANITE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.GRANITE_COBALT_ORE.get())
                 .add(OreGenBlocks.GRANITE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.GRANITE_LEAD_ORE.get())
@@ -101,7 +101,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.GRANITE_ZINC_ORE.get())
      // Sandstone     
                 .add(OreGenBlocks.SANDSTONE_QUARTZ_ORE.get())
-                .add(OreGenBlocks.SANDSTONE_ALUMINIUM_ORE.get())
+                .add(OreGenBlocks.SANDSTONE_BAUXITE_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_COBALT_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_IRIDIUM_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_LEAD_ORE.get())
@@ -124,7 +124,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.NETHER_REDSTONE_ORE.get())
         		.add(OreGenBlocks.NETHER_LAPIS_ORE.get())
         
-        		.add(OreGenBlocks.NETHER_ALUMINIUM_ORE.get())
+        		.add(OreGenBlocks.NETHER_BAUXITE_ORE.get())
         		.add(OreGenBlocks.NETHER_COBALT_ORE.get())
         		.add(OreGenBlocks.NETHER_IRIDIUM_ORE.get())
         		.add(OreGenBlocks.NETHER_LEAD_ORE.get())
@@ -148,7 +148,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.END_LAPIS_ORE.get())
         		.add(OreGenBlocks.END_QUARTZ_ORE.get())
         
-        		.add(OreGenBlocks.END_ALUMINIUM_ORE.get())
+        		.add(OreGenBlocks.END_BAUXITE_ORE.get())
         		.add(OreGenBlocks.END_COBALT_ORE.get())
         		.add(OreGenBlocks.END_IRIDIUM_ORE.get())
         		.add(OreGenBlocks.END_LEAD_ORE.get())
@@ -162,7 +162,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.END_URANIUM_ORE.get())
         		.add(OreGenBlocks.END_ZINC_ORE.get())
         // Solid Blocks
-        		.add(OreGenBlocks.ALUMINIUM_BLOCK.get())
+        		.add(OreGenBlocks.BAUXITE_BLOCK.get())
         		.add(OreGenBlocks.BRONZE_BLOCK.get())
         		.add(OreGenBlocks.COBALT_BLOCK.get())
         		.add(OreGenBlocks.IRIDIUM_BLOCK.get())
@@ -177,7 +177,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.URANIUM_BLOCK.get())
         		.add(OreGenBlocks.ZINC_BLOCK.get())
         
-        		.add(OreGenBlocks.RAW_ALUMINIUM_BLOCK.get())
+        		.add(OreGenBlocks.RAW_BAUXITE_BLOCK.get())
         		.add(OreGenBlocks.RAW_COBALT_BLOCK.get())
         		.add(OreGenBlocks.RAW_IRIDIUM_BLOCK.get())
         		.add(OreGenBlocks.RAW_LEAD_BLOCK.get())
@@ -192,7 +192,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
         // Sand
         .add(OreGenBlocks.SAND_QUARTZ_ORE.get())
-        .add(OreGenBlocks.SAND_ALUMINIUM_ORE.get())
+        .add(OreGenBlocks.SAND_BAUXITE_ORE.get())
         .add(OreGenBlocks.SAND_COBALT_ORE.get())
         .add(OreGenBlocks.SAND_IRIDIUM_ORE.get())
         .add(OreGenBlocks.SAND_LEAD_ORE.get())
@@ -207,7 +207,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         .add(OreGenBlocks.SAND_ZINC_ORE.get())
         // Gravel
         .add(OreGenBlocks.GRAVEL_QUARTZ_ORE.get())
-        .add(OreGenBlocks.GRAVEL_ALUMINIUM_ORE.get())
+        .add(OreGenBlocks.GRAVEL_BAUXITE_ORE.get())
         .add(OreGenBlocks.GRAVEL_COBALT_ORE.get())
         .add(OreGenBlocks.GRAVEL_IRIDIUM_ORE.get())
         .add(OreGenBlocks.GRAVEL_LEAD_ORE.get())
@@ -265,7 +265,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         	.add(OreGenBlocks.NETHER_REDSTONE_ORE.get())
         	.add(OreGenBlocks.NETHER_LAPIS_ORE.get())
 
-        	.add(OreGenBlocks.NETHER_ALUMINIUM_ORE.get())
+        	.add(OreGenBlocks.NETHER_BAUXITE_ORE.get())
         	.add(OreGenBlocks.NETHER_COBALT_ORE.get())
         	.add(OreGenBlocks.NETHER_IRIDIUM_ORE.get())
         	.add(OreGenBlocks.NETHER_LEAD_ORE.get())

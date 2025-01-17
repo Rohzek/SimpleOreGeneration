@@ -1,8 +1,8 @@
-// 1.21.1	2025-01-15T16:06:10.9185287	Tags for minecraft:item mod id simpleoregen
-33e8bffaf37eb09908d181182bad1e6ea977cf9a data/simpleoregen/tags/item/aluminium_ingots.json
-897f37ddb8878a03d141bde233c2de0d3be1fc9e data/simpleoregen/tags/item/aluminium_nuggets.json
-33e8bffaf37eb09908d181182bad1e6ea977cf9a data/simpleoregen/tags/item/aluminum_ingots.json
-897f37ddb8878a03d141bde233c2de0d3be1fc9e data/simpleoregen/tags/item/aluminum_nuggets.json
+// 1.21.1	2025-01-16T20:32:43.3118633	Tags for minecraft:item mod id simpleoregen
+9939319aaea7dbccf7398f7ed33c6ee4ca165500 data/simpleoregen/tags/item/aluminum_ingots.json
+f0ab5565b6c18f00c8bd031058cb497a5ffdeb9b data/simpleoregen/tags/item/aluminum_nuggets.json
+9939319aaea7dbccf7398f7ed33c6ee4ca165500 data/simpleoregen/tags/item/bauxite_ingots.json
+f0ab5565b6c18f00c8bd031058cb497a5ffdeb9b data/simpleoregen/tags/item/bauxite_nuggets.json
 51389987a53a6fa7f0793983d150ad593fb9bc2e data/simpleoregen/tags/item/cobalt_ingots.json
 bc45569410c79fb51ca204a4019f1b19d73f7184 data/simpleoregen/tags/item/cobalt_nuggets.json
 53486172ba93d29bf3c0128f3db0ad7737efe16e data/simpleoregen/tags/item/diamonds.json
@@ -14,8 +14,8 @@ f80c947e86584524e4dd3f4a968e5abd9d080f3d data/simpleoregen/tags/item/nickel_ingo
 d17797afbf26a5ebf260e13fba90374eed40538c data/simpleoregen/tags/item/nickel_nuggets.json
 793e21a75444f6046c230759d933873c17e04ba9 data/simpleoregen/tags/item/platinum_ingots.json
 3d5dfdfa8024ccef43476aaca91062169453afff data/simpleoregen/tags/item/platinum_nuggets.json
-7cf824ebbb331c89e4d8eb96e4b28d77c75f16d8 data/simpleoregen/tags/item/raw_aluminiums.json
-7cf824ebbb331c89e4d8eb96e4b28d77c75f16d8 data/simpleoregen/tags/item/raw_aluminums.json
+c725e0c8fba67a0264104aeace7f3eda458d6342 data/simpleoregen/tags/item/raw_aluminums.json
+c725e0c8fba67a0264104aeace7f3eda458d6342 data/simpleoregen/tags/item/raw_bauxites.json
 80e2b0f701549bb7cca282e2d81ca8df93f2a731 data/simpleoregen/tags/item/raw_cobalts.json
 903a5a82684876347fbdea86feea059a9f6cec7b data/simpleoregen/tags/item/raw_iridiums.json
 a5e77b3a9684064233c963b4591b0664463f82e5 data/simpleoregen/tags/item/raw_leads.json

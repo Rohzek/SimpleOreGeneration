@@ -43,7 +43,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		dropSelf(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
 		add(WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_CYAN_FLOWER.get()));
 		
-		dropSelf(OreGenBlocks.ALUMINIUM_BLOCK.get());
+		dropSelf(OreGenBlocks.BAUXITE_BLOCK.get());
 		dropSelf(OreGenBlocks.BRONZE_BLOCK.get());
 		dropSelf(OreGenBlocks.COBALT_BLOCK.get());
 		dropSelf(OreGenBlocks.IRIDIUM_BLOCK.get());
@@ -58,7 +58,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		dropSelf(OreGenBlocks.URANIUM_BLOCK.get());
 		dropSelf(OreGenBlocks.ZINC_BLOCK.get());
 		
-		dropSelf(OreGenBlocks.RAW_ALUMINIUM_BLOCK.get());
+		dropSelf(OreGenBlocks.RAW_BAUXITE_BLOCK.get());
 		dropSelf(OreGenBlocks.RAW_COBALT_BLOCK.get());
 		dropSelf(OreGenBlocks.RAW_IRIDIUM_BLOCK.get());
 		dropSelf(OreGenBlocks.RAW_LEAD_BLOCK.get());
@@ -73,7 +73,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Stone
 		add(OreGenBlocks.SURFACE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.SURFACE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.SURFACE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.SURFACE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.SURFACE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.SURFACE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -90,7 +90,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Deepslate
 		add(OreGenBlocks.SURFACE_DEEPSLATE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.SURFACE_DEEPSLATE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.SURFACE_DEEPSLATE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.SURFACE_DEEPSLATE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.SURFACE_DEEPSLATE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -107,7 +107,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Andesite
 		add(OreGenBlocks.ANDESITE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.ANDESITE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.ANDESITE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.ANDESITE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.ANDESITE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.ANDESITE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.ANDESITE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -124,7 +124,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Diorite
 		add(OreGenBlocks.DIORITE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.DIORITE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.DIORITE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.DIORITE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.DIORITE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.DIORITE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.DIORITE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -141,7 +141,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Granite
 		add(OreGenBlocks.GRANITE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.GRANITE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.GRANITE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.GRANITE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.GRANITE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.GRANITE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.GRANITE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -158,7 +158,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Sand
 		add(OreGenBlocks.SAND_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.SAND_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.SAND_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.SAND_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.SAND_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.SAND_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.SAND_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -175,7 +175,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Sandstone
 		add(OreGenBlocks.SANDSTONE_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.SANDSTONE_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.SANDSTONE_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.SANDSTONE_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.SANDSTONE_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.SANDSTONE_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.SANDSTONE_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -192,7 +192,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		// Gravel
 		add(OreGenBlocks.GRAVEL_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.GRAVEL_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.GRAVEL_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.GRAVEL_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.GRAVEL_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.GRAVEL_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.GRAVEL_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -216,7 +216,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		add(OreGenBlocks.NETHER_REDSTONE_ORE.get(), block -> createMultipleOreDrops(OreGenBlocks.NETHER_REDSTONE_ORE.get(), Items.REDSTONE, 3, 5));
 		add(OreGenBlocks.NETHER_LAPIS_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_LAPIS_ORE.get(), Items.LAPIS_LAZULI));
 		
-		add(OreGenBlocks.NETHER_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.NETHER_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.NETHER_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.NETHER_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.NETHER_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.NETHER_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));
@@ -241,7 +241,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		add(OreGenBlocks.END_LAPIS_ORE.get(), block -> createOreDrop(OreGenBlocks.END_LAPIS_ORE.get(), Items.LAPIS_LAZULI));
 		add(OreGenBlocks.END_QUARTZ_ORE.get(), block -> createOreDrop(OreGenBlocks.END_QUARTZ_ORE.get(), Items.QUARTZ));
 		
-		add(OreGenBlocks.END_ALUMINIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.END_ALUMINIUM_ORE.get(), OreGenItems.RAW_ALUMINIUM.get()));
+		add(OreGenBlocks.END_BAUXITE_ORE.get(), block -> createOreDrop(OreGenBlocks.END_BAUXITE_ORE.get(), OreGenItems.RAW_BAUXITE.get()));
 		add(OreGenBlocks.END_COBALT_ORE.get(), block -> createOreDrop(OreGenBlocks.END_COBALT_ORE.get(), OreGenItems.RAW_COBALT.get()));
 		add(OreGenBlocks.END_IRIDIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.END_IRIDIUM_ORE.get(), OreGenItems.RAW_IRIDIUM.get()));
 		add(OreGenBlocks.END_LEAD_ORE.get(), block -> createOreDrop(OreGenBlocks.END_LEAD_ORE.get(), OreGenItems.RAW_LEAD.get()));

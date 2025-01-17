@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 public class OreGenItems 
 {
 	// Raws
-	public static final DeferredItem<Item> RAW_ALUMINIUM = DeferredRegistration.ITEMS.register("raw_aluminium", () -> new OreGenRawOre("raw_aluminium"));
+	public static final DeferredItem<Item> RAW_BAUXITE = DeferredRegistration.ITEMS.register("raw_bauxite", () -> new OreGenRawOre("raw_bauxite"));
 	public static final DeferredItem<Item> RAW_COBALT = DeferredRegistration.ITEMS.register("raw_cobalt", () -> new OreGenRawOre("raw_cobalt"));
 	public static final DeferredItem<Item> RAW_IRIDIUM = DeferredRegistration.ITEMS.register("raw_iridium", () -> new OreGenRawOre("raw_iridium"));
 	public static final DeferredItem<Item> RAW_LEAD = DeferredRegistration.ITEMS.register("raw_lead", () -> new OreGenRawOre("raw_lead"));
@@ -25,7 +25,7 @@ public class OreGenItems
 	public static final DeferredItem<Item> HEART_DIAMOND = DeferredRegistration.ITEMS.register("heart_diamond", () -> new OreGenGem("heart_diamond"));
 	
 	// Ingots
-	public static final DeferredItem<Item> ALUMINIUM_INGOT = DeferredRegistration.ITEMS.register("aluminium_ingot", () -> new OreGenIngot("aluminium_ingot"));
+	public static final DeferredItem<Item> BAUXITE_INGOT = DeferredRegistration.ITEMS.register("bauxite_ingot", () -> new OreGenIngot("bauxite_ingot"));
 	public static final DeferredItem<Item> COBALT_INGOT = DeferredRegistration.ITEMS.register("cobalt_ingot", () -> new OreGenIngot("cobalt_ingot"));
 	public static final DeferredItem<Item> IRIDIUM_INGOT = DeferredRegistration.ITEMS.register("iridium_ingot", () -> new OreGenIngot("iridium_ingot"));
 	public static final DeferredItem<Item> LEAD_INGOT = DeferredRegistration.ITEMS.register("lead_ingot", () -> new OreGenIngot("lead_ingot"));
@@ -40,7 +40,7 @@ public class OreGenItems
 	public static final DeferredItem<Item> BRONZE_INGOT = DeferredRegistration.ITEMS.register("bronze_ingot", () -> new OreGenIngot("bronze_ingot"));
 	
 	// Nuggets
-	public static final DeferredItem<Item> ALUMINIUM_NUGGET = DeferredRegistration.ITEMS.register("aluminium_nugget", () -> new OreGenIngot("aluminium_nugget"));
+	public static final DeferredItem<Item> BAUXITE_NUGGET = DeferredRegistration.ITEMS.register("bauxite_nugget", () -> new OreGenIngot("bauxite_nugget"));
 	public static final DeferredItem<Item> COBALT_NUGGET = DeferredRegistration.ITEMS.register("cobalt_nugget", () -> new OreGenIngot("cobalt_nugget"));
 	public static final DeferredItem<Item> IRIDIUM_NUGGET = DeferredRegistration.ITEMS.register("iridium_nugget", () -> new OreGenIngot("iridium_nugget"));
 	public static final DeferredItem<Item> LEAD_NUGGET = DeferredRegistration.ITEMS.register("lead_nugget", () -> new OreGenIngot("lead_nugget"));

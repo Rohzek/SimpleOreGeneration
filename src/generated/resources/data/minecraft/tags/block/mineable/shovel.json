@@ -1,7 +1,7 @@
 {
   "values": [
     "simpleoregen:sand_quartz_ore",
-    "simpleoregen:sand_aluminium_ore",
+    "simpleoregen:sand_bauxite_ore",
     "simpleoregen:sand_cobalt_ore",
     "simpleoregen:sand_iridium_ore",
     "simpleoregen:sand_lead_ore",
@@ -15,7 +15,7 @@
     "simpleoregen:sand_uranium_ore",
     "simpleoregen:sand_zinc_ore",
     "simpleoregen:gravel_quartz_ore",
-    "simpleoregen:gravel_aluminium_ore",
+    "simpleoregen:gravel_bauxite_ore",
     "simpleoregen:gravel_cobalt_ore",
     "simpleoregen:gravel_iridium_ore",
     "simpleoregen:gravel_lead_ore",

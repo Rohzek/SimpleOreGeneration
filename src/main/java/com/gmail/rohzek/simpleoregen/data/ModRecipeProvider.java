@@ -39,10 +39,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
     protected void buildRecipes(RecipeOutput recipeOutput) 
 	{
-        List<ItemLike> ALUMINIUM_SMELTABLES = List.of(OreGenItems.RAW_ALUMINIUM, OreGenBlocks.SURFACE_ALUMINIUM_ORE, 
-        		OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE, OreGenBlocks.ANDESITE_ALUMINIUM_ORE, OreGenBlocks.DIORITE_ALUMINIUM_ORE, 
-        		OreGenBlocks.GRANITE_ALUMINIUM_ORE, OreGenBlocks.SANDSTONE_ALUMINIUM_ORE, OreGenBlocks.SAND_ALUMINIUM_ORE, 
-        		OreGenBlocks.GRAVEL_ALUMINIUM_ORE, OreGenBlocks.NETHER_ALUMINIUM_ORE, OreGenBlocks.END_ALUMINIUM_ORE);
+        List<ItemLike> BAUXITE_SMELTABLES = List.of(OreGenItems.RAW_BAUXITE, OreGenBlocks.SURFACE_BAUXITE_ORE, 
+        		OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE, OreGenBlocks.ANDESITE_BAUXITE_ORE, OreGenBlocks.DIORITE_BAUXITE_ORE, 
+        		OreGenBlocks.GRANITE_BAUXITE_ORE, OreGenBlocks.SANDSTONE_BAUXITE_ORE, OreGenBlocks.SAND_BAUXITE_ORE, 
+        		OreGenBlocks.GRAVEL_BAUXITE_ORE, OreGenBlocks.NETHER_BAUXITE_ORE, OreGenBlocks.END_BAUXITE_ORE);
         
         List<ItemLike> COBALT_SMELTABLES = List.of(OreGenItems.RAW_COBALT, OreGenBlocks.SURFACE_COBALT_ORE, 
         		OreGenBlocks.SURFACE_DEEPSLATE_COBALT_ORE, OreGenBlocks.ANDESITE_COBALT_ORE, OreGenBlocks.DIORITE_COBALT_ORE, 
@@ -105,7 +105,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         		OreGenBlocks.GRAVEL_SAPPHIRE_ORE, OreGenBlocks.NETHER_SAPPHIRE_ORE, OreGenBlocks.END_SAPPHIRE_ORE);
         
         // Raw Blocks
-        shapedCraftingSolidBlocks(recipeOutput, "has_aluminium_raw", OreGenItems.RAW_ALUMINIUM.get(), OreGenBlocks.RAW_ALUMINIUM_BLOCK.get(), OreGenTags.Items.RAW_ALUMINIUMS, "_from_raw");
+        shapedCraftingSolidBlocks(recipeOutput, "has_bauxite_raw", OreGenItems.RAW_BAUXITE.get(), OreGenBlocks.RAW_BAUXITE_BLOCK.get(), OreGenTags.Items.RAW_BAUXITES, "_from_raw");
         shapedCraftingSolidBlocks(recipeOutput, "has_cobalt_raw", OreGenItems.RAW_COBALT.get(), OreGenBlocks.RAW_COBALT_BLOCK.get(), OreGenTags.Items.RAW_COBALTS, "_from_raw");
         shapedCraftingSolidBlocks(recipeOutput, "has_iridium_raw", OreGenItems.RAW_IRIDIUM.get(), OreGenBlocks.RAW_IRIDIUM_BLOCK.get(), OreGenTags.Items.RAW_IRIDIUMS, "_from_raw");
         shapedCraftingSolidBlocks(recipeOutput, "has_lead_raw", OreGenItems.RAW_LEAD.get(), OreGenBlocks.RAW_LEAD_BLOCK.get(), OreGenTags.Items.RAW_LEADS, "_from_raw");
@@ -118,7 +118,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedCraftingSolidBlocks(recipeOutput, "has_zinc_raw", OreGenItems.RAW_ZINC.get(), OreGenBlocks.RAW_ZINC_BLOCK.get(), OreGenTags.Items.RAW_ZINCS, "_from_raw");
         
         // Solid Blocks
-        shapedCraftingSolidBlocks(recipeOutput, "has_aluminium", OreGenItems.ALUMINIUM_INGOT.get(), OreGenBlocks.ALUMINIUM_BLOCK.get(), OreGenTags.Items.ALUMINIUM_INGOTS, "_from_ingot");
+        shapedCraftingSolidBlocks(recipeOutput, "has_bauxite", OreGenItems.BAUXITE_INGOT.get(), OreGenBlocks.BAUXITE_BLOCK.get(), OreGenTags.Items.BAUXITE_INGOTS, "_from_ingot");
         shapedCraftingSolidBlocks(recipeOutput, "has_cobalt", OreGenItems.COBALT_INGOT.get(), OreGenBlocks.COBALT_BLOCK.get(), OreGenTags.Items.COBALT_INGOTS, "_from_ingot");
         shapedCraftingSolidBlocks(recipeOutput, "has_iridium", OreGenItems.IRIDIUM_INGOT.get(), OreGenBlocks.IRIDIUM_BLOCK.get(), OreGenTags.Items.IRIDIUM_INGOTS, "_from_ingot");
         shapedCraftingSolidBlocks(recipeOutput, "has_lead", OreGenItems.LEAD_INGOT.get(), OreGenBlocks.LEAD_BLOCK.get(), OreGenTags.Items.LEAD_INGOTS, "_from_ingot");
@@ -133,7 +133,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedCraftingSolidBlocks(recipeOutput, "has_sapphire", OreGenItems.SAPPHIRE.get(), OreGenBlocks.SAPPHIRE_BLOCK.get(), OreGenTags.Items.SAPPHIRES, "_from_ingot");
         
         // Raw Blocks to Raws
-        shapelessCraftingIngots(recipeOutput, "has_aluminium", OreGenBlocks.RAW_ALUMINIUM_BLOCK.get(), OreGenItems.RAW_ALUMINIUM.get(), "_to_raw");
+        shapelessCraftingIngots(recipeOutput, "has_bauxite", OreGenBlocks.RAW_BAUXITE_BLOCK.get(), OreGenItems.RAW_BAUXITE.get(), "_to_raw");
         shapelessCraftingIngots(recipeOutput, "has_cobalt", OreGenBlocks.RAW_COBALT_BLOCK.get(), OreGenItems.RAW_COBALT.get(), "_to_raw");
         shapelessCraftingIngots(recipeOutput, "has_iridium", OreGenBlocks.RAW_IRIDIUM_BLOCK.get(), OreGenItems.RAW_IRIDIUM.get(), "_to_raw");
         shapelessCraftingIngots(recipeOutput, "has_lead", OreGenBlocks.RAW_LEAD_BLOCK.get(), OreGenItems.RAW_LEAD.get(), "_to_raw");
@@ -146,7 +146,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapelessCraftingIngots(recipeOutput, "has_zinc", OreGenBlocks.RAW_ZINC_BLOCK.get(), OreGenItems.RAW_ZINC.get(), "_to_raw");
         
         // Blocks to Ingots
-        shapelessCraftingIngots(recipeOutput, "has_aluminium", OreGenBlocks.ALUMINIUM_BLOCK.get(), OreGenItems.ALUMINIUM_INGOT.get(), "_to_ingot");
+        shapelessCraftingIngots(recipeOutput, "has_bauxite", OreGenBlocks.BAUXITE_BLOCK.get(), OreGenItems.BAUXITE_INGOT.get(), "_to_ingot");
         shapelessCraftingIngots(recipeOutput, "has_cobalt", OreGenBlocks.COBALT_BLOCK.get(), OreGenItems.COBALT_INGOT.get(), "_to_ingot");
         shapelessCraftingIngots(recipeOutput, "has_iridium", OreGenBlocks.IRIDIUM_BLOCK.get(), OreGenItems.IRIDIUM_INGOT.get(), "_to_ingot");
         shapelessCraftingIngots(recipeOutput, "has_lead", OreGenBlocks.LEAD_BLOCK.get(), OreGenItems.LEAD_INGOT.get(), "_to_ingot");
@@ -161,7 +161,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapelessCraftingIngots(recipeOutput, "has_sapphire", OreGenBlocks.SAPPHIRE_BLOCK.get(), OreGenItems.SAPPHIRE.get(), "_to_ingot");
         
         // Ingots to Nuggets
-        shapelessCraftingNuggets(recipeOutput, "has_aluminium", OreGenItems.ALUMINIUM_INGOT.get(), OreGenItems.ALUMINIUM_NUGGET.get(), "_to_nugget");
+        shapelessCraftingNuggets(recipeOutput, "has_bauxite", OreGenItems.BAUXITE_INGOT.get(), OreGenItems.BAUXITE_NUGGET.get(), "_to_nugget");
         shapelessCraftingNuggets(recipeOutput, "has_cobalt", OreGenItems.COBALT_INGOT.get(), OreGenItems.COBALT_NUGGET.get(), "_to_nugget");
         shapelessCraftingNuggets(recipeOutput, "has_iridium", OreGenItems.IRIDIUM_INGOT.get(), OreGenItems.IRIDIUM_NUGGET.get(), "_to_nugget");
         shapelessCraftingNuggets(recipeOutput, "has_lead", OreGenItems.LEAD_INGOT.get(), OreGenItems.LEAD_NUGGET.get(), "_to_nugget");
@@ -174,7 +174,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapelessCraftingNuggets(recipeOutput, "has_zinc", OreGenItems.ZINC_INGOT.get(), OreGenItems.ZINC_NUGGET.get(), "_to_nugget");
         
         // Nuggets to Ingots
-        shapedCraftingIngots(recipeOutput, "has_aluminium", OreGenItems.ALUMINIUM_NUGGET.get(), OreGenItems.ALUMINIUM_INGOT.get(), OreGenTags.Items.ALUMINIUM_INGOTS, "_from_nugget");
+        shapedCraftingIngots(recipeOutput, "has_bauxite", OreGenItems.BAUXITE_NUGGET.get(), OreGenItems.BAUXITE_INGOT.get(), OreGenTags.Items.BAUXITE_INGOTS, "_from_nugget");
         shapedCraftingIngots(recipeOutput, "has_cobalt", OreGenItems.COBALT_NUGGET.get(), OreGenItems.COBALT_INGOT.get(), OreGenTags.Items.COBALT_INGOTS, "_from_nugget");
         shapedCraftingIngots(recipeOutput, "has_iridium", OreGenItems.IRIDIUM_NUGGET.get(), OreGenItems.IRIDIUM_INGOT.get(), OreGenTags.Items.IRIDIUM_INGOTS, "_from_nugget");
         shapedCraftingIngots(recipeOutput, "has_lead", OreGenItems.LEAD_NUGGET.get(), OreGenItems.LEAD_INGOT.get(), OreGenTags.Items.LEAD_INGOTS, "_from_nugget");
@@ -203,8 +203,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_magic_block", has(ModBlocks.MAGIC_BLOCK))
                 .save(recipeOutput, "tutorialmod:bismuth_from_magic_block");
          */
-        oreSmelting(recipeOutput, ALUMINIUM_SMELTABLES, RecipeCategory.MISC, OreGenItems.ALUMINIUM_INGOT.get(), 0.25f, 200, "aluminium");
-        oreBlasting(recipeOutput, ALUMINIUM_SMELTABLES, RecipeCategory.MISC, OreGenItems.ALUMINIUM_INGOT.get(), 0.25f, 100, "aluminium");
+        oreSmelting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 200, "bauxite");
+        oreBlasting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 100, "bauxite");
         oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, OreGenItems.COBALT_INGOT.get(), 0.25f, 200, "cobalt");
         oreBlasting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, OreGenItems.COBALT_INGOT.get(), 0.25f, 100, "cobalt");
         oreSmelting(recipeOutput, IRIDIUM_SMELTABLES, RecipeCategory.MISC, OreGenItems.IRIDIUM_INGOT.get(), 0.25f, 200, "iridium");

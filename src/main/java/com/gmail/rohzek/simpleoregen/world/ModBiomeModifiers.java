@@ -40,9 +40,9 @@ public class ModBiomeModifiers
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_LAPIS_ORE = registerKey("add_nether_lapis_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_LAPIS_ORE = registerKey("add_end_lapis_ore");
 	
-	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_ALUMINIUM_ORE = registerKey("add_aluminium_ore");
-	public static final ResourceKey<BiomeModifier> ADD_NETHER_ALUMINIUM_ORE = registerKey("add_nether_aluminium_ore");
-	public static final ResourceKey<BiomeModifier> ADD_END_ALUMINIUM_ORE = registerKey("add_end_aluminium_ore");
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_BAUXITE_ORE = registerKey("add_bauxite_ore");
+	public static final ResourceKey<BiomeModifier> ADD_NETHER_BAUXITE_ORE = registerKey("add_nether_bauxite_ore");
+	public static final ResourceKey<BiomeModifier> ADD_END_BAUXITE_ORE = registerKey("add_end_bauxite_ore");
 	
 	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_COBALT_ORE = registerKey("add_cobalt_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_COBALT_ORE = registerKey("add_nether_cobalt_ore");
@@ -207,19 +207,19 @@ public class ModBiomeModifiers
                 GenerationStep.Decoration.UNDERGROUND_ORES));
         
         
-        context.register(ADD_OVERWORLD_ALUMINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_OVERWORLD_BAUXITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_ALUMINIUM_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_BAUXITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_NETHER_ALUMINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_NETHER_BAUXITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_ALUMINIUM_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_BAUXITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_END_ALUMINIUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_END_BAUXITE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_ALUMINIUM_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_BAUXITE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_OVERWORLD_COBALT_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(

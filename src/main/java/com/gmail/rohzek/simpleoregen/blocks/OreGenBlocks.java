@@ -16,7 +16,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> SURFACE_QUARTZ_ORE = DeferredRegistration.registerBlock("quartz_ore", () -> new SurfaceOre("quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> SURFACE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("aluminium_ore", () -> new SurfaceOre("aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> SURFACE_BAUXITE_ORE = DeferredRegistration.registerBlock("bauxite_ore", () -> new SurfaceOre("bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_COBALT_ORE = DeferredRegistration.registerBlock("cobalt_ore", () -> new SurfaceOre("cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_IRIDIUM_ORE = DeferredRegistration.registerBlock("iridium_ore", () -> new SurfaceOre("iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_LEAD_ORE = DeferredRegistration.registerBlock("lead_ore", () -> new SurfaceOre("lead_ore", 3f, 3f));
@@ -34,7 +34,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_QUARTZ_ORE = DeferredRegistration.registerBlock("deepslate_quartz_ore", () -> new SurfaceOre("deepslate_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("deepslate_aluminium_ore", () -> new SurfaceOre("deepslate_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_BAUXITE_ORE = DeferredRegistration.registerBlock("deepslate_bauxite_ore", () -> new SurfaceOre("deepslate_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_COBALT_ORE = DeferredRegistration.registerBlock("deepslate_cobalt_ore", () -> new SurfaceOre("deepslate_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_IRIDIUM_ORE = DeferredRegistration.registerBlock("deepslate_iridium_ore", () -> new SurfaceOre("deepslate_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SURFACE_DEEPSLATE_LEAD_ORE = DeferredRegistration.registerBlock("deepslate_lead_ore", () -> new SurfaceOre("deepslate_lead_ore", 3f, 3f));
@@ -52,7 +52,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> ANDESITE_QUARTZ_ORE = DeferredRegistration.registerBlock("andesite_quartz_ore", () -> new SurfaceOre("andesite_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> ANDESITE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("andesite_aluminium_ore", () -> new SurfaceOre("andesite_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> ANDESITE_BAUXITE_ORE = DeferredRegistration.registerBlock("andesite_bauxite_ore", () -> new SurfaceOre("andesite_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> ANDESITE_COBALT_ORE = DeferredRegistration.registerBlock("andesite_cobalt_ore", () -> new SurfaceOre("andesite_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> ANDESITE_IRIDIUM_ORE = DeferredRegistration.registerBlock("andesite_iridium_ore", () -> new SurfaceOre("andesite_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> ANDESITE_LEAD_ORE = DeferredRegistration.registerBlock("andesite_lead_ore", () -> new SurfaceOre("andesite_lead_ore", 3f, 3f));
@@ -70,7 +70,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> DIORITE_QUARTZ_ORE = DeferredRegistration.registerBlock("diorite_quartz_ore", () -> new SurfaceOre("diorite_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> DIORITE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("diorite_aluminium_ore", () -> new SurfaceOre("diorite_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> DIORITE_BAUXITE_ORE = DeferredRegistration.registerBlock("diorite_bauxite_ore", () -> new SurfaceOre("diorite_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> DIORITE_COBALT_ORE = DeferredRegistration.registerBlock("diorite_cobalt_ore", () -> new SurfaceOre("diorite_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> DIORITE_IRIDIUM_ORE = DeferredRegistration.registerBlock("diorite_iridium_ore", () -> new SurfaceOre("diorite_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> DIORITE_LEAD_ORE = DeferredRegistration.registerBlock("diorite_lead_ore", () -> new SurfaceOre("diorite_lead_ore", 3f, 3f));
@@ -88,7 +88,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> GRANITE_QUARTZ_ORE = DeferredRegistration.registerBlock("granite_quartz_ore", () -> new SurfaceOre("granite_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> GRANITE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("granite_aluminium_ore", () -> new SurfaceOre("granite_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> GRANITE_BAUXITE_ORE = DeferredRegistration.registerBlock("granite_bauxite_ore", () -> new SurfaceOre("granite_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> GRANITE_COBALT_ORE = DeferredRegistration.registerBlock("granite_cobalt_ore", () -> new SurfaceOre("granite_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> GRANITE_IRIDIUM_ORE = DeferredRegistration.registerBlock("granite_iridium_ore", () -> new SurfaceOre("granite_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> GRANITE_LEAD_ORE = DeferredRegistration.registerBlock("granite_lead_ore", () -> new SurfaceOre("granite_lead_ore", 3f, 3f));
@@ -106,7 +106,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> SANDSTONE_QUARTZ_ORE = DeferredRegistration.registerBlock("sandstone_quartz_ore", () -> new SurfaceOre("sandstone_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> SANDSTONE_ALUMINIUM_ORE = DeferredRegistration.registerBlock("sandstone_aluminium_ore", () -> new SurfaceOre("sandstone_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> SANDSTONE_BAUXITE_ORE = DeferredRegistration.registerBlock("sandstone_bauxite_ore", () -> new SurfaceOre("sandstone_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SANDSTONE_COBALT_ORE = DeferredRegistration.registerBlock("sandstone_cobalt_ore", () -> new SurfaceOre("sandstone_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SANDSTONE_IRIDIUM_ORE = DeferredRegistration.registerBlock("sandstone_iridium_ore", () -> new SurfaceOre("sandstone_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> SANDSTONE_LEAD_ORE = DeferredRegistration.registerBlock("sandstone_lead_ore", () -> new SurfaceOre("sandstone_lead_ore", 3f, 3f));
@@ -125,7 +125,7 @@ public class OreGenBlocks
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND)));
 	
 	// Modded
-	public static final DeferredBlock<Block> SAND_ALUMINIUM_ORE = DeferredRegistration.registerBlock("sand_aluminium_ore", () -> new GravityOreBlock("sand_aluminium_ore", new ColorRGBA(14406560),
+	public static final DeferredBlock<Block> SAND_BAUXITE_ORE = DeferredRegistration.registerBlock("sand_bauxite_ore", () -> new GravityOreBlock("sand_bauxite_ore", new ColorRGBA(14406560),
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND)));
 	public static final DeferredBlock<Block> SAND_COBALT_ORE = DeferredRegistration.registerBlock("sand_cobalt_ore", () -> new GravityOreBlock("sand_cobalt_ore", new ColorRGBA(14406560),
             BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND)));
@@ -157,7 +157,7 @@ public class OreGenBlocks
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.SNARE).strength(0.6F).sound(SoundType.GRAVEL)));
 	
 	// Modded
-	public static final DeferredBlock<Block> GRAVEL_ALUMINIUM_ORE = DeferredRegistration.registerBlock("gravel_aluminium_ore", () -> new GravityOreBlock("gravel_aluminium_ore", new ColorRGBA(-8356741),
+	public static final DeferredBlock<Block> GRAVEL_BAUXITE_ORE = DeferredRegistration.registerBlock("gravel_bauxite_ore", () -> new GravityOreBlock("gravel_bauxite_ore", new ColorRGBA(-8356741),
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.SNARE).strength(0.6F).sound(SoundType.GRAVEL)));
 	public static final DeferredBlock<Block> GRAVEL_COBALT_ORE = DeferredRegistration.registerBlock("gravel_cobalt_ore", () -> new GravityOreBlock("gravel_cobalt_ore", new ColorRGBA(-8356741),
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.SNARE).strength(0.6F).sound(SoundType.GRAVEL)));
@@ -194,7 +194,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> NETHER_REDSTONE_ORE = DeferredRegistration.registerBlock("nether_redstone_ore", () -> new NetherOre("nether_redstone_ore", 3f, 3f));
 	public static final DeferredBlock<Block> NETHER_LAPIS_ORE = DeferredRegistration.registerBlock("nether_lapis_ore", () -> new NetherOre("nether_lapis_ore", 3f, 3f));
 	// Modded
-	public static final DeferredBlock<Block> NETHER_ALUMINIUM_ORE = DeferredRegistration.registerBlock("nether_aluminium_ore", () -> new NetherOre("nether_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> NETHER_BAUXITE_ORE = DeferredRegistration.registerBlock("nether_bauxite_ore", () -> new NetherOre("nether_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> NETHER_COBALT_ORE = DeferredRegistration.registerBlock("nether_cobalt_ore", () -> new NetherOre("nether_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> NETHER_IRIDIUM_ORE = DeferredRegistration.registerBlock("nether_iridium_ore", () -> new NetherOre("nether_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> NETHER_LEAD_ORE = DeferredRegistration.registerBlock("nether_lead_ore", () -> new NetherOre("nether_lead_ore", 3f, 3f));
@@ -220,7 +220,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> END_QUARTZ_ORE = DeferredRegistration.registerBlock("end_quartz_ore", () -> new EndOre("end_quartz_ore", 3f, 3f));
 	
 	// Modded
-	public static final DeferredBlock<Block> END_ALUMINIUM_ORE = DeferredRegistration.registerBlock("end_aluminium_ore", () -> new EndOre("end_aluminium_ore", 3f, 3f));
+	public static final DeferredBlock<Block> END_BAUXITE_ORE = DeferredRegistration.registerBlock("end_bauxite_ore", () -> new EndOre("end_bauxite_ore", 3f, 3f));
 	public static final DeferredBlock<Block> END_COBALT_ORE = DeferredRegistration.registerBlock("end_cobalt_ore", () -> new EndOre("end_cobalt_ore", 3f, 3f));
 	public static final DeferredBlock<Block> END_IRIDIUM_ORE = DeferredRegistration.registerBlock("end_iridium_ore", () -> new EndOre("end_iridium_ore", 3f, 3f));
 	public static final DeferredBlock<Block> END_LEAD_ORE = DeferredRegistration.registerBlock("end_lead_ore", () -> new EndOre("end_lead_ore", 3f, 3f));
@@ -236,7 +236,7 @@ public class OreGenBlocks
     
 	
 	// Solid Blocks
-	public static final DeferredBlock<Block> ALUMINIUM_BLOCK = DeferredRegistration.registerBlock("aluminium_block", () -> new SolidBlock("aluminium_block", 5f, 6f));
+	public static final DeferredBlock<Block> BAUXITE_BLOCK = DeferredRegistration.registerBlock("bauxite_block", () -> new SolidBlock("bauxite_block", 5f, 6f));
 	public static final DeferredBlock<Block> BRONZE_BLOCK = DeferredRegistration.registerBlock("bronze_block", () -> new SolidBlock("bronze_block", 5f, 6f));
 	public static final DeferredBlock<Block> COBALT_BLOCK = DeferredRegistration.registerBlock("cobalt_block", () -> new SolidBlock("cobalt_block", 5f, 6f));
 	public static final DeferredBlock<Block> IRIDIUM_BLOCK = DeferredRegistration.registerBlock("iridium_block", () -> new SolidBlock("iridium_block",5f, 6f));
@@ -251,7 +251,7 @@ public class OreGenBlocks
 	public static final DeferredBlock<Block> URANIUM_BLOCK = DeferredRegistration.registerBlock("uranium_block", () -> new SolidBlock("uranium_block", 5f, 6f));
 	public static final DeferredBlock<Block> ZINC_BLOCK = DeferredRegistration.registerBlock("zinc_block", () -> new SolidBlock("zinc_block", 5f, 6f));
 	
-	public static final DeferredBlock<Block> RAW_ALUMINIUM_BLOCK = DeferredRegistration.registerBlock("raw_aluminium_block", () -> new SolidBlock("raw_aluminium_block", 3f, 3f));
+	public static final DeferredBlock<Block> RAW_BAUXITE_BLOCK = DeferredRegistration.registerBlock("raw_bauxite_block", () -> new SolidBlock("raw_bauxite_block", 3f, 3f));
 	public static final DeferredBlock<Block> RAW_COBALT_BLOCK = DeferredRegistration.registerBlock("raw_cobalt_block", () -> new SolidBlock("raw_cobalt_block", 3f, 3f));
 	public static final DeferredBlock<Block> RAW_IRIDIUM_BLOCK = DeferredRegistration.registerBlock("raw_iridium_block", () -> new SolidBlock("raw_iridium_block", 3f, 3f));
 	public static final DeferredBlock<Block> RAW_LEAD_BLOCK = DeferredRegistration.registerBlock("raw_lead_block", () -> new SolidBlock("raw_lead_block", 3f, 3f));

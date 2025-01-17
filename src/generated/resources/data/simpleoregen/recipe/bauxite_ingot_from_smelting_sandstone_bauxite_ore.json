@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "bauxite",
+  "ingredient": {
+    "item": "simpleoregen:sandstone_bauxite_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:bauxite_ingot"
+  }
+}

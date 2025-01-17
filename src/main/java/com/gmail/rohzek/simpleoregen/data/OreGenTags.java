@@ -16,7 +16,9 @@ public class OreGenTags
 	public static class Blocks
 	{
 		// Define tags for blocks
-		public static final TagKey<Block> ALUMINIUM_ORES = createTag("aluminium_ores");
+		public static final TagKey<Block> BAUXITE_ORES = createTag("bauxite_ores");
+		public static final TagKey<Block> ALUMINUM_ORES = createTag("bauxite_ores");
+		public static final TagKey<Block> ALUMINIUM_ORES = createTag("bauxite_ores");
 		
 		public static final TagKey<Block> BRONZE_BLOCK = createTag("bronze_blocks");
 		
@@ -32,8 +34,9 @@ public class OreGenTags
 		public static final TagKey<Item> DIAMONDS = createTag("diamonds");
 		public static final TagKey<Item> RUBIES = createTag("rubies");
 		public static final TagKey<Item> SAPPHIRES = createTag("sapphires");
-		public static final TagKey<Item> RAW_ALUMINIUMS = createTag("raw_aluminiums");
-		public static final TagKey<Item> RAW_ALUMINUMS = createTag("raw_aluminums");
+		public static final TagKey<Item> RAW_BAUXITES = createTag("raw_bauxites");
+		public static final TagKey<Item> RAW_ALUMINUMS = createTag("raw_bauxites");
+		public static final TagKey<Item> RAW_ALUMINIUMS = createTag("raw_bauxites");
 		public static final TagKey<Item> RAW_COBALTS = createTag("raw_cobalts");
 		public static final TagKey<Item> RAW_IRIDIUMS = createTag("raw_iridiums");
 		public static final TagKey<Item> RAW_LEADS = createTag("raw_leads");
@@ -45,8 +48,9 @@ public class OreGenTags
 		public static final TagKey<Item> RAW_URANIUMS = createTag("raw_uraniums");
 		public static final TagKey<Item> RAW_ZINCS = createTag("raw_zincs");
 		
-		public static final TagKey<Item> ALUMINIUM_INGOTS = createTag("aluminium_ingots");
-		public static final TagKey<Item> ALUMINUM_INGOTS = createTag("aluminum_ingots");
+		public static final TagKey<Item> BAUXITE_INGOTS = createTag("bauxite_ingots");
+		public static final TagKey<Item> ALUMINUM_INGOTS = createTag("bauxite_ingots");
+		public static final TagKey<Item> ALUMINIUM_INGOTS = createTag("bauxite_ingots");
 		public static final TagKey<Item> COBALT_INGOTS = createTag("cobalt_ingots");
 		public static final TagKey<Item> IRIDIUM_INGOTS = createTag("iridium_ingots");
 		public static final TagKey<Item> LEAD_INGOTS = createTag("lead_ingots");
@@ -58,8 +62,9 @@ public class OreGenTags
 		public static final TagKey<Item> URANIUM_INGOTS = createTag("uranium_ingots");
 		public static final TagKey<Item> ZINC_INGOTS = createTag("zinc_ingots");
 		
-		public static final TagKey<Item> ALUMINIUM_NUGGETS = createTag("aluminium_nuggets");
-		public static final TagKey<Item> ALUMINUM_NUGGETS = createTag("aluminum_nuggets");
+		public static final TagKey<Item> BAUXITE_NUGGETS = createTag("bauxite_nuggets");
+		public static final TagKey<Item> ALUMINUM_NUGGETS = createTag("bauxite_nuggets");
+		public static final TagKey<Item> ALUMINIUM_NUGGETS = createTag("bauxite_nuggets");
 		public static final TagKey<Item> COBALT_NUGGETS = createTag("cobalt_nuggets");
 		public static final TagKey<Item> IRIDIUM_NUGGETS = createTag("iridium_nuggets");
 		public static final TagKey<Item> LEAD_NUGGETS = createTag("lead_nuggets");

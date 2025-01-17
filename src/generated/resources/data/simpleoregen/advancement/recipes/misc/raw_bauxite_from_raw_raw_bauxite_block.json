@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bauxite_raw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:raw_bauxites"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:raw_bauxite_from_raw_raw_bauxite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bauxite_raw"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:raw_bauxite_from_raw_raw_bauxite_block"
+    ]
+  }
+}

@@ -49,9 +49,9 @@ public class ModConfiguredFeatures
 	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_LAPIS_ORE_KEY = registerKey("nether_lapis_ore");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> END_LAPIS_ORE_KEY = registerKey("end_lapis_ore");
 	
-	public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_ALUMINIUM_ORE_KEY = registerKey("aluminium_ore");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_ALUMINIUM_ORE_KEY = registerKey("nether_aluminium_ore");
-	public static final ResourceKey<ConfiguredFeature<?, ?>> END_ALUMINIUM_ORE_KEY = registerKey("end_aluminium_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_BAUXITE_ORE_KEY = registerKey("bauxite_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_BAUXITE_ORE_KEY = registerKey("nether_bauxite_ore");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> END_BAUXITE_ORE_KEY = registerKey("end_bauxite_ore");
 	
 	public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_COBALT_ORE_KEY = registerKey("cobalt_ore");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COBALT_ORE_KEY = registerKey("nether_cobalt_ore");
@@ -127,14 +127,14 @@ public class ModConfiguredFeatures
         
         List<OreConfiguration.TargetBlockState> overworldAluminiumOres = 
         		List.of(
-        				OreConfiguration.target(stoneReplace, OreGenBlocks.SURFACE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(deepslateReplaceables, OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(andesiteReplace, OreGenBlocks.ANDESITE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(dioriteReplace, OreGenBlocks.DIORITE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(graniteReplace, OreGenBlocks.GRANITE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(sandstoneReplace, OreGenBlocks.SANDSTONE_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(sandReplace, OreGenBlocks.SAND_ALUMINIUM_ORE.get().defaultBlockState()),
-        				OreConfiguration.target(gravelReplace, OreGenBlocks.GRAVEL_ALUMINIUM_ORE.get().defaultBlockState())
+        				OreConfiguration.target(stoneReplace, OreGenBlocks.SURFACE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(deepslateReplaceables, OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(andesiteReplace, OreGenBlocks.ANDESITE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(dioriteReplace, OreGenBlocks.DIORITE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(graniteReplace, OreGenBlocks.GRANITE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(sandstoneReplace, OreGenBlocks.SANDSTONE_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(sandReplace, OreGenBlocks.SAND_BAUXITE_ORE.get().defaultBlockState()),
+        				OreConfiguration.target(gravelReplace, OreGenBlocks.GRAVEL_BAUXITE_ORE.get().defaultBlockState())
                 );
         List<OreConfiguration.TargetBlockState> overworldCobaltOres = 
         		List.of(
@@ -320,11 +320,11 @@ public class ModConfiguredFeatures
         		OreGenBlocks.END_QUARTZ_ORE.get().defaultBlockState(), veinSize));
         
         
-        register(context, OVERWORLD_ALUMINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAluminiumOres, veinSize));
-        register(context, NETHER_ALUMINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
-        		OreGenBlocks.NETHER_ALUMINIUM_ORE.get().defaultBlockState(), veinSize));
-        register(context, END_ALUMINIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endReplace,
-        		OreGenBlocks.END_ALUMINIUM_ORE.get().defaultBlockState(), veinSize));
+        register(context, OVERWORLD_BAUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldAluminiumOres, veinSize));
+        register(context, NETHER_BAUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,
+        		OreGenBlocks.NETHER_BAUXITE_ORE.get().defaultBlockState(), veinSize));
+        register(context, END_BAUXITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplace,
+        		OreGenBlocks.END_BAUXITE_ORE.get().defaultBlockState(), veinSize));
         
         register(context, OVERWORLD_COBALT_ORE_KEY, Feature.ORE, new OreConfiguration(overworldCobaltOres, veinSize));
         register(context, NETHER_COBALT_ORE_KEY, Feature.ORE, new OreConfiguration(netherReplace,

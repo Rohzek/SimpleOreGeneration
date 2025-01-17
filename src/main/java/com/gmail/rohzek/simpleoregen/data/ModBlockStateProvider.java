@@ -33,7 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Stone
     	blockWithItem(OreGenBlocks.SURFACE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.SURFACE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.SURFACE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_LEAD_ORE);
@@ -50,7 +50,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Deepslate
     	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_DEEPSLATE_LEAD_ORE);
@@ -67,7 +67,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Andesite
     	blockWithItem(OreGenBlocks.ANDESITE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.ANDESITE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.ANDESITE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.ANDESITE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.ANDESITE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.ANDESITE_LEAD_ORE);
@@ -84,7 +84,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Diorite
     	blockWithItem(OreGenBlocks.DIORITE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.DIORITE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.DIORITE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.DIORITE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.DIORITE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.DIORITE_LEAD_ORE);
@@ -101,7 +101,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Granite
     	blockWithItem(OreGenBlocks.GRANITE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.GRANITE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.GRANITE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.GRANITE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.GRANITE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.GRANITE_LEAD_ORE);
@@ -118,7 +118,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Sandstone
     	blockWithItem(OreGenBlocks.SANDSTONE_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.SANDSTONE_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.SANDSTONE_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.SANDSTONE_COBALT_ORE);
     	blockWithItem(OreGenBlocks.SANDSTONE_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.SANDSTONE_LEAD_ORE);
@@ -135,7 +135,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Sand
     	blockWithItem(OreGenBlocks.SAND_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.SAND_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.SAND_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.SAND_COBALT_ORE);
     	blockWithItem(OreGenBlocks.SAND_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.SAND_LEAD_ORE);
@@ -152,7 +152,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	// Gravel
     	blockWithItem(OreGenBlocks.GRAVEL_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.GRAVEL_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.GRAVEL_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.GRAVEL_COBALT_ORE);
     	blockWithItem(OreGenBlocks.GRAVEL_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.GRAVEL_LEAD_ORE);
@@ -176,7 +176,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	blockWithItem(OreGenBlocks.NETHER_REDSTONE_ORE);
     	blockWithItem(OreGenBlocks.NETHER_LAPIS_ORE);
     	
-    	blockWithItem(OreGenBlocks.NETHER_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.NETHER_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.NETHER_COBALT_ORE);
     	blockWithItem(OreGenBlocks.NETHER_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.NETHER_LEAD_ORE);
@@ -201,7 +201,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	blockWithItem(OreGenBlocks.END_LAPIS_ORE);
     	blockWithItem(OreGenBlocks.END_QUARTZ_ORE);
     	
-    	blockWithItem(OreGenBlocks.END_ALUMINIUM_ORE);
+    	blockWithItem(OreGenBlocks.END_BAUXITE_ORE);
     	blockWithItem(OreGenBlocks.END_COBALT_ORE);
     	blockWithItem(OreGenBlocks.END_IRIDIUM_ORE);
     	blockWithItem(OreGenBlocks.END_LEAD_ORE);
@@ -216,7 +216,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	blockWithItem(OreGenBlocks.END_ZINC_ORE);
     	
     	// Solid Blocks
-    	blockWithItem(OreGenBlocks.ALUMINIUM_BLOCK);
+    	blockWithItem(OreGenBlocks.BAUXITE_BLOCK);
     	blockWithItem(OreGenBlocks.BRONZE_BLOCK);
     	blockWithItem(OreGenBlocks.COBALT_BLOCK);
     	blockWithItem(OreGenBlocks.IRIDIUM_BLOCK);
@@ -231,7 +231,7 @@ public class ModBlockStateProvider extends BlockStateProvider
     	blockWithItem(OreGenBlocks.URANIUM_BLOCK);
     	blockWithItem(OreGenBlocks.ZINC_BLOCK);
     	
-    	blockWithItem(OreGenBlocks.RAW_ALUMINIUM_BLOCK);
+    	blockWithItem(OreGenBlocks.RAW_BAUXITE_BLOCK);
     	blockWithItem(OreGenBlocks.RAW_COBALT_BLOCK);
     	blockWithItem(OreGenBlocks.RAW_IRIDIUM_BLOCK);
     	blockWithItem(OreGenBlocks.RAW_LEAD_BLOCK);
