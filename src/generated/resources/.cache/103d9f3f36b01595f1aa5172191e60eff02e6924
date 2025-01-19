@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-18T19:07:31.4931047	Registries
+// 1.21.1	2025-01-18T19:23:42.4860672	Registries
 7281ed00039238c6b2be3fcf73a9981dda7cb0d4 data/simpleoregen/neoforge/biome_modifier/add_bauxite_ore.json
 35a5a361fc964ae7833b0c44c3df37ee08ac9b2f data/simpleoregen/neoforge/biome_modifier/add_cheshirerose.json
 089a9db095403f02fae70b852187637f16b8b4bd data/simpleoregen/neoforge/biome_modifier/add_cobalt_ore.json
@@ -67,7 +67,7 @@ fabe00ccbd4c7109ea9d82d3273ea9eeb8bdbeb8 data/simpleoregen/neoforge/biome_modifi
 2a1a565c0a57b2c3c9a950abea55b777e5c5c8df data/simpleoregen/neoforge/biome_modifier/add_tungsten_ore.json
 4c41cc6f061b916c36ae9df61adad3963a26f8af data/simpleoregen/neoforge/biome_modifier/add_uranium_ore.json
 76d00cf8b7db3ba902fe6ee2e8dec9e37797e6db data/simpleoregen/neoforge/biome_modifier/add_zinc_ore.json
-92e4b3e96fbe51f1a698d924627bf15e33c5efa9 data/simpleoregen/neoforge/biome_modifier/remove_vanilla_spawns_surface.json
+e9c94ac2d2937ff2714238f77fc2ead05a44ed61 data/simpleoregen/neoforge/biome_modifier/remove_vanilla_spawns_surface.json
 10c298e7b7977a71752a982542dcf52b96180749 data/simpleoregen/worldgen/configured_feature/bauxite_ore.json
 7bb66fb88e408ef010d1ec9d38dc9488e4ed6f5b data/simpleoregen/worldgen/configured_feature/cheshirerose.json
 043c96f68c300a2e4410965c572bd66a8e0f776f data/simpleoregen/worldgen/configured_feature/cobalt_ore.json
