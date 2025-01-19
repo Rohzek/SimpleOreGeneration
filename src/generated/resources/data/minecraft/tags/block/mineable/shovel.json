@@ -14,6 +14,7 @@
     "simpleoregen:sand_tungsten_ore",
     "simpleoregen:sand_uranium_ore",
     "simpleoregen:sand_zinc_ore",
+    "simpleoregen:sand_chaos_ore",
     "simpleoregen:gravel_quartz_ore",
     "simpleoregen:gravel_bauxite_ore",
     "simpleoregen:gravel_cobalt_ore",
@@ -27,6 +28,7 @@
     "simpleoregen:gravel_tin_ore",
     "simpleoregen:gravel_tungsten_ore",
     "simpleoregen:gravel_uranium_ore",
-    "simpleoregen:gravel_zinc_ore"
+    "simpleoregen:gravel_zinc_ore",
+    "simpleoregen:gravel_chaos_ore"
   ]
 }

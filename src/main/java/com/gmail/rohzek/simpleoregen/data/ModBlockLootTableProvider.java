@@ -25,7 +25,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider
 {
-
+	
 	protected ModBlockLootTableProvider(HolderLookup.Provider registries) 
 	{
 		super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
@@ -254,6 +254,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		add(OreGenBlocks.END_TUNGSTEN_ORE.get(), block -> createOreDrop(OreGenBlocks.END_TUNGSTEN_ORE.get(), OreGenItems.RAW_TUNGSTEN.get()));
 		add(OreGenBlocks.END_URANIUM_ORE.get(), block -> createOreDrop(OreGenBlocks.END_URANIUM_ORE.get(), OreGenItems.RAW_URANIUM.get()));
 		add(OreGenBlocks.END_ZINC_ORE.get(), block -> createOreDrop(OreGenBlocks.END_ZINC_ORE.get(), OreGenItems.RAW_ZINC.get()));
+		
 	}
 	
 	// Copied and Changed from the Copper drops
@@ -264,6 +265,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
                    .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
                    .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
     }
+	
 	
 	@Override
 	protected Iterable<Block> getKnownBlocks() 

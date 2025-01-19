@@ -39,6 +39,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.SURFACE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.SURFACE_URANIUM_ORE.get())
                 .add(OreGenBlocks.SURFACE_ZINC_ORE.get())
+                .add(OreGenBlocks.SURFACE_CHAOS_ORE.get())
         // Deepslate
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_QUARTZ_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_BAUXITE_ORE.get())
@@ -54,6 +55,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_URANIUM_ORE.get())
                 .add(OreGenBlocks.SURFACE_DEEPSLATE_ZINC_ORE.get())
+                .add(OreGenBlocks.SURFACE_DEEPSLATE_CHAOS_ORE.get())
         // Andesite        
                 .add(OreGenBlocks.ANDESITE_QUARTZ_ORE.get())
                 .add(OreGenBlocks.ANDESITE_BAUXITE_ORE.get())
@@ -69,6 +71,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.ANDESITE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.ANDESITE_URANIUM_ORE.get())
                 .add(OreGenBlocks.ANDESITE_ZINC_ORE.get())
+                .add(OreGenBlocks.ANDESITE_CHAOS_ORE.get())
       // Diorite          
                 .add(OreGenBlocks.DIORITE_QUARTZ_ORE.get())
                 .add(OreGenBlocks.DIORITE_BAUXITE_ORE.get())
@@ -84,6 +87,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.DIORITE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.DIORITE_URANIUM_ORE.get())
                 .add(OreGenBlocks.DIORITE_ZINC_ORE.get())
+                .add(OreGenBlocks.DIORITE_CHAOS_ORE.get())
       // Granite          
                 .add(OreGenBlocks.GRANITE_QUARTZ_ORE.get())
                 .add(OreGenBlocks.GRANITE_BAUXITE_ORE.get())
@@ -99,6 +103,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.GRANITE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.GRANITE_URANIUM_ORE.get())
                 .add(OreGenBlocks.GRANITE_ZINC_ORE.get())
+                .add(OreGenBlocks.GRANITE_CHAOS_ORE.get())
      // Sandstone     
                 .add(OreGenBlocks.SANDSTONE_QUARTZ_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_BAUXITE_ORE.get())
@@ -114,6 +119,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
                 .add(OreGenBlocks.SANDSTONE_TUNGSTEN_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_URANIUM_ORE.get())
                 .add(OreGenBlocks.SANDSTONE_ZINC_ORE.get())
+                .add(OreGenBlocks.SANDSTONE_CHAOS_ORE.get())
         // Nether
                 .add(OreGenBlocks.NETHER_COAL_ORE.get())
         		.add(OreGenBlocks.NETHER_COPPER_ORE.get())
@@ -137,6 +143,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.NETHER_TUNGSTEN_ORE.get())
         		.add(OreGenBlocks.NETHER_URANIUM_ORE.get())
         		.add(OreGenBlocks.NETHER_ZINC_ORE.get())
+        		.add(OreGenBlocks.NETHER_CHAOS_ORE.get())
         // End
         		.add(OreGenBlocks.END_COAL_ORE.get())
         		.add(OreGenBlocks.END_COPPER_ORE.get())
@@ -161,6 +168,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         		.add(OreGenBlocks.END_TUNGSTEN_ORE.get())
         		.add(OreGenBlocks.END_URANIUM_ORE.get())
         		.add(OreGenBlocks.END_ZINC_ORE.get())
+        		.add(OreGenBlocks.END_CHAOS_ORE.get())
         // Solid Blocks
         		.add(OreGenBlocks.BAUXITE_BLOCK.get())
         		.add(OreGenBlocks.BRONZE_BLOCK.get())
@@ -205,6 +213,7 @@ public class ModBlockTagProvider extends BlockTagsProvider
         .add(OreGenBlocks.SAND_TUNGSTEN_ORE.get())
         .add(OreGenBlocks.SAND_URANIUM_ORE.get())
         .add(OreGenBlocks.SAND_ZINC_ORE.get())
+        .add(OreGenBlocks.SAND_CHAOS_ORE.get())
         // Gravel
         .add(OreGenBlocks.GRAVEL_QUARTZ_ORE.get())
         .add(OreGenBlocks.GRAVEL_BAUXITE_ORE.get())
@@ -219,7 +228,8 @@ public class ModBlockTagProvider extends BlockTagsProvider
         .add(OreGenBlocks.GRAVEL_TIN_ORE.get())
         .add(OreGenBlocks.GRAVEL_TUNGSTEN_ORE.get())
         .add(OreGenBlocks.GRAVEL_URANIUM_ORE.get())
-        .add(OreGenBlocks.GRAVEL_ZINC_ORE.get());
+        .add(OreGenBlocks.GRAVEL_ZINC_ORE.get())
+        .add(OreGenBlocks.GRAVEL_CHAOS_ORE.get());
         //tag(BlockTags.NEEDS_IRON_TOOL)
         		//.add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
         

@@ -11,6 +11,7 @@ public class ConfigurationManager
     public static class General 
     {
     	public final ModConfigSpec.ConfigValue<Boolean> isDebug;
+    	public final ModConfigSpec.ConfigValue<String> chaosBlockDropMode;
     	/*
     	public final ModConfigSpec.ConfigValue<Boolean> consumeAir;
     	public final ModConfigSpec.ConfigValue<Integer> minutesOfAir;
@@ -34,6 +35,11 @@ public class ConfigurationManager
                     .comment("Enables/Disables debug mode logging [false/true|default:false]")
                     .translation("debugmode." + Reference.MODID + ".config")
                     .define("isDebug", false);
+            
+            chaosBlockDropMode = builder
+                    .comment("Choose mode for ore drops from mining a Chaos Ore block [single/multiple|all|none; defaults to: none]")
+                    .translation("chaosmode." + Reference.MODID + ".config")
+                    .define("chaosBlockDropMode", "multiple");
             
             /*
             consumeAir = builder.comment("Enables/Disables the limited air system. If false, wearing gets you unlimited air. [false/true|default:true]")

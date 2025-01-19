@@ -26,7 +26,7 @@
   ],
   "steps": [
     "underground_structures",
-    "underground_ores",
-    "local_modifications"
+    "local_modifications",
+    "underground_ores"
   ]
 }

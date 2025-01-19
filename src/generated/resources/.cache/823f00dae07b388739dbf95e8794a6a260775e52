@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-16T20:32:43.3103632	Tags for minecraft:block mod id simpleoregen
+// 1.21.1	2025-01-18T21:10:51.5241571	Tags for minecraft:block mod id simpleoregen
 e26d51e176761b9f58a5c881e0878fd9f7eb7032 data/minecraft/tags/block/coal_ores.json
 4bbe630b5821df2a3cd44f5e0e2d67f4303eb621 data/minecraft/tags/block/copper_ores.json
 cec35793f64629aa60f9ca9eb09bf37ecc35d05a data/minecraft/tags/block/diamond_ores.json
@@ -8,7 +8,7 @@ f8b97fc7b0d2e8b1e9d9e12c80b718d5571aad73 data/minecraft/tags/block/gold_ores.jso
 ee9ebb14d0ea3f9a0c8af3b3f92d3c50023dcc96 data/minecraft/tags/block/guarded_by_piglins.json
 a82906cb98d9c8fa51d9a69941f9481e54470111 data/minecraft/tags/block/iron_ores.json
 99c03385f0c6040ec70f521246f927e2553c70db data/minecraft/tags/block/lapis_ores.json
-672cfdeb1456019a5a119209861f30baee8cc988 data/minecraft/tags/block/mineable/pickaxe.json
-671d31f2976994cc91fba80471ccc4a01e47ba3f data/minecraft/tags/block/mineable/shovel.json
+fdfa828ba88c4666f8c6131421746f031e014504 data/minecraft/tags/block/mineable/pickaxe.json
+392993431ecaea5d4de0857fccd168af21c85c3c data/minecraft/tags/block/mineable/shovel.json
 314a4ed9a9e2b2247889b74fbdf9ae003e812faf data/minecraft/tags/block/redstone_ores.json
 908725d9625b23b3b67220be9fb1aa3d8f498756 data/minecraft/tags/block/small_flowers.json

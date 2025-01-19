@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/nether_chaos_ore"
+    }
+  }
+}

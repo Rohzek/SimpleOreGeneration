@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
 import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
+import com.gmail.rohzek.simpleoregen.enchantments.ModEnchantmentEffects;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
 import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
 import com.gmail.rohzek.simpleoregen.lib.DeferredRegistration;
@@ -50,6 +51,7 @@ public class SimpleOreGeneration
 		OreGenItems.register();
 		OreGenBlocks.register();
 		WorldGenBlocks.register();
+		ModEnchantmentEffects.register();
 
 		// Register configuration file
 		//final ModLoadingContext modLoadingContext = ModLoadingContext.get();

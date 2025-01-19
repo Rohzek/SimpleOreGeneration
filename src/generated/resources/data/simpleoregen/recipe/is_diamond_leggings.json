@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": {
+      "tag": "simpleoregen:diamonds"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "M M",
+    "M M"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_leggings"
+  }
+}

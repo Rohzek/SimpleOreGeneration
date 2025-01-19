@@ -205,6 +205,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
          */
         
         shapedCraftingPickaxe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_PICKAXE);
+        shapedCraftingSword(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SWORD);
+        shapedCraftingShovel(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SHOVEL);
+        shapedCraftingHoe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_HOE);
+        
+        shapedCraftingHelmet(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, Items.DIAMOND_HELMET);
+        shapedCraftingChestplate(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_CHESTPLATE);
+        shapedCraftingLeggings(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_LEGGINGS);
+        shapedCraftingBoots(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_BOOTS);
         
         
         oreSmelting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 200, "bauxite");
@@ -253,6 +261,77 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         .define('M', input_material)
         .define('H', input_handle)
         .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_pickaxe");
+	}
+	
+	protected static void shapedCraftingSword(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, TagKey<Item> input_handle, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output)
+        .pattern("M")
+        .pattern("M")
+        .pattern("H")
+        .define('M', input_material)
+        .define('H', input_handle)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_sword");
+	}
+	
+	protected static void shapedCraftingShovel(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, TagKey<Item> input_handle, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output)
+        .pattern("M")
+        .pattern("H")
+        .pattern("H")
+        .define('M', input_material)
+        .define('H', input_handle)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_shovel");
+	}
+	
+	protected static void shapedCraftingHoe(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, TagKey<Item> input_handle, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output)
+        .pattern("MM")
+        .pattern(" H")
+        .pattern(" H")
+        .define('M', input_material)
+        .define('H', input_handle)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_hoe");
+	}
+	
+	protected static void shapedCraftingHelmet(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+        .pattern("MMM")
+        .pattern("M M")
+        .define('M', input_material)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_helmet");
+	}
+	
+	protected static void shapedCraftingChestplate(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+        .pattern("M M")
+        .pattern("MMM")
+        .pattern("MMM")
+        .define('M', input_material)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_chestplate");
+	}
+	
+	protected static void shapedCraftingLeggings(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+        .pattern("MMM")
+        .pattern("M M")
+        .pattern("M M")
+        .define('M', input_material)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_leggings");
+	}
+	
+	protected static void shapedCraftingBoots(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, Item output) 
+	{
+		ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, output)
+        .pattern("M M")
+        .pattern("M M")
+        .define('M', input_material)
+        .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_boots");
 	}
 	
 	protected static void shapedCraftingSolidBlocks(RecipeOutput recipeOutput, String unlocked, Item input, Block output, TagKey<Item> unlock, String name) 

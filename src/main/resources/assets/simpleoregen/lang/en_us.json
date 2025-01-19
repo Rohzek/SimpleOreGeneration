@@ -243,5 +243,14 @@
 
   "block.simpleoregen.cheshirerose": "Cheshire Rose",
   "block.simpleoregen.rose": "Rose",
-  "block.simpleoregen.rose_cyan": "Blue Rose"
+  "block.simpleoregen.rose_cyan": "Blue Rose",
+
+  "enchantment.simpleoregen.madness_enchantment": "Madness",
+
+  "text.simpleoregen.alice_quotes.madness": "We're all mad here",
+  "text.simpleoregen.alice_quotes.curious": "Curiouser and curiouser",
+  "text.simpleoregen.alice_quotes.that_depends": "That depends on where you want to get to",
+  "text.simpleoregen.alice_quotes.doesn't_matter": "Then it doesn’t really matter which way you go",
+  "text.simpleoregen.alice_quotes.who_am_i": "Who in the world am I? Ah, that's the great puzzle",
+  "text.simpleoregen.alice_quotes.can't_explain": "I'm afraid I can't explain myself, sir. Because I'm not myself, you see"
 }
