@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/sand_iron_ore"
+    }
+  }
+}

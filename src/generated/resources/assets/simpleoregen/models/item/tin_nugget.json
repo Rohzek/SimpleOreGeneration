@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/tin_nugget"
+    "layer0": "simpleoregen:item/nugget/tin_nugget"
   }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "simpleoregen:block/diorite_iridium_ore"
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleoregen:block/ore/diorite/diorite_iridium_ore"
+  }
 }

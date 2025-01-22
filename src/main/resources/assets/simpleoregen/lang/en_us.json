@@ -1,7 +1,16 @@
 {
   "itemGroup.simpleoregen": "Simple Ore Generation",
 
+  "block.simpleoregen.coal_ore": "Coal Ore",
+  "block.simpleoregen.copper_ore": "Copper Ore",
+  "block.simpleoregen.diamond_ore": "Diamond Ore",
+  "block.simpleoregen.emerald_ore": "Emerald Ore",
+  "block.simpleoregen.gold_ore": "Gold Ore",
+  "block.simpleoregen.iron_ore": "Iron Ore",
+  "block.simpleoregen.redstone_ore": "Redstone Ore",
+  "block.simpleoregen.lapis_ore": "Lapis Ore",
   "block.simpleoregen.quartz_ore": "Quartz Ore",
+
   "block.simpleoregen.bauxite_ore": "Aluminum Ore",
   "block.simpleoregen.cobalt_ore": "Cobalt Ore",
   "block.simpleoregen.iridium_ore": "Iridium Ore",
@@ -16,7 +25,16 @@
   "block.simpleoregen.uranium_ore": "Uranium Ore",
   "block.simpleoregen.zinc_ore": "Zinc Ore",
 
+  "block.simpleoregen.deepslate_coal_ore": "Deepslate Coal Ore",
+  "block.simpleoregen.deepslate_copper_ore": "Deepslate Copper Ore",
+  "block.simpleoregen.deepslate_diamond_ore": "Deepslate Diamond Ore",
+  "block.simpleoregen.deepslate_emerald_ore": "Deepslate Emerald Ore",
+  "block.simpleoregen.deepslate_gold_ore": "Deepslate Gold Ore",
+  "block.simpleoregen.deepslate_iron_ore": "Deepslate Iron Ore",
+  "block.simpleoregen.deepslate_redstone_ore": "Deepslate Redstone Ore",
+  "block.simpleoregen.deepslate_lapis_ore": "Deepslate Lapis Ore",
   "block.simpleoregen.deepslate_quartz_ore": "Deepslate Quartz Ore",
+
   "block.simpleoregen.deepslate_bauxite_ore": "Deepslate Aluminum Ore",
   "block.simpleoregen.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
   "block.simpleoregen.deepslate_iridium_ore": "Deepslate Iridium",
@@ -31,7 +49,16 @@
   "block.simpleoregen.deepslate_uranium_ore": "Deepslate Uranium Ore",
   "block.simpleoregen.deepslate_zinc_ore": "Deepslate Zinc Ore",
 
+  "block.simpleoregen.andesite_coal_ore": "Andesite Coal Ore",
+  "block.simpleoregen.andesite_copper_ore": "Andesite Copper Ore",
+  "block.simpleoregen.andesite_diamond_ore": "Andesite Diamond Ore",
+  "block.simpleoregen.andesite_emerald_ore": "Andesite Emerald Ore",
+  "block.simpleoregen.andesite_gold_ore": "Andesite Gold Ore",
+  "block.simpleoregen.andesite_iron_ore": "Andesite Iron Ore",
+  "block.simpleoregen.andesite_redstone_ore": "Andesite Redstone Ore",
+  "block.simpleoregen.andesite_lapis_ore": "Andesite Lapis Ore",
   "block.simpleoregen.andesite_quartz_ore": "Andesite Quartz Ore",
+
   "block.simpleoregen.andesite_bauxite_ore": "Andesite Aluminum Ore",
   "block.simpleoregen.andesite_cobalt_ore": "Andesite Cobalt Ore",
   "block.simpleoregen.andesite_iridium_ore": "Andesite Iridium",
@@ -46,7 +73,16 @@
   "block.simpleoregen.andesite_uranium_ore": "Andesite Uranium Ore",
   "block.simpleoregen.andesite_zinc_ore": "Andesite Zinc Ore",
 
+  "block.simpleoregen.diorite_coal_ore": "Diorite Coal Ore",
+  "block.simpleoregen.diorite_copper_ore": "Diorite Copper Ore",
+  "block.simpleoregen.diorite_diamond_ore": "Diorite Diamond Ore",
+  "block.simpleoregen.diorite_emerald_ore": "Diorite Emerald Ore",
+  "block.simpleoregen.diorite_gold_ore": "Diorite Gold Ore",
+  "block.simpleoregen.diorite_iron_ore": "Diorite Iron Ore",
+  "block.simpleoregen.diorite_redstone_ore": "Diorite Redstone Ore",
+  "block.simpleoregen.diorite_lapis_ore": "Diorite Lapis Ore",
   "block.simpleoregen.diorite_quartz_ore": "Diorite Quartz Ore",
+
   "block.simpleoregen.diorite_bauxite_ore": "Diorite Aluminum Ore",
   "block.simpleoregen.diorite_cobalt_ore": "Diorite Cobalt Ore",
   "block.simpleoregen.diorite_iridium_ore": "Diorite Iridium",
@@ -61,7 +97,16 @@
   "block.simpleoregen.diorite_uranium_ore": "Diorite Uranium Ore",
   "block.simpleoregen.diorite_zinc_ore": "Diorite Zinc Ore",
 
+  "block.simpleoregen.granite_coal_ore": "Granite Coal Ore",
+  "block.simpleoregen.granite_copper_ore": "Granite Copper Ore",
+  "block.simpleoregen.granite_diamond_ore": "Granite Diamond Ore",
+  "block.simpleoregen.granite_emerald_ore": "Granite Emerald Ore",
+  "block.simpleoregen.granite_gold_ore": "Granite Gold Ore",
+  "block.simpleoregen.granite_iron_ore": "Granite Iron Ore",
+  "block.simpleoregen.granite_redstone_ore": "Granite Redstone Ore",
+  "block.simpleoregen.granite_lapis_ore": "Granite Lapis Ore",
   "block.simpleoregen.granite_quartz_ore": "Granite Quartz Ore",
+
   "block.simpleoregen.granite_bauxite_ore": "Granite Aluminum Ore",
   "block.simpleoregen.granite_cobalt_ore": "Granite Cobalt Ore",
   "block.simpleoregen.granite_iridium_ore": "Granite Iridium",
@@ -76,7 +121,16 @@
   "block.simpleoregen.granite_uranium_ore": "Granite Uranium Ore",
   "block.simpleoregen.granite_zinc_ore": "Granite Zinc Ore",
 
+  "block.simpleoregen.sandstone_coal_ore": "Sandstone Coal Ore",
+  "block.simpleoregen.sandstone_copper_ore": "Sandstone Copper Ore",
+  "block.simpleoregen.sandstone_diamond_ore": "Sandstone Diamond Ore",
+  "block.simpleoregen.sandstone_emerald_ore": "Sandstone Emerald Ore",
+  "block.simpleoregen.sandstone_gold_ore": "Sandstone Gold Ore",
+  "block.simpleoregen.sandstone_iron_ore": "Sandstone Iron Ore",
+  "block.simpleoregen.sandstone_redstone_ore": "Sandstone Redstone Ore",
+  "block.simpleoregen.sandstone_lapis_ore": "Sandstone Lapis Ore",
   "block.simpleoregen.sandstone_quartz_ore": "Sandstone Quartz Ore",
+
   "block.simpleoregen.sandstone_bauxite_ore": "Sandstone Aluminum Ore",
   "block.simpleoregen.sandstone_cobalt_ore": "Sandstone Cobalt Ore",
   "block.simpleoregen.sandstone_iridium_ore": "Sandstone Iridium",
@@ -91,7 +145,16 @@
   "block.simpleoregen.sandstone_uranium_ore": "Sandstone Uranium Ore",
   "block.simpleoregen.sandstone_zinc_ore": "Sandstone Zinc Ore",
 
+  "block.simpleoregen.sand_coal_ore": "Sand Coal Ore",
+  "block.simpleoregen.sand_copper_ore": "Sand Copper Ore",
+  "block.simpleoregen.sand_diamond_ore": "Sand Diamond Ore",
+  "block.simpleoregen.sand_emerald_ore": "Sand Emerald Ore",
+  "block.simpleoregen.sand_gold_ore": "Sand Gold Ore",
+  "block.simpleoregen.sand_iron_ore": "Sand Iron Ore",
+  "block.simpleoregen.sand_redstone_ore": "Sand Redstone Ore",
+  "block.simpleoregen.sand_lapis_ore": "Sand Lapis Ore",
   "block.simpleoregen.sand_quartz_ore": "Sand Quartz Ore",
+
   "block.simpleoregen.sand_bauxite_ore": "Sand Aluminum Ore",
   "block.simpleoregen.sand_cobalt_ore": "Sand Cobalt Ore",
   "block.simpleoregen.sand_iridium_ore": "Sand Iridium",
@@ -106,7 +169,16 @@
   "block.simpleoregen.sand_uranium_ore": "Sand Uranium Ore",
   "block.simpleoregen.sand_zinc_ore": "Sand Zinc Ore",
 
+  "block.simpleoregen.gravel_coal_ore": "Gravel Coal Ore",
+  "block.simpleoregen.gravel_copper_ore": "Gravel Copper Ore",
+  "block.simpleoregen.gravel_diamond_ore": "Gravel Diamond Ore",
+  "block.simpleoregen.gravel_emerald_ore": "Gravel Emerald Ore",
+  "block.simpleoregen.gravel_gold_ore": "Gravel Gold Ore",
+  "block.simpleoregen.gravel_iron_ore": "Gravel Iron Ore",
+  "block.simpleoregen.gravel_redstone_ore": "Gravel Redstone Ore",
+  "block.simpleoregen.gravel_lapis_ore": "Gravel Lapis Ore",
   "block.simpleoregen.gravel_quartz_ore": "Gravel Quartz Ore",
+
   "block.simpleoregen.gravel_bauxite_ore": "Gravel Aluminum Ore",
   "block.simpleoregen.gravel_cobalt_ore": "Gravel Cobalt Ore",
   "block.simpleoregen.gravel_iridium_ore": "Gravel Iridium",
@@ -168,6 +240,50 @@
   "block.simpleoregen.end_uranium_ore": "End Uranium Ore",
   "block.simpleoregen.end_zinc_ore": "End Zinc Ore",
 
+  "block.simpleoregen.chaos_ore": "Chaos Ore",
+  "block.simpleoregen.deepslate_chaos_ore": "Deepslate Chaos Ore",
+  "block.simpleoregen.andesite_chaos_ore": "Andesite Chaos Ore",
+  "block.simpleoregen.diorite_chaos_ore": "Diorite Chaos Ore",
+  "block.simpleoregen.granite_chaos_ore": "Granite Chaos Ore",
+  "block.simpleoregen.sandstone_chaos_ore": "Sandstone Chaos Ore",
+  "block.simpleoregen.sand_chaos_ore": "Sand Chaos Ore",
+  "block.simpleoregen.gravel_chaos_ore": "Gravel Chaos Ore",
+  "block.simpleoregen.nether_chaos_ore": "Nether Chaos Ore",
+  "block.simpleoregen.end_chaos_ore": "End Chaos Ore",
+
+  "block.simpleoregen.copper_nugget_ore": "Copper Ore (Small)",
+  "block.simpleoregen.gold_nugget_ore": "Gold Ore (Small)",
+  "block.simpleoregen.iron_nugget_ore": "Iron Ore (Small)",
+
+  "block.simpleoregen.deepslate_copper_nugget_ore": "Deepslate Copper Ore (Small)",
+  "block.simpleoregen.deepslate_gold_nugget_ore": "Deepslate Gold Ore (Small)",
+  "block.simpleoregen.deepslate_iron_nugget_ore": "Deepslate Iron Ore (Small)",
+  
+  "block.simpleoregen.andesite_copper_nugget_ore": "Andesite Copper Ore (Small)",
+  "block.simpleoregen.andesite_gold_nugget_ore": "Andesite Gold Ore (Small)",
+  "block.simpleoregen.andesite_iron_nugget_ore": "Andesite Iron Ore (Small)",
+
+
+  "block.simpleoregen.diorite_copper_nugget_ore": "Diorite Copper Ore (Small)",
+  "block.simpleoregen.diorite_gold_nugget_ore": "Diorite Gold Ore (Small)",
+  "block.simpleoregen.diorite_iron_nugget_ore": "Diorite Iron Ore (Small)",
+
+  "block.simpleoregen.granite_copper_nugget_ore": "Granite Copper Ore (Small)",
+  "block.simpleoregen.granite_gold_nugget_ore": "Granite Gold Ore (Small)",
+  "block.simpleoregen.granite_iron_nugget_ore": "Granite Iron Ore (Small)",
+
+  "block.simpleoregen.sand_copper_nugget_ore": "Sand Copper Ore (Small)",
+  "block.simpleoregen.sand_gold_nugget_ore": "Sand Gold Ore (Small)",
+  "block.simpleoregen.sand_iron_nugget_ore": "Sand Iron Ore (Small)",
+
+  "block.simpleoregen.sandstone_copper_nugget_ore": "Sandstone Copper Ore (Small)",
+  "block.simpleoregen.sandstone_gold_nugget_ore": "Sandstone Gold Ore (Small)",
+  "block.simpleoregen.sandstone_iron_nugget_ore": "Sandstone Iron Ore (Small)",
+
+  "block.simpleoregen.gravel_copper_nugget_ore": "Gravel Copper Ore (Small)",
+  "block.simpleoregen.gravel_gold_nugget_ore": "Gravel Gold Ore (Small)",
+  "block.simpleoregen.gravel_iron_nugget_ore": "Gravel Iron Ore (Small)",
+
   "block.simpleoregen.bauxite_block": "Aluminum Block",
   "block.simpleoregen.bronze_block": "Bronze Block",
   "block.simpleoregen.cobalt_block": "Cobalt Block",
@@ -178,6 +294,7 @@
   "block.simpleoregen.ruby_block": "Ruby Block",
   "block.simpleoregen.sapphire_block": "Sapphire Block",
   "block.simpleoregen.silver_block": "Silver Block",
+  "block.simpleoregen.steel_block": "Steel Block",
   "block.simpleoregen.tin_block": "Tin Block",
   "block.simpleoregen.tungsten_block": "Tungsten Block",
   "block.simpleoregen.uranium_block": "Uranium Block",
@@ -221,6 +338,7 @@
   "item.simpleoregen.ruby_ingot": "Ruby Ingot",
   "item.simpleoregen.sapphire_ingot": "Sapphire Ingot",
   "item.simpleoregen.silver_ingot": "Silver Ingot",
+  "item.simpleoregen.steel_ingot": "Steel Ingot",
   "item.simpleoregen.tin_ingot": "Tin Ingot",
   "item.simpleoregen.tungsten_ingot": "Tungsten Ingot",
   "item.simpleoregen.uranium_ingot": "Uranium Ingot",
@@ -229,6 +347,7 @@
   "item.simpleoregen.bauxite_nugget": "Aluminum Nugget",
   "item.simpleoregen.bronze_nugget": "Bronze Nugget",
   "item.simpleoregen.cobalt_nugget": "Cobalt Nugget",
+  "item.simpleoregen.copper_nugget": "Copper Nugget",
   "item.simpleoregen.iridium_nugget": "Iridium Nugget",
   "item.simpleoregen.lead_nugget": "Lead Nugget",
   "item.simpleoregen.nickel_nugget": "Nickel Nugget",
@@ -236,6 +355,7 @@
   "item.simpleoregen.ruby_nugget": "Ruby Nugget",
   "item.simpleoregen.sapphire_nugget": "Sapphire Nugget",
   "item.simpleoregen.silver_nugget": "Silver Nugget",
+  "item.simpleoregen.steel_nugget": "Steel Nugget",
   "item.simpleoregen.tin_nugget": "Tin Nugget",
   "item.simpleoregen.tungsten_nugget": "Tungsten Nugget",
   "item.simpleoregen.uranium_nugget": "Uranium Nugget",
@@ -246,6 +366,8 @@
   "block.simpleoregen.rose_cyan": "Blue Rose",
 
   "enchantment.simpleoregen.madness_enchantment": "Madness",
+
+  "cat.simpleoregen.cheshire_cat": "Cheshire Cat",
 
   "text.simpleoregen.alice_quotes.madness": "We're all mad here",
   "text.simpleoregen.alice_quotes.curious": "Curiouser and curiouser",

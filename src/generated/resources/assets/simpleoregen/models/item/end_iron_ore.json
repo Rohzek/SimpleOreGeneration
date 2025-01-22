@@ -1,3 +1,6 @@
 {
-  "parent": "simpleoregen:block/end_iron_ore"
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleoregen:block/ore/end/end_iron_ore"
+  }
 }

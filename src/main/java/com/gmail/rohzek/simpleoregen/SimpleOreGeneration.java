@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
 import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.enchantments.ModEnchantmentEffects;
+import com.gmail.rohzek.simpleoregen.entity.ModEntities;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
 import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
 import com.gmail.rohzek.simpleoregen.lib.DeferredRegistration;
@@ -52,6 +53,7 @@ public class SimpleOreGeneration
 		OreGenBlocks.register();
 		WorldGenBlocks.register();
 		ModEnchantmentEffects.register();
+		ModEntities.register(modEventBus);
 
 		// Register configuration file
 		//final ModLoadingContext modLoadingContext = ModLoadingContext.get();
@@ -77,7 +79,7 @@ public class SimpleOreGeneration
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {}
     
- // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = Reference.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents 
     {

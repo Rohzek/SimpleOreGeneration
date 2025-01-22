@@ -1,3 +1,6 @@
 {
-  "parent": "simpleoregen:block/sand_nickel_ore"
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleoregen:block/ore/sand/sand_nickel_ore"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/raw_lead"
+    "layer0": "simpleoregen:item/raw/raw_lead"
   }
 }

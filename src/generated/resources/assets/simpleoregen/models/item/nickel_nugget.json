@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/nickel_nugget"
+    "layer0": "simpleoregen:item/nugget/nickel_nugget"
   }
 }

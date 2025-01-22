@@ -24,6 +24,10 @@ public class ModItemTagProvider extends ItemTagsProvider
     @Override
     protected void addTags(HolderLookup.Provider provider) 
     {
+    	tag(OreGenTags.Items.COALS)
+    		.add(Items.CHARCOAL)
+    		.add(Items.COAL);
+    	
         tag(OreGenTags.Items.DIAMONDS)
         	.add(OreGenItems.HEART_DIAMOND.get())
         	.add(Items.DIAMOND);
@@ -76,6 +80,9 @@ public class ModItemTagProvider extends ItemTagsProvider
         tag(OreGenTags.Items.ALUMINUM_INGOTS)
 			.add(OreGenItems.BAUXITE_INGOT.get());
         
+        tag(OreGenTags.Items.BRONZE_INGOTS)
+			.add(OreGenItems.BRONZE_INGOT.get());
+        
         tag(OreGenTags.Items.COBALT_INGOTS)
 			.add(OreGenItems.COBALT_INGOT.get());
         
@@ -93,6 +100,9 @@ public class ModItemTagProvider extends ItemTagsProvider
         
         tag(OreGenTags.Items.SILVER_INGOTS)
 			.add(OreGenItems.SILVER_INGOT.get());
+        
+        tag(OreGenTags.Items.STEEL_INGOTS)
+			.add(OreGenItems.STEEL_INGOT.get());
         
         tag(OreGenTags.Items.TIN_INGOTS)
 			.add(OreGenItems.TIN_INGOT.get());
@@ -112,8 +122,14 @@ public class ModItemTagProvider extends ItemTagsProvider
         tag(OreGenTags.Items.ALUMINUM_NUGGETS)
 			.add(OreGenItems.BAUXITE_NUGGET.get());
         
+        tag(OreGenTags.Items.BRONZE_NUGGETS)
+			.add(OreGenItems.BRONZE_NUGGET.get());
+        
         tag(OreGenTags.Items.COBALT_NUGGETS)
 			.add(OreGenItems.COBALT_NUGGET.get());
+        
+        tag(OreGenTags.Items.COPPER_NUGGETS)
+			.add(OreGenItems.COPPER_NUGGET.get());
         
         tag(OreGenTags.Items.IRIDIUM_NUGGETS)
 			.add(OreGenItems.IRIDIUM_NUGGET.get());
@@ -129,6 +145,9 @@ public class ModItemTagProvider extends ItemTagsProvider
         
         tag(OreGenTags.Items.SILVER_NUGGETS)
 			.add(OreGenItems.SILVER_NUGGET.get());
+        
+        tag(OreGenTags.Items.STEEL_NUGGETS)
+			.add(OreGenItems.STEEL_NUGGET.get());
         
         tag(OreGenTags.Items.TIN_NUGGETS)
 			.add(OreGenItems.TIN_NUGGET.get());

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/deepslate_diamond_ore"
+    }
+  }
+}

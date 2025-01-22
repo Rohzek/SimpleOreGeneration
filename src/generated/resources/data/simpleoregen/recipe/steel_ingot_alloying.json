@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "simpleoregen:coals"
+    },
+    {
+      "tag": "simpleoregen:coals"
+    },
+    {
+      "tag": "simpleoregen:coals"
+    },
+    {
+      "tag": "c:ingots/iron"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "simpleoregen:steel_ingot"
+  }
+}

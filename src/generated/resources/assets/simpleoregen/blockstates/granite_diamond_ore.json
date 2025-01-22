@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/granite_diamond_ore"
+    }
+  }
+}

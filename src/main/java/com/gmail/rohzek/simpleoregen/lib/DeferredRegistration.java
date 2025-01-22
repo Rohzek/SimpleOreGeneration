@@ -2,7 +2,7 @@ package com.gmail.rohzek.simpleoregen.lib;
 
 import java.util.function.Supplier;
 
-import com.gmail.rohzek.simpleoregen.blocks.CheshireRoseFlowerItem;
+import com.gmail.rohzek.simpleoregen.blocks.flowertypes.CheshireRoseFlowerItem;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.registries.BuiltInRegistries;

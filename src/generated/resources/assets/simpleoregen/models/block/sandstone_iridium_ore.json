@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/sandstone_iridium_ore"
+    "all": "simpleoregen:block/ore/sandstone/sandstone_iridium_ore"
   }
 }

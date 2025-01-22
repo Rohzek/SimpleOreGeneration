@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/nether_diamond_ore"
+    "all": "simpleoregen:block/ore/nether/nether_diamond_ore"
   }
 }

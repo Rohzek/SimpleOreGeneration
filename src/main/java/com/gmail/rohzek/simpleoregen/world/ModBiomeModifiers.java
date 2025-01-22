@@ -19,39 +19,38 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers 
 {
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_COAL_ORE = registerKey("add_surface_coal_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_COPPER_ORE = registerKey("add_surface_copper_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_DIAMOND_ORE = registerKey("add_surface_diamond_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_EMERALD_ORE = registerKey("add_surface_emerald_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_GOLD_ORE = registerKey("add_surface_gold_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_IRON_ORE = registerKey("add_surface_iron_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_REDSTONE_ORE = registerKey("add_surface_redstone_ore");
-	public static final ResourceKey<BiomeModifier> ADD_SURFACE_LAPIS_ORE = registerKey("add_surface_lapis_ore");
-	
-	
-	
-	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_COAL_ORE = registerKey("add_coal_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_COAL_ORE = registerKey("add_nether_coal_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_COAL_ORE = registerKey("add_end_coal_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_COPPER_ORE = registerKey("add_copper_ore");
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_COPPER_NUGGET_ORE = registerKey("add_copper_nugget_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_COPPER_ORE = registerKey("add_nether_copper_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_COPPER_ORE = registerKey("add_end_copper_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_DIAMOND_ORE = registerKey("add_diamond_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_DIAMOND_ORE = registerKey("add_nether_diamond_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_DIAMOND_ORE = registerKey("add_end_diamond_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_EMERALD_ORE = registerKey("add_emerald_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_EMERALD_ORE = registerKey("add_nether_emerald_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_EMERALD_ORE = registerKey("add_end_emerald_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_GOLD_ORE = registerKey("add_gold_ore");
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_GOLD_NUGGET_ORE = registerKey("add_gold_nugget_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_GOLD_ORE = registerKey("add_nether_gold_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_GOLD_ORE = registerKey("add_end_gold_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_IRON_ORE = registerKey("add_iron_ore");
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_IRON_NUGGET_ORE = registerKey("add_iron_nugget_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_IRON_ORE = registerKey("add_nether_iron_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_IRON_ORE = registerKey("add_end_iron_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_REDSTONE_ORE = registerKey("add_redstone_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_REDSTONE_ORE = registerKey("add_nether_redstone_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_REDSTONE_ORE = registerKey("add_end_redstone_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_LAPIS_ORE = registerKey("add_lapis_ore");
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_LAPIS_ORE = registerKey("add_nether_lapis_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_LAPIS_ORE = registerKey("add_end_lapis_ore");
 	
@@ -110,6 +109,10 @@ public class ModBiomeModifiers
 	public static final ResourceKey<BiomeModifier> ADD_NETHER_ZINC_ORE = registerKey("add_nether_zinc_ore");
 	public static final ResourceKey<BiomeModifier> ADD_END_ZINC_ORE = registerKey("add_end_zinc_ore");
 	
+	public static final ResourceKey<BiomeModifier> ADD_OVERWORLD_CHAOS_ORE = registerKey("add_chaos_ore");
+	public static final ResourceKey<BiomeModifier> ADD_NETHER_CHAOS_ORE = registerKey("add_nether_chaos_ore");
+	public static final ResourceKey<BiomeModifier> ADD_END_CHAOS_ORE = registerKey("add_end_chaos_ore");
+	
 	public static final ResourceKey<BiomeModifier> ADD_CHESHIREROSE = registerKey("add_cheshirerose");
 	public static final ResourceKey<BiomeModifier> ADD_ROSE = registerKey("add_rose");
 	public static final ResourceKey<BiomeModifier> ADD_ROSE_CYAN = registerKey("add_rose_cyan");
@@ -157,62 +160,13 @@ public class ModBiomeModifiers
                         GenerationStep.Decoration.UNDERGROUND_STRUCTURES,
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 )));
-        
-        
-        // Replace vanilla spawns
-        context.register(ADD_SURFACE_COAL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_COAL_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-        
-        context.register(ADD_SURFACE_COPPER_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_COPPER_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_DIAMOND_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_DIAMOND_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_EMERALD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_EMERALD_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_GOLD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_GOLD_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_IRON_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_REDSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_REDSTONE_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-
-		context.register(ADD_SURFACE_LAPIS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SURFACE_LAPIS_ORE_PLACED_KEY)),
-                GenerationStep.Decoration.UNDERGROUND_ORES));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-        
+ 
         // Add modded ores
+        context.register(ADD_OVERWORLD_COAL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_COAL_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
         context.register(ADD_NETHER_COAL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_COAL_ORE_PLACED_KEY)),
@@ -221,6 +175,16 @@ public class ModBiomeModifiers
         context.register(ADD_END_COAL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_COAL_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_OVERWORLD_COPPER_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_COPPER_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_OVERWORLD_COPPER_NUGGET_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_COPPER_NUGGET_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
         
         context.register(ADD_NETHER_COPPER_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
@@ -233,6 +197,11 @@ public class ModBiomeModifiers
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_COPPER_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+        context.register(ADD_OVERWORLD_DIAMOND_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_DIAMOND_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
 		context.register(ADD_NETHER_DIAMOND_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_DIAMOND_ORE_PLACED_KEY)),
@@ -242,8 +211,13 @@ public class ModBiomeModifiers
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_DIAMOND_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_OVERWORLD_EMERALD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_EMERALD_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
 
-				context.register(ADD_NETHER_EMERALD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+		context.register(ADD_NETHER_EMERALD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_EMERALD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
@@ -253,7 +227,17 @@ public class ModBiomeModifiers
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_EMERALD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-				context.register(ADD_NETHER_GOLD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_OVERWORLD_GOLD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_GOLD_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_OVERWORLD_GOLD_NUGGET_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_GOLD_NUGGET_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+		context.register(ADD_NETHER_GOLD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_GOLD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
@@ -263,7 +247,17 @@ public class ModBiomeModifiers
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_GOLD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-				context.register(ADD_NETHER_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_OVERWORLD_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_IRON_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        context.register(ADD_OVERWORLD_IRON_NUGGET_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_IRON_NUGGET_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+		context.register(ADD_NETHER_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_IRON_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
@@ -273,7 +267,12 @@ public class ModBiomeModifiers
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_IRON_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-				context.register(ADD_NETHER_REDSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_OVERWORLD_REDSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_REDSTONE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+		context.register(ADD_NETHER_REDSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_REDSTONE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
@@ -283,6 +282,11 @@ public class ModBiomeModifiers
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_REDSTONE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
+        context.register(ADD_OVERWORLD_LAPIS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_LAPIS_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
 		context.register(ADD_NETHER_LAPIS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_LAPIS_ORE_PLACED_KEY)),
@@ -499,6 +503,23 @@ public class ModBiomeModifiers
         context.register(ADD_END_ZINC_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_ZINC_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        
+        
+        
+        context.register(ADD_OVERWORLD_CHAOS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OVERWORLD_CHAOS_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_NETHER_CHAOS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_CHAOS_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_END_CHAOS_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_CHAOS_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
         
         // Example of using multiple biomes without a tag

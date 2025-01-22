@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/raw_zinc"
+    "layer0": "simpleoregen:item/raw/raw_zinc"
   }
 }

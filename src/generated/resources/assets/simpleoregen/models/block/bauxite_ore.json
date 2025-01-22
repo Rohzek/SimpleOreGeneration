@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/bauxite_ore"
+    "all": "simpleoregen:block/ore/bauxite_ore"
   }
 }

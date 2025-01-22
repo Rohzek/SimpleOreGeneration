@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/uranium_nugget"
+    "layer0": "simpleoregen:item/nugget/uranium_nugget"
   }
 }

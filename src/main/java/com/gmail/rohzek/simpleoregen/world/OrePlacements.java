@@ -1,0 +1,164 @@
+package com.gmail.rohzek.simpleoregen.world;
+
+public enum OrePlacements 
+{
+	// int veinSize, int veinCount, int minYLevel, int maxYLevel
+	// Nugget Versions
+	SURFACE_COPPER_NUGGET(16, 16, 0, 320),
+	SURFACE_GOLD_NUGGET(11, 11, 0, 320),
+	SURFACE_IRON_NUGGET(18, 18, 0, 320),
+	
+	SURFACE_BAUXITE_NUGGET(12, 12, 0, 320),
+	SURFACE_COBALT_NUGGET(5, 3, 0, 320),
+	SURFACE_IRIDIUM_NUGGET(5, 5, 0, 320),
+	SURFACE_LEAD_NUGGET(5, 4, 0, 320),
+	SURFACE_NICKEL_NUGGET(5, 3, 0, 320),
+	SURFACE_PLATINUM_NUGGET(5, 3, 0, 320),
+	SURFACE_SILVER_NUGGET(6, 6, 0, 320),
+	SURFACE_TIN_NUGGET(7, 7, 0, 320),
+	SURFACE_TUNGSTEN_NUGGET(7, 7, 0, 320),
+	SURFACE_URANIUM_NUGGET(9, 9, 0, 320),
+	SURFACE_ZINC_NUGGET(5, 5, 0, 320),
+	
+	NETHER_GOLD_NUGGET(6, 6, 0, 320),
+	NETHER_IRON_NUGGET(10, 10, 0, 320),
+	
+	NETHER_BAUXITE_NUGGET(12, 12, 0, 320),
+	NETHER_COBALT_NUGGET(5, 3, 0, 320),
+	NETHER_IRIDIUM_NUGGET(5, 3, 0, 320),
+	NETHER_LEAD_NUGGET(5, 5, 0, 320),
+	NETHER_NICKEL_NUGGET(5,5, 0, 320),
+	NETHER_PLATINUM_NUGGET(5, 3, 0, 320),
+	NETHER_SILVER_NUGGET(6, 6, 0, 320),
+	NETHER_TIN_NUGGET(7, 7, 0, 320),
+	NETHER_TUNGSTEN_NUGGET(7, 7, 0, 320),
+	NETHER_URANIUM_NUGGET(9, 9, 0, 320),
+	NETHER_ZINC_NUGGET(5, 5, 0, 320),
+	
+	END_COPPER_NUGGET(8, 8, 0, 320),
+	END_GOLD_NUGGET(6, 6, 0, 320),
+	END_IRON_NUGGET(10, 10, 0, 320),
+	
+	END_BAUXITE_NUGGET(12, 12, 0, 320),
+	END_COBALT_NUGGET(5, 3, 0, 320),
+	END_IRIDIUM_NUGGET(5, 3, 0, 320),
+	END_LEAD_NUGGET(5, 5, 0, 320),
+	END_NICKEL_NUGGET(5, 5, 0, 320),
+	END_PLATINUM_NUGGET(5, 3, 0, 320),
+	END_SILVER_NUGGET(6, 6, 0, 320),
+	END_TIN_NUGGET(7, 7, 0, 320),
+	END_TUNGSTEN_NUGGET(7, 7, 0, 320),
+	END_URANIUM_NUGGET(9, 9, 0, 320),
+	END_ZINC_NUGGET(5, 5, 0, 320),
+	
+	// Full Ore Versions
+	SURFACE_COAL(12, 13, -64, 320),
+	SURFACE_COPPER(9, 9, -64, 0),
+	SURFACE_DIAMOND(10, 13, -144, 16),
+	SURFACE_EMERALD(10, 1, -144, 16),
+	SURFACE_GOLD(6, 6, -64, 0),
+	SURFACE_IRON(10, 10, -64, 15),
+	SURFACE_REDSTONE(8, 8, -64, 8),
+	SURFACE_LAPIS(8, 8, -64, 8),
+	
+	SURFACE_QUARTZ(5, 5, -64, 0),
+	
+	SURFACE_BAUXITE(12, 12, -64, 0),
+	SURFACE_COBALT(5, 3, -64, 0),
+	SURFACE_IRIDIUM(5, 3, -64, 0),
+	SURFACE_LEAD(5, 5, -64, 0),
+	SURFACE_NICKEL(8, 6, -64, -42),
+	SURFACE_PLATINUM(15, 14, -64, 0),
+	SURFACE_RUBY(10, 2, -144, 16),
+	SURFACE_SAPPHIRE(10, 2, -144, 16),
+	SURFACE_SILVER(6, 6, -64, 0),
+	SURFACE_TIN(7, 7, -64, 0),
+	SURFACE_TUNGSTEN(7, 7, -64, 0),
+	SURFACE_URANIUM(9, 9, -64, 0),
+	SURFACE_ZINC(5, 5, -64, 0),
+	
+	NETHER_COAL(8, 8, 0, 127),
+	NETHER_COPPER(9, 9, 0, 127),
+	NETHER_DIAMOND(5, 5, 0, 127),
+	NETHER_EMERALD(5, 5, 0, 127),
+	NETHER_GOLD(6, 6, 0, 127),
+	NETHER_IRON(10, 10, 0, 127),
+	NETHER_REDSTONE(6, 6, 0, 127),
+	NETHER_LAPIS(6, 6, 0, 127),
+	
+	NETHER_BAUXITE(0, 0, 0, 127),
+	NETHER_COBALT(5, 3, 0, 127),
+	NETHER_IRIDIUM(5, 3, 0, 127),
+	NETHER_LEAD(5, 5, 0, 127),
+	NETHER_NICKEL(8, 8, 0, 127),
+	NETHER_PLATINUM(5, 4, 0, 127),
+	NETHER_RUBY(5, 5, 0, 127),
+	NETHER_SAPPHIRE(5, 5, 0, 127),
+	NETHER_SILVER(6, 6, 0, 127),
+	NETHER_TIN(7, 7, 0, 127),
+	NETHER_TUNGSTEN(7, 7, 0, 127),
+	NETHER_URANIUM(9, 9, 0, 127),
+	NETHER_ZINC(5, 5, 0, 127),
+	
+	END_COAL(8, 8, 0, 127),
+	END_COPPER(9, 9, 0, 127),
+	END_DIAMOND(5, 5, 0, 127),
+	END_EMERALD(5, 5, 0, 127),
+	END_GOLD(6, 6, 0, 127),
+	END_IRON(10, 10, 0, 127),
+	END_REDSTONE(6, 6, 0, 127),
+	END_LAPIS(6, 6, 0, 127),
+	
+	END_QUARTZ(7, 7, 0, 127),
+	
+	END_BAUXITE(12, 12, 0, 127),
+	END_COBALT(5, 3, 0, 127),
+	END_IRIDIUM(5, 3, 0, 127),
+	END_LEAD(5, 5, 0, 127),
+	END_NICKEL(8, 8, 0, 127),
+	END_PLATINUM(5, 4, 0, 127),
+	END_RUBY(5, 5, 0, 127),
+	END_SAPPHIRE(5, 5, 0, 127),
+	END_SILVER(6, 6, 0, 127),
+	END_TIN(7, 7, 0, 127),
+	END_TUNGSTEN(7, 7, 0, 127),
+	END_URANIUM(9, 9, 0, 127),
+	END_ZINC(5, 5, 0, 127),
+	
+	SURFACE_CHAOS(1, 3, -64, 0),
+	NETHER_CHAOS(1, 3, -64, 0),
+	END_CHAOS(1, 3, -64, 0);
+	
+	private final int veinSize, veinCount, minYLevel, maxYLevel;
+	
+	// Bedrock layer is at Y Level -62, Minimum possible is -64
+	// Deepslate Y level is 8 and below, with a majority at 0
+	// Top of the world is currently Y Level 320
+	OrePlacements(int veinSize, int veinCount, int minYLevel, int maxYLevel)
+	{
+		this.veinSize = veinSize;
+		this.veinCount = veinCount;
+		this.minYLevel = minYLevel;
+		this.maxYLevel = maxYLevel;
+	}
+	
+	public int getVeinSize() 
+	{
+		return veinSize;
+	}
+	
+	public int getVeinCount() 
+	{
+		return veinCount;
+	}
+	
+	public int getMinYLevel() 
+	{
+		return minYLevel;
+	}
+	
+	public int getMaxYLevel() 
+	{
+		return maxYLevel;
+	}
+}

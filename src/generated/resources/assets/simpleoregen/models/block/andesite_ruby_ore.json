@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/andesite_ruby_ore"
+    "all": "simpleoregen:block/ore/andesite/andesite_ruby_ore"
   }
 }

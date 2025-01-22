@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "simpleoregen:block/granite_coal_ore"
+    }
+  }
+}

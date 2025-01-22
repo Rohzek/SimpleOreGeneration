@@ -1,3 +1,6 @@
 {
-  "parent": "simpleoregen:block/raw_tin_block"
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleoregen:block/raw/raw_tin_block"
+  }
 }

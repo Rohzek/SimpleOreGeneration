@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/diorite_tin_ore"
+    "all": "simpleoregen:block/ore/diorite/diorite_tin_ore"
   }
 }

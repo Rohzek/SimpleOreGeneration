@@ -1,3 +1,6 @@
 {
-  "parent": "simpleoregen:block/andesite_uranium_ore"
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleoregen:block/ore/andesite/andesite_uranium_ore"
+  }
 }

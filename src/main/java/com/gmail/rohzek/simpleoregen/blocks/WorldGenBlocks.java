@@ -1,5 +1,7 @@
 package com.gmail.rohzek.simpleoregen.blocks;
 
+import com.gmail.rohzek.simpleoregen.blocks.flowertypes.CheshireRoseFlower;
+import com.gmail.rohzek.simpleoregen.blocks.flowertypes.ModFlower;
 import com.gmail.rohzek.simpleoregen.lib.DeferredRegistration;
 
 import net.minecraft.world.level.block.Block;
@@ -11,8 +13,8 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 public class WorldGenBlocks 
 {
 	public static final DeferredBlock<Block> CHESHIRE_ROSE_FLOWER = DeferredRegistration.registerBlock("cheshirerose", () -> new CheshireRoseFlower("cheshirerose"));
-	public static final DeferredBlock<Block> ROSE_FLOWER = DeferredRegistration.registerBlock("rose", () -> new ModFlowerBlock("rose"));
-	public static final DeferredBlock<Block> ROSE_CYAN_FLOWER = DeferredRegistration.registerBlock("rose_cyan", () -> new ModFlowerBlock("rose_cyan"));
+	public static final DeferredBlock<Block> ROSE_FLOWER = DeferredRegistration.registerBlock("rose", () -> new ModFlower("rose"));
+	public static final DeferredBlock<Block> ROSE_CYAN_FLOWER = DeferredRegistration.registerBlock("rose_cyan", () -> new ModFlower("rose_cyan"));
 	
 	//FlowerPotBlock(@Nullable java.util.function.Supplier<FlowerPotBlock> emptyPot, java.util.function.Supplier<? extends Block> p_53528_, BlockBehaviour.Properties properties) {
 	public static final DeferredBlock<Block> CHESHIRE_ROSE_FLOWER_POTTED = DeferredRegistration.registerBlock("cheshirerose_potted", 

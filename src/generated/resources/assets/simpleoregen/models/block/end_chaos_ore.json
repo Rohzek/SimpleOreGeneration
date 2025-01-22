@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/end_chaos_ore"
+    "all": "simpleoregen:block/ore/end/end_chaos_ore"
   }
 }

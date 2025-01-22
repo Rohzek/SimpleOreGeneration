@@ -38,8 +38,11 @@ public class OreGenItems
 	public static final DeferredItem<Item> ZINC_INGOT = DeferredRegistration.ITEMS.register("zinc_ingot", () -> new OreGenIngot("zinc_ingot"));
 	
 	public static final DeferredItem<Item> BRONZE_INGOT = DeferredRegistration.ITEMS.register("bronze_ingot", () -> new OreGenIngot("bronze_ingot"));
+	public static final DeferredItem<Item> STEEL_INGOT = DeferredRegistration.ITEMS.register("steel_ingot", () -> new OreGenIngot("steel_ingot"));
 	
 	// Nuggets
+	public static final DeferredItem<Item> COPPER_NUGGET = DeferredRegistration.ITEMS.register("copper_nugget", () -> new OreGenIngot("copper_nugget"));
+	
 	public static final DeferredItem<Item> BAUXITE_NUGGET = DeferredRegistration.ITEMS.register("bauxite_nugget", () -> new OreGenIngot("bauxite_nugget"));
 	public static final DeferredItem<Item> COBALT_NUGGET = DeferredRegistration.ITEMS.register("cobalt_nugget", () -> new OreGenIngot("cobalt_nugget"));
 	public static final DeferredItem<Item> IRIDIUM_NUGGET = DeferredRegistration.ITEMS.register("iridium_nugget", () -> new OreGenIngot("iridium_nugget"));
@@ -53,6 +56,7 @@ public class OreGenItems
 	public static final DeferredItem<Item> ZINC_NUGGET = DeferredRegistration.ITEMS.register("zinc_nugget", () -> new OreGenIngot("zinc_nugget"));
 	
 	public static final DeferredItem<Item> BRONZE_NUGGET = DeferredRegistration.ITEMS.register("bronze_nugget", () -> new OreGenIngot("bronze_nugget"));
+	public static final DeferredItem<Item> STEEL_NUGGET = DeferredRegistration.ITEMS.register("steel_nugget", () -> new OreGenIngot("steel_nugget"));
     
     public static void register() {}
 }

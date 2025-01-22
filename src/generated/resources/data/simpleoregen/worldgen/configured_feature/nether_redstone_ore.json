@@ -2,11 +2,14 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 9,
+    "size": 6,
     "targets": [
       {
         "state": {
-          "Name": "simpleoregen:nether_redstone_ore"
+          "Name": "simpleoregen:nether_redstone_ore",
+          "Properties": {
+            "lit": "true"
+          }
         },
         "target": {
           "block": "minecraft:netherrack",

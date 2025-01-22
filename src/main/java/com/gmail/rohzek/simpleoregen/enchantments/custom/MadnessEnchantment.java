@@ -6,35 +6,59 @@ import java.util.Random;
 import com.gmail.rohzek.simpleoregen.lib.LogHelper;
 import com.mojang.serialization.MapCodec;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.CatVariant;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantedItemInUse;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.phys.Vec3;
 
+@SuppressWarnings("resource")
 public record MadnessEnchantment() implements EnchantmentEntityEffect
 {
 	public static final MapCodec<MadnessEnchantment> CODEC = MapCodec.unit(MadnessEnchantment::new);
+	
 	@Override
 	public void apply(ServerLevel world, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin)
 	{
-		LogHelper.Debug("We're all mad here!");
 		Random rand = new Random();
 		var spawnloc = new BlockPos((int)entity.getX(), (int)entity.getY() + 1, (int)entity.getZ());
+		HolderLookup.Provider provider = Minecraft.getInstance().level.registryAccess();
+		HolderLookup.RegistryLookup<CatVariant> registry = provider.lookupOrThrow(Registries.CAT_VARIANT);
+		Player player = null;
+		
+		if(item.owner() instanceof Player) 
+		{
+			player = (Player)item.owner();
+		}
 		
 		if(enchantmentLevel == 1) 
 		{
-			EntityType.CAT.spawn(world, spawnloc, MobSpawnType.SPAWN_EGG);
-			/*
 			Cat cat = new Cat(EntityType.CAT, world);
-			cat.isOwnedBy(item.owner());
-			//cat.setVariant(CatVariant.RED);
-			cat.setCustomName(Component.literal("Cheshire"));
-			cat.spawnAtLocation(null);
-			*/
+			//CheshireCat cat = new CheshireCat(ModEntities.CHESHIRE_CAT.get(), world);
+			
+			if(player != null) 
+			{
+				cat.isOwnedBy(player);
+				cat.tame(player);
+			}
+			
+			cat.setVariant(registry.getOrThrow(CatVariant.ALL_BLACK));
+			cat.setCustomName(Component.translatable("cat.simpleoregen.cheshire_cat"));
+			cat.absMoveTo(entity.getX(), entity.getY() + 1, entity.getZ());
+			world.addFreshEntity(cat);
+			
+			LogHelper.Debug("I should be spawning a CheshireCat at: " + cat.blockPosition() + " which should be the same as blockpos: " + spawnloc);
+			
 		}
 		if(enchantmentLevel == 2) 
 		{

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/granite_tungsten_ore"
+    "all": "simpleoregen:block/ore/granite/granite_tungsten_ore"
   }
 }

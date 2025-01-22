@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/tungsten_nugget"
+    "layer0": "simpleoregen:item/nugget/tungsten_nugget"
   }
 }

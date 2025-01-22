@@ -1,8 +1,12 @@
-// 1.21.1	2025-01-17T08:37:50.7087518	Tags for minecraft:item mod id simpleoregen
+// 1.21.1	2025-01-21T20:10:45.6660595	Tags for minecraft:item mod id simpleoregen
 4eb0ddc071675939dbca4f942fc9abda8903b71e data/simpleoregen/tags/item/bauxite_ingots.json
 cb169589d1c3bdf963e4a741d04b912ae2325eed data/simpleoregen/tags/item/bauxite_nuggets.json
+7e05a5d216863f7f7fcf3786fd5529a3d0241687 data/simpleoregen/tags/item/bronze_ingots.json
+182b4b1d22d264bb1e6d911718c074911f58890d data/simpleoregen/tags/item/bronze_nuggets.json
+626dd1b62fbe57cc60e739ec16ce6c7a5f8e034d data/simpleoregen/tags/item/coals.json
 51389987a53a6fa7f0793983d150ad593fb9bc2e data/simpleoregen/tags/item/cobalt_ingots.json
 bc45569410c79fb51ca204a4019f1b19d73f7184 data/simpleoregen/tags/item/cobalt_nuggets.json
+009ba915e73af842472a17861f2a9745a33e351c data/simpleoregen/tags/item/copper_nuggets.json
 53486172ba93d29bf3c0128f3db0ad7737efe16e data/simpleoregen/tags/item/diamonds.json
 f834d3c4ff1ca1f89823413767e65495da2b1dec data/simpleoregen/tags/item/iridium_ingots.json
 44ca7fda7550b797e69ac4025b7fe4047a1768c1 data/simpleoregen/tags/item/iridium_nuggets.json
@@ -27,6 +31,8 @@ c77c7a8ee31cbfb17c4f9638feea2ee664dfefbf data/simpleoregen/tags/item/raw_tungste
 7046b39c08eac7e762c4a92d924b7f2e66e3c54c data/simpleoregen/tags/item/sapphires.json
 6152ee4598c5c671b29b22a0a38b138b1fdd45f7 data/simpleoregen/tags/item/silver_ingots.json
 067d0348005d9b6ab4eb811a026376dea7f01af9 data/simpleoregen/tags/item/silver_nuggets.json
+4726e8cf8d2c5468a0af288ac9a7ed071e48a4c0 data/simpleoregen/tags/item/steel_ingots.json
+75e44559592425324292de18dc5baec2155e39cc data/simpleoregen/tags/item/steel_nuggets.json
 be85c771218ce77344df5773e438efdb9e883cf1 data/simpleoregen/tags/item/tin_ingots.json
 04ae1fce7b30f0241600491e6de2bff808e241b4 data/simpleoregen/tags/item/tin_nuggets.json
 1ad920aa65e2706dabb6265f3b12546ab33e8936 data/simpleoregen/tags/item/tool_handles.json

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "simpleoregen:item/cobalt_ingot"
+    "layer0": "simpleoregen:item/ingot/cobalt_ingot"
   }
 }

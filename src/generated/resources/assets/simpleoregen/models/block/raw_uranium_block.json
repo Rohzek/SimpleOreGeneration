@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "simpleoregen:block/raw_uranium_block"
+    "all": "simpleoregen:block/raw/raw_uranium_block"
   }
 }

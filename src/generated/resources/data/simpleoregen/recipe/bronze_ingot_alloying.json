@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:ingots/copper"
+    },
+    {
+      "tag": "c:ingots/copper"
+    },
+    {
+      "tag": "c:ingots/copper"
+    },
+    {
+      "tag": "simpleoregen:tin_ingots"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "simpleoregen:bronze_ingot"
+  }
+}
