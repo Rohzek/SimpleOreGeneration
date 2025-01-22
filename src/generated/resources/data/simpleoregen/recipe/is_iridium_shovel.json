@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "simpleoregen:rods/tool_handle"
+    },
+    "M": {
+      "tag": "simpleoregen:ingots/iridium"
+    }
+  },
+  "pattern": [
+    "M",
+    "H",
+    "H"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:iridium_shovel"
+  }
+}

@@ -3,7 +3,7 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.25,
-  "group": "heart_diamond",
+  "group": "cyan_dye",
   "ingredient": {
     "item": "simpleoregen:rose_cyan"
   },

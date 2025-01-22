@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "simpleoregen:rods/tool_handle"
+    },
+    "M": {
+      "tag": "c:gems/emerald"
+    }
+  },
+  "pattern": [
+    "M",
+    "M",
+    "H"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:emerald_sword"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:ingots/platinum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:is_platinum_paxel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:is_platinum_paxel"
+    ]
+  }
+}
