@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:sapphire_ore",
+    "simpleoregen:deepslate_sapphire_ore",
+    "simpleoregen:andesite_sapphire_ore",
+    "simpleoregen:diorite_sapphire_ore",
+    "simpleoregen:granite_sapphire_ore",
+    "simpleoregen:sandstone_sapphire_ore",
+    "simpleoregen:sand_sapphire_ore",
+    "simpleoregen:gravel_sapphire_ore",
+    "simpleoregen:nether_sapphire_ore",
+    "simpleoregen:end_sapphire_ore"
+  ]
+}

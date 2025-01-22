@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:tin_ore",
+    "simpleoregen:deepslate_tin_ore",
+    "simpleoregen:andesite_tin_ore",
+    "simpleoregen:diorite_tin_ore",
+    "simpleoregen:granite_tin_ore",
+    "simpleoregen:sandstone_tin_ore",
+    "simpleoregen:sand_tin_ore",
+    "simpleoregen:gravel_tin_ore",
+    "simpleoregen:nether_tin_ore",
+    "simpleoregen:end_tin_ore"
+  ]
+}

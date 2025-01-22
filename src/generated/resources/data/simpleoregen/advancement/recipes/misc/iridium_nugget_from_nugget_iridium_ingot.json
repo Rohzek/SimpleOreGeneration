@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:iridium_ingots"
+            "items": "#simpleoregen:ingots/iridium"
           }
         ]
       },

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:raw_iridiums"
+            "items": "#simpleoregen:raw_materials/iridium"
           }
         ]
       },

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:raw_silvers"
+            "items": "#simpleoregen:raw_materials/silver"
           }
         ]
       },

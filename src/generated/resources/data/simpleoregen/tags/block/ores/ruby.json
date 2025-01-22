@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:ruby_ore",
+    "simpleoregen:deepslate_ruby_ore",
+    "simpleoregen:andesite_ruby_ore",
+    "simpleoregen:diorite_ruby_ore",
+    "simpleoregen:granite_ruby_ore",
+    "simpleoregen:sandstone_ruby_ore",
+    "simpleoregen:sand_ruby_ore",
+    "simpleoregen:gravel_ruby_ore",
+    "simpleoregen:nether_ruby_ore",
+    "simpleoregen:end_ruby_ore"
+  ]
+}

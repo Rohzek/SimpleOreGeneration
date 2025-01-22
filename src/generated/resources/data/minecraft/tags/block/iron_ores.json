@@ -1,5 +1,21 @@
 {
   "values": [
+    "simpleoregen:iron_ore",
+    "simpleoregen:iron_nugget_ore",
+    "simpleoregen:deepslate_iron_ore",
+    "simpleoregen:deepslate_iron_nugget_ore",
+    "simpleoregen:andesite_iron_ore",
+    "simpleoregen:andesite_iron_nugget_ore",
+    "simpleoregen:diorite_iron_ore",
+    "simpleoregen:diorite_iron_nugget_ore",
+    "simpleoregen:granite_iron_ore",
+    "simpleoregen:granite_iron_nugget_ore",
+    "simpleoregen:sandstone_iron_ore",
+    "simpleoregen:sandstone_iron_nugget_ore",
+    "simpleoregen:sand_iron_ore",
+    "simpleoregen:sand_iron_nugget_ore",
+    "simpleoregen:gravel_iron_ore",
+    "simpleoregen:gravel_iron_nugget_ore",
     "simpleoregen:nether_iron_ore",
     "simpleoregen:end_iron_ore"
   ]

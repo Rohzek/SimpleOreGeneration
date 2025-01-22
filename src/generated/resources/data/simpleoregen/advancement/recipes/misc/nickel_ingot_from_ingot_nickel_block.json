@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:nickel_ingots"
+            "items": "#simpleoregen:ingots/nickel"
           }
         ]
       },

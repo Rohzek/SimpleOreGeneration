@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:raw_tins"
+            "items": "#simpleoregen:raw_materials/tin"
           }
         ]
       },

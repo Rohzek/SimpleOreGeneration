@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:diamonds"
+            "items": "#simpleoregen:gems/diamond"
           }
         ]
       },

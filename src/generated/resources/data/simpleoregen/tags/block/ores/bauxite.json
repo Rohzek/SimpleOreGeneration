@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:bauxite_ore",
+    "simpleoregen:deepslate_bauxite_ore",
+    "simpleoregen:andesite_bauxite_ore",
+    "simpleoregen:diorite_bauxite_ore",
+    "simpleoregen:granite_bauxite_ore",
+    "simpleoregen:sandstone_bauxite_ore",
+    "simpleoregen:sand_bauxite_ore",
+    "simpleoregen:gravel_bauxite_ore",
+    "simpleoregen:nether_bauxite_ore",
+    "simpleoregen:end_bauxite_ore"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:tungsten_ore",
+    "simpleoregen:deepslate_tungsten_ore",
+    "simpleoregen:andesite_tungsten_ore",
+    "simpleoregen:diorite_tungsten_ore",
+    "simpleoregen:granite_tungsten_ore",
+    "simpleoregen:sandstone_tungsten_ore",
+    "simpleoregen:sand_tungsten_ore",
+    "simpleoregen:gravel_tungsten_ore",
+    "simpleoregen:nether_tungsten_ore",
+    "simpleoregen:end_tungsten_ore"
+  ]
+}

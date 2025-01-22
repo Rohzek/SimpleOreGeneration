@@ -7,6 +7,7 @@ import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.enchantments.ModEnchantmentEffects;
 import com.gmail.rohzek.simpleoregen.entity.ModEntities;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
+import com.gmail.rohzek.simpleoregen.items.OreGenTools;
 import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
 import com.gmail.rohzek.simpleoregen.lib.DeferredRegistration;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
@@ -50,6 +51,7 @@ public class SimpleOreGeneration
 		// Register items
 		DeferredRegistration.register(modEventBus);
 		OreGenItems.register();
+		OreGenTools.register();
 		OreGenBlocks.register();
 		WorldGenBlocks.register();
 		ModEnchantmentEffects.register();

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:lead_ingots"
+            "items": "#simpleoregen:ingots/lead"
           }
         ]
       },

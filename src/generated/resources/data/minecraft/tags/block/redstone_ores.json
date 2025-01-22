@@ -1,5 +1,13 @@
 {
   "values": [
+    "simpleoregen:redstone_ore",
+    "simpleoregen:deepslate_redstone_ore",
+    "simpleoregen:andesite_redstone_ore",
+    "simpleoregen:diorite_redstone_ore",
+    "simpleoregen:granite_redstone_ore",
+    "simpleoregen:sandstone_redstone_ore",
+    "simpleoregen:sand_redstone_ore",
+    "simpleoregen:gravel_redstone_ore",
     "simpleoregen:nether_redstone_ore",
     "simpleoregen:end_redstone_ore"
   ]

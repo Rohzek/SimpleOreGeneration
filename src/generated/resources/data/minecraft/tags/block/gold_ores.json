@@ -1,5 +1,21 @@
 {
   "values": [
+    "simpleoregen:gold_ore",
+    "simpleoregen:gold_nugget_ore",
+    "simpleoregen:deepslate_gold_ore",
+    "simpleoregen:deepslate_gold_nugget_ore",
+    "simpleoregen:andesite_gold_ore",
+    "simpleoregen:andesite_gold_nugget_ore",
+    "simpleoregen:diorite_gold_ore",
+    "simpleoregen:diorite_gold_nugget_ore",
+    "simpleoregen:granite_gold_ore",
+    "simpleoregen:granite_gold_nugget_ore",
+    "simpleoregen:sandstone_gold_ore",
+    "simpleoregen:sandstone_gold_nugget_ore",
+    "simpleoregen:sand_gold_ore",
+    "simpleoregen:sand_gold_nugget_ore",
+    "simpleoregen:gravel_gold_ore",
+    "simpleoregen:gravel_gold_nugget_ore",
     "simpleoregen:nether_gold_ore",
     "simpleoregen:end_gold_ore"
   ]

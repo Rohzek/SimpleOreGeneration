@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:uranium_ore",
+    "simpleoregen:deepslate_uranium_ore",
+    "simpleoregen:andesite_uranium_ore",
+    "simpleoregen:diorite_uranium_ore",
+    "simpleoregen:granite_uranium_ore",
+    "simpleoregen:sandstone_uranium_ore",
+    "simpleoregen:sand_uranium_ore",
+    "simpleoregen:gravel_uranium_ore",
+    "simpleoregen:nether_uranium_ore",
+    "simpleoregen:end_uranium_ore"
+  ]
+}

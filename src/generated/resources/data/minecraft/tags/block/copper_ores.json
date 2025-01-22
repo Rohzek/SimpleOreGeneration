@@ -1,5 +1,21 @@
 {
   "values": [
+    "simpleoregen:copper_ore",
+    "simpleoregen:copper_nugget_ore",
+    "simpleoregen:deepslate_copper_ore",
+    "simpleoregen:deepslate_copper_nugget_ore",
+    "simpleoregen:andesite_copper_ore",
+    "simpleoregen:andesite_copper_nugget_ore",
+    "simpleoregen:diorite_copper_ore",
+    "simpleoregen:diorite_copper_nugget_ore",
+    "simpleoregen:granite_copper_ore",
+    "simpleoregen:granite_copper_nugget_ore",
+    "simpleoregen:sandstone_copper_ore",
+    "simpleoregen:sandstone_copper_nugget_ore",
+    "simpleoregen:sand_copper_ore",
+    "simpleoregen:sand_copper_nugget_ore",
+    "simpleoregen:gravel_copper_ore",
+    "simpleoregen:gravel_copper_nugget_ore",
     "simpleoregen:nether_copper_ore",
     "simpleoregen:end_copper_ore"
   ]

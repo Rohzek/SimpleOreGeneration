@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:bauxite_ingots"
+            "items": "#simpleoregen:ingots/bauxite"
           }
         ]
       },

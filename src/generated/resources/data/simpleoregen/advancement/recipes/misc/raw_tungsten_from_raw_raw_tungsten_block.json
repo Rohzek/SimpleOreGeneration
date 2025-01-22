@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:raw_tungstens"
+            "items": "#simpleoregen:raw_materials/tungsten"
           }
         ]
       },

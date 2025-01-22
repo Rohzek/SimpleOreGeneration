@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:cobalt_ore",
+    "simpleoregen:deepslate_cobalt_ore",
+    "simpleoregen:andesite_cobalt_ore",
+    "simpleoregen:diorite_cobalt_ore",
+    "simpleoregen:granite_cobalt_ore",
+    "simpleoregen:sandstone_cobalt_ore",
+    "simpleoregen:sand_cobalt_ore",
+    "simpleoregen:gravel_cobalt_ore",
+    "simpleoregen:nether_cobalt_ore",
+    "simpleoregen:end_cobalt_ore"
+  ]
+}

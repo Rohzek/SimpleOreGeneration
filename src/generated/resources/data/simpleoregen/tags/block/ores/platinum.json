@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:platinum_ore",
+    "simpleoregen:deepslate_platinum_ore",
+    "simpleoregen:andesite_platinum_ore",
+    "simpleoregen:diorite_platinum_ore",
+    "simpleoregen:granite_platinum_ore",
+    "simpleoregen:sandstone_platinum_ore",
+    "simpleoregen:sand_platinum_ore",
+    "simpleoregen:gravel_platinum_ore",
+    "simpleoregen:nether_platinum_ore",
+    "simpleoregen:end_platinum_ore"
+  ]
+}

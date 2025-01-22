@@ -1,5 +1,13 @@
 {
   "values": [
+    "simpleoregen:coal_ore",
+    "simpleoregen:deepslate_coal_ore",
+    "simpleoregen:andesite_coal_ore",
+    "simpleoregen:diorite_coal_ore",
+    "simpleoregen:granite_coal_ore",
+    "simpleoregen:sandstone_coal_ore",
+    "simpleoregen:sand_coal_ore",
+    "simpleoregen:gravel_coal_ore",
     "simpleoregen:nether_coal_ore",
     "simpleoregen:end_coal_ore"
   ]

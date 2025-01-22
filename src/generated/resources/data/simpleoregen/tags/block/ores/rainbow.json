@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:chaos_ore",
+    "simpleoregen:deepslate_chaos_ore",
+    "simpleoregen:andesite_chaos_ore",
+    "simpleoregen:diorite_chaos_ore",
+    "simpleoregen:granite_chaos_ore",
+    "simpleoregen:sandstone_chaos_ore",
+    "simpleoregen:sand_chaos_ore",
+    "simpleoregen:gravel_chaos_ore",
+    "simpleoregen:nether_chaos_ore",
+    "simpleoregen:end_chaos_ore"
+  ]
+}

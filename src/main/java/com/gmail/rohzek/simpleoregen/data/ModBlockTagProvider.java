@@ -1246,5 +1246,10 @@ public class ModBlockTagProvider extends BlockTagsProvider
 				.add(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get())
 				.add(WorldGenBlocks.ROSE_FLOWER.get())
 				.add(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
+        
+        tag(OreGenTags.Blocks.PAXEL_MINEABLE)
+	        .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+	        .addTag(BlockTags.MINEABLE_WITH_AXE)
+	        .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
     }
 }

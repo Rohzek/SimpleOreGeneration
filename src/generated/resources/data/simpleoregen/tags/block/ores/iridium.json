@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:iridium_ore",
+    "simpleoregen:deepslate_iridium_ore",
+    "simpleoregen:andesite_iridium_ore",
+    "simpleoregen:diorite_iridium_ore",
+    "simpleoregen:granite_iridium_ore",
+    "simpleoregen:sandstone_iridium_ore",
+    "simpleoregen:sand_iridium_ore",
+    "simpleoregen:gravel_iridium_ore",
+    "simpleoregen:nether_iridium_ore",
+    "simpleoregen:end_iridium_ore"
+  ]
+}

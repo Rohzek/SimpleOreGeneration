@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "simpleoregen:coals"
+      "tag": "simpleoregen:materials/coal"
     },
     {
-      "tag": "simpleoregen:coals"
+      "tag": "simpleoregen:materials/coal"
     },
     {
-      "tag": "simpleoregen:coals"
+      "tag": "simpleoregen:materials/coal"
     },
     {
       "tag": "c:ingots/iron"

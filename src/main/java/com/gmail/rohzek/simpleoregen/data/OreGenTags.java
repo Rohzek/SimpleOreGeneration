@@ -68,6 +68,8 @@ public class OreGenTags
 		
 		public static final TagKey<Block> FLOWERS = createTag("flowers");
 		
+		public static final TagKey<Block> PAXEL_MINEABLE = createTag("mineable/paxel");
+		
 		private static TagKey<Block> createTag(String name)
 		{
 			return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));

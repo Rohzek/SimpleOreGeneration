@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:rubies"
+            "items": "#simpleoregen:gems/ruby"
           }
         ]
       },

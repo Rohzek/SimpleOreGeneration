@@ -1,5 +1,13 @@
 {
   "values": [
+    "simpleoregen:emerald_ore",
+    "simpleoregen:deepslate_emerald_ore",
+    "simpleoregen:andesite_emerald_ore",
+    "simpleoregen:diorite_emerald_ore",
+    "simpleoregen:granite_emerald_ore",
+    "simpleoregen:sandstone_emerald_ore",
+    "simpleoregen:sand_emerald_ore",
+    "simpleoregen:gravel_emerald_ore",
     "simpleoregen:nether_emerald_ore",
     "simpleoregen:end_emerald_ore"
   ]

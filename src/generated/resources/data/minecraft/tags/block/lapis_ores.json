@@ -1,5 +1,13 @@
 {
   "values": [
+    "simpleoregen:lapis_ore",
+    "simpleoregen:deepslate_lapis_ore",
+    "simpleoregen:andesite_lapis_ore",
+    "simpleoregen:diorite_lapis_ore",
+    "simpleoregen:granite_lapis_ore",
+    "simpleoregen:sandstone_lapis_ore",
+    "simpleoregen:sand_lapis_ore",
+    "simpleoregen:gravel_lapis_ore",
     "simpleoregen:nether_lapis_ore",
     "simpleoregen:end_lapis_ore"
   ]

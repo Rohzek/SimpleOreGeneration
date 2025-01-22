@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "M": {
-      "tag": "simpleoregen:diamonds"
+      "tag": "simpleoregen:gems/diamond"
     }
   },
   "pattern": [

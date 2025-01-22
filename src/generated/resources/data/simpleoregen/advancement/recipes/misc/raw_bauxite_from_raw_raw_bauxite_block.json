@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:raw_bauxites"
+            "items": "#simpleoregen:raw_materials/bauxite"
           }
         ]
       },

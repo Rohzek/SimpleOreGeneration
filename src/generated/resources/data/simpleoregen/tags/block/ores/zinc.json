@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:zinc_ore",
+    "simpleoregen:deepslate_zinc_ore",
+    "simpleoregen:andesite_zinc_ore",
+    "simpleoregen:diorite_zinc_ore",
+    "simpleoregen:granite_zinc_ore",
+    "simpleoregen:sandstone_zinc_ore",
+    "simpleoregen:sand_zinc_ore",
+    "simpleoregen:gravel_zinc_ore",
+    "simpleoregen:nether_zinc_ore",
+    "simpleoregen:end_zinc_ore"
+  ]
+}

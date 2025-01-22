@@ -20,6 +20,7 @@
     "simpleoregen:nether_tin_ore",
     "simpleoregen:nether_tungsten_ore",
     "simpleoregen:nether_uranium_ore",
-    "simpleoregen:nether_zinc_ore"
+    "simpleoregen:nether_zinc_ore",
+    "simpleoregen:nether_chaos_ore"
   ]
 }

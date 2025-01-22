@@ -1,5 +1,13 @@
 {
   "values": [
+    "simpleoregen:diamond_ore",
+    "simpleoregen:deepslate_diamond_ore",
+    "simpleoregen:andesite_diamond_ore",
+    "simpleoregen:diorite_diamond_ore",
+    "simpleoregen:granite_diamond_ore",
+    "simpleoregen:sandstone_diamond_ore",
+    "simpleoregen:sand_diamond_ore",
+    "simpleoregen:gravel_diamond_ore",
     "simpleoregen:nether_diamond_ore",
     "simpleoregen:end_diamond_ore"
   ]

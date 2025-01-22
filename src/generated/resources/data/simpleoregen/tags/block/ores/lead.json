@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:lead_ore",
+    "simpleoregen:deepslate_lead_ore",
+    "simpleoregen:andesite_lead_ore",
+    "simpleoregen:diorite_lead_ore",
+    "simpleoregen:granite_lead_ore",
+    "simpleoregen:sandstone_lead_ore",
+    "simpleoregen:sand_lead_ore",
+    "simpleoregen:gravel_lead_ore",
+    "simpleoregen:nether_lead_ore",
+    "simpleoregen:end_lead_ore"
+  ]
+}

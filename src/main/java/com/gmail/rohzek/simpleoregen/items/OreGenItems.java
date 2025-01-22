@@ -1,5 +1,8 @@
 package com.gmail.rohzek.simpleoregen.items;
 
+import com.gmail.rohzek.simpleoregen.items.itemtypes.OreGenGem;
+import com.gmail.rohzek.simpleoregen.items.itemtypes.OreGenIngot;
+import com.gmail.rohzek.simpleoregen.items.itemtypes.OreGenRawOre;
 import com.gmail.rohzek.simpleoregen.lib.DeferredRegistration;
 
 import net.minecraft.world.item.Item;
@@ -57,6 +60,16 @@ public class OreGenItems
 	
 	public static final DeferredItem<Item> BRONZE_NUGGET = DeferredRegistration.ITEMS.register("bronze_nugget", () -> new OreGenIngot("bronze_nugget"));
 	public static final DeferredItem<Item> STEEL_NUGGET = DeferredRegistration.ITEMS.register("steel_nugget", () -> new OreGenIngot("steel_nugget"));
+	
+	/*
+	 * public static final DeferredItem<Item> copper_bucket = ITEMS.register("copper_bucket",
+            () -> new UniversalBucketItem(
+                    new UniversalBucketItem.Properties()
+                    .upperCrackingTemperature(SimpleOresConfig.serverCopperBucketMeltTemperature::get)
+                    .burningTemperature(SimpleOresConfig.serverCopperBucketFireTemperature::get)
+                    .milking(SimpleOresConfig.serverEnableCopperBucketMilking::get)
+                    ));
+	 */
     
     public static void register() {}
 }

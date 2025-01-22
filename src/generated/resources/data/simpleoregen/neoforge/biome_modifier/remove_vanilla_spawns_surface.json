@@ -1,6 +1,6 @@
 {
   "type": "neoforge:remove_features",
-  "biomes": "#simpleoregen:all_biomes",
+  "biomes": "#simpleoregen:biomes/all",
   "features": [
     "minecraft:ore_coal_lower",
     "minecraft:ore_coal_upper",
@@ -25,8 +25,8 @@
     "minecraft:ore_redstone_lower"
   ],
   "steps": [
-    "underground_ores",
+    "underground_structures",
     "local_modifications",
-    "underground_structures"
+    "underground_ores"
   ]
 }

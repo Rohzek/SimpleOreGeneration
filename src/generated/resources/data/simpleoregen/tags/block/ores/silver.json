@@ -1,0 +1,14 @@
+{
+  "values": [
+    "simpleoregen:silver_ore",
+    "simpleoregen:deepslate_silver_ore",
+    "simpleoregen:andesite_silver_ore",
+    "simpleoregen:diorite_silver_ore",
+    "simpleoregen:granite_silver_ore",
+    "simpleoregen:sandstone_silver_ore",
+    "simpleoregen:sand_silver_ore",
+    "simpleoregen:gravel_silver_ore",
+    "simpleoregen:nether_silver_ore",
+    "simpleoregen:end_silver_ore"
+  ]
+}

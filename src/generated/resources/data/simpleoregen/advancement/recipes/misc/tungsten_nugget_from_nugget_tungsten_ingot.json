@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:tungsten_ingots"
+            "items": "#simpleoregen:ingots/tungsten"
           }
         ]
       },

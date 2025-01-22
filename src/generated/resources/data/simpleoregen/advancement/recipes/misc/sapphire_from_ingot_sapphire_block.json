@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:sapphires"
+            "items": "#simpleoregen:gems/sapphire"
           }
         ]
       },

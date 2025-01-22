@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "H": {
-      "tag": "simpleoregen:tool_handles"
+      "tag": "simpleoregen:rods/tool_handle"
     },
     "M": {
-      "tag": "simpleoregen:diamonds"
+      "tag": "simpleoregen:gems/diamond"
     }
   },
   "pattern": [

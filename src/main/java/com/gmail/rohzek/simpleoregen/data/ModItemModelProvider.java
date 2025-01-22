@@ -52,6 +52,16 @@ public class ModItemModelProvider extends ItemModelProvider
 		
 		if(item.toString().contains("axe")) 
 		{
+			if(item.toString().contains("pick")) 
+			{
+				return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/pickaxe/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+			}
+			
+			if(item.toString().contains("pax")) 
+			{
+				return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/paxel/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+			}
+			
 			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/axe/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 		}
 		
@@ -60,14 +70,14 @@ public class ModItemModelProvider extends ItemModelProvider
 			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/hoe/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 		}
 		
-		if(item.toString().contains("pickaxe")) 
+		if(item.toString().contains("shovel")) 
 		{
-			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/pickaxe/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/shovel/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 		}
 		
 		if(item.toString().contains("shovel")) 
 		{
-			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/shovel/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+			return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/tool/paxel/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 		}
 		
 		if(item.toString().contains("sword")) 

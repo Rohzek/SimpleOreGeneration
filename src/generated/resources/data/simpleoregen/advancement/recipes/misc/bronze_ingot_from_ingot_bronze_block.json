@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#simpleoregen:bronze_ingots"
+            "items": "#simpleoregen:ingots/bronze"
           }
         ]
       },

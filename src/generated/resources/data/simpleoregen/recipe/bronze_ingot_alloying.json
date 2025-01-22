@@ -12,7 +12,7 @@
       "tag": "c:ingots/copper"
     },
     {
-      "tag": "simpleoregen:tin_ingots"
+      "tag": "simpleoregen:ingots/tin"
     }
   ],
   "result": {
