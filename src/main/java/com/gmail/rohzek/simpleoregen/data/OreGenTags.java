@@ -10,43 +10,66 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
 
 public class OreGenTags 
 {
 	public static class Blocks
 	{
 		// Define tags for blocks
-		public static final TagKey<Block> BAUXITE_ORES = createTag("ores_bauxite");
-		public static final TagKey<Block> ALUMINUM_ORES = createTag("_bauxite");
-		public static final TagKey<Block> ALUMINIUM_ORES = createTag("_bauxite");
+		public static final TagKey<Block> BAUXITE_ORES = createTag("ores/bauxite");
+		public static final TagKey<Block> ALUMINUM_ORES = createTag("ores/aluminum");
+		public static final TagKey<Block> ALUMINIUM_ORES = createTag("ores/aluminium");
+		public static final TagKey<Block> COBALT_ORES = createTag("ores/cobalt");
+		public static final TagKey<Block> IRIDIUM_ORES = createTag("ores/iridium");
+		public static final TagKey<Block> LEAD_ORES = createTag("ores/lead");
+		public static final TagKey<Block> NICKEL_ORES = createTag("ores/nickel");
+		public static final TagKey<Block> PLATINUM_ORES = createTag("ores/platinum");
+		public static final TagKey<Block> RUBY_ORES = createTag("ores/ruby");
+		public static final TagKey<Block> SAPPHIRE_ORES = createTag("ores/sapphire");
+		public static final TagKey<Block> SILVER_ORES = createTag("ores/silver");
+		public static final TagKey<Block> TIN_ORES = createTag("ores/tin");
+		public static final TagKey<Block> TUNGSTEN_ORES = createTag("ores/tungsten");
+		public static final TagKey<Block> URANIUM_ORES = createTag("ores/uranium");
+		public static final TagKey<Block> ZINC_ORES = createTag("ores/zinc");
+		public static final TagKey<Block> CHAOS_ORES = createTag("ores/chaos");
+		public static final TagKey<Block> RAINBOW_ORES = createTag("ores/rainbow");
+		public static final TagKey<Block> RANDOM_ORES = createTag("ores/random");
 		
-		public static final TagKey<Block> BRONZE_BLOCKS = createTag("bronze_blocks");
-		public static final TagKey<Block> STEEL_BLOCKS = createTag("steel_blocks");
+		public static final TagKey<Block> BAUXITE_BLOCKS = createTag("storage_blocks/bauxite");
+		public static final TagKey<Block> ALUMINUM_BLOCKS = createTag("storage_blocks/aluminum");
+		public static final TagKey<Block> ALUMINIUM_BLOCKS = createTag("storage_blocks/aluminium");
+		public static final TagKey<Block> COBALT_BLOCKS = createTag("storage_blocks/cobalt");
+		public static final TagKey<Block> IRIDIUM_BLOCKS = createTag("storage_blocks/iridium");
+		public static final TagKey<Block> LEAD_BLOCKS = createTag("storage_blocks/lead");
+		public static final TagKey<Block> NICKEL_BLOCKS = createTag("storage_blocks/nickel");
+		public static final TagKey<Block> PLATINUM_BLOCKS = createTag("storage_blocks/platinum");
+		public static final TagKey<Block> RUBY_BLOCKS = createTag("storage_blocks/ruby");
+		public static final TagKey<Block> SAPPHIRE_BLOCKS = createTag("storage_blocks/sapphire");
+		public static final TagKey<Block> SILVER_BLOCKS = createTag("storage_blocks/silver");
+		public static final TagKey<Block> STEEL_BLOCKS = createTag("storage_blocks/steel");
+		public static final TagKey<Block> TIN_BLOCKS = createTag("storage_blocks/tin");
+		public static final TagKey<Block> TUNGSTEN_BLOCKS = createTag("storage_blocks/tungsten");
+		public static final TagKey<Block> URANIUM_BLOCKS = createTag("storage_blocks/uranium");
+		public static final TagKey<Block> ZINC_BLOCKS = createTag("storage_blocks/zinc");
+		
+		public static final TagKey<Block> BAUXITE_RAW_BLOCKS = createTag("storage_blocks/raw_bauxite");
+		public static final TagKey<Block> ALUMINUM_RAW_BLOCKS = createTag("storage_blocks/raw_aluminum");
+		public static final TagKey<Block> ALUMINIUM_RAW_BLOCKS = createTag("storage_blocks/raw_aluminium");
+		public static final TagKey<Block> COBALT_RAW_BLOCKS = createTag("storage_blocks/raw_cobalt");
+		public static final TagKey<Block> IRIDIUM_RAW_BLOCKS = createTag("storage_blocks/raw_iridium");
+		public static final TagKey<Block> LEAD_RAW_BLOCKS = createTag("storage_blocks/raw_lead");
+		public static final TagKey<Block> NICKEL_RAW_BLOCKS = createTag("storage_blocks/raw_nickel");
+		public static final TagKey<Block> PLATINUM_RAW_BLOCKS = createTag("storage_blocks/raw_platinum");
+		public static final TagKey<Block> SILVER_RAW_BLOCKS = createTag("storage_blocks/raw_silver");
+		public static final TagKey<Block> TIN_RAW_BLOCKS = createTag("storage_blocks/raw_tin");
+		public static final TagKey<Block> TUNGSTEN_RAW_BLOCKS = createTag("storage_blocks/raw_tungsten");
+		public static final TagKey<Block> URANIUM_RAW_BLOCKS = createTag("storage_blocks/raw_uranium");
+		public static final TagKey<Block> ZINC_RAW_BLOCKS = createTag("storage_blocks/raw_zinc");
+		
+		public static final TagKey<Block> FLOWERS = createTag("flowers");
 		
 		private static TagKey<Block> createTag(String name)
 		{
-			//Tags.Items.STORAGE_BLOCKS_IRON
-			/*
-			Tags.Blocks.ORES_LAPIS
-			public static final TagKey<Block> ORE_RATES_SPARSE = tag("ore_rates/sparse");
-	        public static final TagKey<Block> ORES = tag("ores");
-	        public static final TagKey<Block> ORES_COAL = tag("ores/coal");
-	        public static final TagKey<Block> ORES_COPPER = tag("ores/copper");
-	        public static final TagKey<Block> ORES_DIAMOND = tag("ores/diamond");
-	        public static final TagKey<Block> ORES_EMERALD = tag("ores/emerald");
-	        public static final TagKey<Block> ORES_GOLD = tag("ores/gold");
-	        public static final TagKey<Block> ORES_IRON = tag("ores/iron");
-	        public static final TagKey<Block> ORES_LAPIS = tag("ores/lapis");
-	        public static final TagKey<Block> ORES_NETHERITE_SCRAP = tag("ores/netherite_scrap");
-	        public static final TagKey<Block> ORES_QUARTZ = tag("ores/quartz");
-	        public static final TagKey<Block> ORES_REDSTONE = tag("ores/redstone");
-			
-			public static final TagKey<Item> RAW_MATERIALS = tag("raw_materials");
-	        public static final TagKey<Item> RAW_MATERIALS_COPPER = tag("raw_materials/copper");
-	        public static final TagKey<Item> RAW_MATERIALS_GOLD = tag("raw_materials/gold");
-	        public static final TagKey<Item> RAW_MATERIALS_IRON = tag("raw_materials/iron");*/
-			//public static final TagKey<Item> GEMS_DIAMOND = tag("gems/diamond");
 			return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));
 		}
 	}
@@ -54,59 +77,59 @@ public class OreGenTags
 	public static class Items
 	{
 		// Define tags for items
-		public static final TagKey<Item> COALS = createTag("coals");
-		public static final TagKey<Item> DIAMONDS = createTag("diamonds");
-		public static final TagKey<Item> RUBIES = createTag("rubies");
-		public static final TagKey<Item> SAPPHIRES = createTag("sapphires");
+		public static final TagKey<Item> COALS = createTag("materials/coal");
+		public static final TagKey<Item> DIAMONDS = createTag("gems/diamond");
+		public static final TagKey<Item> RUBIES = createTag("gems/ruby");
+		public static final TagKey<Item> SAPPHIRES = createTag("gems/sapphire");
 		
-		public static final TagKey<Item> RAW_BAUXITES = createTag("raw_bauxites");
-		public static final TagKey<Item> RAW_ALUMINUMS = createTag("raw_bauxites");
-		public static final TagKey<Item> RAW_ALUMINIUMS = createTag("raw_bauxites");
-		public static final TagKey<Item> RAW_COBALTS = createTag("raw_cobalts");
-		public static final TagKey<Item> RAW_IRIDIUMS = createTag("raw_iridiums");
-		public static final TagKey<Item> RAW_LEADS = createTag("raw_leads");
-		public static final TagKey<Item> RAW_NICKELS = createTag("raw_nickels");
-		public static final TagKey<Item> RAW_PLATINUMS = createTag("raw_platinums");
-		public static final TagKey<Item> RAW_SILVERS = createTag("raw_silvers");
-		public static final TagKey<Item> RAW_TINS = createTag("raw_tins");
-		public static final TagKey<Item> RAW_TUNGSTENS = createTag("raw_tungstens");
-		public static final TagKey<Item> RAW_URANIUMS = createTag("raw_uraniums");
-		public static final TagKey<Item> RAW_ZINCS = createTag("raw_zincs");
+		public static final TagKey<Item> RAW_BAUXITES = createTag("raw_materials/bauxite");
+		public static final TagKey<Item> RAW_ALUMINUMS = createTag("raw_materials/aluminum");
+		public static final TagKey<Item> RAW_ALUMINIUMS = createTag("raw_materials/aluminium");
+		public static final TagKey<Item> RAW_COBALTS = createTag("raw_materials/cobalt");
+		public static final TagKey<Item> RAW_IRIDIUMS = createTag("raw_materials/iridium");
+		public static final TagKey<Item> RAW_LEADS = createTag("raw_materials/lead");
+		public static final TagKey<Item> RAW_NICKELS = createTag("raw_materials/nickel");
+		public static final TagKey<Item> RAW_PLATINUMS = createTag("raw_materials/platinum");
+		public static final TagKey<Item> RAW_SILVERS = createTag("raw_materials/silver");
+		public static final TagKey<Item> RAW_TINS = createTag("raw_materials/tin");
+		public static final TagKey<Item> RAW_TUNGSTENS = createTag("raw_materials/tungsten");
+		public static final TagKey<Item> RAW_URANIUMS = createTag("raw_materials/uranium");
+		public static final TagKey<Item> RAW_ZINCS = createTag("raw_materials/zinc");
 		
-		public static final TagKey<Item> BAUXITE_INGOTS = createTag("bauxite_ingots");
-		public static final TagKey<Item> ALUMINUM_INGOTS = createTag("bauxite_ingots");
-		public static final TagKey<Item> ALUMINIUM_INGOTS = createTag("bauxite_ingots");
-		public static final TagKey<Item> BRONZE_INGOTS = createTag("bronze_ingots");
-		public static final TagKey<Item> COBALT_INGOTS = createTag("cobalt_ingots");
-		public static final TagKey<Item> IRIDIUM_INGOTS = createTag("iridium_ingots");
-		public static final TagKey<Item> LEAD_INGOTS = createTag("lead_ingots");
-		public static final TagKey<Item> NICKEL_INGOTS = createTag("nickel_ingots");
-		public static final TagKey<Item> PLATINUM_INGOTS = createTag("platinum_ingots");
-		public static final TagKey<Item> SILVER_INGOTS = createTag("silver_ingots");
-		public static final TagKey<Item> STEEL_INGOTS = createTag("steel_ingots");
-		public static final TagKey<Item> TIN_INGOTS = createTag("tin_ingots");
-		public static final TagKey<Item> TUNGSTEN_INGOTS = createTag("tungsten_ingots");
-		public static final TagKey<Item> URANIUM_INGOTS = createTag("uranium_ingots");
-		public static final TagKey<Item> ZINC_INGOTS = createTag("zinc_ingots");
+		public static final TagKey<Item> BAUXITE_INGOTS = createTag("ingots/bauxite");
+		public static final TagKey<Item> ALUMINUM_INGOTS = createTag("ingots/aluminum");
+		public static final TagKey<Item> ALUMINIUM_INGOTS = createTag("ingots/aluminium");
+		public static final TagKey<Item> BRONZE_INGOTS = createTag("ingots/bronze");
+		public static final TagKey<Item> COBALT_INGOTS = createTag("ingots/cobalt");
+		public static final TagKey<Item> IRIDIUM_INGOTS = createTag("ingots/iridium");
+		public static final TagKey<Item> LEAD_INGOTS = createTag("ingots/lead");
+		public static final TagKey<Item> NICKEL_INGOTS = createTag("ingots/nickel");
+		public static final TagKey<Item> PLATINUM_INGOTS = createTag("ingots/platinum");
+		public static final TagKey<Item> SILVER_INGOTS = createTag("ingots/silver");
+		public static final TagKey<Item> STEEL_INGOTS = createTag("ingots/steel");
+		public static final TagKey<Item> TIN_INGOTS = createTag("ingots/tin");
+		public static final TagKey<Item> TUNGSTEN_INGOTS = createTag("ingots/tungsten");
+		public static final TagKey<Item> URANIUM_INGOTS = createTag("ingots/uranium");
+		public static final TagKey<Item> ZINC_INGOTS = createTag("ingots/zinc");
 		
-		public static final TagKey<Item> BAUXITE_NUGGETS = createTag("bauxite_nuggets");
-		public static final TagKey<Item> ALUMINUM_NUGGETS = createTag("bauxite_nuggets");
-		public static final TagKey<Item> ALUMINIUM_NUGGETS = createTag("bauxite_nuggets");
-		public static final TagKey<Item> BRONZE_NUGGETS = createTag("bronze_nuggets");
-		public static final TagKey<Item> COBALT_NUGGETS = createTag("cobalt_nuggets");
-		public static final TagKey<Item> COPPER_NUGGETS = createTag("copper_nuggets");
-		public static final TagKey<Item> IRIDIUM_NUGGETS = createTag("iridium_nuggets");
-		public static final TagKey<Item> LEAD_NUGGETS = createTag("lead_nuggets");
-		public static final TagKey<Item> NICKEL_NUGGETS = createTag("nickel_nuggets");
-		public static final TagKey<Item> PLATINUM_NUGGETS = createTag("platinum_nuggets");
-		public static final TagKey<Item> SILVER_NUGGETS = createTag("silver_nuggets");
-		public static final TagKey<Item> STEEL_NUGGETS = createTag("steel_nuggets");
-		public static final TagKey<Item> TIN_NUGGETS = createTag("tin_nuggets");
-		public static final TagKey<Item> TUNGSTEN_NUGGETS = createTag("tungsten_nuggets");
-		public static final TagKey<Item> URANIUM_NUGGETS = createTag("uranium_nuggets");
-		public static final TagKey<Item> ZINC_NUGGETS = createTag("zinc_nuggets");
+		public static final TagKey<Item> BAUXITE_NUGGETS = createTag("nuggets/bauxite/");
+		public static final TagKey<Item> ALUMINUM_NUGGETS = createTag("nuggets/aluminum");
+		public static final TagKey<Item> ALUMINIUM_NUGGETS = createTag("nuggets/aluminium");
+		public static final TagKey<Item> BRONZE_NUGGETS = createTag("nuggets/bronze");
+		public static final TagKey<Item> COBALT_NUGGETS = createTag("nuggets/cobalt");
+		public static final TagKey<Item> COPPER_NUGGETS = createTag("nuggets/copper");
+		public static final TagKey<Item> IRIDIUM_NUGGETS = createTag("nuggets/iridium");
+		public static final TagKey<Item> LEAD_NUGGETS = createTag("nuggets/lead");
+		public static final TagKey<Item> NICKEL_NUGGETS = createTag("nuggets/nickel");
+		public static final TagKey<Item> PLATINUM_NUGGETS = createTag("nuggets/platinum");
+		public static final TagKey<Item> SILVER_NUGGETS = createTag("nuggets/silver");
+		public static final TagKey<Item> STEEL_NUGGETS = createTag("nuggets/steel");
+		public static final TagKey<Item> TIN_NUGGETS = createTag("nuggets/tin");
+		public static final TagKey<Item> TUNGSTEN_NUGGETS = createTag("nuggets/tungsten");
+		public static final TagKey<Item> URANIUM_NUGGETS = createTag("nuggets/uranium");
+		public static final TagKey<Item> ZINC_NUGGETS = createTag("nuggets/zinc");
 		
-		public static final TagKey<Item> TOOL_HANDLES = createTag("tool_handles");
+		public static final TagKey<Item> TOOL_HANDLES = createTag("rods/tool_handle");
 					
 		private static TagKey<Item> createTag(String name)
 		{
@@ -117,10 +140,10 @@ public class OreGenTags
 	public static class Biomes
 	{
 		// Define tags for biomes
-		public static final TagKey<Biome> CHESHIREROSE_BIOMES = createTag("cheshirerose_biomes");
-		public static final TagKey<Biome> ROSE_BIOMES = createTag("rose_biomes");
+		public static final TagKey<Biome> CHESHIREROSE_BIOMES = createTag("biomes/cheshirerose");
+		public static final TagKey<Biome> ROSE_BIOMES = createTag("biomes/rose_biomes");
 		
-		public static final TagKey<Biome> ALL_BIOMES = createTag("all_biomes");
+		public static final TagKey<Biome> ALL_BIOMES = createTag("biomes/all");
 		
 		private static TagKey<Biome> createTag(String name)
 		{

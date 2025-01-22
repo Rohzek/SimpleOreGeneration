@@ -80,6 +80,9 @@ public class ModItemTagProvider extends ItemTagsProvider
         tag(OreGenTags.Items.ALUMINUM_INGOTS)
 			.add(OreGenItems.BAUXITE_INGOT.get());
         
+        tag(OreGenTags.Items.ALUMINIUM_INGOTS)
+			.add(OreGenItems.BAUXITE_INGOT.get());
+        
         tag(OreGenTags.Items.BRONZE_INGOTS)
 			.add(OreGenItems.BRONZE_INGOT.get());
         
@@ -94,8 +97,8 @@ public class ModItemTagProvider extends ItemTagsProvider
         
         tag(OreGenTags.Items.NICKEL_INGOTS)
 			.add(OreGenItems.NICKEL_INGOT.get());
-        tag(OreGenTags.Items.PLATINUM_INGOTS)
         
+        tag(OreGenTags.Items.PLATINUM_INGOTS)
 			.add(OreGenItems.PLATINUM_INGOT.get());
         
         tag(OreGenTags.Items.SILVER_INGOTS)
@@ -120,6 +123,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenItems.BAUXITE_NUGGET.get());
         
         tag(OreGenTags.Items.ALUMINUM_NUGGETS)
+			.add(OreGenItems.BAUXITE_NUGGET.get());
+        
+        tag(OreGenTags.Items.ALUMINIUM_NUGGETS)
 			.add(OreGenItems.BAUXITE_NUGGET.get());
         
         tag(OreGenTags.Items.BRONZE_NUGGETS)
