@@ -27,7 +27,7 @@ public class DataGenetators
 		PackOutput packOutput = dataGenerator.getPackOutput();
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 		CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-
+				
 		// Recipes
 		dataGenerator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
 		

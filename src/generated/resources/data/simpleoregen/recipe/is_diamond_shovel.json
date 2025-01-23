@@ -6,7 +6,7 @@
       "tag": "simpleoregen:rods/tool_handle"
     },
     "M": {
-      "tag": "simpleoregen:gems/diamond"
+      "tag": "c:gems/diamond"
     }
   },
   "pattern": [

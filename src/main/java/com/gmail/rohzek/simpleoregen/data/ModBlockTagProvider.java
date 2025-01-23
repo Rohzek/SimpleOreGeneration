@@ -24,6 +24,17 @@ public class ModBlockTagProvider extends BlockTagsProvider
     @Override
     protected void addTags(HolderLookup.Provider provider) 
     {
+    	tag(Tags.Blocks.HIDDEN_FROM_RECIPE_VIEWERS)
+	    	.add(OreGenBlocks.SURFACE_COAL_ORE.get())
+			.add(OreGenBlocks.SURFACE_COPPER_ORE.get())
+			.add(OreGenBlocks.SURFACE_DIAMOND_ORE.get())
+			.add(OreGenBlocks.SURFACE_EMERALD_ORE.get())
+			.add(OreGenBlocks.SURFACE_GOLD_ORE.get())
+			.add(OreGenBlocks.SURFACE_IRON_ORE.get())
+			.add(OreGenBlocks.SURFACE_LAPIS_ORE.get())
+			.add(OreGenBlocks.SURFACE_REDSTONE_ORE.get());
+    	
+    	
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
         // Surface
         		.add(OreGenBlocks.SURFACE_COAL_ORE.get())

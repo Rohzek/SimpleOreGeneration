@@ -1,0 +1,12 @@
+{
+  "values": [
+    "simpleoregen:coal_ore",
+    "simpleoregen:copper_ore",
+    "simpleoregen:diamond_ore",
+    "simpleoregen:emerald_ore",
+    "simpleoregen:gold_ore",
+    "simpleoregen:iron_ore",
+    "simpleoregen:lapis_ore",
+    "simpleoregen:redstone_ore"
+  ]
+}

@@ -5,8 +5,10 @@ import java.util.concurrent.CompletableFuture;
 
 import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
 import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
+import com.gmail.rohzek.simpleoregen.items.OreGenArmors;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
 import com.gmail.rohzek.simpleoregen.items.OreGenTools;
+import com.gmail.rohzek.simpleoregen.items.VanillaTypeArmors;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -17,6 +19,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -41,6 +44,44 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 	@Override
     protected void buildRecipes(RecipeOutput recipeOutput) 
 	{
+		List<ItemLike> COPPER_SMELTABLES = List.of(OreGenBlocks.SURFACE_COPPER_ORE, 
+        		OreGenBlocks.DEEPSLATE_COPPER_ORE, OreGenBlocks.ANDESITE_COPPER_ORE, OreGenBlocks.DIORITE_COPPER_ORE, 
+        		OreGenBlocks.GRANITE_COPPER_ORE, OreGenBlocks.SANDSTONE_COPPER_ORE, OreGenBlocks.SAND_COPPER_ORE, 
+        		OreGenBlocks.GRAVEL_COPPER_ORE, OreGenBlocks.NETHER_COPPER_ORE, OreGenBlocks.END_COPPER_ORE);
+		List<ItemLike> COPPER_NUGGET_SMELTABLES = List.of(OreGenBlocks.SURFACE_COPPER_NUGGET_ORE, 
+        		OreGenBlocks.DEEPSLATE_COPPER_NUGGET_ORE, OreGenBlocks.ANDESITE_COPPER_NUGGET_ORE, OreGenBlocks.DIORITE_COPPER_NUGGET_ORE, 
+        		OreGenBlocks.GRANITE_COPPER_NUGGET_ORE, OreGenBlocks.SANDSTONE_COPPER_NUGGET_ORE, OreGenBlocks.SAND_COPPER_NUGGET_ORE, 
+        		OreGenBlocks.GRAVEL_COPPER_NUGGET_ORE);
+		List<ItemLike> EMERALD_SMELTABLES = List.of(OreGenBlocks.SURFACE_EMERALD_ORE, 
+        		OreGenBlocks.DEEPSLATE_EMERALD_ORE, OreGenBlocks.ANDESITE_EMERALD_ORE, OreGenBlocks.DIORITE_EMERALD_ORE, 
+        		OreGenBlocks.GRANITE_EMERALD_ORE, OreGenBlocks.SANDSTONE_EMERALD_ORE, OreGenBlocks.SAND_EMERALD_ORE, 
+        		OreGenBlocks.GRAVEL_EMERALD_ORE, OreGenBlocks.NETHER_EMERALD_ORE, OreGenBlocks.END_EMERALD_ORE);
+		List<ItemLike> GOLD_SMELTABLES = List.of(OreGenBlocks.SURFACE_GOLD_ORE, 
+        		OreGenBlocks.DEEPSLATE_GOLD_ORE, OreGenBlocks.ANDESITE_GOLD_ORE, OreGenBlocks.DIORITE_GOLD_ORE, 
+        		OreGenBlocks.GRANITE_GOLD_ORE, OreGenBlocks.SANDSTONE_GOLD_ORE, OreGenBlocks.SAND_GOLD_ORE, 
+        		OreGenBlocks.GRAVEL_GOLD_ORE, OreGenBlocks.NETHER_GOLD_ORE, OreGenBlocks.END_GOLD_ORE);
+		List<ItemLike> GOLD_NUGGET_SMELTABLES = List.of(OreGenBlocks.SURFACE_GOLD_NUGGET_ORE, 
+        		OreGenBlocks.DEEPSLATE_GOLD_NUGGET_ORE, OreGenBlocks.ANDESITE_GOLD_NUGGET_ORE, OreGenBlocks.DIORITE_GOLD_NUGGET_ORE, 
+        		OreGenBlocks.GRANITE_GOLD_NUGGET_ORE, OreGenBlocks.SANDSTONE_GOLD_NUGGET_ORE, OreGenBlocks.SAND_GOLD_NUGGET_ORE, 
+        		OreGenBlocks.GRAVEL_GOLD_NUGGET_ORE);
+		List<ItemLike> IRON_SMELTABLES = List.of(OreGenBlocks.SURFACE_IRON_ORE, 
+        		OreGenBlocks.DEEPSLATE_IRON_ORE, OreGenBlocks.ANDESITE_IRON_ORE, OreGenBlocks.DIORITE_IRON_ORE, 
+        		OreGenBlocks.GRANITE_IRON_ORE, OreGenBlocks.SANDSTONE_IRON_ORE, OreGenBlocks.SAND_IRON_ORE, 
+        		OreGenBlocks.GRAVEL_IRON_ORE, OreGenBlocks.NETHER_IRON_ORE, OreGenBlocks.END_IRON_ORE);
+		List<ItemLike> IRON_NUGGET_SMELTABLES = List.of(OreGenBlocks.SURFACE_IRON_NUGGET_ORE, 
+        		OreGenBlocks.DEEPSLATE_IRON_NUGGET_ORE, OreGenBlocks.ANDESITE_IRON_NUGGET_ORE, OreGenBlocks.DIORITE_IRON_NUGGET_ORE, 
+        		OreGenBlocks.GRANITE_IRON_NUGGET_ORE, OreGenBlocks.SANDSTONE_IRON_NUGGET_ORE, OreGenBlocks.SAND_IRON_NUGGET_ORE, 
+        		OreGenBlocks.GRAVEL_IRON_NUGGET_ORE);
+		List<ItemLike> LAPIS_SMELTABLES = List.of(OreGenBlocks.SURFACE_LAPIS_ORE, 
+        		OreGenBlocks.DEEPSLATE_LAPIS_ORE, OreGenBlocks.ANDESITE_LAPIS_ORE, OreGenBlocks.DIORITE_LAPIS_ORE, 
+        		OreGenBlocks.GRANITE_LAPIS_ORE, OreGenBlocks.SANDSTONE_LAPIS_ORE, OreGenBlocks.SAND_LAPIS_ORE, 
+        		OreGenBlocks.GRAVEL_LAPIS_ORE, OreGenBlocks.NETHER_LAPIS_ORE, OreGenBlocks.END_LAPIS_ORE);
+		List<ItemLike> REDSTONE_SMELTABLES = List.of(OreGenBlocks.SURFACE_REDSTONE_ORE, 
+        		OreGenBlocks.DEEPSLATE_REDSTONE_ORE, OreGenBlocks.ANDESITE_REDSTONE_ORE, OreGenBlocks.DIORITE_REDSTONE_ORE, 
+        		OreGenBlocks.GRANITE_REDSTONE_ORE, OreGenBlocks.SANDSTONE_REDSTONE_ORE, OreGenBlocks.SAND_REDSTONE_ORE, 
+        		OreGenBlocks.GRAVEL_REDSTONE_ORE, OreGenBlocks.NETHER_REDSTONE_ORE, OreGenBlocks.END_REDSTONE_ORE);
+		
+		
         List<ItemLike> BAUXITE_SMELTABLES = List.of(OreGenItems.RAW_BAUXITE, OreGenBlocks.SURFACE_BAUXITE_ORE, 
         		OreGenBlocks.DEEPSLATE_BAUXITE_ORE, OreGenBlocks.ANDESITE_BAUXITE_ORE, OreGenBlocks.DIORITE_BAUXITE_ORE, 
         		OreGenBlocks.GRANITE_BAUXITE_ORE, OreGenBlocks.SANDSTONE_BAUXITE_ORE, OreGenBlocks.SAND_BAUXITE_ORE, 
@@ -200,35 +241,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapelessCraftingAlloys(recipeOutput, "has_bronze", Tags.Items.INGOTS_COPPER, OreGenTags.Items.TIN_INGOTS, OreGenItems.BRONZE_INGOT.get(), "_alloying");
         shapelessCraftingAlloys(recipeOutput, "has_bronze", OreGenTags.Items.COPPER_NUGGETS, OreGenTags.Items.TIN_NUGGETS, OreGenItems.BRONZE_NUGGET.get(), "_alloying");
         shapelessCraftingAlloys(recipeOutput, "has_iron", OreGenTags.Items.COALS, Tags.Items.INGOTS_IRON, OreGenItems.STEEL_INGOT.get(), "_alloying");
-        /*
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BISMUTH_BLOCK.get())
-                .pattern("BBB")
-                .pattern("BBB")
-                .pattern("BBB")
-                .define('B', ModItems.BISMUTH.get())
-                .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BISMUTH.get(), 9)
-                .requires(ModBlocks.BISMUTH_BLOCK)
-                .unlockedBy("has_bismuth_block", has(ModBlocks.BISMUTH_BLOCK)).save(recipeOutput);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BISMUTH.get(), 18)
-                .requires(ModBlocks.MAGIC_BLOCK)
-                .unlockedBy("has_magic_block", has(ModBlocks.MAGIC_BLOCK))
-                .save(recipeOutput, "tutorialmod:bismuth_from_magic_block");
-         */
         // Heart Diamond Recipes
-        shapedCraftingPickaxe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_PICKAXE);
-        shapedCraftingAxe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_AXE);
-        shapedCraftingSword(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SWORD);
-        shapedCraftingShovel(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SHOVEL);
-        shapedCraftingHoe(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_HOE);
-        shapedCraftingPaxel(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.DIAMOND_PAXEL.get());
+        shapedCraftingPickaxe(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_PICKAXE);
+        shapedCraftingAxe(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_AXE);
+        shapedCraftingSword(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SWORD);
+        shapedCraftingShovel(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_SHOVEL);
+        shapedCraftingHoe(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, Items.DIAMOND_HOE);
         
-        shapedCraftingHelmet(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS, Items.DIAMOND_HELMET);
-        shapedCraftingChestplate(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_CHESTPLATE);
-        shapedCraftingLeggings(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_LEGGINGS);
-        shapedCraftingBoots(recipeOutput, "has_diamonds", "is_diamond", OreGenTags.Items.DIAMONDS,  Items.DIAMOND_BOOTS);
+        shapedCraftingHelmet(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND, Items.DIAMOND_HELMET);
+        shapedCraftingChestplate(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND,  Items.DIAMOND_CHESTPLATE);
+        shapedCraftingLeggings(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND,  Items.DIAMOND_LEGGINGS);
+        shapedCraftingBoots(recipeOutput, "has_diamonds", "is_diamond", Tags.Items.GEMS_DIAMOND,  Items.DIAMOND_BOOTS);
         
         
         // Normal Recipes
@@ -273,6 +297,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedCraftingAxe(recipeOutput, "has_tungsten", "is_tungsten", OreGenTags.Items.TUNGSTEN_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.TUNGSTEN_AXE.get());
         shapedCraftingAxe(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.URANIUM_AXE.get());
         shapedCraftingAxe(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.ZINC_AXE.get());
+        
+        shapedCraftingPaxel(recipeOutput, "has_wood", "is_wood", OreGenTags.Items.PLANKS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.WOOD_PAXEL.get());
+        shapedCraftingPaxel(recipeOutput, "has_stone", "is_stone", OreGenTags.Items.STONES, OreGenTags.Items.TOOL_HANDLES, OreGenTools.STONE_PAXEL.get());
+        shapedCraftingPaxel(recipeOutput, "has_iron", "is_iron", Tags.Items.INGOTS_IRON, OreGenTags.Items.TOOL_HANDLES, OreGenTools.IRON_PAXEL.get());
+        shapedCraftingPaxel(recipeOutput, "has_gold", "is_gold", Tags.Items.INGOTS_GOLD, OreGenTags.Items.TOOL_HANDLES, OreGenTools.GOLD_PAXEL.get());
+        shapedCraftingPaxel(recipeOutput, "has_diamond", "is_diamond", Tags.Items.GEMS_DIAMOND, OreGenTags.Items.TOOL_HANDLES, OreGenTools.DIAMOND_PAXEL.get());
+        smithingRecipe(recipeOutput, "has_netherite", "is_netherite", OreGenTags.Items.NETHERITE_TEMPLATES, OreGenTools.DIAMOND_PAXEL.get(), Tags.Items.INGOTS_NETHERITE, OreGenTools.NETHERITE_PAXEL.get());
         
         shapedCraftingPaxel(recipeOutput, "has_amethyst", "is_amethyst", Tags.Items.GEMS_AMETHYST, OreGenTags.Items.TOOL_HANDLES, OreGenTools.AMETHYST_PAXEL.get());
         shapedCraftingPaxel(recipeOutput, "has_bauxite", "is_bauxite", OreGenTags.Items.BAUXITE_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.BAUXITE_PAXEL.get());
@@ -358,9 +389,113 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapedCraftingHoe(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.URANIUM_HOE.get());
         shapedCraftingHoe(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenTags.Items.TOOL_HANDLES, OreGenTools.ZINC_HOE.get());
         
+        shapedCraftingHelmet(recipeOutput, "has_bauxite", "is_bauxite", OreGenTags.Items.BAUXITE_INGOTS, OreGenArmors.BAUXITE_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_bronze", "is_bronze", OreGenTags.Items.BRONZE_INGOTS, OreGenArmors.BRONZE_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_cobalt", "is_cobalt", OreGenTags.Items.COBALT_INGOTS, OreGenArmors.COBALT_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_copper", "is_copper", Tags.Items.INGOTS_COPPER, VanillaTypeArmors.COPPER_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_emerald", "is_emerald", Tags.Items.GEMS_EMERALD, VanillaTypeArmors.EMERALD_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_iridium", "is_iridium", OreGenTags.Items.IRIDIUM_INGOTS, OreGenArmors.IRIDIUM_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_lead", "is_lead", OreGenTags.Items.LEAD_INGOTS, OreGenArmors.LEAD_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_nickel", "is_nickel", OreGenTags.Items.NICKEL_INGOTS, OreGenArmors.NICKEL_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_obsidian", "is_obsidian", Tags.Items.OBSIDIANS, VanillaTypeArmors.OBSIDIAN_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_platinum", "is_platinum", OreGenTags.Items.PLATINUM_INGOTS, OreGenArmors.PLATINUM_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_ruby", "is_ruby", OreGenTags.Items.RUBIES, OreGenArmors.RUBY_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_sapphire", "is_sapphire", OreGenTags.Items.SAPPHIRES, OreGenArmors.SAPPHIRE_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_silver", "is_silver", OreGenTags.Items.SILVER_INGOTS, OreGenArmors.SILVER_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_steel", "is_steel", OreGenTags.Items.STEEL_INGOTS, OreGenArmors.STEEL_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_tin", "is_tin", OreGenTags.Items.TIN_INGOTS, OreGenArmors.TIN_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_tungsten", "is_tungsten", OreGenTags.Items.TUNGSTEN_INGOTS, OreGenArmors.TUNGSTEN_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenArmors.URANIUM_HELMET.get());
+        shapedCraftingHelmet(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenArmors.ZINC_HELMET.get());
+        
+        shapedCraftingChestplate(recipeOutput, "has_bauxite", "is_bauxite", OreGenTags.Items.BAUXITE_INGOTS, OreGenArmors.BAUXITE_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_bronze", "is_bronze", OreGenTags.Items.BRONZE_INGOTS, OreGenArmors.BRONZE_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_cobalt", "is_cobalt", OreGenTags.Items.COBALT_INGOTS, OreGenArmors.COBALT_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_copper", "is_copper", Tags.Items.INGOTS_COPPER, VanillaTypeArmors.COPPER_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_emerald", "is_emerald", Tags.Items.GEMS_EMERALD, VanillaTypeArmors.EMERALD_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_iridium", "is_iridium", OreGenTags.Items.IRIDIUM_INGOTS, OreGenArmors.IRIDIUM_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_lead", "is_lead", OreGenTags.Items.LEAD_INGOTS, OreGenArmors.LEAD_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_nickel", "is_nickel", OreGenTags.Items.NICKEL_INGOTS, OreGenArmors.NICKEL_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_obsidian", "is_obsidian", Tags.Items.OBSIDIANS, VanillaTypeArmors.OBSIDIAN_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_platinum", "is_platinum", OreGenTags.Items.PLATINUM_INGOTS, OreGenArmors.PLATINUM_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_ruby", "is_ruby", OreGenTags.Items.RUBIES, OreGenArmors.RUBY_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_sapphire", "is_sapphire", OreGenTags.Items.SAPPHIRES, OreGenArmors.SAPPHIRE_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_silver", "is_silver", OreGenTags.Items.SILVER_INGOTS, OreGenArmors.SILVER_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_steel", "is_steel", OreGenTags.Items.STEEL_INGOTS, OreGenArmors.STEEL_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_tin", "is_tin", OreGenTags.Items.TIN_INGOTS, OreGenArmors.TIN_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_tungsten", "is_tungsten", OreGenTags.Items.TUNGSTEN_INGOTS, OreGenArmors.TUNGSTEN_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenArmors.URANIUM_CHESTPLATE.get());
+        shapedCraftingChestplate(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenArmors.ZINC_CHESTPLATE.get());
+        
+        shapedCraftingLeggings(recipeOutput, "has_bauxite", "is_bauxite", OreGenTags.Items.BAUXITE_INGOTS, OreGenArmors.BAUXITE_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_bronze", "is_bronze", OreGenTags.Items.BRONZE_INGOTS, OreGenArmors.BRONZE_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_cobalt", "is_cobalt", OreGenTags.Items.COBALT_INGOTS, OreGenArmors.COBALT_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_copper", "is_copper", Tags.Items.INGOTS_COPPER, VanillaTypeArmors.COPPER_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_emerald", "is_emerald", Tags.Items.GEMS_EMERALD, VanillaTypeArmors.EMERALD_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_iridium", "is_iridium", OreGenTags.Items.IRIDIUM_INGOTS, OreGenArmors.IRIDIUM_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_lead", "is_lead", OreGenTags.Items.LEAD_INGOTS, OreGenArmors.LEAD_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_nickel", "is_nickel", OreGenTags.Items.NICKEL_INGOTS, OreGenArmors.NICKEL_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_obsidian", "is_obsidian", Tags.Items.OBSIDIANS, VanillaTypeArmors.OBSIDIAN_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_platinum", "is_platinum", OreGenTags.Items.PLATINUM_INGOTS, OreGenArmors.PLATINUM_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_ruby", "is_ruby", OreGenTags.Items.RUBIES, OreGenArmors.RUBY_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_sapphire", "is_sapphire", OreGenTags.Items.SAPPHIRES, OreGenArmors.SAPPHIRE_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_silver", "is_silver", OreGenTags.Items.SILVER_INGOTS, OreGenArmors.SILVER_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_steel", "is_steel", OreGenTags.Items.STEEL_INGOTS, OreGenArmors.STEEL_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_tin", "is_tin", OreGenTags.Items.TIN_INGOTS, OreGenArmors.TIN_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_tungsten", "is_tungsten", OreGenTags.Items.TUNGSTEN_INGOTS, OreGenArmors.TUNGSTEN_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenArmors.URANIUM_LEGGINGS.get());
+        shapedCraftingLeggings(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenArmors.ZINC_LEGGINGS.get());
+        
+        shapedCraftingBoots(recipeOutput, "has_bauxite", "is_bauxite", OreGenTags.Items.BAUXITE_INGOTS, OreGenArmors.BAUXITE_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_bronze", "is_bronze", OreGenTags.Items.BRONZE_INGOTS, OreGenArmors.BRONZE_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_cobalt", "is_cobalt", OreGenTags.Items.COBALT_INGOTS, OreGenArmors.COBALT_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_copper", "is_copper", Tags.Items.INGOTS_COPPER, VanillaTypeArmors.COPPER_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_emerald", "is_emerald", Tags.Items.GEMS_EMERALD, VanillaTypeArmors.EMERALD_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_iridium", "is_iridium", OreGenTags.Items.IRIDIUM_INGOTS, OreGenArmors.IRIDIUM_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_lead", "is_lead", OreGenTags.Items.LEAD_INGOTS, OreGenArmors.LEAD_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_nickel", "is_nickel", OreGenTags.Items.NICKEL_INGOTS, OreGenArmors.NICKEL_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_obsidian", "is_obsidian", Tags.Items.OBSIDIANS, VanillaTypeArmors.OBSIDIAN_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_platinum", "is_platinum", OreGenTags.Items.PLATINUM_INGOTS, OreGenArmors.PLATINUM_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_ruby", "is_ruby", OreGenTags.Items.RUBIES, OreGenArmors.RUBY_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_sapphire", "is_sapphire", OreGenTags.Items.SAPPHIRES, OreGenArmors.SAPPHIRE_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_silver", "is_silver", OreGenTags.Items.SILVER_INGOTS, OreGenArmors.SILVER_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_steel", "is_steel", OreGenTags.Items.STEEL_INGOTS, OreGenArmors.STEEL_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_tin", "is_tin", OreGenTags.Items.TIN_INGOTS, OreGenArmors.TIN_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_tungsten", "is_tungsten", OreGenTags.Items.TUNGSTEN_INGOTS, OreGenArmors.TUNGSTEN_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_uranium", "is_uranium", OreGenTags.Items.URANIUM_INGOTS, OreGenArmors.URANIUM_BOOTS.get());
+        shapedCraftingBoots(recipeOutput, "has_zinc", "is_zinc", OreGenTags.Items.ZINC_INGOTS, OreGenArmors.ZINC_BOOTS.get());
         
         
         // Smelting Recipes
+        oreSmelting(recipeOutput, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.25f, 200, "copper");
+        oreBlasting(recipeOutput, COPPER_SMELTABLES, RecipeCategory.MISC, Items.COPPER_INGOT, 0.25f, 100, "copper");
+        
+        oreSmelting(recipeOutput, IRON_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 200, "iron");
+        oreBlasting(recipeOutput, IRON_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 100, "iron");
+        
+        oreSmelting(recipeOutput, GOLD_SMELTABLES, RecipeCategory.MISC, Items.GOLD_INGOT, 0.25f, 200, "gold");
+        oreBlasting(recipeOutput, GOLD_SMELTABLES, RecipeCategory.MISC, Items.GOLD_INGOT, 0.25f, 100, "gold");
+        
+        oreSmelting(recipeOutput, LAPIS_SMELTABLES, RecipeCategory.MISC, Items.LAPIS_LAZULI, 0.25f, 200, "lapis");
+        oreBlasting(recipeOutput, LAPIS_SMELTABLES, RecipeCategory.MISC, Items.LAPIS_LAZULI, 0.25f, 100, "lapis");
+        
+        oreSmelting(recipeOutput, REDSTONE_SMELTABLES, RecipeCategory.MISC, Items.REDSTONE, 0.25f, 200, "redstone");
+        oreBlasting(recipeOutput, REDSTONE_SMELTABLES, RecipeCategory.MISC, Items.REDSTONE, 0.25f, 100, "redstone");
+        
+        oreSmelting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, Items.EMERALD, 0.25f, 200, "emerald");
+        oreBlasting(recipeOutput, EMERALD_SMELTABLES, RecipeCategory.MISC, Items.EMERALD, 0.25f, 100, "emerald");
+        
+        oreSmelting(recipeOutput, IRON_NUGGET_SMELTABLES, RecipeCategory.MISC, Items.IRON_NUGGET, 0.25f, 200, "iron_nugget");
+        oreBlasting(recipeOutput, IRON_NUGGET_SMELTABLES, RecipeCategory.MISC, Items.IRON_NUGGET, 0.25f, 100, "iron_nugget");
+        
+        oreSmelting(recipeOutput, COPPER_NUGGET_SMELTABLES, RecipeCategory.MISC, OreGenItems.COPPER_NUGGET.get(), 0.25f, 200, "copper_nugget");
+        oreBlasting(recipeOutput, COPPER_NUGGET_SMELTABLES, RecipeCategory.MISC, OreGenItems.COPPER_NUGGET.get(), 0.25f, 100, "copper_nugget");
+        
+        oreSmelting(recipeOutput, GOLD_NUGGET_SMELTABLES, RecipeCategory.MISC, Items.GOLD_NUGGET, 0.25f, 200, "gold_nugget");
+        oreBlasting(recipeOutput, GOLD_NUGGET_SMELTABLES, RecipeCategory.MISC, Items.GOLD_NUGGET, 0.25f, 100, "gold_nugget");
+        
+        
+        
         oreSmelting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 200, "bauxite");
         oreBlasting(recipeOutput, BAUXITE_SMELTABLES, RecipeCategory.MISC, OreGenItems.BAUXITE_INGOT.get(), 0.25f, 100, "bauxite");
         oreSmelting(recipeOutput, COBALT_SMELTABLES, RecipeCategory.MISC, OreGenItems.COBALT_INGOT.get(), 0.25f, 200, "cobalt");
@@ -388,8 +523,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, OreGenItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
         oreBlasting(recipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, OreGenItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
         
-        oreSmelting(recipeOutput, List.of(WorldGenBlocks.CHESHIRE_ROSE_FLOWER), RecipeCategory.MISC, OreGenItems.HEART_DIAMOND.get(), 0.25f, 200, "heart_diamond");
-        oreBlasting(recipeOutput, List.of(WorldGenBlocks.CHESHIRE_ROSE_FLOWER), RecipeCategory.MISC, OreGenItems.HEART_DIAMOND.get(), 0.25f, 100, "heart_diamond");
+        oreSmelting(recipeOutput, List.of(WorldGenBlocks.CHESHIRE_ROSE_FLOWER), RecipeCategory.MISC, OreGenItems.HEART_DIAMOND.get(), 0.25f, 300, "heart_diamond");
+        oreBlasting(recipeOutput, List.of(WorldGenBlocks.CHESHIRE_ROSE_FLOWER), RecipeCategory.MISC, OreGenItems.HEART_DIAMOND.get(), 0.25f, 150, "heart_diamond");
         
         oreSmelting(recipeOutput, List.of(WorldGenBlocks.ROSE_FLOWER), RecipeCategory.MISC, Items.RED_DYE, 0.25f, 200, "red_dye");
         oreBlasting(recipeOutput, List.of(WorldGenBlocks.ROSE_FLOWER), RecipeCategory.MISC, Items.RED_DYE, 0.25f, 100, "red_dye");
@@ -462,6 +597,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         .define('M', input_material)
         .define('H', input_handle)
         .unlockedBy(unlocked, has(input_material)).save(recipeOutput, Reference.MODID + ":" + name + "_hoe");
+	}
+	
+	protected static void smithingRecipe(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> template, ItemLike tool, TagKey<Item> input_material, Item output) 
+	{
+		SmithingTransformRecipeBuilder.smithing
+		(
+				Ingredient.of(template), 
+				Ingredient.of(tool), 
+				Ingredient.of(input_material), 
+				RecipeCategory.TOOLS, 
+				output
+		)
+		.unlocks(unlocked, has(input_material))
+		.save(recipeOutput, name);
 	}
 	
 	protected static void shapedCraftingHelmet(RecipeOutput recipeOutput, String unlocked, String name, TagKey<Item> input_material, Item output) 

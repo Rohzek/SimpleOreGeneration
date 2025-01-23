@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gravel_iron_nugget_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:gravel_iron_nugget_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:iron_nugget_from_blasting_gravel_iron_nugget_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gravel_iron_nugget_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:iron_nugget_from_blasting_gravel_iron_nugget_ore"
+    ]
+  }
+}

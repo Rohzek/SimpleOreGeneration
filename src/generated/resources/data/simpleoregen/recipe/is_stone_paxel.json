@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "simpleoregen:rods/tool_handle"
+    },
+    "M": {
+      "tag": "simpleoregen:stones"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MH ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:stone_paxel"
+  }
+}

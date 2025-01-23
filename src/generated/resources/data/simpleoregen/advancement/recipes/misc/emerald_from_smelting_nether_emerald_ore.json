@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_emerald_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:nether_emerald_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:emerald_from_smelting_nether_emerald_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nether_emerald_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:emerald_from_smelting_nether_emerald_ore"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iridium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#simpleoregen:ingots/iridium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:is_iridium_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iridium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:is_iridium_helmet"
+    ]
+  }
+}

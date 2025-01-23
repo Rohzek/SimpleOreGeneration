@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "c:ingots/netherite"
+  },
+  "base": {
+    "item": "simpleoregen:diamond_paxel"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleoregen:netherite_paxel"
+  },
+  "template": {
+    "tag": "simpleoregen:templates/netherite"
+  }
+}

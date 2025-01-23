@@ -1,4 +1,5 @@
-// 1.21.1	2025-01-22T03:59:49.2512911	Tags for minecraft:block mod id simpleoregen
+// 1.21.1	2025-01-22T18:33:15.0138249	Tags for minecraft:block mod id simpleoregen
+7b325b30471ad96c8e16d834092eca851de35404 data/c/tags/block/hidden_from_recipe_viewers.json
 fbd187cfea785f3b6afa761e76245699051fda28 data/c/tags/block/ores.json
 c41e9d89d17442f0072d9fbdca5d2f8567b38b0b data/minecraft/tags/block/coal_ores.json
 76ab957a8f1c95061c242bb29a7b83df7c6e390a data/minecraft/tags/block/copper_ores.json
