@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-21T20:05:38.7293319	Loot Tables
+// 1.21.1	2025-01-28T12:41:58.8653531	Loot Tables
 3901094e79e0ead9a165c983970346fe332bd13a data/simpleoregen/loot_table/blocks/andesite_bauxite_ore.json
 c76d8447085aabfd95c0fdada91a47ef6cc9ca0e data/simpleoregen/loot_table/blocks/andesite_coal_ore.json
 7706fef4e4d8456d76a26e14ecc19b6cca69133b data/simpleoregen/loot_table/blocks/andesite_cobalt_ore.json
@@ -26,6 +26,7 @@ caa55bea1f4f89a04589b6f4fdc0e8157520192e data/simpleoregen/loot_table/blocks/and
 0116e720566e13768641dfdcd8fca97dc757e857 data/simpleoregen/loot_table/blocks/andesite_zinc_ore.json
 779c60d1a740dd7a672c8057718324201b1103f4 data/simpleoregen/loot_table/blocks/bauxite_block.json
 cd0d23139f8cc60e0f1c5343d472bab661865bbe data/simpleoregen/loot_table/blocks/bauxite_ore.json
+634e7249b8039ed4f65a56105440a9924722db64 data/simpleoregen/loot_table/blocks/brass_block.json
 207384a4d7bab9d0519775a3407e3b3138286efb data/simpleoregen/loot_table/blocks/bronze_block.json
 a8811d9559ab6f82d1983812277975fb7048556f data/simpleoregen/loot_table/blocks/cheshirerose.json
 0cf19d7f1177debd0cacc1b930dc1953c3b178b6 data/simpleoregen/loot_table/blocks/cheshirerose_potted.json

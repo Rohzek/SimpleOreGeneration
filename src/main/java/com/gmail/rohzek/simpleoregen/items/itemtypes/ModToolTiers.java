@@ -18,6 +18,7 @@ public enum ModToolTiers implements Tier
 {
 	AMETHYST(BlockTags.INCORRECT_FOR_GOLD_TOOL, 350, 12f, 2.0f, 19, () -> Ingredient.of(Tags.Items.GEMS_AMETHYST)),
 	BAUXITE(BlockTags.INCORRECT_FOR_STONE_TOOL, 165, 4.5f, 1.0f, 5, () -> Ingredient.of(OreGenTags.Items.BAUXITE_INGOTS)),
+	BRASS(BlockTags.INCORRECT_FOR_IRON_TOOL, 260, 6.5f, 2.5f, 17, () -> Ingredient.of(OreGenTags.Items.BRASS_INGOTS)),
 	BRONZE(BlockTags.INCORRECT_FOR_IRON_TOOL, 300, 6.5f, 2.5f, 15, () -> Ingredient.of(OreGenTags.Items.BRONZE_INGOTS)),
 	COBALT(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 800, 9f, 3.5f, 15, () -> Ingredient.of(OreGenTags.Items.COBALT_INGOTS)),
 	COPPER(BlockTags.INCORRECT_FOR_IRON_TOOL, 240, 6f, 2.5f, 13, () -> Ingredient.of(Tags.Items.INGOTS_COPPER)),

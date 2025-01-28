@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-22T17:56:09.3096641	Item Models: simpleoregen
+// 1.21.1	2025-01-28T12:41:58.8538549	Item Models: simpleoregen
 b1d1a029eb553975c8ba69000a38b36ef526054b assets/simpleoregen/models/item/amethyst_axe.json
 43a661f36eabab224511adb19262d9e7fb8b5f07 assets/simpleoregen/models/item/amethyst_hoe.json
 7a669a29845cbbd31b279feccc54273e452f59b4 assets/simpleoregen/models/item/amethyst_paxel.json
@@ -46,6 +46,20 @@ b8b134e14ff2f5d114164976bd999fa219a13029 assets/simpleoregen/models/item/bauxite
 09fb3f26c7e7edf8da6c109c1b1547dd502ef8e4 assets/simpleoregen/models/item/bauxite_pickaxe.json
 02f269b0ea7e34ad9a7618c75a9c2a8ef94862d2 assets/simpleoregen/models/item/bauxite_shovel.json
 617b13ec5bf83288c6e440063590729053121e2c assets/simpleoregen/models/item/bauxite_sword.json
+abdb483dbf4eda96d17ffa55e76eab801906373f assets/simpleoregen/models/item/brass_axe.json
+179694164c01a00455381a3c94e2d12b799d18c2 assets/simpleoregen/models/item/brass_block.json
+ef5c2c370f109d09f3a102bc869972d062a0b648 assets/simpleoregen/models/item/brass_boots.json
+342ccc6f70a02ae3971b0ac6ce1675fbb4cd5da8 assets/simpleoregen/models/item/brass_chestplate.json
+3074f76dd1a47709ddea0f942e1b7ca3b9e265d1 assets/simpleoregen/models/item/brass_helmet.json
+4ff690430c22bf0934b61613021cb1b049d2a9da assets/simpleoregen/models/item/brass_hoe.json
+3fc9e203b3e8b117396bd182612359883064d712 assets/simpleoregen/models/item/brass_horse_armor.json
+605f500504d40a50778c6012f42adf5c4e76141a assets/simpleoregen/models/item/brass_ingot.json
+8de8d23e338eb80fdf883d7506fc29592cf49d8a assets/simpleoregen/models/item/brass_leggings.json
+108c53a5fbdfa63ea112a68ef3acc66221f6aa5a assets/simpleoregen/models/item/brass_nugget.json
+2dc69c3724e80b01d9a9d107ccde8e72bae1d2f7 assets/simpleoregen/models/item/brass_paxel.json
+fe2ab29617a36958062898bdc742af74918daff1 assets/simpleoregen/models/item/brass_pickaxe.json
+3a8890e9ffcc595d08bede6404d46418b9fbd85a assets/simpleoregen/models/item/brass_shovel.json
+02f41ef387d6f66c81ef100806b5989bb3891d7b assets/simpleoregen/models/item/brass_sword.json
 313f920de6c95cc13d6d9b3cb5e64d5ec64a849b assets/simpleoregen/models/item/bronze_axe.json
 a8f47d116dbdb988202f225e21f0bd7aeb28fdd7 assets/simpleoregen/models/item/bronze_block.json
 d1226934f7e68e4b1fd95331423e2bbdd29feb31 assets/simpleoregen/models/item/bronze_boots.json

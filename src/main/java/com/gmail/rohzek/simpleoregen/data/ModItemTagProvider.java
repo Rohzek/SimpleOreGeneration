@@ -112,6 +112,9 @@ public class ModItemTagProvider extends ItemTagsProvider
         tag(OreGenTags.Items.ALUMINIUM_INGOTS)
 			.add(OreGenItems.BAUXITE_INGOT.get());
         
+        tag(OreGenTags.Items.BRASS_INGOTS)
+			.add(OreGenItems.BRASS_INGOT.get());
+        
         tag(OreGenTags.Items.BRONZE_INGOTS)
 			.add(OreGenItems.BRONZE_INGOT.get());
         
@@ -157,8 +160,8 @@ public class ModItemTagProvider extends ItemTagsProvider
         tag(OreGenTags.Items.ALUMINIUM_NUGGETS)
 			.add(OreGenItems.BAUXITE_NUGGET.get());
         
-        tag(OreGenTags.Items.BRONZE_NUGGETS)
-			.add(OreGenItems.BRONZE_NUGGET.get());
+        tag(OreGenTags.Items.BRASS_NUGGETS)
+			.add(OreGenItems.BRASS_NUGGET.get());
         
         tag(OreGenTags.Items.COBALT_NUGGETS)
 			.add(OreGenItems.COBALT_NUGGET.get());
@@ -205,6 +208,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    tag(OreGenTags.Items.ALUMINIUM_PICKAXES)
 			.add(OreGenTools.BAUXITE_PICKAXE.get());
 	    
+	    tag(OreGenTags.Items.BRASS_PICKAXES)
+			.add(OreGenTools.BRASS_PICKAXE.get());
+	    
 	    tag(OreGenTags.Items.BRONZE_PICKAXES)
 			.add(OreGenTools.BRONZE_PICKAXE.get());
 	    
@@ -249,6 +255,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.ALUMINIUM_AXES)
 			.add(OreGenTools.BAUXITE_AXE.get());
+	    
+	    tag(OreGenTags.Items.BRASS_AXES)
+			.add(OreGenTools.BRASS_AXE.get());
 	    
 	    tag(OreGenTags.Items.BRONZE_AXES)
 			.add(OreGenTools.BRONZE_AXE.get());
@@ -295,6 +304,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    tag(OreGenTags.Items.ALUMINIUM_HOES)
 			.add(OreGenTools.BAUXITE_HOE.get());
 	    
+	    tag(OreGenTags.Items.BRASS_HOES)
+			.add(OreGenTools.BRASS_HOE.get());
+	    
 	    tag(OreGenTags.Items.BRONZE_HOES)
 			.add(OreGenTools.BRONZE_HOE.get());
 	    
@@ -339,6 +351,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.ALUMINIUM_SHOVELS)
 			.add(OreGenTools.BAUXITE_SHOVEL.get());
+	    
+	    tag(OreGenTags.Items.BRASS_SHOVELS)
+			.add(OreGenTools.BRASS_SHOVEL.get());
 	    
 	    tag(OreGenTags.Items.BRONZE_SHOVELS)
 			.add(OreGenTools.BRONZE_SHOVEL.get());
@@ -385,6 +400,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    tag(OreGenTags.Items.ALUMINIUM_SWORDS)
 			.add(OreGenTools.BAUXITE_SWORD.get());
 	    
+	    tag(OreGenTags.Items.BRASS_SWORDS)
+			.add(OreGenTools.BRASS_SWORD.get());
+	    
 	    tag(OreGenTags.Items.BRONZE_SWORDS)
 			.add(OreGenTools.BRONZE_SWORD.get());
 	    
@@ -429,6 +447,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.ALUMINIUM_PAXELS)
 			.add(OreGenTools.BAUXITE_PAXEL.get());
+	    
+	    tag(OreGenTags.Items.BRASS_PAXELS)
+			.add(OreGenTools.BRASS_PAXEL.get());
 	    
 	    tag(OreGenTags.Items.BRONZE_PAXELS)
 			.add(OreGenTools.BRONZE_PAXEL.get());
@@ -475,6 +496,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    tag(OreGenTags.Items.ALUMINIUM_HELMETS)
 			.add(OreGenArmors.BAUXITE_HELMET.get());
 	    
+	    tag(OreGenTags.Items.BRASS_HELMETS)
+			.add(OreGenArmors.BRASS_HELMET.get());
+	    
 	    tag(OreGenTags.Items.BRONZE_HELMETS)
 			.add(OreGenArmors.BRONZE_HELMET.get());
 	    
@@ -519,6 +543,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.ALUMINIUM_CHESTPLATES)
 			.add(OreGenArmors.BAUXITE_CHESTPLATE.get());
+	    
+	    tag(OreGenTags.Items.BRASS_CHESTPLATES)
+			.add(OreGenArmors.BRASS_CHESTPLATE.get());
 	    
 	    tag(OreGenTags.Items.BRONZE_CHESTPLATES)
 			.add(OreGenArmors.BRONZE_CHESTPLATE.get());
@@ -565,6 +592,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 		tag(OreGenTags.Items.ALUMINIUM_LEGGINGS)
 			.add(OreGenArmors.BAUXITE_LEGGINGS.get());
 		
+		tag(OreGenTags.Items.BRASS_LEGGINGS)
+			.add(OreGenArmors.BRASS_LEGGINGS.get());
+		
 		tag(OreGenTags.Items.BRONZE_LEGGINGS)
 			.add(OreGenArmors.BRONZE_LEGGINGS.get());
 		
@@ -610,6 +640,9 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    tag(OreGenTags.Items.ALUMINIUM_BOOTS)
 			.add(OreGenArmors.BAUXITE_BOOTS.get());
 	    
+	    tag(OreGenTags.Items.BRASS_BOOTS)
+			.add(OreGenArmors.BRASS_BOOTS.get());
+	    
 	    tag(OreGenTags.Items.BRONZE_BOOTS)
 			.add(OreGenArmors.BRONZE_BOOTS.get());
 	    
@@ -648,8 +681,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.TOOLS)
 		    .add(OreGenTools.BAUXITE_PICKAXE.get())
-		    .add(OreGenTools.BAUXITE_PICKAXE.get())
-		    .add(OreGenTools.BAUXITE_PICKAXE.get())
+		    .add(OreGenTools.BRASS_PICKAXE.get())
 		    .add(OreGenTools.BRONZE_PICKAXE.get())
 		    .add(OreGenTools.COBALT_PICKAXE.get())
 		    .add(OreGenTools.IRIDIUM_PICKAXE.get())
@@ -663,8 +695,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 		    .add(OreGenTools.URANIUM_PICKAXE.get())
 		    .add(OreGenTools.ZINC_PICKAXE.get())
 		    .add(OreGenTools.BAUXITE_AXE.get())
-		    .add(OreGenTools.BAUXITE_AXE.get())
-		    .add(OreGenTools.BAUXITE_AXE.get())
+		    .add(OreGenTools.BRASS_AXE.get())
 		    .add(OreGenTools.BRONZE_AXE.get())
 		    .add(OreGenTools.COBALT_AXE.get())
 		    .add(OreGenTools.IRIDIUM_AXE.get())
@@ -678,8 +709,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 		    .add(OreGenTools.URANIUM_AXE.get())
 		    .add(OreGenTools.ZINC_AXE.get())
 		    .add(OreGenTools.BAUXITE_HOE.get())
-		    .add(OreGenTools.BAUXITE_HOE.get())
-		    .add(OreGenTools.BAUXITE_HOE.get())
+		    .add(OreGenTools.BRASS_HOE.get())
 		    .add(OreGenTools.BRONZE_HOE.get())
 		    .add(OreGenTools.COBALT_HOE.get())
 		    .add(OreGenTools.IRIDIUM_HOE.get())
@@ -693,8 +723,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 		    .add(OreGenTools.URANIUM_HOE.get())
 		    .add(OreGenTools.ZINC_HOE.get())
 		    .add(OreGenTools.BAUXITE_SHOVEL.get())
-		    .add(OreGenTools.BAUXITE_SHOVEL.get())
-		    .add(OreGenTools.BAUXITE_SHOVEL.get())
+		    .add(OreGenTools.BRASS_SHOVEL.get())
 		    .add(OreGenTools.BRONZE_SHOVEL.get())
 		    .add(OreGenTools.COBALT_SHOVEL.get())
 		    .add(OreGenTools.IRIDIUM_SHOVEL.get())
@@ -708,8 +737,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 		    .add(OreGenTools.URANIUM_SHOVEL.get())
 		    .add(OreGenTools.ZINC_SHOVEL.get())
 		    .add(OreGenTools.BAUXITE_SWORD.get())
-		    .add(OreGenTools.BAUXITE_SWORD.get())
-		    .add(OreGenTools.BAUXITE_SWORD.get())
+		    .add(OreGenTools.BRASS_SWORD.get())
 		    .add(OreGenTools.BRONZE_SWORD.get())
 		    .add(OreGenTools.COBALT_SWORD.get())
 		    .add(OreGenTools.IRIDIUM_SWORD.get())
@@ -723,8 +751,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 		    .add(OreGenTools.URANIUM_SWORD.get())
 		    .add(OreGenTools.ZINC_SWORD.get())
 		    .add(OreGenTools.BAUXITE_PAXEL.get())
-		    .add(OreGenTools.BAUXITE_PAXEL.get())
-		    .add(OreGenTools.BAUXITE_PAXEL.get())
+		    .add(OreGenTools.BRASS_PAXEL.get())
 		    .add(OreGenTools.BRONZE_PAXEL.get())
 		    .add(OreGenTools.COBALT_PAXEL.get())
 		    .add(OreGenTools.IRIDIUM_PAXEL.get())
@@ -742,8 +769,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 	    
 	    tag(OreGenTags.Items.ARMORS)
 			.add(OreGenArmors.BAUXITE_HELMET.get())
-			.add(OreGenArmors.BAUXITE_HELMET.get())
-			.add(OreGenArmors.BAUXITE_HELMET.get())
+			.add(OreGenArmors.BRASS_HELMET.get())
 			.add(OreGenArmors.BRONZE_HELMET.get())
 			.add(OreGenArmors.COBALT_HELMET.get())
 			.add(OreGenArmors.IRIDIUM_HELMET.get())
@@ -757,8 +783,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenArmors.URANIUM_HELMET.get())
 			.add(OreGenArmors.ZINC_HELMET.get())
 			.add(OreGenArmors.BAUXITE_CHESTPLATE.get())
-			.add(OreGenArmors.BAUXITE_CHESTPLATE.get())
-			.add(OreGenArmors.BAUXITE_CHESTPLATE.get())
+			.add(OreGenArmors.BRASS_CHESTPLATE.get())
 			.add(OreGenArmors.BRONZE_CHESTPLATE.get())
 			.add(OreGenArmors.COBALT_CHESTPLATE.get())
 			.add(OreGenArmors.IRIDIUM_CHESTPLATE.get())
@@ -772,8 +797,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenArmors.URANIUM_CHESTPLATE.get())
 			.add(OreGenArmors.ZINC_CHESTPLATE.get())
 			.add(OreGenArmors.BAUXITE_LEGGINGS.get())
-			.add(OreGenArmors.BAUXITE_LEGGINGS.get())
-			.add(OreGenArmors.BAUXITE_LEGGINGS.get())
+			.add(OreGenArmors.BRASS_LEGGINGS.get())
 			.add(OreGenArmors.BRONZE_LEGGINGS.get())
 			.add(OreGenArmors.COBALT_LEGGINGS.get())
 			.add(OreGenArmors.IRIDIUM_LEGGINGS.get())
@@ -787,8 +811,7 @@ public class ModItemTagProvider extends ItemTagsProvider
 			.add(OreGenArmors.URANIUM_LEGGINGS.get())
 			.add(OreGenArmors.ZINC_LEGGINGS.get())
 			.add(OreGenArmors.BAUXITE_BOOTS.get())
-			.add(OreGenArmors.BAUXITE_BOOTS.get())
-			.add(OreGenArmors.BAUXITE_BOOTS.get())
+			.add(OreGenArmors.BRASS_BOOTS.get())
 			.add(OreGenArmors.BRONZE_BOOTS.get())
 			.add(OreGenArmors.COBALT_BOOTS.get())
 			.add(OreGenArmors.IRIDIUM_BOOTS.get())

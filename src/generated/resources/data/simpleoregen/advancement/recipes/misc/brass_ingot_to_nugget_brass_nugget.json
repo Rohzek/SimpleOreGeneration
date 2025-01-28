@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleoregen:brass_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simpleoregen:brass_ingot_to_nugget_brass_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simpleoregen:brass_ingot_to_nugget_brass_nugget"
+    ]
+  }
+}

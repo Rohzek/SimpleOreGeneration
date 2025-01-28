@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "simpleoregen:nuggets/copper"
+    },
+    {
+      "tag": "simpleoregen:nuggets/copper"
+    },
+    {
+      "tag": "simpleoregen:nuggets/copper"
+    },
+    {
+      "tag": "simpleoregen:nuggets/zinc"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "simpleoregen:brass_nugget"
+  }
+}

@@ -40,6 +40,7 @@ public class OreGenItems
 	public static final DeferredItem<Item> URANIUM_INGOT = DeferredRegistration.ITEMS.register("uranium_ingot", () -> new OreGenIngot("uranium_ingot"));
 	public static final DeferredItem<Item> ZINC_INGOT = DeferredRegistration.ITEMS.register("zinc_ingot", () -> new OreGenIngot("zinc_ingot"));
 	
+	public static final DeferredItem<Item> BRASS_INGOT = DeferredRegistration.ITEMS.register("brass_ingot", () -> new OreGenIngot("brass_ingot"));
 	public static final DeferredItem<Item> BRONZE_INGOT = DeferredRegistration.ITEMS.register("bronze_ingot", () -> new OreGenIngot("bronze_ingot"));
 	public static final DeferredItem<Item> STEEL_INGOT = DeferredRegistration.ITEMS.register("steel_ingot", () -> new OreGenIngot("steel_ingot"));
 	
@@ -58,18 +59,10 @@ public class OreGenItems
 	public static final DeferredItem<Item> URANIUM_NUGGET = DeferredRegistration.ITEMS.register("uranium_nugget", () -> new OreGenIngot("uranium_nugget"));
 	public static final DeferredItem<Item> ZINC_NUGGET = DeferredRegistration.ITEMS.register("zinc_nugget", () -> new OreGenIngot("zinc_nugget"));
 	
+
+	public static final DeferredItem<Item> BRASS_NUGGET = DeferredRegistration.ITEMS.register("brass_nugget", () -> new OreGenIngot("brass_nugget"));
 	public static final DeferredItem<Item> BRONZE_NUGGET = DeferredRegistration.ITEMS.register("bronze_nugget", () -> new OreGenIngot("bronze_nugget"));
 	public static final DeferredItem<Item> STEEL_NUGGET = DeferredRegistration.ITEMS.register("steel_nugget", () -> new OreGenIngot("steel_nugget"));
-	
-	/*
-	 * public static final DeferredItem<Item> copper_bucket = ITEMS.register("copper_bucket",
-            () -> new UniversalBucketItem(
-                    new UniversalBucketItem.Properties()
-                    .upperCrackingTemperature(SimpleOresConfig.serverCopperBucketMeltTemperature::get)
-                    .burningTemperature(SimpleOresConfig.serverCopperBucketFireTemperature::get)
-                    .milking(SimpleOresConfig.serverEnableCopperBucketMilking::get)
-                    ));
-	 */
     
     public static void register() {}
 }

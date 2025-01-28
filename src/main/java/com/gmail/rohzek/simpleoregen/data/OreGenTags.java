@@ -38,6 +38,8 @@ public class OreGenTags
 		public static final TagKey<Block> BAUXITE_BLOCKS = createTag("storage_blocks/bauxite");
 		public static final TagKey<Block> ALUMINUM_BLOCKS = createTag("storage_blocks/aluminum");
 		public static final TagKey<Block> ALUMINIUM_BLOCKS = createTag("storage_blocks/aluminium");
+		public static final TagKey<Block> BRASS_BLOCKS = createTag("storage_blocks/brass");
+		public static final TagKey<Block> BRONZE_BLOCKS = createTag("storage_blocks/bronze");
 		public static final TagKey<Block> COBALT_BLOCKS = createTag("storage_blocks/cobalt");
 		public static final TagKey<Block> IRIDIUM_BLOCKS = createTag("storage_blocks/iridium");
 		public static final TagKey<Block> LEAD_BLOCKS = createTag("storage_blocks/lead");
@@ -102,6 +104,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_INGOTS = createTag("ingots/bauxite");
 		public static final TagKey<Item> ALUMINUM_INGOTS = createTag("ingots/aluminum");
 		public static final TagKey<Item> ALUMINIUM_INGOTS = createTag("ingots/aluminium");
+		public static final TagKey<Item> BRASS_INGOTS = createTag("ingots/brass");
 		public static final TagKey<Item> BRONZE_INGOTS = createTag("ingots/bronze");
 		public static final TagKey<Item> COBALT_INGOTS = createTag("ingots/cobalt");
 		public static final TagKey<Item> IRIDIUM_INGOTS = createTag("ingots/iridium");
@@ -118,6 +121,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_NUGGETS = createTag("nuggets/bauxite");
 		public static final TagKey<Item> ALUMINUM_NUGGETS = createTag("nuggets/aluminum");
 		public static final TagKey<Item> ALUMINIUM_NUGGETS = createTag("nuggets/aluminium");
+		public static final TagKey<Item> BRASS_NUGGETS = createTag("nuggets/brass");
 		public static final TagKey<Item> BRONZE_NUGGETS = createTag("nuggets/bronze");
 		public static final TagKey<Item> COBALT_NUGGETS = createTag("nuggets/cobalt");
 		public static final TagKey<Item> COPPER_NUGGETS = createTag("nuggets/copper");
@@ -135,6 +139,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_PICKAXES = createTag("pickaxes/bauxite");
 		public static final TagKey<Item> ALUMINUM_PICKAXES = createTag("pickaxes/aluminum");
 		public static final TagKey<Item> ALUMINIUM_PICKAXES = createTag("pickaxes/aluminium");
+		public static final TagKey<Item> BRASS_PICKAXES = createTag("pickaxes/brass");
 		public static final TagKey<Item> BRONZE_PICKAXES = createTag("pickaxes/bronze");
 		public static final TagKey<Item> COBALT_PICKAXES = createTag("pickaxes/cobalt");
 		public static final TagKey<Item> COPPER_PICKAXES = createTag("pickaxes/copper");
@@ -152,6 +157,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_AXES = createTag("axes/bauxite");
 		public static final TagKey<Item> ALUMINUM_AXES = createTag("axes/aluminum");
 		public static final TagKey<Item> ALUMINIUM_AXES = createTag("axes/aluminium");
+		public static final TagKey<Item> BRASS_AXES = createTag("axes/brass");
 		public static final TagKey<Item> BRONZE_AXES = createTag("axes/bronze");
 		public static final TagKey<Item> COBALT_AXES = createTag("axes/cobalt");
 		public static final TagKey<Item> COPPER_AXES = createTag("axes/copper");
@@ -169,6 +175,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_SHOVELS = createTag("shovels/bauxite");
 		public static final TagKey<Item> ALUMINUM_SHOVELS = createTag("shovels/aluminum");
 		public static final TagKey<Item> ALUMINIUM_SHOVELS = createTag("shovels/aluminium");
+		public static final TagKey<Item> BRASS_SHOVELS = createTag("shovels/brass");
 		public static final TagKey<Item> BRONZE_SHOVELS = createTag("shovels/bronze");
 		public static final TagKey<Item> COBALT_SHOVELS = createTag("shovels/cobalt");
 		public static final TagKey<Item> COPPER_SHOVELS = createTag("shovels/copper");
@@ -186,6 +193,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_SWORDS = createTag("swords/bauxite");
 		public static final TagKey<Item> ALUMINUM_SWORDS = createTag("swords/aluminum");
 		public static final TagKey<Item> ALUMINIUM_SWORDS = createTag("swords/aluminium");
+		public static final TagKey<Item> BRASS_SWORDS = createTag("swords/brass");
 		public static final TagKey<Item> BRONZE_SWORDS = createTag("swords/bronze");
 		public static final TagKey<Item> COBALT_SWORDS = createTag("swords/cobalt");
 		public static final TagKey<Item> COPPER_SWORDS = createTag("swords/copper");
@@ -203,6 +211,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_SHIELDS = createTag("shields/bauxite");
 		public static final TagKey<Item> ALUMINUM_SHIELDS = createTag("shields/aluminum");
 		public static final TagKey<Item> ALUMINIUM_SHIELDS = createTag("shields/aluminium");
+		public static final TagKey<Item> BRASS_SHIELDS = createTag("shields/bass");
 		public static final TagKey<Item> BRONZE_SHIELDS = createTag("shields/bronze");
 		public static final TagKey<Item> COBALT_SHIELDS = createTag("shields/cobalt");
 		public static final TagKey<Item> COPPER_SHIELDS = createTag("shields/copper");
@@ -217,9 +226,16 @@ public class OreGenTags
 		public static final TagKey<Item> URANIUM_SHIELDS = createTag("shields/uranium");
 		public static final TagKey<Item> ZINC_SHIELDS = createTag("shields/zinc");
 		
+		public static final TagKey<Item> WOODEN_PAXELS = createTag("paxels/wood");
+		public static final TagKey<Item> IRON_PAXELS = createTag("paxels/iron");
+		public static final TagKey<Item> GOLDEN_PAXELS = createTag("paxels/gold");
+		public static final TagKey<Item> DIAMOND_PAXELS = createTag("paxels/diamond");
+		public static final TagKey<Item> NETHERITE_PAXELS = createTag("paxels/netherite");
+		
 		public static final TagKey<Item> BAUXITE_PAXELS = createTag("paxels/bauxite");
 		public static final TagKey<Item> ALUMINUM_PAXELS = createTag("paxels/aluminum");
 		public static final TagKey<Item> ALUMINIUM_PAXELS = createTag("paxels/aluminium");
+		public static final TagKey<Item> BRASS_PAXELS = createTag("paxels/brass");
 		public static final TagKey<Item> BRONZE_PAXELS = createTag("paxels/bronze");
 		public static final TagKey<Item> COBALT_PAXELS = createTag("paxels/cobalt");
 		public static final TagKey<Item> COPPER_PAXELS = createTag("paxels/copper");
@@ -237,6 +253,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_HOES = createTag("hoes/bauxite");
 		public static final TagKey<Item> ALUMINUM_HOES = createTag("hoes/aluminum");
 		public static final TagKey<Item> ALUMINIUM_HOES = createTag("hoes/aluminium");
+		public static final TagKey<Item> BRASS_HOES = createTag("hoes/brass");
 		public static final TagKey<Item> BRONZE_HOES = createTag("hoes/bronze");
 		public static final TagKey<Item> COBALT_HOES = createTag("hoes/cobalt");
 		public static final TagKey<Item> COPPER_HOES = createTag("hoes/copper");
@@ -254,6 +271,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_HELMETS = createTag("helmets/bauxite");
 		public static final TagKey<Item> ALUMINUM_HELMETS = createTag("helmets/aluminum");
 		public static final TagKey<Item> ALUMINIUM_HELMETS = createTag("helmets/aluminium");
+		public static final TagKey<Item> BRASS_HELMETS = createTag("helmets/brass");
 		public static final TagKey<Item> BRONZE_HELMETS = createTag("helmets/bronze");
 		public static final TagKey<Item> COBALT_HELMETS = createTag("helmets/cobalt");
 		public static final TagKey<Item> COPPER_HELMETS = createTag("helmets/copper");
@@ -271,6 +289,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_CHESTPLATES = createTag("chestplates/bauxite");
 		public static final TagKey<Item> ALUMINUM_CHESTPLATES = createTag("chestplates/aluminum");
 		public static final TagKey<Item> ALUMINIUM_CHESTPLATES = createTag("chestplates/aluminium");
+		public static final TagKey<Item> BRASS_CHESTPLATES = createTag("chestplates/brass");
 		public static final TagKey<Item> BRONZE_CHESTPLATES = createTag("chestplates/bronze");
 		public static final TagKey<Item> COBALT_CHESTPLATES = createTag("chestplates/cobalt");
 		public static final TagKey<Item> COPPER_CHESTPLATES = createTag("chestplates/copper");
@@ -288,6 +307,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_LEGGINGS = createTag("leggings/bauxite");
 		public static final TagKey<Item> ALUMINUM_LEGGINGS = createTag("leggings/aluminum");
 		public static final TagKey<Item> ALUMINIUM_LEGGINGS = createTag("leggings/aluminium");
+		public static final TagKey<Item> BRASS_LEGGINGS = createTag("leggings/brass");
 		public static final TagKey<Item> BRONZE_LEGGINGS = createTag("leggings/bronze");
 		public static final TagKey<Item> COBALT_LEGGINGS = createTag("leggings/cobalt");
 		public static final TagKey<Item> COPPER_LEGGINGS = createTag("leggings/copper");
@@ -305,6 +325,7 @@ public class OreGenTags
 		public static final TagKey<Item> BAUXITE_BOOTS = createTag("boots/bauxite");
 		public static final TagKey<Item> ALUMINUM_BOOTS = createTag("boots/aluminum");
 		public static final TagKey<Item> ALUMINIUM_BOOTS = createTag("boots/aluminium");
+		public static final TagKey<Item> BRASS_BOOTS = createTag("boots/brass");
 		public static final TagKey<Item> BRONZE_BOOTS = createTag("boots/bronze");
 		public static final TagKey<Item> COBALT_BOOTS = createTag("boots/cobalt");
 		public static final TagKey<Item> COPPER_BOOTS = createTag("boots/copper");
@@ -318,6 +339,30 @@ public class OreGenTags
 		public static final TagKey<Item> TUNGSTEN_BOOTS = createTag("boots/tungsten");
 		public static final TagKey<Item> URANIUM_BOOTS = createTag("boots/uranium");
 		public static final TagKey<Item> ZINC_BOOTS = createTag("boots/zinc");
+		
+		public static final TagKey<Item> WOODEN_BUCKETS = createTag("buckets/wood");
+		public static final TagKey<Item> IRON_BUCKETS = createTag("buckets/iron");
+		public static final TagKey<Item> GOLDEN_BUCKETS = createTag("buckets/gold");
+		public static final TagKey<Item> DIAMOND_BUCKETS = createTag("buckets/diamond");
+		public static final TagKey<Item> NETHERITE_BUCKETS = createTag("buckets/netherite");
+		
+		public static final TagKey<Item> BAUXITE_BUCKETS = createTag("buckets/bauxite");
+		public static final TagKey<Item> ALUMINUM_BUCKETS = createTag("buckets/aluminum");
+		public static final TagKey<Item> ALUMINIUM_BUCKETS = createTag("buckets/aluminium");
+		public static final TagKey<Item> BRASS_BUCKETS = createTag("buckets/brass");
+		public static final TagKey<Item> BRONZE_BUCKETS = createTag("buckets/bronze");
+		public static final TagKey<Item> COBALT_BUCKETS = createTag("buckets/cobalt");
+		public static final TagKey<Item> COPPER_BUCKETS = createTag("buckets/copper");
+		public static final TagKey<Item> IRIDIUM_BUCKETS = createTag("buckets/iridium");
+		public static final TagKey<Item> LEAD_BUCKETS = createTag("buckets/lead");
+		public static final TagKey<Item> NICKEL_BUCKETS = createTag("buckets/nickel");
+		public static final TagKey<Item> PLATINUM_BUCKETS = createTag("buckets/platinum");
+		public static final TagKey<Item> SILVER_BUCKETS = createTag("buckets/silver");
+		public static final TagKey<Item> STEEL_BUCKETS = createTag("buckets/steel");
+		public static final TagKey<Item> TIN_BUCKETS = createTag("buckets/tin");
+		public static final TagKey<Item> TUNGSTEN_BUCKETS = createTag("buckets/tungsten");
+		public static final TagKey<Item> URANIUM_BUCKETS = createTag("buckets/uranium");
+		public static final TagKey<Item> ZINC_BUCKETS = createTag("buckets/zinc");
 		
 		public static final TagKey<Item> ARMORS = createTag("armors");
 		public static final TagKey<Item> TOOLS = createTag("tools");

@@ -22,6 +22,8 @@ public class OreGenTools
 			() -> new OreGenPickaxe(ModToolTiers.BAUXITE, "bauxite_pickaxe"));
 	public static final DeferredItem<Item> BRONZE_PICKAXE = DeferredRegistration.ITEMS.register("bronze_pickaxe", 
 			() -> new OreGenPickaxe(ModToolTiers.BRONZE, "bronze_pickaxe"));
+	public static final DeferredItem<Item> BRASS_PICKAXE = DeferredRegistration.ITEMS.register("brass_pickaxe", 
+			() -> new OreGenPickaxe(ModToolTiers.BRASS, "brass_pickaxe"));
 	public static final DeferredItem<Item> COBALT_PICKAXE = DeferredRegistration.ITEMS.register("cobalt_pickaxe", 
 			() -> new OreGenPickaxe(ModToolTiers.COBALT, "cobalt_pickaxe"));
 	public static final DeferredItem<Item> COPPER_PICKAXE = DeferredRegistration.ITEMS.register("copper_pickaxe", 
@@ -62,6 +64,8 @@ public class OreGenTools
 			() -> new OreGenAxe(ModToolTiers.AMETHYST, "amethyst_axe"));
 	public static final DeferredItem<Item> BAUXITE_AXE = DeferredRegistration.ITEMS.register("bauxite_axe", 
 			() -> new OreGenAxe(ModToolTiers.BAUXITE, "bauxite_axe"));
+	public static final DeferredItem<Item> BRASS_AXE = DeferredRegistration.ITEMS.register("brass_axe", 
+			() -> new OreGenAxe(ModToolTiers.BRASS, "brass_axe"));
 	public static final DeferredItem<Item> BRONZE_AXE = DeferredRegistration.ITEMS.register("bronze_axe", 
 			() -> new OreGenAxe(ModToolTiers.BRONZE, "bronze_axe"));
 	public static final DeferredItem<Item> COBALT_AXE = DeferredRegistration.ITEMS.register("cobalt_axe", 
@@ -104,6 +108,8 @@ public class OreGenTools
 			() -> new OreGenShovel(ModToolTiers.AMETHYST, "amethyst_shovel"));
 	public static final DeferredItem<Item> BAUXITE_SHOVEL = DeferredRegistration.ITEMS.register("bauxite_shovel", 
 			() -> new OreGenShovel(ModToolTiers.BAUXITE, "bauxite_shovel"));
+	public static final DeferredItem<Item> BRASS_SHOVEL = DeferredRegistration.ITEMS.register("brass_shovel", 
+			() -> new OreGenShovel(ModToolTiers.BRASS, "brass_shovel"));
 	public static final DeferredItem<Item> BRONZE_SHOVEL = DeferredRegistration.ITEMS.register("bronze_shovel", 
 			() -> new OreGenShovel(ModToolTiers.BRONZE, "bronze_shovel"));
 	public static final DeferredItem<Item> COBALT_SHOVEL = DeferredRegistration.ITEMS.register("cobalt_shovel", 
@@ -146,6 +152,8 @@ public class OreGenTools
 			() -> new OreGenHoe(ModToolTiers.AMETHYST, "amethyst_hoe"));
 	public static final DeferredItem<Item> BAUXITE_HOE = DeferredRegistration.ITEMS.register("bauxite_hoe", 
 			() -> new OreGenHoe(ModToolTiers.BAUXITE, "bauxite_hoe"));
+	public static final DeferredItem<Item> BRASS_HOE = DeferredRegistration.ITEMS.register("brass_hoe", 
+			() -> new OreGenHoe(ModToolTiers.BRASS, "brass_hoe"));
 	public static final DeferredItem<Item> BRONZE_HOE = DeferredRegistration.ITEMS.register("bronze_hoe", 
 			() -> new OreGenHoe(ModToolTiers.BRONZE, "bronze_hoe"));
 	public static final DeferredItem<Item> COBALT_HOE = DeferredRegistration.ITEMS.register("cobalt_hoe", 
@@ -201,6 +209,8 @@ public class OreGenTools
 			() -> new OreGenPaxel(ModToolTiers.AMETHYST, "amethyst_paxel"));
 	public static final DeferredItem<Item> BAUXITE_PAXEL = DeferredRegistration.ITEMS.register("bauxite_paxel", 
 			() -> new OreGenPaxel(ModToolTiers.BAUXITE, "bauxite_paxel"));
+	public static final DeferredItem<Item> BRASS_PAXEL = DeferredRegistration.ITEMS.register("brass_paxel", 
+			() -> new OreGenPaxel(ModToolTiers.BRASS, "brass_paxel"));
 	public static final DeferredItem<Item> BRONZE_PAXEL = DeferredRegistration.ITEMS.register("bronze_paxel", 
 			() -> new OreGenPaxel(ModToolTiers.BRONZE, "bronze_paxel"));
 	public static final DeferredItem<Item> COBALT_PAXEL = DeferredRegistration.ITEMS.register("cobalt_paxel", 
@@ -243,6 +253,8 @@ public class OreGenTools
 			() -> new OreGenSword(ModToolTiers.AMETHYST, "amethyst_sword"));
 	public static final DeferredItem<Item> BAUXITE_SWORD = DeferredRegistration.ITEMS.register("bauxite_sword", 
 			() -> new OreGenSword(ModToolTiers.BAUXITE, "bauxite_sword"));
+	public static final DeferredItem<Item> BRASS_SWORD = DeferredRegistration.ITEMS.register("brass_sword", 
+			() -> new OreGenSword(ModToolTiers.BRASS, "brass_sword"));
 	public static final DeferredItem<Item> BRONZE_SWORD = DeferredRegistration.ITEMS.register("bronze_sword", 
 			() -> new OreGenSword(ModToolTiers.BRONZE, "bronze_sword"));
 	public static final DeferredItem<Item> COBALT_SWORD = DeferredRegistration.ITEMS.register("cobalt_sword", 

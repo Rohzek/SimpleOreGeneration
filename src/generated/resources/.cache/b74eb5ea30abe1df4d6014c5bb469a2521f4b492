@@ -1,9 +1,10 @@
-// 1.21.1	2025-01-22T18:33:15.0163263	Tags for minecraft:item mod id simpleoregen
+// 1.21.1	2025-01-28T12:41:58.8628538	Tags for minecraft:item mod id simpleoregen
 53486172ba93d29bf3c0128f3db0ad7737efe16e data/c/tags/item/gems/diamond.json
-2f37185976fd828bb7c72e09ed3ce8defd6034a9 data/simpleoregen/tags/item/armors.json
+bd7b36b69654f7bcbaf5492559d576570c5774b3 data/simpleoregen/tags/item/armors.json
 8c0ba5f6a10f4d6aa17cb6d3d6c92aa7888693ad data/simpleoregen/tags/item/axes/aluminium.json
 8c0ba5f6a10f4d6aa17cb6d3d6c92aa7888693ad data/simpleoregen/tags/item/axes/aluminum.json
 8c0ba5f6a10f4d6aa17cb6d3d6c92aa7888693ad data/simpleoregen/tags/item/axes/bauxite.json
+2c504c0ecbf990253b6ae96aa88e840b4a26b93d data/simpleoregen/tags/item/axes/brass.json
 33d17a884a7a2169ce5daa862cf7b4d5a265ab37 data/simpleoregen/tags/item/axes/bronze.json
 d62009e6dd66c0cb4db7eb78722e3ad69fcb6788 data/simpleoregen/tags/item/axes/cobalt.json
 e8031229f9c61915472efbf4008a938f162e0896 data/simpleoregen/tags/item/axes/iridium.json
@@ -19,6 +20,7 @@ ff563ac18bebbb45f82a02f323712643243779b3 data/simpleoregen/tags/item/axes/zinc.j
 1f900f66be9289917364ad7b10a2e97f5dec98e3 data/simpleoregen/tags/item/boots/aluminium.json
 1f900f66be9289917364ad7b10a2e97f5dec98e3 data/simpleoregen/tags/item/boots/aluminum.json
 1f900f66be9289917364ad7b10a2e97f5dec98e3 data/simpleoregen/tags/item/boots/bauxite.json
+2ec6268d318725ed03c0232c76a8c0d0e1ea4011 data/simpleoregen/tags/item/boots/brass.json
 bc180be0577e3282a94d34a1366d102392c473f8 data/simpleoregen/tags/item/boots/bronze.json
 aa1fc1d279ddf78fd555b257af078f172c86215d data/simpleoregen/tags/item/boots/cobalt.json
 4176dd0096fd02c2f72437f930360fa2451c175c data/simpleoregen/tags/item/boots/iridium.json
@@ -34,6 +36,7 @@ e9efefca6d59e638d31c5646584a5dc0971ee414 data/simpleoregen/tags/item/boots/zinc.
 ea4f55fa75938f6d82afc1511d57597e028f78a4 data/simpleoregen/tags/item/chestplates/aluminium.json
 ea4f55fa75938f6d82afc1511d57597e028f78a4 data/simpleoregen/tags/item/chestplates/aluminum.json
 ea4f55fa75938f6d82afc1511d57597e028f78a4 data/simpleoregen/tags/item/chestplates/bauxite.json
+74d374c5805c3a2f029623c54dbafbbb923a5c8a data/simpleoregen/tags/item/chestplates/brass.json
 1cbf449f8ed47d7956b13b2e66edd060cb82ec2b data/simpleoregen/tags/item/chestplates/bronze.json
 e0d2e92e6b7d2706d72d3693ef41b7f4697716b2 data/simpleoregen/tags/item/chestplates/cobalt.json
 7b7f9ee8ffddf363b5c5398b98c8a8cb0cb97ad3 data/simpleoregen/tags/item/chestplates/iridium.json
@@ -51,6 +54,7 @@ b5457fc56ef5501bbe96478b522c816ab3d13853 data/simpleoregen/tags/item/chestplates
 e4ade7caf8e62578af7d9fb5517ac404c8e3cfce data/simpleoregen/tags/item/helmets/aluminium.json
 e4ade7caf8e62578af7d9fb5517ac404c8e3cfce data/simpleoregen/tags/item/helmets/aluminum.json
 e4ade7caf8e62578af7d9fb5517ac404c8e3cfce data/simpleoregen/tags/item/helmets/bauxite.json
+6200f80a3a365f71531a7a87007565dee00731f4 data/simpleoregen/tags/item/helmets/brass.json
 c1a0a062c29b29c7c15ba0a06a48d8db515b689e data/simpleoregen/tags/item/helmets/bronze.json
 e90eea6c0def6f610854a11dfdc208bbc94e9e70 data/simpleoregen/tags/item/helmets/cobalt.json
 7c18baf2f0a4f7c18009dda3da4721ffbd2e7384 data/simpleoregen/tags/item/helmets/iridium.json
@@ -66,6 +70,7 @@ f0f6cf8787780d6c209d21ea1fc4044c240c989d data/simpleoregen/tags/item/helmets/ura
 4406982ff29a6641c849949a3ae2ba80323bada3 data/simpleoregen/tags/item/hoes/aluminium.json
 4406982ff29a6641c849949a3ae2ba80323bada3 data/simpleoregen/tags/item/hoes/aluminum.json
 4406982ff29a6641c849949a3ae2ba80323bada3 data/simpleoregen/tags/item/hoes/bauxite.json
+a301c05d91fc1a15cf08e246dc17e0b3380ed1c4 data/simpleoregen/tags/item/hoes/brass.json
 430f35170be48c3ba246f5c1c052f444b5c7267f data/simpleoregen/tags/item/hoes/bronze.json
 8a7298d3e6bdf8a377ec8fdc85aed41c5d4ae976 data/simpleoregen/tags/item/hoes/cobalt.json
 a117c504a32593681cc2012b4a91bbe78d78a49e data/simpleoregen/tags/item/hoes/iridium.json
@@ -81,6 +86,7 @@ f8f4c95c026c14e2b7a69ab445dfb3b54a8b7eac data/simpleoregen/tags/item/hoes/lead.j
 9939319aaea7dbccf7398f7ed33c6ee4ca165500 data/simpleoregen/tags/item/ingots/aluminium.json
 9939319aaea7dbccf7398f7ed33c6ee4ca165500 data/simpleoregen/tags/item/ingots/aluminum.json
 9939319aaea7dbccf7398f7ed33c6ee4ca165500 data/simpleoregen/tags/item/ingots/bauxite.json
+c1d09ccf26fc780291fc3a9f850ec5f1f5038f4a data/simpleoregen/tags/item/ingots/brass.json
 7e05a5d216863f7f7fcf3786fd5529a3d0241687 data/simpleoregen/tags/item/ingots/bronze.json
 51389987a53a6fa7f0793983d150ad593fb9bc2e data/simpleoregen/tags/item/ingots/cobalt.json
 f834d3c4ff1ca1f89823413767e65495da2b1dec data/simpleoregen/tags/item/ingots/iridium.json
@@ -96,6 +102,7 @@ cdd8c0f96dcef637e3658f4601f722e24bb68ec5 data/simpleoregen/tags/item/ingots/tung
 accf5faf337cebd84de9344de4d7b18f591cdd27 data/simpleoregen/tags/item/leggings/aluminium.json
 accf5faf337cebd84de9344de4d7b18f591cdd27 data/simpleoregen/tags/item/leggings/aluminum.json
 accf5faf337cebd84de9344de4d7b18f591cdd27 data/simpleoregen/tags/item/leggings/bauxite.json
+d81836264c414b0bc74432ec4e37e8d3bf475970 data/simpleoregen/tags/item/leggings/brass.json
 4e2fc2d75740ddf297439d5314b5c871547e4079 data/simpleoregen/tags/item/leggings/bronze.json
 17e7b7efc16d23a00c01de7256f2634d2beb3d70 data/simpleoregen/tags/item/leggings/cobalt.json
 34997078423e059a4cfa49edd932a45d79c386c1 data/simpleoregen/tags/item/leggings/iridium.json
@@ -112,7 +119,7 @@ db13a76c94cbd942dc950d3a31e90c60402354d9 data/simpleoregen/tags/item/leggings/zi
 f0ab5565b6c18f00c8bd031058cb497a5ffdeb9b data/simpleoregen/tags/item/nuggets/aluminium.json
 f0ab5565b6c18f00c8bd031058cb497a5ffdeb9b data/simpleoregen/tags/item/nuggets/aluminum.json
 f0ab5565b6c18f00c8bd031058cb497a5ffdeb9b data/simpleoregen/tags/item/nuggets/bauxite.json
-182b4b1d22d264bb1e6d911718c074911f58890d data/simpleoregen/tags/item/nuggets/bronze.json
+6f3c7441f68e43bcf300850229fb43222d5d7d4b data/simpleoregen/tags/item/nuggets/brass.json
 bc45569410c79fb51ca204a4019f1b19d73f7184 data/simpleoregen/tags/item/nuggets/cobalt.json
 009ba915e73af842472a17861f2a9745a33e351c data/simpleoregen/tags/item/nuggets/copper.json
 44ca7fda7550b797e69ac4025b7fe4047a1768c1 data/simpleoregen/tags/item/nuggets/iridium.json
@@ -128,6 +135,7 @@ d6ec7b776e7df9b86a2f939e642832c70f63439f data/simpleoregen/tags/item/nuggets/zin
 61ea85fccd9ead2f0a52dcd3778fefb21370f55d data/simpleoregen/tags/item/paxels/aluminium.json
 61ea85fccd9ead2f0a52dcd3778fefb21370f55d data/simpleoregen/tags/item/paxels/aluminum.json
 61ea85fccd9ead2f0a52dcd3778fefb21370f55d data/simpleoregen/tags/item/paxels/bauxite.json
+438a316de609bc6cbe4f37609bb90c58f06e0275 data/simpleoregen/tags/item/paxels/brass.json
 0b05e158e585f870020ddb8d820876550b299592 data/simpleoregen/tags/item/paxels/bronze.json
 494e505d7d62960bfc732bd486657862f6ad4e36 data/simpleoregen/tags/item/paxels/cobalt.json
 d6b01bfce663ef0141fe382402d46da1a238cac5 data/simpleoregen/tags/item/paxels/iridium.json
@@ -143,6 +151,7 @@ cefde8ca92ec2935500c878d264e737df57901fe data/simpleoregen/tags/item/paxels/tung
 60c00c011c5e21bc2d97d204d8be20639b853d8a data/simpleoregen/tags/item/pickaxes/aluminium.json
 60c00c011c5e21bc2d97d204d8be20639b853d8a data/simpleoregen/tags/item/pickaxes/aluminum.json
 60c00c011c5e21bc2d97d204d8be20639b853d8a data/simpleoregen/tags/item/pickaxes/bauxite.json
+c5b23581de3ab1f3549f49c2207936ed354d202b data/simpleoregen/tags/item/pickaxes/brass.json
 8f50417eb18375aeb1394bffcb856e8dc97cede2 data/simpleoregen/tags/item/pickaxes/bronze.json
 8b31f18d9beee8d0393af48330ccffe9f99b060d data/simpleoregen/tags/item/pickaxes/cobalt.json
 e5e21a340943fe37be576a57d4f9d6e3ba59364c data/simpleoregen/tags/item/pickaxes/iridium.json
@@ -173,6 +182,7 @@ c77c7a8ee31cbfb17c4f9638feea2ee664dfefbf data/simpleoregen/tags/item/raw_materia
 d7b2008fe89a7a37bd3f9785b3436ecc3f567601 data/simpleoregen/tags/item/shovels/aluminium.json
 d7b2008fe89a7a37bd3f9785b3436ecc3f567601 data/simpleoregen/tags/item/shovels/aluminum.json
 d7b2008fe89a7a37bd3f9785b3436ecc3f567601 data/simpleoregen/tags/item/shovels/bauxite.json
+9152146f887abaef76a2e2b106176c8da1d71324 data/simpleoregen/tags/item/shovels/brass.json
 f9bb524f217bb6e0b882205977361cbaa2eb9949 data/simpleoregen/tags/item/shovels/bronze.json
 2c7cf2e46e66d239ad67428926f07aece967c70a data/simpleoregen/tags/item/shovels/cobalt.json
 7639d3e62e9be1cd3afc5d4bd51b53cd58a413a8 data/simpleoregen/tags/item/shovels/iridium.json
@@ -189,6 +199,7 @@ de0983d0810bcb631c9158325f6a2b1bf30f4f67 data/simpleoregen/tags/item/shovels/ura
 c74bbd363d716003222daffcdfec66efdd015153 data/simpleoregen/tags/item/swords/aluminium.json
 c74bbd363d716003222daffcdfec66efdd015153 data/simpleoregen/tags/item/swords/aluminum.json
 c74bbd363d716003222daffcdfec66efdd015153 data/simpleoregen/tags/item/swords/bauxite.json
+94c93172b96e6382471b57ca5428d674b0354be0 data/simpleoregen/tags/item/swords/brass.json
 6155eec5ea30b3683a1f34300da946fd308ba1ee data/simpleoregen/tags/item/swords/bronze.json
 135a1578edd28cecaea0ff7ff684b4388b03b747 data/simpleoregen/tags/item/swords/cobalt.json
 7ea13a8b8da7ccc54b58c7ccd63dd3ebf175e8e8 data/simpleoregen/tags/item/swords/iridium.json
@@ -202,4 +213,4 @@ ec92698d3f7364cd21fe6b2c6a12e5a129610f46 data/simpleoregen/tags/item/swords/tung
 18f3d0ecb7e012cc1009ec792f5ddf3d4dc150d7 data/simpleoregen/tags/item/swords/uranium.json
 56ee8809799646fe92efe8af186ec85d16ece73f data/simpleoregen/tags/item/swords/zinc.json
 ea68072bb3fcbbb3aeea8c887afed0b582a59be7 data/simpleoregen/tags/item/templates/netherite.json
-fd18a9855ada303292c2f766063f82c31f2202bf data/simpleoregen/tags/item/tools.json
+aa10b588f33f1b6dd60d591e4d16f317b9b594e7 data/simpleoregen/tags/item/tools.json

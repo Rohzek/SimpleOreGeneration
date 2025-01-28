@@ -43,6 +43,25 @@ public class OreGenArmors
 			0f
 	));
 	
+	public static final Holder<ArmorMaterial> ARMOR_MATERIAL_BRASS = DeferredRegistration.ARMOR_MATERIALS.register("armor_material_brass", () -> new ArmorMaterial(
+			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> 
+			{
+				map.put(Type.BOOTS, 2);
+				map.put(Type.LEGGINGS, 5);
+				map.put(Type.CHESTPLATE, 6);
+				map.put(Type.HELMET, 3);
+				map.put(Type.BODY, 5);
+			}),
+			15,
+			SoundEvents.ARMOR_EQUIP_GOLD,
+			() -> Ingredient.of(OreGenItems.BRASS_INGOT),
+			List.of(
+					new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "brass"))
+			),
+			2.5f,
+			0f
+	));
+	
 	public static final Holder<ArmorMaterial> ARMOR_MATERIAL_BRONZE = DeferredRegistration.ARMOR_MATERIALS.register("armor_material_bronze", () -> new ArmorMaterial(
 			Util.make(new EnumMap<>(ArmorItem.Type.class), map -> 
 			{
@@ -314,6 +333,7 @@ public class OreGenArmors
 	 */
 	
 	public static final Supplier<ArmorItem> BAUXITE_HELMET = DeferredRegistration.ITEMS.register("bauxite_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_BAUXITE, Type.HELMET, 5));
+	public static final Supplier<ArmorItem> BRASS_HELMET = DeferredRegistration.ITEMS.register("brass_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_BRASS, Type.HELMET, 17));
 	public static final Supplier<ArmorItem> BRONZE_HELMET = DeferredRegistration.ITEMS.register("bronze_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_BRONZE, Type.HELMET, 15));
 	public static final Supplier<ArmorItem> COBALT_HELMET = DeferredRegistration.ITEMS.register("cobalt_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_COBALT, Type.HELMET, 16));
 	public static final Supplier<ArmorItem> IRIDIUM_HELMET = DeferredRegistration.ITEMS.register("iridium_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_IRIDIUM, Type.HELMET, 13));
@@ -330,6 +350,7 @@ public class OreGenArmors
 	public static final Supplier<ArmorItem> ZINC_HELMET = DeferredRegistration.ITEMS.register("zinc_helmet", () -> new OreGenArmor(ARMOR_MATERIAL_ZINC, Type.HELMET, 13));
 	
 	public static final Supplier<ArmorItem> BAUXITE_CHESTPLATE = DeferredRegistration.ITEMS.register("bauxite_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_BAUXITE, Type.CHESTPLATE, 5));
+	public static final Supplier<ArmorItem> BRASS_CHESTPLATE = DeferredRegistration.ITEMS.register("brass_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_BRASS, Type.CHESTPLATE, 17));
 	public static final Supplier<ArmorItem> BRONZE_CHESTPLATE = DeferredRegistration.ITEMS.register("bronze_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_BRONZE, Type.CHESTPLATE, 15));
 	public static final Supplier<ArmorItem> COBALT_CHESTPLATE = DeferredRegistration.ITEMS.register("cobalt_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_COBALT, Type.CHESTPLATE, 16));
 	public static final Supplier<ArmorItem> IRIDIUM_CHESTPLATE = DeferredRegistration.ITEMS.register("iridium_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_IRIDIUM, Type.CHESTPLATE, 13));
@@ -346,6 +367,7 @@ public class OreGenArmors
 	public static final Supplier<ArmorItem> ZINC_CHESTPLATE = DeferredRegistration.ITEMS.register("zinc_chestplate", () -> new OreGenArmor(ARMOR_MATERIAL_ZINC, Type.CHESTPLATE, 13));
 	
 	public static final Supplier<ArmorItem> BAUXITE_LEGGINGS = DeferredRegistration.ITEMS.register("bauxite_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_BAUXITE, Type.LEGGINGS, 5));
+	public static final Supplier<ArmorItem> BRASS_LEGGINGS = DeferredRegistration.ITEMS.register("brass_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_BRASS, Type.LEGGINGS, 17));
 	public static final Supplier<ArmorItem> BRONZE_LEGGINGS = DeferredRegistration.ITEMS.register("bronze_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_BRONZE, Type.LEGGINGS, 15));
 	public static final Supplier<ArmorItem> COBALT_LEGGINGS = DeferredRegistration.ITEMS.register("cobalt_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_COBALT, Type.LEGGINGS, 16));
 	public static final Supplier<ArmorItem> IRIDIUM_LEGGINGS = DeferredRegistration.ITEMS.register("iridium_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_IRIDIUM, Type.LEGGINGS, 13));
@@ -362,6 +384,7 @@ public class OreGenArmors
 	public static final Supplier<ArmorItem> ZINC_LEGGINGS = DeferredRegistration.ITEMS.register("zinc_leggings", () -> new OreGenArmor(ARMOR_MATERIAL_ZINC, Type.LEGGINGS, 13));
 	
 	public static final Supplier<ArmorItem> BAUXITE_BOOTS = DeferredRegistration.ITEMS.register("bauxite_boots", () -> new OreGenArmor(ARMOR_MATERIAL_BAUXITE, Type.BOOTS, 5));
+	public static final Supplier<ArmorItem> BRASS_BOOTS = DeferredRegistration.ITEMS.register("brass_boots", () -> new OreGenArmor(ARMOR_MATERIAL_BRASS, Type.BOOTS, 17));
 	public static final Supplier<ArmorItem> BRONZE_BOOTS = DeferredRegistration.ITEMS.register("bronze_boots", () -> new OreGenArmor(ARMOR_MATERIAL_BRONZE, Type.BOOTS, 15));
 	public static final Supplier<ArmorItem> COBALT_BOOTS = DeferredRegistration.ITEMS.register("cobalt_boots", () -> new OreGenArmor(ARMOR_MATERIAL_COBALT, Type.BOOTS, 16));
 	public static final Supplier<ArmorItem> IRIDIUM_BOOTS = DeferredRegistration.ITEMS.register("iridium_boots", () -> new OreGenArmor(ARMOR_MATERIAL_IRIDIUM, Type.BOOTS, 13));
@@ -379,6 +402,7 @@ public class OreGenArmors
 	
 	
 	public static final Supplier<AnimalArmorItem> BAUXITE_HORSE_ARMOR = DeferredRegistration.ITEMS.register("bauxite_horse_armor", () -> new OreGenHorseArmor(ARMOR_MATERIAL_BAUXITE, "bauxite"));
+	public static final Supplier<AnimalArmorItem> BRASS_HORSE_ARMOR = DeferredRegistration.ITEMS.register("brass_horse_armor", () -> new OreGenHorseArmor(ARMOR_MATERIAL_BRASS, "brass"));
 	public static final Supplier<AnimalArmorItem> BRONZE_HORSE_ARMOR = DeferredRegistration.ITEMS.register("bronze_horse_armor", () -> new OreGenHorseArmor(ARMOR_MATERIAL_BRONZE, "bronze"));
 	public static final Supplier<AnimalArmorItem> COBALT_HORSE_ARMOR = DeferredRegistration.ITEMS.register("cobalt_horse_armor", () -> new OreGenHorseArmor(ARMOR_MATERIAL_COBALT, "cobalt"));
 	public static final Supplier<AnimalArmorItem> IRIDIUM_HORSE_ARMOR = DeferredRegistration.ITEMS.register("iridium_horse_armor", () -> new OreGenHorseArmor(ARMOR_MATERIAL_IRIDIUM, "iridium"));

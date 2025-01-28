@@ -528,6 +528,7 @@ public class OreGenBlocks
 	
 	// Solid
 	public static final DeferredBlock<Block> BAUXITE_BLOCK = DeferredRegistration.registerBlock("bauxite_block", () -> new SolidBlock("bauxite_block", 5f, 6f));
+	public static final DeferredBlock<Block> BRASS_BLOCK = DeferredRegistration.registerBlock("brass_block", () -> new SolidBlock("brass_block", 5f, 6f));
 	public static final DeferredBlock<Block> BRONZE_BLOCK = DeferredRegistration.registerBlock("bronze_block", () -> new SolidBlock("bronze_block", 5f, 6f));
 	public static final DeferredBlock<Block> COBALT_BLOCK = DeferredRegistration.registerBlock("cobalt_block", () -> new SolidBlock("cobalt_block", 5f, 6f));
 	public static final DeferredBlock<Block> IRIDIUM_BLOCK = DeferredRegistration.registerBlock("iridium_block", () -> new SolidBlock("iridium_block",5f, 6f));
