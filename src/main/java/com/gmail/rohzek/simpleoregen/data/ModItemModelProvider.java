@@ -31,6 +31,16 @@ public class ModItemModelProvider extends ItemModelProvider
 		{
 			simpleBlockItem(entry.get());
 		}
+		
+		for (DeferredHolder<Item, ? extends Item> entry : DeferredRegistration.ITEM_BUCKETS.getEntries()) 
+		{
+			simpleBucketItem(entry.get());
+		}
+	}
+	
+	protected ItemModelBuilder simpleBucketItem(Item item) 
+	{
+		return withExistingParent(BuiltInRegistries.ITEM.getKey(item).getPath(), ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", ResourceLocation.fromNamespaceAndPath(modid, "item/bucket/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
 	}
 
 	protected ItemModelBuilder simpleItem(Item item) 

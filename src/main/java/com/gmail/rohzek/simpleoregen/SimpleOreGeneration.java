@@ -7,6 +7,7 @@ import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.enchantments.ModEnchantmentEffects;
 import com.gmail.rohzek.simpleoregen.entity.ModEntities;
 import com.gmail.rohzek.simpleoregen.items.OreGenArmors;
+import com.gmail.rohzek.simpleoregen.items.OreGenBuckets;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
 import com.gmail.rohzek.simpleoregen.items.OreGenTools;
 import com.gmail.rohzek.simpleoregen.items.VanillaTypeArmors;
@@ -56,6 +57,7 @@ public class SimpleOreGeneration
 		OreGenArmors.register();
 		VanillaTypeArmors.register();
 		OreGenTools.register();
+		OreGenBuckets.register();
 		OreGenBlocks.register();
 		WorldGenBlocks.register();
 		ModEnchantmentEffects.register();

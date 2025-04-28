@@ -25,6 +25,7 @@ public class DeferredRegistration
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Items ITEMS_FLOWERS = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Items ITEMS_FLOWERS_POTTED = DeferredRegister.Items.createItems(Reference.MODID);
+	public static final DeferredRegister.Items ITEM_BUCKETS = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Items ITEM_BLOCKS = DeferredRegister.Items.createItems(Reference.MODID);
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.Blocks.createBlocks(Reference.MODID);
 	public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(BuiltInRegistries.ARMOR_MATERIAL, Reference.MODID);
@@ -72,6 +73,7 @@ public class DeferredRegistration
 		ITEM_BLOCKS.register(bus);
 		ITEMS_FLOWERS.register(bus);
 		ITEMS_FLOWERS_POTTED.register(bus);
+		//ITEM_BUCKETS.register(bus);
 		ARMOR_MATERIALS.register(bus);
 		TABS.register(bus);
 		BLOCKS.register(bus);
@@ -87,6 +89,10 @@ public class DeferredRegistration
 				});
 				
 				ITEMS.getEntries().forEach(entry -> {
+					output.accept(entry.get());
+				});
+				
+				ITEM_BUCKETS.getEntries().forEach(entry -> {
 					output.accept(entry.get());
 				});
 				
