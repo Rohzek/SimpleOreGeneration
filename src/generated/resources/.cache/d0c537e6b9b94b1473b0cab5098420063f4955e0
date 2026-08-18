@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-28T18:41:47.7653723	Item Models: simpleoregen
+// 1.21.1	2026-08-18T17:03:31.3704545	Item Models: simpleoregen
 b1d1a029eb553975c8ba69000a38b36ef526054b assets/simpleoregen/models/item/amethyst_axe.json
 43a661f36eabab224511adb19262d9e7fb8b5f07 assets/simpleoregen/models/item/amethyst_hoe.json
 7a669a29845cbbd31b279feccc54273e452f59b4 assets/simpleoregen/models/item/amethyst_paxel.json
@@ -93,7 +93,6 @@ e9c60e3d0a796d1834e4b3fa609cb84ac87ba13c assets/simpleoregen/models/item/cobalt_
 29fab1f8023bc36b00c27d499bd404743b3cace4 assets/simpleoregen/models/item/cobalt_sword.json
 ef3685bfe5bc9491cf45bd07f19c7640492481fc assets/simpleoregen/models/item/copper_axe.json
 08080b6e46c1bc7dbffb6865915deec7817627df assets/simpleoregen/models/item/copper_boots.json
-c716dc71a111d77a61f36861c6e2c50b29e1caef assets/simpleoregen/models/item/copper_bucket.json
 7f6eb1c98882f4da42c948bb1e5402a228d1c4c0 assets/simpleoregen/models/item/copper_chestplate.json
 7bfa020cbf18457a726ba27495c1e92e43118e7e assets/simpleoregen/models/item/copper_helmet.json
 8b37b2ef8bb44b1f8c91da1041bf454e449c0dd5 assets/simpleoregen/models/item/copper_hoe.json

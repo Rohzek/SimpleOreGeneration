@@ -23,6 +23,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTes
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
+@SuppressWarnings({ "unchecked"})
 public class ModConfiguredFeatures 
 {
 	public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_COAL_ORE_KEY = registerKey("surface_coal_ore");
@@ -128,7 +129,8 @@ public class ModConfiguredFeatures
 	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_PURPLE_KEY = registerKey("rose_purple");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_BLACK_KEY = registerKey("rose_black");
 	
-	public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context)
+	@SuppressWarnings("rawtypes")
+	public static void bootstrap(BootstrapContext context)
 
     {
     	// ConfiguredFeature -> PlacedFeature -> BiomeModifier
@@ -684,6 +686,26 @@ public class ModConfiguredFeatures
         register(context, ROSE_CYAN_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
         		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_CYAN_FLOWER.get().defaultBlockState())), 
         		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_BLACK_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_BLACK_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_YELLOW_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_YELLOW_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_PINK_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_PINK_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_PURPLE_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_PURPLE_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
+        
+        register(context, ROSE_WHITE_KEY, Feature.FLOWER, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        		new SimpleBlockConfiguration(BlockStateProvider.simple(WorldGenBlocks.ROSE_WHITE_FLOWER.get().defaultBlockState())), 
+        		List.of(Blocks.GRASS_BLOCK, Blocks.DIRT)));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) 
@@ -691,11 +713,8 @@ public class ModConfiguredFeatures
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Reference.MODID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
-                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) 
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) 
     {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
-    
-    
 }

@@ -3,8 +3,6 @@ package com.gmail.rohzek.simpleoregen.enchantments.custom;
 import java.util.List;
 import java.util.Random;
 
-import com.gmail.rohzek.simpleoregen.entity.CheshireCat;
-import com.gmail.rohzek.simpleoregen.entity.ModEntities;
 import com.gmail.rohzek.simpleoregen.lib.LogHelper;
 import com.mojang.serialization.MapCodec;
 
@@ -17,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.animal.Cat;
 import net.minecraft.world.entity.animal.CatVariant;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantedItemInUse;
@@ -44,8 +43,8 @@ public record MadnessEnchantment() implements EnchantmentEntityEffect
 		
 		if(enchantmentLevel == 1) 
 		{
-			//Cat cat = new Cat(EntityType.CAT, world);
-			CheshireCat cat = new CheshireCat(ModEntities.CHESHIRE_CAT.get(), world);
+			Cat cat = new Cat(EntityType.CAT, world);
+			//CheshireCat cat = new CheshireCat(ModEntities.CHESHIRE_CAT.get(), world);
 			
 			if(player != null) 
 			{

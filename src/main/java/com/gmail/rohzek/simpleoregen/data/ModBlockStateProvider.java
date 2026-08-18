@@ -31,6 +31,21 @@ public class ModBlockStateProvider extends BlockStateProvider
     	makeFlower(WorldGenBlocks.ROSE_CYAN_FLOWER.get(), "rose_cyan");
     	makeFlowerPotted(WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED.get(), "rose_cyan");
     	
+    	makeFlower(WorldGenBlocks.ROSE_WHITE_FLOWER.get(), "rose_white");
+    	makeFlowerPotted(WorldGenBlocks.WHITE_ROSE_FLOWER_POTTED.get(), "rose_white");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_YELLOW_FLOWER.get(), "rose_yellow");
+    	makeFlowerPotted(WorldGenBlocks.YELLOW_ROSE_FLOWER_POTTED.get(), "rose_yellow");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_PURPLE_FLOWER.get(), "rose_purple");
+    	makeFlowerPotted(WorldGenBlocks.PURPLE_ROSE_FLOWER_POTTED.get(), "rose_purple");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_BLACK_FLOWER.get(), "rose_black");
+    	makeFlowerPotted(WorldGenBlocks.BLACK_ROSE_FLOWER_POTTED.get(), "rose_black");
+    	
+    	makeFlower(WorldGenBlocks.ROSE_PINK_FLOWER.get(), "rose_pink");
+    	makeFlowerPotted(WorldGenBlocks.PINK_ROSE_FLOWER_POTTED.get(), "rose_pink");
+    	
     	// Stone
     	blockWithItem(OreGenBlocks.SURFACE_COAL_ORE);
     	blockWithItem(OreGenBlocks.SURFACE_COPPER_ORE);

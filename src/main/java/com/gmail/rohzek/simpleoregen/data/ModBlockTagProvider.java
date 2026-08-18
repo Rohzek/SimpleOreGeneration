@@ -1251,12 +1251,22 @@ public class ModBlockTagProvider extends BlockTagsProvider
         tag(BlockTags.FLOWERS)
         		.add(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get())
         		.add(WorldGenBlocks.ROSE_FLOWER.get())
-        		.add(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
+        		.add(WorldGenBlocks.ROSE_CYAN_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_WHITE_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_YELLOW_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_PURPLE_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_PINK_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_BLACK_FLOWER.get());
         
         tag(BlockTags.SMALL_FLOWERS)
 				.add(WorldGenBlocks.CHESHIRE_ROSE_FLOWER.get())
 				.add(WorldGenBlocks.ROSE_FLOWER.get())
-				.add(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
+				.add(WorldGenBlocks.ROSE_CYAN_FLOWER.get())
+				.add(WorldGenBlocks.ROSE_WHITE_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_YELLOW_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_PURPLE_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_PINK_FLOWER.get())
+		        .add(WorldGenBlocks.ROSE_BLACK_FLOWER.get());
         
         tag(OreGenTags.Blocks.PAXEL_MINEABLE)
 	        .addTag(BlockTags.MINEABLE_WITH_PICKAXE)

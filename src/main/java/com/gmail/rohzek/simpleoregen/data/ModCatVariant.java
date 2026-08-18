@@ -13,14 +13,14 @@ public class ModCatVariant
     public static final ResourceKey<CatVariant> CHESHIRE_CAT = ResourceKey.create
     (
         Registries.CAT_VARIANT, 
-        ResourceLocation.fromNamespaceAndPath(Reference.MODID, "cheshire_cat")
+        ResourceLocation.fromNamespaceAndPath(Reference.MODID, "cheshire_cat_variant")
     );
 
     public static void bootstrap(BootstrapContext<CatVariant> context)
     {
         context.register(CHESHIRE_CAT, new CatVariant
         (
-            ResourceLocation.fromNamespaceAndPath(Reference.MODID, "cheshire_cat")
+            ResourceLocation.fromNamespaceAndPath(Reference.MODID, "cheshire_cat_variant")
         ));
     }
 }

@@ -1,11 +1,11 @@
-// 1.21.1	2025-01-22T18:33:15.0138249	Tags for minecraft:block mod id simpleoregen
+// 1.21.1	2026-08-18T17:22:21.0650391	Tags for minecraft:block mod id simpleoregen
 7b325b30471ad96c8e16d834092eca851de35404 data/c/tags/block/hidden_from_recipe_viewers.json
 fbd187cfea785f3b6afa761e76245699051fda28 data/c/tags/block/ores.json
 c41e9d89d17442f0072d9fbdca5d2f8567b38b0b data/minecraft/tags/block/coal_ores.json
 76ab957a8f1c95061c242bb29a7b83df7c6e390a data/minecraft/tags/block/copper_ores.json
 8e5fd7c55efbeb24b3687a85ad661fc8725c7d57 data/minecraft/tags/block/diamond_ores.json
 c01ff83e526473764b851aca5fa69b6885ca948d data/minecraft/tags/block/emerald_ores.json
-908725d9625b23b3b67220be9fb1aa3d8f498756 data/minecraft/tags/block/flowers.json
+b913b224765118a5e7ec45fc1b9ba09779681629 data/minecraft/tags/block/flowers.json
 9f4dfcb7285aa6aafdfd8bc1e5f8d0c841335e1e data/minecraft/tags/block/gold_ores.json
 e46cd5f3e4af98cfcf7389553ab9f4554107f0ea data/minecraft/tags/block/guarded_by_piglins.json
 8441cb7b012ea59dae40cbaa13e1498158ff529a data/minecraft/tags/block/iron_ores.json
@@ -16,7 +16,7 @@ e46cd5f3e4af98cfcf7389553ab9f4554107f0ea data/minecraft/tags/block/guarded_by_pi
 327f5122b10f9f682e74402ff6f5104a09e01092 data/minecraft/tags/block/needs_iron_tool.json
 8cdff8718c83d498dacae0c8704f3528ec3344b6 data/minecraft/tags/block/needs_stone_tool.json
 ceb63f4df0017226596e1401003a1994cdd08050 data/minecraft/tags/block/redstone_ores.json
-908725d9625b23b3b67220be9fb1aa3d8f498756 data/minecraft/tags/block/small_flowers.json
+b913b224765118a5e7ec45fc1b9ba09779681629 data/minecraft/tags/block/small_flowers.json
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/simpleoregen/tags/block/mineable/paxel.json
 4beca52508a876b3f83814fb856ccefc785b3dfa data/simpleoregen/tags/block/ores/aluminium.json
 4beca52508a876b3f83814fb856ccefc785b3dfa data/simpleoregen/tags/block/ores/aluminum.json

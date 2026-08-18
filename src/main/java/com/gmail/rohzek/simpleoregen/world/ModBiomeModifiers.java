@@ -3,7 +3,6 @@ package com.gmail.rohzek.simpleoregen.world;
 import java.util.Set;
 
 import com.gmail.rohzek.simpleoregen.data.OreGenTags;
-import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
 import net.minecraft.core.HolderSet;
@@ -537,13 +536,10 @@ public class ModBiomeModifiers
         
         
         // FLOWERS
-        if(ConfigurationManager.GENERAL.wifeFlower.get()) 
-        {
-        	context.register(ADD_CHESHIREROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
-            		biomes.getOrThrow(OreGenTags.Biomes.CHESHIREROSE_BIOMES),
-                    HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHESHIREROSE_PLACED_KEY)),
-                    GenerationStep.Decoration.VEGETAL_DECORATION));
-        }
+        context.register(ADD_CHESHIREROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.CHESHIREROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHESHIREROSE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
         
         context.register(ADD_ROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
         		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),

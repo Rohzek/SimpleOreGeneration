@@ -44,6 +44,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
 		dropSelf(WorldGenBlocks.ROSE_CYAN_FLOWER.get());
 		add(WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_CYAN_FLOWER.get()));
 		
+		dropSelf(WorldGenBlocks.ROSE_WHITE_FLOWER.get());
+		add(WorldGenBlocks.WHITE_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_WHITE_FLOWER.get()));
+		
+		dropSelf(WorldGenBlocks.ROSE_PINK_FLOWER.get());
+		add(WorldGenBlocks.PINK_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_PINK_FLOWER.get()));
+		
+		dropSelf(WorldGenBlocks.ROSE_YELLOW_FLOWER.get());
+		add(WorldGenBlocks.YELLOW_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_YELLOW_FLOWER.get()));
+		
+		dropSelf(WorldGenBlocks.ROSE_PURPLE_FLOWER.get());
+		add(WorldGenBlocks.PURPLE_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_PURPLE_FLOWER.get()));
+		
+		dropSelf(WorldGenBlocks.ROSE_BLACK_FLOWER.get());
+		add(WorldGenBlocks.BLACK_ROSE_FLOWER_POTTED.get(), block -> createPotFlowerItemTable(WorldGenBlocks.ROSE_BLACK_FLOWER.get()));
+		
 		dropSelf(OreGenBlocks.BAUXITE_BLOCK.get());
 		dropSelf(OreGenBlocks.BRASS_BLOCK.get());
 		dropSelf(OreGenBlocks.BRONZE_BLOCK.get());

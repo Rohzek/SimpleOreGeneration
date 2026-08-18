@@ -2,6 +2,11 @@
   "values": [
     "simpleoregen:cheshirerose",
     "simpleoregen:rose",
-    "simpleoregen:rose_cyan"
+    "simpleoregen:rose_cyan",
+    "simpleoregen:rose_white",
+    "simpleoregen:rose_yellow",
+    "simpleoregen:rose_purple",
+    "simpleoregen:rose_pink",
+    "simpleoregen:rose_black"
   ]
 }
