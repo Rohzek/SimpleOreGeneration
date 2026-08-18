@@ -3,6 +3,7 @@ package com.gmail.rohzek.simpleoregen.world;
 import java.util.Set;
 
 import com.gmail.rohzek.simpleoregen.data.OreGenTags;
+import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
 import com.gmail.rohzek.simpleoregen.lib.Reference;
 
 import net.minecraft.core.HolderSet;
@@ -116,6 +117,12 @@ public class ModBiomeModifiers
 	public static final ResourceKey<BiomeModifier> ADD_CHESHIREROSE = registerKey("add_cheshirerose");
 	public static final ResourceKey<BiomeModifier> ADD_ROSE = registerKey("add_rose");
 	public static final ResourceKey<BiomeModifier> ADD_ROSE_CYAN = registerKey("add_rose_cyan");
+	
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_WHITE = registerKey("add_rose_white");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_PINK = registerKey("add_rose_pink");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_YELLOW = registerKey("add_rose_yellow");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_PURPLE = registerKey("add_rose_purple");
+	public static final ResourceKey<BiomeModifier> ADD_ROSE_BLACK = registerKey("add_rose_black");
 	
 	public static final ResourceKey<BiomeModifier> REMOVE_VANILLA_SPAWNS_SURFACE = registerKey("remove_vanilla_spawns_surface");
 	public static final ResourceKey<BiomeModifier> REMOVE_VANILLA_SPAWNS_NETHER = registerKey("remove_vanilla_spawns_nether");
@@ -530,10 +537,13 @@ public class ModBiomeModifiers
         
         
         // FLOWERS
-        context.register(ADD_CHESHIREROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
-        		biomes.getOrThrow(OreGenTags.Biomes.CHESHIREROSE_BIOMES),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHESHIREROSE_PLACED_KEY)),
-                GenerationStep.Decoration.VEGETAL_DECORATION));
+        if(ConfigurationManager.GENERAL.wifeFlower.get()) 
+        {
+        	context.register(ADD_CHESHIREROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
+            		biomes.getOrThrow(OreGenTags.Biomes.CHESHIREROSE_BIOMES),
+                    HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CHESHIREROSE_PLACED_KEY)),
+                    GenerationStep.Decoration.VEGETAL_DECORATION));
+        }
         
         context.register(ADD_ROSE, new BiomeModifiers.AddFeaturesBiomeModifier(
         		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
@@ -541,6 +551,31 @@ public class ModBiomeModifiers
                 GenerationStep.Decoration.VEGETAL_DECORATION));
         
         context.register(ADD_ROSE_CYAN, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_WHITE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_PINK, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_YELLOW, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_PURPLE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        
+        context.register(ADD_ROSE_BLACK, new BiomeModifiers.AddFeaturesBiomeModifier(
         		biomes.getOrThrow(OreGenTags.Biomes.ROSE_BIOMES),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ROSE_CYAN_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));

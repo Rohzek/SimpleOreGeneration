@@ -617,6 +617,11 @@
   "block.simpleoregen.cheshirerose": "Cheshire Rose",
   "block.simpleoregen.rose": "Rose",
   "block.simpleoregen.rose_cyan": "Blue Rose",
+  "block.simpleoregen.rose_white": "White Rose",
+  "block.simpleoregen.rose_pink": "Pink Rose",
+  "block.simpleoregen.rose_yellow": "Yellow Rose",
+  "block.simpleoregen.rose_purple": "Purple Rose",
+  "block.simpleoregen.rose_black": "Black Rose",
 
   "enchantment.simpleoregen.madness_enchantment": "Madness",
 

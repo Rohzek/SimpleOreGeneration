@@ -122,8 +122,14 @@ public class ModConfiguredFeatures
 	public static final ResourceKey<ConfiguredFeature<?, ?>> CHESHIREROSE_KEY = registerKey("cheshirerose");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_KEY = registerKey("rose");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_CYAN_KEY = registerKey("rose_cyan");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_WHITE_KEY = registerKey("rose_white");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_PINK_KEY = registerKey("rose_pink");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_YELLOW_KEY = registerKey("rose_yellow");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_PURPLE_KEY = registerKey("rose_purple");
+	public static final ResourceKey<ConfiguredFeature<?, ?>> ROSE_BLACK_KEY = registerKey("rose_black");
 	
-    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) 
+	public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context)
+
     {
     	// ConfiguredFeature -> PlacedFeature -> BiomeModifier
     	//RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -690,4 +696,6 @@ public class ModConfiguredFeatures
     {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
+    
+    
 }

@@ -21,7 +21,7 @@ public class CheshireCat extends Cat
 	@Override
 	public ResourceLocation getTextureId() 
 	{
-		return ResourceLocation.fromNamespaceAndPath(Reference.MODID, "texture/entity/cat/cheshire.png");
+		return ResourceLocation.fromNamespaceAndPath(Reference.MODID, "textures/entity/cat/cheshire.png");
 	}
 	
 	/*

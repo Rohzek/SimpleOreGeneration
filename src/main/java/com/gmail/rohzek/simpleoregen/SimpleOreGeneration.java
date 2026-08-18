@@ -6,6 +6,7 @@ import com.gmail.rohzek.simpleoregen.blocks.OreGenBlocks;
 import com.gmail.rohzek.simpleoregen.blocks.WorldGenBlocks;
 import com.gmail.rohzek.simpleoregen.enchantments.ModEnchantmentEffects;
 import com.gmail.rohzek.simpleoregen.entity.ModEntities;
+import com.gmail.rohzek.simpleoregen.events.OnLoad;
 import com.gmail.rohzek.simpleoregen.items.OreGenArmors;
 import com.gmail.rohzek.simpleoregen.items.OreGenBuckets;
 import com.gmail.rohzek.simpleoregen.items.OreGenItems;
@@ -43,6 +44,7 @@ public class SimpleOreGeneration
 		//modEventBus.register(this);
 	
 		modEventBus.addListener(this::commonSetup);
+		modEventBus.register(OnLoad.class);
 		
 		NeoForge.EVENT_BUS.register(this);
 		
@@ -80,6 +82,21 @@ public class SimpleOreGeneration
 			
 			((FlowerPotBlock) Blocks.FLOWER_POT)
 			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_cyan"), WorldGenBlocks.CYAN_ROSE_FLOWER_POTTED);
+			
+			((FlowerPotBlock) Blocks.FLOWER_POT)
+			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_white"), WorldGenBlocks.WHITE_ROSE_FLOWER_POTTED);
+			
+			((FlowerPotBlock) Blocks.FLOWER_POT)
+			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_pink"), WorldGenBlocks.PINK_ROSE_FLOWER_POTTED);
+			
+			((FlowerPotBlock) Blocks.FLOWER_POT)
+			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_yellow"), WorldGenBlocks.YELLOW_ROSE_FLOWER_POTTED);
+			
+			((FlowerPotBlock) Blocks.FLOWER_POT)
+			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_purple"), WorldGenBlocks.PURPLE_ROSE_FLOWER_POTTED);
+			
+			((FlowerPotBlock) Blocks.FLOWER_POT)
+			.addPlant(ResourceLocation.fromNamespaceAndPath(Reference.MODID, "rose_black"), WorldGenBlocks.BLACK_ROSE_FLOWER_POTTED);
 		});
 	}
 	

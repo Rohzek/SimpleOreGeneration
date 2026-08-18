@@ -120,6 +120,11 @@ public class ModPlacedFeatures
 	public static final ResourceKey<PlacedFeature> CHESHIREROSE_PLACED_KEY = registerKey("cheshirerose_placed");
 	public static final ResourceKey<PlacedFeature> ROSE_PLACED_KEY = registerKey("rose_placed");
 	public static final ResourceKey<PlacedFeature> ROSE_CYAN_PLACED_KEY = registerKey("rose_cyan_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_WHITE_PLACED_KEY = registerKey("rose_white_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_PINK_PLACED_KEY = registerKey("rose_pink_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_YELLOW_PLACED_KEY = registerKey("rose_yellow_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_PURPLE_PLACED_KEY = registerKey("rose_purple_placed");
+	public static final ResourceKey<PlacedFeature> ROSE_BLACK_PLACED_KEY = registerKey("rose_black_placed");
 	
     public static void bootstrap(BootstrapContext<PlacedFeature> context) 
     {
@@ -300,6 +305,26 @@ public class ModPlacedFeatures
         		BiomeFilter.biome()));
         
         register(context, ROSE_CYAN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_CYAN_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_WHITE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_WHITE_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_PINK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_PINK_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_YELLOW_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_YELLOW_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_PURPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_PURPLE_KEY),
+        		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
+        		BiomeFilter.biome()));
+        
+        register(context, ROSE_BLACK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROSE_BLACK_KEY),
         		List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, 
         		BiomeFilter.biome()));
     }

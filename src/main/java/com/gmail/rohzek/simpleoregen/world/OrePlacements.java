@@ -1,5 +1,7 @@
 package com.gmail.rohzek.simpleoregen.world;
 
+import com.gmail.rohzek.simpleoregen.lib.ConfigurationManager;
+
 public enum OrePlacements 
 {
 	// int veinSize, int veinCount, int minYLevel, int maxYLevel
@@ -129,7 +131,7 @@ public enum OrePlacements
 	NETHER_CHAOS(1, 3, -64, 0),
 	END_CHAOS(1, 3, -64, 0);
 	
-	private final int veinSize, veinCount, minYLevel, maxYLevel;
+	private int veinSize, veinCount, minYLevel, maxYLevel;
 	
 	// Bedrock layer is at Y Level -62, Minimum possible is -64
 	// Deepslate Y level is 8 and below, with a majority at 0
@@ -160,5 +162,13 @@ public enum OrePlacements
 	public int getMaxYLevel() 
 	{
 		return maxYLevel;
+	}
+	
+	public void overrideFromConfig() 
+	{
+	    this.veinSize = ConfigurationManager.OREGEN.veinSizes.get(this).get();
+	    this.veinCount = ConfigurationManager.OREGEN.veinCounts.get(this).get();
+	    this.minYLevel = ConfigurationManager.OREGEN.minYLevels.get(this).get();
+	    this.maxYLevel = ConfigurationManager.OREGEN.maxYLevels.get(this).get();
 	}
 }
